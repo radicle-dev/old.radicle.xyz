@@ -71,6 +71,11 @@ footer h4 {
   margin-bottom: 24px;
 }
 
+.contact,
+.about {
+  min-width: 378px;
+}
+
 .contact a {
   padding-top: 16px;
   color: #6e41e0;
