@@ -58,13 +58,8 @@ header h3 {
   width: 780px;
 }
 
-.footer {
-  background-color: #6e41e0;
-  margin-top: 72px;
-}
-
 .footerContent {
-  margin: 0 auto;
+  margin: 72px auto;
   max-width: 780px;
   padding: 72px 0;
   display: flex;

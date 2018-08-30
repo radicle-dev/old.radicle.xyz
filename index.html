@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/codemirror-repl.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/repl-theme.css" />
   <script src="js/codemirror-repl.js"></script>
 </head>
 
@@ -32,10 +33,9 @@
         </p>
       </div>
       <div class="contact">
-        <h4>Why Radicle</h4>
+        <h4>Get in touch</h4>
         <p>
-          Over the last few decades, with the emergence of open-source software, we've experienced an unprecedented acceleration in
-          the development of.
+          If you’re interested in radicle or want to contribute, you can find us here:
         </p>
         <a href="">radicle@monadic.xyz</a>
       </div>
@@ -48,7 +48,7 @@
   // Setup the repl.
   var repl = new CodeMirrorREPL("repl", {
     mode: "javascript",
-    theme: "eclipse"
+    theme: "base16-dark"
   });
 
   function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
