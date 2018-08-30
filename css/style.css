@@ -46,7 +46,6 @@ header h1 {
   font-family: GTAmericaMono;
   font-size: 24px;
   font-weight: normal;
-  padding-bottom: 24px;
 }
 header h3 {
   font-weight: normal;
@@ -70,4 +69,9 @@ footer h4 {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 24px;
+}
+
+.contact a {
+  padding-top: 16px;
+  color: #6e41e0;
 }
