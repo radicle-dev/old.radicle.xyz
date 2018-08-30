@@ -58,7 +58,7 @@ header h3 {
 }
 
 footer {
-  margin: 72px auto;
+  margin: 48px auto 72px;
   max-width: 780px;
   display: flex;
   flex-direction: row;
