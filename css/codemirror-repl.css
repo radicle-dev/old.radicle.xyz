@@ -1,6 +1,6 @@
 .CodeMirror {
   height: 100%;
-  line-height: 1em;
+  line-height: 125%;
   font-family: GTAmericaMono;
 
   /* Necessary so the scrollbar can be absolutely positioned within the wrapper on Lion. */
@@ -17,6 +17,9 @@
      is visible outside of the scrolling box. */
   position: relative;
   outline: none;
+  background-color: #28333d;
+  color: white;
+  border-radius: 4px;
 }
 
 /* Vertical scrollbar */
@@ -54,20 +57,21 @@
   left: 0;
   top: 0;
   z-index: 10;
-  background-color: #f7f7f7;
+  background-color: #28333d;
   border-right: 1px solid #eee;
   min-width: 2em;
   height: 100%;
+  display: none;
 }
 .CodeMirror-gutter-text {
-  color: #aaa;
+  color: #90a0af;
   text-align: right;
-  padding: 0.4em 0.2em 0.4em 0.4em;
+  padding: 0.4em;
   white-space: pre !important;
   cursor: default;
 }
 .CodeMirror-lines {
-  padding: 0.4em;
+  padding: 24px;
   white-space: pre;
   cursor: text;
 }
@@ -109,7 +113,7 @@
   z-index: 10;
   position: absolute;
   visibility: hidden;
-  border-left: 1px solid black;
+  border-left: 1px solid #90a0af;
   border-right: none;
   width: 0;
 }
@@ -166,7 +170,7 @@ div.CodeMirror-selected {
   color: #085;
 }
 .cm-s-default span.cm-property {
-  color: black;
+  color: white;
 }
 .cm-s-default span.cm-operator {
   color: black;
