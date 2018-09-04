@@ -52,6 +52,9 @@
 
   async function eval_fn(expr) {
     var tmp = { "arg": expr };
+    if (typeof eval_fn_ === "undefined") {
+        await sleep(2000);
+    };
     try {
       eval_fn_(tmp);
       if (typeof tmp.result === "undefined") {
