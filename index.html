@@ -4,19 +4,20 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Radicle</title>
+  <title>radicle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/codemirror-repl.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/repl-theme.css" />
   <script src="js/codemirror-repl.js"></script>
+  <script src="js/rad.js"></script>
 </head>
 
 <body>
   <div class="content">
     <header>
-      <h1>Radicle</h1>
-      <h3>A blocktree language</h3>
+      <h1>radicle</h1>
+      <h3>A reprogrammable state machine</h3>
     </header>
     <div class="repl">
       <textarea id="repl" autofocus="true"></textarea>
@@ -24,10 +25,8 @@
   </div>
   <footer>
     <div class="about">
-      <h4>Why Radicle</h4>
+      <h4>Why radicle</h4>
       <p>
-        Over the last few decades, with the emergence of open-source software, we've experienced an unprecedented acceleration in
-        the development of.
       </p>
     </div>
     <div class="contact">
@@ -36,6 +35,7 @@
         If you’re interested in radicle or want to contribute, you can find us here:
       </p>
       <a href="radicle@monadic.xyz">radicle@monadic.xyz</a>
+      <p>#radicle on freenode</p>
     </div>
   </footer>
 </body>
@@ -44,8 +44,8 @@
 <script language="javascript">
   // Setup the repl.
   var repl = new CodeMirrorREPL("repl", {
-    mode: "javascript",
-    theme: "base16-dark"
+    mode: "rad",
+    theme: "base16-dark",
   });
 
   function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
@@ -56,7 +56,7 @@
       eval_fn_(tmp);
       if (typeof tmp.result === "undefined") {
         console.log("sleeping in the hope this is an async call");
-        await sleep(1000);
+        await sleep(2000);
       }
       repl.print(tmp.result);
     } catch (error) {
@@ -64,7 +64,11 @@
       repl.print(error, "error");
     }
   }
-  repl.eval = eval_fn
+  repl.eval = eval_fn;
+  repl.print("Welcome to radicle!");
+  repl.print("Type '(help)' for help.");
+  repl.print("");
+  repl.print("");
 
 </script>
 
