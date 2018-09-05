@@ -1,6 +1,6 @@
 .CodeMirror {
   height: 100%;
-  line-height: 125%;
+  line-height: 150%;
   font-family: GTAmericaMono;
 
   /* Necessary so the scrollbar can be absolutely positioned within the wrapper on Lion. */
@@ -58,20 +58,19 @@
   top: 0;
   z-index: 10;
   background-color: #28333d;
-  border-right: 1px solid #eee;
   min-width: 2em;
   height: 100%;
-  display: none;
+  /* display: none; */
 }
 .CodeMirror-gutter-text {
-  color: #90a0af;
+  color: #e3ed11;
   text-align: right;
-  padding: 0.4em;
+  padding: 24px 0 24px 24px;
   white-space: pre !important;
   cursor: default;
 }
 .CodeMirror-lines {
-  padding: 24px;
+  padding: 24px 24px 24px 12px;
   white-space: pre;
   cursor: text;
 }

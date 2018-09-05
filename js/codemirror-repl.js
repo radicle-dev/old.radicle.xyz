@@ -49,7 +49,7 @@ function CodeMirrorREPL(textareaId, options) {
     repl.print = print;
     repl.setMode = setMode;
     repl.setTheme = setTheme;
-    mirror.setMarker(line, ">>");
+    mirror.setMarker(line, "rad>");
 
     function undo() {}
 
@@ -94,12 +94,12 @@ function CodeMirrorREPL(textareaId, options) {
             if (balanced) {
                 repl.eval(code);
                 buffer.length = 0;
-                mirror.setMarker(line, ">>");
+                mirror.setMarker(line, "rad>");
             } else {
                 if (balanced === null) {
                     buffer.pop();
                     code = buffer.join('\n').replace('\r', '\n');
-                    mirror.setMarker(line, repl.isBalanced(code) ? ">>" : "..");
+                    mirror.setMarker(line, repl.isBalanced(code) ? "rad>" : "..");
                 } else mirror.setMarker(line, "..");
             }
         }
@@ -183,7 +183,7 @@ function CodeMirrorREPL(textareaId, options) {
 
         if (text) {
             mirror.setLine(line, text);
-            mirror.setMarker(line, ">>");
+            mirror.setMarker(line, "rad>");
             mirror.setCursor({line: line, ch: cursor});
         }
 
