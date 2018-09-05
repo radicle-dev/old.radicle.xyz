@@ -75,8 +75,7 @@ header h3 {
 }
 
 footer {
-  margin: 48px auto 72px;
-  max-width: 780px;
+  margin: 48px 0 72px;
   display: flex;
   flex-direction: row;
   color: #546474;
@@ -113,7 +112,7 @@ footer h4 {
   padding-bottom: 48px;
 }
 
-.docs .content {
+.docs-wrapper {
   margin: 0 auto;
   max-width: 780px;
 }
