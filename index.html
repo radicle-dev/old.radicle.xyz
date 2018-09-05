@@ -17,7 +17,7 @@
   <div class="content">
     <header>
       <h1>radicle</h1>
-      <h3>A reprogrammable state machine</h3>
+      <h3>A language for peer-to-peer collaboration</h3>
     </header>
     <div class="repl">
       <textarea id="repl" autofocus="true"></textarea>
@@ -26,11 +26,14 @@
   <footer>
     <div class="about">
       <h4>Why radicle</h4>
+      <p> radicle is a language that makes collaboration a primitive. Different
+      environments ("chains") can be given their own semantics, including who
+      can modify them, and can be accessed as easily as your local environment.
+
+      </p>
       <p>
-        We always say open source coin and you can use it to describe the team such as open source coin team. Although if that is
-        too long or feels clunky, you can use oscoin team to describe a part of open source coin. When using the abbreviated
-        oscoin it should always be in combination with something else, not by itself. And you should pronounce it 'oh-es-coin',
-        not 'os-coin'.
+      radicle was developed to be the basis of <a
+          href="http://oscoin.io">oscoin</a>.
       </p>
     </div>
     <div class="contact">
@@ -113,6 +116,9 @@
 
   async function eval_fn(expr) {
     var tmp = { "arg": expr };
+    if (typeof eval_fn_ === "undefined") {
+        await sleep(2000);
+    };
     try {
       eval_fn_(tmp);
       if (typeof tmp.result === "undefined") {
@@ -126,7 +132,7 @@
     }
   }
   repl.eval = eval_fn;
-  repl.print("Welcome to radicle!");
+  repl.print("radicle (pre-alpha).");
   repl.print("Type '(help)' for help.");
   repl.print("");
   repl.print("");
