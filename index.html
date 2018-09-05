@@ -16,7 +16,15 @@
 <body>
   <div class="content">
     <header>
-      <h1>radicle</h1>
+      <!-- <h1>radicle</h1> -->
+      <pre>
+██████╗  █████╗ ██████╗ ██╗ ██████╗██╗     ███████╗
+██╔══██╗██╔══██╗██╔══██╗██║██╔════╝██║     ██╔════╝
+██████╔╝███████║██║  ██║██║██║     ██║     █████╗
+██╔══██╗██╔══██║██║  ██║██║██║     ██║     ██╔══╝
+██║  ██║██║  ██║██████╔╝██║╚██████╗███████╗███████╗
+╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝ ╚═════╝╚══════╝╚══════╝
+      </pre>
       <h3>A language for peer-to-peer collaboration</h3>
     </header>
     <div class="repl">
@@ -26,14 +34,12 @@
   <footer>
     <div class="about">
       <h4>Why radicle</h4>
-      <p> radicle is a language that makes collaboration a primitive. Different
-      environments ("chains") can be given their own semantics, including who
-      can modify them, and can be accessed as easily as your local environment.
-
-      </p>
       <p>
-      radicle was developed to be the basis of <a
-          href="http://oscoin.io">oscoin</a>.
+        radicle is a language that makes collaboration a primitive. Different environments ("chains") can be given their own semantics,
+        including who can modify them, and can be accessed as easily as your local environment.
+        </br>
+        </br>
+        radicle was developed to be the basis of <a href="http://oscoin.io">open source coin</a>.
       </p>
     </div>
     <div class="contact">
@@ -50,7 +56,8 @@
 
   <div class="docs">
     <div class="content">
-      <h4>Example of radicle code for issues</h4>
+      <h4>Example of radicle code</h4>
+      <p>This example shows you how one would program an issues chain.</p>
       <pre>
     "not a comment"
 
@@ -117,7 +124,7 @@
   async function eval_fn(expr) {
     var tmp = { "arg": expr };
     if (typeof eval_fn_ === "undefined") {
-        await sleep(2000);
+      await sleep(2000);
     };
     try {
       eval_fn_(tmp);

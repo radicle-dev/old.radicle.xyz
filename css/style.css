@@ -31,13 +31,26 @@ p {
   line-height: 135%;
 }
 
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+a {
+  color: #6e41e0;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
 .content {
   margin: 0 auto;
   max-width: 780px;
 }
 
 header {
-  text-align: center;
   padding-top: 72px;
   padding-bottom: 48px;
 }
@@ -47,7 +60,11 @@ header h1 {
   font-size: 24px;
   font-weight: normal;
 }
+header pre {
+  margin: 0 auto;
+}
 header h3 {
+  font-family: GTAmericaMono;
   font-weight: normal;
   color: #546474;
 }
@@ -66,9 +83,8 @@ footer {
 }
 
 footer h4 {
-  font-size: 16px;
-  font-weight: bold;
   margin-bottom: 24px;
+  color: #28333d;
 }
 
 .about {
@@ -87,10 +103,6 @@ footer h4 {
   font-weight: bold;
 }
 
-.social a {
-  color: #6e41e0;
-}
-
 .social p {
   margin: 0;
   color: #20d479;
@@ -107,7 +119,11 @@ footer h4 {
 }
 
 .docs h4 {
-  padding: 64px 0 32px;
+  padding: 64px 0 0;
+}
+.docs p {
+  margin-bottom: 48px;
+  color: #546474;
 }
 
 .docs pre {
