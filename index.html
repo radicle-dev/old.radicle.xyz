@@ -27,6 +27,10 @@
     <div class="about">
       <h4>Why radicle</h4>
       <p>
+        We always say open source coin and you can use it to describe the team such as open source coin team. Although if that is
+        too long or feels clunky, you can use oscoin team to describe a part of open source coin. When using the abbreviated
+        oscoin it should always be in combination with something else, not by itself. And you should pronounce it 'oh-es-coin',
+        not 'os-coin'.
       </p>
     </div>
     <div class="contact">
@@ -34,10 +38,67 @@
       <p>
         If you’re interested in radicle or want to contribute, you can find us here:
       </p>
-      <a href="radicle@monadic.xyz">radicle@monadic.xyz</a>
-      <p>#radicle on freenode</p>
+      <div class="social">
+        <a href="radicle@monadic.xyz">radicle@monadic.xyz</a>
+        <p>#radicle on freenode</p>
+      </div>
     </div>
   </footer>
+
+  <div class="docs">
+    <div class="content">
+      <h4>Example of radicle code for issues</h4>
+      <pre>
+    "not a comment"
+
+    ;; Issues for rad prelude
+
+    (define create-rad-issue-chain (lambda ()
+      (define issues (ref nil))
+      (define should-be (lambda (name x y) (eq? x y)))
+      (define current-prelude (ref (dict :env (dict 'should-be should-be 'eval eval) :refs nil)))
+
+
+      (define failing? (lambda (expr)
+        (define res (catch 'any
+                            (head (eval-with-env expr (read-ref current-prelude)))
+                            (lambda (x) #f)))
+        (eq? res #f)))
+
+      (define new-issue (lambda (creator title desc failing-test)
+        (if (failing? failing-test)
+            (modify-ref
+              issues
+              (lambda (x)
+                (cons (dict
+                  :creator creator
+                  :title title
+                  :description desc
+                  :failing-test failing-test) x)))
+            "Test is not failing")))
+
+      (define list-issues (lambda () (read-ref issues)))
+
+      (define dispatch (lambda (m)
+        (if (eq? m 'new-issue) new-issue
+        (if (eq? m 'list-issues) list-issues
+            "error: unknown message"))))
+
+      dispatch))
+
+    (define rad-issue-chain (create-rad-issue-chain))
+
+    (define rad-issue-chain-eval (lambda (expr)
+          (if (eq? (head expr) 'new-issue)
+              (apply (rad-issue-chain 'new-issue) (tail expr))
+          (if (eq? (head expr) 'list-issues)
+              ((rad-issue-chain 'list-issues))
+              "must be one of: 'new-issue', 'list-issues'"))
+          ))
+    </pre>
+      <p>For more examples, check <a href="http://git.oscoin.io/radicle/tree/rad?h=origin/demo" target="_blank">here</a></p>
+    </div>
+  </div>
 </body>
 <script language="javascript" src="js/all.min.js"></script>
 

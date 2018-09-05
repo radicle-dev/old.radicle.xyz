@@ -71,12 +71,47 @@ footer h4 {
   margin-bottom: 24px;
 }
 
+.about {
+  padding-right: 24px;
+}
+
 .contact,
 .about {
   min-width: 378px;
 }
 
-.contact a {
-  padding-top: 16px;
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.social a {
   color: #6e41e0;
+}
+
+.social p {
+  margin: 0;
+  color: #20d479;
+}
+
+.docs {
+  background-color: white;
+  padding-bottom: 48px;
+}
+
+.docs .content {
+  margin: 0 auto;
+  max-width: 780px;
+}
+
+.docs h4 {
+  padding: 64px 0 32px;
+}
+
+.docs pre {
+  padding: 32px 0;
+  background-color: #f8f8f8;
+  margin-bottom: 48px;
 }
