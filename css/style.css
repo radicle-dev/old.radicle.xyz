@@ -55,11 +55,6 @@ header {
   padding-bottom: 48px;
 }
 
-header h1 {
-  font-family: GTAmericaMono;
-  font-size: 24px;
-  font-weight: normal;
-}
 header pre {
   margin: 0 auto;
   width: 400px;
@@ -94,7 +89,7 @@ footer h4 {
 
 .contact,
 .about {
-  min-width: 378px;
+  max-width: 378px;
 }
 
 .social {
@@ -131,4 +126,41 @@ footer h4 {
   padding: 32px 0;
   background-color: #f8f8f8;
   margin-bottom: 48px;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 820px) {
+  .content {
+    max-width: 90%;
+  }
+
+  .repl {
+    max-width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  .contact,
+  .about {
+    max-width: 90%;
+  }
+
+  .docs-wrapper {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  header pre {
+    max-width: 84%;
+    font-size: 2.5vw;
+  }
+  header h3 {
+    font-size: 5vw;
+  }
 }
