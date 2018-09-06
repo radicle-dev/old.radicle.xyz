@@ -64,6 +64,7 @@ header {
 header pre {
   margin: 0 auto;
   width: 400px;
+  color: #e074cb;
 }
 header h3 {
   font-family: GTAmericaMono;
@@ -99,14 +100,11 @@ footer h4 {
 }
 
 .social {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   font-weight: bold;
 }
 
 .social p {
-  margin: 0;
+  margin-top: 4px;
   color: #20d479;
 }
 
@@ -155,13 +153,6 @@ footer h4 {
   .about {
     max-width: 100%;
     padding: 0;
-  }
-  .social {
-    flex-direction: column;
-  }
-
-  .social p {
-    margin-top: 4px;
   }
 
   .docs-wrapper {
