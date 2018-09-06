@@ -62,11 +62,13 @@ header h1 {
 }
 header pre {
   margin: 0 auto;
+  width: 400px;
 }
 header h3 {
   font-family: GTAmericaMono;
   font-weight: normal;
   color: #546474;
+  text-align: center;
 }
 
 .repl {
