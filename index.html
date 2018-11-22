@@ -9,8 +9,12 @@
   <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/codemirror-repl.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/repl-theme.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
   <script src="js/codemirror-repl.js"></script>
   <script src="js/rad.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/clojure.min.js"></script>
 </head>
 
 <body>
@@ -61,54 +65,54 @@
         author, title,
         description, and failing test case.
       </p>
-      <pre>
-    :Issues.Comment
+      <pre><code class="clojure">
+:Issues.Comment
 
-    ;; Issues for rad prelude
+;; Issues for rad prelude
 
-    (define create-rad-issue-chain (lambda ()
-      (define issues (ref nil))
-      (define should-be (lambda (name x y) (eq? x y)))
-      (define current-prelude (ref (dict :env (dict 'should-be should-be 'eval eval) :refs nil)))
+(define create-rad-issue-chain (lambda ()
+  (define issues (ref nil))
+  (define should-be (lambda (name x y) (eq? x y)))
+  (define current-prelude (ref (dict :env (dict 'should-be should-be 'eval eval) :refs nil)))
 
 
-      (define failing? (lambda (expr)
-        (define res (catch 'any
-                            (head (eval-with-env expr (read-ref current-prelude)))
-                            (lambda (x) #f)))
-        (eq? res #f)))
+  (define failing? (lambda (expr)
+    (define res (catch 'any
+                        (head (eval-with-env expr (read-ref current-prelude)))
+                        (lambda (x) #f)))
+    (eq? res #f)))
 
-      (define new-issue (lambda (creator title desc failing-test)
-        (if (failing? failing-test)
-            (modify-ref
-              issues
-              (lambda (x)
-                (cons (dict
-                  :creator creator
-                  :title title
-                  :description desc
-                  :failing-test failing-test) x)))
-            "Test is not failing")))
+  (define new-issue (lambda (creator title desc failing-test)
+    (if (failing? failing-test)
+        (modify-ref
+          issues
+          (lambda (x)
+            (cons (dict
+              :creator creator
+              :title title
+              :description desc
+              :failing-test failing-test) x)))
+        "Test is not failing")))
 
-      (define list-issues (lambda () (read-ref issues)))
+  (define list-issues (lambda () (read-ref issues)))
 
-      (define dispatch (lambda (m)
-        (if (eq? m 'new-issue) new-issue
-        (if (eq? m 'list-issues) list-issues
-            "error: unknown message"))))
+  (define dispatch (lambda (m)
+    (if (eq? m 'new-issue) new-issue
+    (if (eq? m 'list-issues) list-issues
+        "error: unknown message"))))
 
-      dispatch))
+  dispatch))
 
-    (define rad-issue-chain (create-rad-issue-chain))
+(define rad-issue-chain (create-rad-issue-chain))
 
-    (define rad-issue-chain-eval (lambda (expr)
-          (if (eq? (head expr) 'new-issue)
-              (apply (rad-issue-chain 'new-issue) (tail expr))
-          (if (eq? (head expr) 'list-issues)
-              ((rad-issue-chain 'list-issues))
-              "must be one of: 'new-issue', 'list-issues'"))
-          ))
-    </pre>
+(define rad-issue-chain-eval (lambda (expr)
+      (if (eq? (head expr) 'new-issue)
+          (apply (rad-issue-chain 'new-issue) (tail expr))
+      (if (eq? (head expr) 'list-issues)
+          ((rad-issue-chain 'list-issues))
+          "must be one of: 'new-issue', 'list-issues'"))
+      ))
+      </code></pre>
     </div>
   </div>
 </body>
