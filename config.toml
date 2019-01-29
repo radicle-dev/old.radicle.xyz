@@ -1,0 +1,9 @@
+baseURL = "https://collab.radicle.xyz/"
+languageCode = "en-us"
+title = "Radicle Code Collaboration"
+
+[[menu.main]]
+  name = "Source Code"
+  url  = "github.com/oscoin/radicle"
+  identifier = "code"
+  weight = 1
