@@ -19,7 +19,7 @@ h1 {
 
 p {
   font-family: monospace;
-  color: #5555ff;
+  color: #ff55ff;
   font-size: calc(14px + (24 - 14) * ((100vw - 300px) / (1600 - 300)));
   padding-top: 8vh;
 }
