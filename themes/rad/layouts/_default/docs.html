@@ -3,7 +3,7 @@
 	    {{- partial "head.html" . -}}
 	    <body>
 	        {{- partial "header.html" . -}}
-	        {{- partial "sidebar.html" . -}}
+	        <!-- {{- partial "sidebar.html" . -}} -->
 	        <div id="content">
 	        {{- block "main" . }}{{- end }}
 	        {{- range (where .Data.Pages "Section" "docs") }}
