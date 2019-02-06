@@ -1,9 +1,60 @@
-baseURL = "https://collab.radicle.xyz/"
+baseURL = "/"
 languageCode = "en-us"
-title = "Radicle Code Collaboration"
+title = "Rad iz kewl"
+theme = "rad"
 
+[params]
+  author = "Monadic"
+  description = "Garden iz fancy"
+
+# Nav menu
 [[menu.main]]
   name = "Source Code"
-  url  = "github.com/oscoin/radicle"
+  url  = "https://github.com/oscoin/radicle"
   identifier = "code"
+  weight = 1
+
+[[menu.main]]
+  name = "Install"
+  url  = "/docs"
+  identifier = "docs"
+  weight = 2
+
+[[menu.main]]
+  name = "Try"
+  url  = "/demo"
+  identifier = "demo"
+  weight = 3
+
+[[menu.main]]
+  name = "Blog"
+  url  = "/blog"
+  identifier = "blog"
+  weight = 4
+
+# Nav docs
+[[menu.docs]]
+  name = "Doc 1"
+  url  = "https://github.com/oscoin/radicle"
+  identifier = "doc1"
+  weight = 1
+
+[[menu.docs]]
+  name = "Doc 2"
+  url  = "radicle"
+  identifier = "docs2"
+  weight = 2
+  parent= "doc1"
+
+  [[menu.docs]]
+  name = "Doc 3"
+  url  = "radicle"
+  identifier = "docs3"
+  weight = 2
+  parent= "doc1"
+
+  [[menu.docs]]
+  name = "Doc 4"
+  url  = "https://github.com/oscoin/radicle"
+  identifier = "doc4"
   weight = 1

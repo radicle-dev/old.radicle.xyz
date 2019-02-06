@@ -1,0 +1,17 @@
+	<!DOCTYPE html>
+	<html>
+	    {{- partial "head.html" . -}}
+	    <body>
+	        {{- partial "header.html" . -}}
+	        {{- partial "sidebar.html" . -}}
+	        <div id="content">
+	        {{- block "main" . }}{{- end }}
+	        {{- range (where .Data.Pages "Section" "docs") }}
+					<a href="{{ .Permalink }}">
+						{{ .Title }}
+					</a>
+					<br>
+			{{- end }}
+	        {{- partial "footer.html" . -}}
+	    </body>
+	</html>
