@@ -1,9 +1,43 @@
-<header>
-<nav>
-    <ul>
-      {{ range .Site.Menus.main }}
-      <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
-      {{ end }}
-    </ul>
-</nav>
-</header>
+	<div class="narrow-menu" id="narrow-menu">
+	    <ul>
+	      {{ range .Site.Menus.main }}
+	      <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+	      {{ end }}
+	    </ul>
+      <button class="cross" id="close"></button>
+    </div>
+    <div class="nav-bar" id="nav">
+      <a href="/" class="rad-nav-logo"></a>
+      <button class="hamburger" id="open">Menu</button>
+      <div class="bar">
+        <nav>
+		    <ul>
+		      {{ range .Site.Menus.main }}
+		      <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+		      {{ end }}
+		    </ul>
+        </nav>
+        <a href="/docs.html#start" class="header-btn">{{ $.Site.Params.cta }}</a>
+      </div>
+    </div>
+    <header>
+      <div class="left-header">
+        <div class="small-nav">
+          <a href="/docs.#start" class="header-btn">{{ $.Site.Params.cta }}</a>
+          <nav>
+		    <ul>
+		      {{ range .Site.Menus.main }}
+		      <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+		      {{ end }}
+		    </ul>
+          </nav>
+          <button class="hamburger" id="narrow-open">Menu</button>
+        </div>
+
+        <div class="title">
+          <div class="logo"></div>
+          <h1>{{ $.Site.Params.description }}</h1>
+        </div>
+      </div>
+      <div class="right-header"></div>
+    </header>

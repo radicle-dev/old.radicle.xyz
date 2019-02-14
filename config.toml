@@ -1,29 +1,31 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "Rad iz kewl"
+title = "Radicle"
 theme = "rad"
 
 [params]
   author = "Monadic"
-  description = "Garden iz fancy"
+  description = "A peer-to-peer stack for code collaboration"
+  cta = "try"
 
 # Nav menu
+
 [[menu.main]]
-  name = "Source Code"
+  name = "Source"
   url  = "https://github.com/oscoin/radicle"
-  identifier = "code"
+  identifier = "source"
   weight = 1
 
 [[menu.main]]
-  name = "Install"
+  name = "Docs"
   url  = "/docs"
   identifier = "docs"
   weight = 2
 
 [[menu.main]]
-  name = "Try"
-  url  = "/demo"
-  identifier = "demo"
+  name = "Garden"
+  url  = "/garden"
+  identifier = "garden"
   weight = 3
 
 [[menu.main]]

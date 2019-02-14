@@ -1,0 +1,38 @@
+.divider {
+  background-color: $red;
+
+  svg path {
+    fill: $black;
+    stroke: $black;
+    stroke-width: 1px;
+  }
+
+  &.white {
+    background-color: $white;
+    svg path {
+      fill: $red;
+      stroke: $red;
+    }
+  }
+  &.garden {
+    background-color: $blue;
+    svg path {
+      fill: $blue;
+      stroke: $white;
+    }
+  }
+  &.line {
+    svg path {
+      fill: transparent;
+      stroke: $black;
+    }
+    &.opacity {
+      opacity: 0.2;
+    }
+  }
+  &.footer {
+    @media (min-width: 980px) {
+      display: none;
+    }
+  }
+}
