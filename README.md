@@ -1,7 +1,7 @@
 ## Prerequisits
 
 1. [Install hugo](https://gohugo.io/getting-started/installing/)
-2. Install rst2html `sudo pip install docutils`
+2. Install rst2html ` pip install docutils`
 
 ## Start
 
