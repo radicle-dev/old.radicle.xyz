@@ -4,6 +4,7 @@
 @import "partials/fonts";
 @import "partials/buttons";
 @import "partials/docs";
+@import "partials/blog";
 @import "partials/gardens";
 @import "partials/divider";
 @import "partials/nav-bar";
@@ -54,9 +55,9 @@ header {
       margin: 42px 0 24px 0;
     }
     .logo {
-      width: 226px;
-      height: 48px;
-      background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549882894/radicle-logo-2_el4fmz.svg");
+      width: 297px;
+      height: 50px;
+      background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550228984/radicle-logo-alpha_n94rqc.svg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -69,8 +70,8 @@ header {
         margin-top: 24px;
       }
       .logo {
-        width: 166px;
-        height: 36px;
+        width: 220px;
+        height: 37px;
       }
     }
   }

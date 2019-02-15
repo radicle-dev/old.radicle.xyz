@@ -194,11 +194,16 @@ h2 {
       font-size: 21px;
       line-height: 24px; } }
 
-h3,
-h4 {
+h3 {
   font-family: FoundersGrotesk, Arial, sans-serif;
   font-size: 27px;
   line-height: 32px;
+  font-weight: normal; }
+
+h4 {
+  font-family: FoundersGrotesk, Arial, sans-serif;
+  font-size: 21px;
+  line-height: 28px;
   font-weight: normal; }
 
 code,
@@ -288,11 +293,13 @@ main {
   flex-direction: column;
   justify-self: center;
   border-left: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
   color: #000000; }
   main .chapter {
     padding: 0 48px 48px 48px;
     margin: 0 auto;
-    max-width: 960px; }
+    max-width: 960px;
+    line-height: 24px; }
   main h1 {
     color: #5555ff;
     padding-top: 112px; }
@@ -304,13 +311,80 @@ main {
     color: #494949; }
   @media (max-width: 640px) {
     main .chapter {
-      padding: 0 32px 32px 32px; }
+      padding: 0 32px 32px 32px;
+      line-height: 22px; }
     main h1 {
       padding-top: 96px; }
     main h3 {
       padding: 36px 0 16px; }
     main code {
       padding: 2px 3px; } }
+
+.blog-content {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 32px; }
+  .blog-content h1 {
+    color: #5555ff;
+    text-align: center;
+    margin: 96px 32px 72px; }
+  .blog-content article {
+    margin-bottom: 96px;
+    line-height: 24px; }
+    .blog-content article h3 {
+      margin-bottom: 32px; }
+    .blog-content article h4 {
+      margin-bottom: 16px; }
+    .blog-content article p {
+      margin-bottom: 24px; }
+    .blog-content article ul {
+      margin-bottom: 24px; }
+      .blog-content article ul li {
+        list-style-type: initial; }
+    .blog-content article ol {
+      margin-bottom: 24px; }
+      .blog-content article ol li {
+        list-style-type: bullets;
+        margin-bottom: 9px; }
+    .blog-content article span {
+      font-family: VulfMono, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 22px; }
+    .blog-content article blockquote {
+      padding: 16px 24px;
+      color: rgba(0, 0, 0, 0.6); }
+    .blog-content article sub,
+    .blog-content article sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline; }
+    .blog-content article sup {
+      top: -0.5em; }
+    .blog-content article sub {
+      bottom: -0.25em; }
+    .blog-content article hr {
+      border: 0;
+      height: 6px;
+      background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550165007/wave-line_yzwo3f.svg");
+      background-repeat: repeat-x;
+      opacity: 0.3;
+      margin: 48px 0 32px; }
+    .blog-content article .footnotes {
+      font-size: 14px;
+      line-height: 18px;
+      color: rgba(0, 0, 0, 0.6);
+      word-break: break-all; }
+    @media (max-width: 640px) {
+      .blog-content article {
+        line-height: 22px; } }
+  .blog-content .controls {
+    display: flex;
+    justify-content: space-between; }
 
 .garden-header {
   position: fixed;
@@ -508,9 +582,9 @@ header {
       text-align: center;
       margin: 42px 0 24px 0; }
     .left-header .title .logo {
-      width: 226px;
-      height: 48px;
-      background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549882894/radicle-logo-2_el4fmz.svg");
+      width: 297px;
+      height: 50px;
+      background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550228984/radicle-logo-alpha_n94rqc.svg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain; }
@@ -522,8 +596,8 @@ header {
           line-height: 24px;
           margin-top: 24px; }
         .left-header .title .logo {
-          width: 166px;
-          height: 36px; } }
+          width: 220px;
+          height: 37px; } }
 
 .right-header {
   background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550133303/tumblr_pc6875xcVe1wy5o2ho1_500_nya767.gif");
