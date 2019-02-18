@@ -25,9 +25,7 @@
     <aside>
       <ul>
         {{- range (where .Data.Pages "Section" "docs").Reverse }}
-        <li><a href="{{ .Permalink }}">
-            {{ .Title }}
-          </a></li>
+        <li><a href="/docs{{string "#"}}{{ .Title | anchorize }}">{{ .Title }}</a></li>
         {{- end }}
       </ul>
     </aside>
