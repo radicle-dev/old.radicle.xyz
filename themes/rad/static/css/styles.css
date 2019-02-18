@@ -142,6 +142,10 @@ button:focus {
   src: url("../fonts/FoundersGroteskTextWeb-Regular.eot?") format("eot"), url("../fonts/FoundersGroteskTextWeb-Regular.woff2") format("woff2"), url("../fonts/FoundersGroteskTextWeb-Regular.woff") format("woff"); }
 
 @font-face {
+  font-family: "FoundersGroteskMedium";
+  src: url("../fonts/FoundersGroteskTextWeb-Medium.eot?") format("eot"), url("../fonts/FoundersGroteskTextWeb-Medium.woff2") format("woff2"), url("../fonts/FoundersGroteskTextWeb-Medium.woff") format("woff"); }
+
+@font-face {
   font-family: "FoundersGroteskMono";
   src: url("../fonts/FoundersGroteskMonoWeb-Regular.eot?") format("eot"), url("../fonts/FoundersGroteskMonoWeb-Regular.woff2") format("woff2"), url("../fonts/FoundersGroteskMonoWeb-Regular.woff") format("woff"); }
 
@@ -178,7 +182,8 @@ h1 {
   font-family: VulfMono, Arial, sans-serif;
   font-size: 42px;
   line-height: 52px;
-  font-weight: normal; }
+  font-weight: normal;
+  font-style: normal; }
   @media (max-width: 640px) {
     h1 {
       font-size: 24px;
@@ -188,7 +193,8 @@ h2 {
   font-family: FutureMono, monospace;
   font-size: 28px;
   line-height: 33px;
-  font-weight: normal; }
+  font-weight: normal;
+  font-style: normal; }
   @media (max-width: 640px) {
     h2 {
       font-size: 21px;
@@ -198,13 +204,19 @@ h3 {
   font-family: FoundersGrotesk, Arial, sans-serif;
   font-size: 27px;
   line-height: 32px;
-  font-weight: normal; }
+  font-weight: normal;
+  font-style: normal; }
 
 h4 {
-  font-family: FoundersGrotesk, Arial, sans-serif;
-  font-size: 21px;
-  line-height: 28px;
-  font-weight: normal; }
+  font-family: FoundersGroteskMedium, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: normal;
+  font-style: normal; }
+  @media (max-width: 640px) {
+    h4 {
+      font-size: 16px;
+      line-height: 20px; } }
 
 code,
 pre {
@@ -216,6 +228,11 @@ pre {
     pre {
       font-size: 14px;
       line-height: 18px; } }
+
+strong {
+  font-family: FoundersGroteskMedium, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal; }
 
 p code {
   opacity: 0.8; }
@@ -256,6 +273,7 @@ a {
   font-size: 16px; }
 
 .docs-content {
+  margin-top: 64px;
   display: grid;
   grid-template-columns: 280px auto;
   grid-template-rows: minmax(min-content, auto);
@@ -293,32 +311,60 @@ main {
   flex-direction: column;
   justify-self: center;
   border-left: 1px solid rgba(0, 0, 0, 0.2);
-  width: 100%;
-  color: #000000; }
+  width: 100%; }
   main .chapter {
     padding: 0 48px 48px 48px;
     margin: 0 auto;
     max-width: 960px;
-    line-height: 24px; }
-  main h1 {
-    color: #5555ff;
-    padding-top: 112px; }
-  main h3 {
-    padding: 64px 0 24px 0; }
-  main code {
-    background-color: #f2f2f2;
-    padding: 3px;
-    color: #494949; }
+    line-height: 24px;
+    color: #000000; }
+    main .chapter h1 {
+      color: #5555ff;
+      margin: 1em 0 1em; }
+    main .chapter .section {
+      word-break: break-all; }
+      main .chapter .section h2 {
+        word-break: normal;
+        font-family: FoundersGrotesk, Arial, sans-serif;
+        font-size: 27px;
+        line-height: 32px;
+        font-weight: normal;
+        font-style: normal;
+        margin: 2em 0 1em; }
+      main .chapter .section p {
+        word-break: normal; }
+      main .chapter .section code, main .chapter .section tt, main .chapter .section .pre {
+        background-color: #f2f2f2;
+        padding: 3px;
+        color: rgba(0, 0, 0, 0.8);
+        font-family: FoundersGroteskMono, monospace;
+        font-size: 16px;
+        line-height: 22px; }
+        @media (max-width: 640px) {
+          main .chapter .section code, main .chapter .section tt, main .chapter .section .pre {
+            font-size: 14px;
+            line-height: 18px; } }
+      main .chapter .section pre {
+        background-color: #f2f2f2;
+        padding: 16px;
+        margin: 1em 0;
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 16px;
+        line-height: 22px;
+        white-space: pre-wrap;
+        word-wrap: break-all; }
+        @media (max-width: 640px) {
+          main .chapter .section pre {
+            font-size: 14px;
+            line-height: 18px; } }
   @media (max-width: 640px) {
     main .chapter {
       padding: 0 32px 32px 32px;
       line-height: 22px; }
-    main h1 {
-      padding-top: 96px; }
-    main h3 {
-      padding: 36px 0 16px; }
-    main code {
-      padding: 2px 3px; } }
+      main .chapter h1 {
+        margin-top: 4em; }
+      main .chapter code, main .chapter tt, main .chapter .pre {
+        padding: 2px 3px; } }
 
 .blog-content {
   margin-top: 64px;
@@ -331,22 +377,28 @@ main {
   .blog-content h1 {
     color: #5555ff;
     text-align: center;
-    margin: 96px 32px 72px; }
+    margin: 144px 32px 96px; }
   .blog-content article {
-    margin-bottom: 96px;
+    margin-bottom: 4em;
     line-height: 24px; }
     .blog-content article h3 {
-      margin-bottom: 32px; }
+      margin-bottom: 2em; }
     .blog-content article h4 {
-      margin-bottom: 16px; }
+      margin: 2em 0 1em; }
     .blog-content article p {
-      margin-bottom: 24px; }
+      margin-bottom: 1em; }
     .blog-content article ul {
-      margin-bottom: 24px; }
+      margin-bottom: 1em;
+      list-style-type: none; }
       .blog-content article ul li {
-        list-style-type: initial; }
+        padding-left: 26px; }
+        .blog-content article ul li:before {
+          content: "\2014";
+          position: absolute;
+          margin-left: -24px; }
     .blog-content article ol {
-      margin-bottom: 24px; }
+      margin-bottom: 1em;
+      list-style-position: inside; }
       .blog-content article ol li {
         list-style-type: bullets;
         margin-bottom: 9px; }
@@ -355,8 +407,11 @@ main {
       font-size: 16px;
       line-height: 22px; }
     .blog-content article blockquote {
-      padding: 16px 24px;
+      padding: 1em 2em;
       color: rgba(0, 0, 0, 0.6); }
+    .blog-content article cite {
+      font-style: normal;
+      font-weight: normal; }
     .blog-content article sub,
     .blog-content article sup {
       font-size: 75%;
@@ -372,7 +427,6 @@ main {
       height: 6px;
       background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550165007/wave-line_yzwo3f.svg");
       background-repeat: repeat-x;
-      opacity: 0.3;
       margin: 48px 0 32px; }
     .blog-content article .footnotes {
       font-size: 14px;
@@ -387,28 +441,24 @@ main {
     justify-content: space-between; }
 
 .garden-header {
-  position: fixed;
-  top: 220px;
-  max-width: 540px;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
   display: flex;
+  margin-top: 64px;
+  height: 406px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 36px 0 48px 0;
   background-color: #5555ff;
   color: #ffffff;
   text-align: center; }
+  @media (max-width: 640px) {
+    .garden-header {
+      height: 320px; } }
   .garden-header h1 {
-    margin-bottom: 16px; }
+    margin-bottom: 1em; }
   .garden-header a {
     border: 1px solid #ffffff; }
 
 .gardens-content {
-  margin-top: 64px;
   background-color: #5555ff;
   display: flex;
   flex-wrap: wrap;
@@ -600,7 +650,7 @@ header {
           height: 37px; } }
 
 .right-header {
-  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550133303/tumblr_pc6875xcVe1wy5o2ho1_500_nya767.gif");
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550439747/radicle-growth-2_i2dohu.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -706,9 +756,10 @@ header {
   margin: 64px 26px 36px 26px; }
 
 .globe {
-  height: 320px;
-  width: 320px;
-  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549985964/1018px-As08-16-2593_ckwc9j.jpg");
+  margin: 48px 0 32px;
+  height: 280px;
+  width: 280px;
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550437129/globe-ascii-bw_bfq3ql.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -723,37 +774,36 @@ header {
 .stack {
   background-color: #ff5555;
   color: #000000;
-  padding: 48px; }
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .stack .text {
+    max-width: 720px; }
   .stack h1 {
     padding-bottom: 48px; }
   .stack p {
-    margin-bottom: 64px; }
+    margin-bottom: 3em; }
   .stack a {
-    color: #000000;
+    margin-top: 3em;
+    color: #ffffff;
     background: none;
-    border: 1px solid #000000; }
-  .stack .stack-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-column-gap: 64px;
-    max-width: 1680px;
-    margin: 0 auto; }
-    @media (max-width: 980px), (min-width: 1680px) {
-      .stack .stack-content {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 320px;
-        grid-column-gap: 0px;
-        grid-row-gap: 64px;
-        max-width: 640px; } }
-    @media (max-width: 640px) {
-      .stack .stack-content {
-        grid-template-rows: auto 200px; } }
+    border: 1px solid #ffffff;
+    max-width: 360px; }
   .stack .illustration {
-    background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549627170/stack5_adsy9k.svg");
+    background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550437112/stack6_txj7ii.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain; }
+    background-size: cover;
+    width: 540px;
+    height: 0;
+    padding: 0;
+    /* reset */
+    padding-bottom: 248px; }
+    @media (max-width: 640px) {
+      .stack .illustration {
+        width: 100%;
+        padding-bottom: calc(100% * 213 / 462); } }
 
 footer {
   background-color: #ffffff;

@@ -1,126 +1,105 @@
 {{ define "main" }}
 <div class="large-content">
-      <section class="collab">
-        <div id="peer">
-          <h2>Peer–to–peer</h2>
-          <p>
-            Open source development is fundamentally P2P. The radicle stack runs
-            on IPFS to enable fully peer-to-peer conversations with code.
-          </p>
-        </div>
-        <div id="prog">
-          <h2>Programmable</h2>
-          <p>
-            Apps are written in the radicle language, a Lisp dialect designed
-            specifically for programming state machines that replicate across a
-            peer-to-peer network. Tools and documentation for developing your
-            own radicle apps coming soon!
-          </p>
-        </div>
-        <div id="term">
-          <h2>Terminal-first</h2>
-          <p>
-            Radicle's collaboration apps bring issue management and patch
-            proposals into the terminal. Use git-inspired commands to coordinate
-            with peers and manage contributions.
-          </p>
-        </div>
-      </section>
-
-      <section class="try">
-        <h1>Collaborate with Radicle</h1>
-
-        <div class="try-section">
-          <h2>Manage your issues</h2>
-          <p>
-            <code>rad issue</code> brings issue management to your terminal.
-            Create, view, list and comment to heart's content.
-          </p>
-          <div class="terminal">
-            <asciinema-player
-              autoplay
-              font-size="14px"
-              loop
-              preload
-              src="video/issues.cast"
-              theme="white"
-            ></asciinema-player>
-          </div>
-        </div>
-
-        <div class="try-section">
-          <h2>Collaborate on code</h2>
-          <p>
-            <code>rad diff</code> gives you the tools to collaborate on git
-           repositories, completely P2P. Propose and track changes to a project you follow with a patch-based collaboration model.
-          </p>
-          <div class="terminal blue">
-            <asciinema-player
-              autoplay
-              font-size="14px"
-              loop
-              preload
-              src="video/issues.cast"
-              theme="blue"
-            ></asciinema-player>
-          </div>
-        </div>
-
-        <div class="try-section">
-          <h2>Setup a project</h2>
-          <p>
-            <code>rad project</code> allows you to register your git projects on
-            the radicle network and connect your repo to other radicle
-            applications, like <code>rad issues</code> and
-            <code>rad diff</code>.
-          </p>
-          <div class="terminal">
-            <asciinema-player
-              autoplay
-              font-size="14px"
-              loop
-              preload
-              src="video/issues.cast"
-              theme="white"
-            ></asciinema-player>
-          </div>
-        </div>
-
-        <a class="button guide-cta" href="/docs.html#start"
-          >Follow our guide to learn radicle<span>→</span></a
-        >
-
-        <div class="globe"></div>
-      </section>
-
-      <section class="divider"></section>
-
-      <section class="stack">
-        <div class="stack-content">
-          <div class="text">
-            <h1>Radicle Stack</h1>
-            <p>
-              Each radicle app is a peer-to-peer program that syncs with anyone
-              who clones your open source project.
-              <br /><br />
-              Taking inspiration from the original git model, where a single
-              maintainer of a repo accepts patches, radicle apps are controlled
-              by the owner of the project and updates can be submitted by any
-              peer on the radicle network.
-              <br /><br />
-              In the coming months we’ll be formalizing the technical stack
-              underlying radicle and releasing documentation that will allow you
-              to write your own apps using this same peer-to-peer
-              infrastructure.
-            </p>
-            <a class="button" href="/docs.html">
-              Learn more about the radicle stack<span>→</span>
-            </a>
-          </div>
-          <div class="illustration"></div>
-        </div>
-      </section>
-
-      <section class="divider white"></section>
+  <section class="collab">
+    <div id="peer">
+      <h2>Peer–to–peer</h2>
+      <p>
+        Open source development is fundamentally P2P. The radicle stack runs
+        on IPFS to enable fully peer-to-peer conversations with code.
+      </p>
     </div>
+    <div id="prog">
+      <h2>Programmable</h2>
+      <p>
+        Apps are written in the radicle language, a Lisp dialect designed
+        specifically for programming state machines that replicate across a
+        peer-to-peer network. Tools and documentation for developing your
+        own radicle apps coming soon!
+      </p>
+    </div>
+    <div id="term">
+      <h2>Terminal-first</h2>
+      <p>
+        Radicle's collaboration apps bring issue management and patch
+        proposals into the terminal. Use git-inspired commands to coordinate
+        with peers and manage contributions.
+      </p>
+    </div>
+  </section>
+
+  <section class="try">
+    <h1>Collaborate with Radicle</h1>
+
+    <div class="try-section">
+      <h2>Manage your issues</h2>
+      <p>
+        <code>rad issue</code> brings issue management to your terminal.
+        Create, view, list and comment to heart's content.
+      </p>
+      <div class="terminal">
+        <asciinema-player autoplay font-size="14px" loop preload src="video/issues.cast" theme="white">
+        </asciinema-player>
+      </div>
+    </div>
+
+    <div class="try-section">
+      <h2>Collaborate on code</h2>
+      <p>
+        <code>rad diff</code> gives you the tools to collaborate on git
+        repositories, completely P2P. Propose and track changes to a project you follow with a patch-based collaboration
+        model.
+      </p>
+      <div class="terminal blue">
+        <asciinema-player autoplay font-size="14px" loop preload src="video/issues.cast" theme="blue">
+        </asciinema-player>
+      </div>
+    </div>
+
+    <div class="try-section">
+      <h2>Setup a project</h2>
+      <p>
+        <code>rad project</code> allows you to register your git projects on
+        the radicle network and connect your repo to other radicle
+        applications, like <code>rad issues</code> and
+        <code>rad diff</code>.
+      </p>
+      <div class="terminal">
+        <asciinema-player autoplay font-size="14px" loop preload src="video/issues.cast" theme="white">
+        </asciinema-player>
+      </div>
+    </div>
+
+    <a class="button guide-cta" href="/docs.html#start">Follow our guide to learn radicle<span>→</span></a>
+
+    <div class="globe"></div>
+  </section>
+
+  <section class="divider"></section>
+
+  <section class="stack">
+    <div class="text">
+      <h1>Radicle Stack</h1>
+      <p>
+        Each radicle app is a peer-to-peer program that syncs with anyone
+        who clones your open source project.
+        <br /><br />
+        Taking inspiration from the original git model, where a single
+        maintainer of a repo accepts patches, radicle apps are controlled
+        by the owner of the project and updates can be submitted by any
+        peer on the radicle network.
+        <br /><br />
+        In the coming months we’ll be formalizing the technical stack
+        underlying radicle and releasing documentation that will allow you
+        to write your own apps using this same peer-to-peer
+        infrastructure.
+      </p>
+    </div>
+    <div class="illustration"></div>
+    <a class="button" href="/docs.html">
+      Learn more about the radicle stack<span>→</span>
+    </a>
+  </section>
+
+  <section class="divider white"></section>
+</div>
 {{ end }}

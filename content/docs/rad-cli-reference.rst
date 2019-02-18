@@ -6,6 +6,9 @@ draft: true
 markup: rst
 
 ---
+=================
+Rad CLI Reference
+=================
 
 The ``rad`` CLI
 ===============

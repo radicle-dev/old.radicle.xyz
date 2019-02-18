@@ -6,7 +6,7 @@ theme = "rad"
 [params]
   author = "Monadic"
   description = "A peer-to-peer stack for code collaboration"
-  cta = "try"
+  cta = "install"
 
 # Nav menu
 

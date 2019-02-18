@@ -1,29 +1,22 @@
 ---
 
-title: "Radicle Guide"
+title: "Try Radicle"
 date: 2019-02-05T18:12:34+01:00
 draft: true
 markup: rst
 
 ---
 
-=================
- Guide user flow
-=================
-
-The following flows capture what a user will learn when going through the code collaboration guide they will find under rad.xyz/docs/guide on the alpha website. It is assumed the user has a working setup of
-radicle and the project, git and diff app installed.
-
+===========
 Try radicle
 ===========
-
 Welcome to radicle. Today we will teach you how you can contribute to someone else's project. After that we will guide you through setting up your own project and enabling others to contribute to your project.
 
 
 How to contribute to a project
-------------------------------
+==============================
 
-We've created a project for this guide where you will be adding your own message to `our community board <radicle.xyz/garden>`_. Before you can start contributing though, you'll have to get the project on your device.
+We've created a project for this guide where you will be adding your own message to `our garden <../garden>`_. Before you can start contributing though, you'll have to get the project on your device.
 
 To be able to get the communtity board project on your device, you'll need the project-id: ``<PROJECT-ID>``
 
@@ -138,12 +131,12 @@ If you want to see the status of your diff, you can do that by running ``$ rad d
   pending    1   Super dope contribution             <AUTHOR-NAME>    2019-02-01T11:30
 
 
-It shouldn't take too long for your proposed diff will be accepted and then you can check out your contribution on `radicle.xyz <radicle.xyz/garden.html>`_.
+It shouldn't take too long for your proposed diff will be accepted and then you can check out your contribution on `our garden <../garden>`_.
 
 
 
 How to start your own project
------------------------------
+=============================
 
 Now that you've gotten the hang how to contribute to other projects, let's take a look at starting your own project and how to enable others to contribute to it.
 

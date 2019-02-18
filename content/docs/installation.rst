@@ -6,6 +6,9 @@ draft: true
 markup: rst
 
 ---
+============
+Installation
+============
 
 OS X
 ====

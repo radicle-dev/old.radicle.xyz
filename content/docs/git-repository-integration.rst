@@ -6,6 +6,10 @@ draft: true
 markup: rst
 
 ---
+==========================
+Git Repository Integration
+==========================
+
 
 Preamble
 ========

@@ -1,11 +1,15 @@
 ---
 
-title: "FAQ"
+title: "Radicle P2P Architecture"
 date: 2019-02-05T18:13:32+01:00
 draft: true
 markup: rst
 
 ---
+
+===
+FAQ
+===
 
 
 Why is P2P important for code collaboration?
