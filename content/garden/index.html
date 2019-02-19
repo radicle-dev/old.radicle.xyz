@@ -1,48 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>{{ $.Site.Title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="{{ "css/styles.css" | relURL }}"
-    />
-  </head>
-  <body>
-    <div class="narrow-menu" id="narrow-menu">
-      <ul>
-        {{ range .Site.Menus.main }}
-        <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
-        {{ end }}
-      </ul>
-      <button class="cross" id="close"></button>
-    </div>
-    <div class="nav-bar">
-      <a href="/" class="rad-nav-logo"></a>
-      <button class="hamburger" id="open">Menu</button>
-      <div class="bar">
-        <nav>
-        <ul>
-          {{ range .Site.Menus.main }}
-          <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
-          {{ end }}
-        </ul>
-        </nav>
-        <a href="/docs.html#start" class="header-btn">try</a>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>{{ $.Site.Title }}</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+      <link rel="stylesheet" href="{{ $style.Permalink }}">
+</head>
+
+<body>
+      <div class="narrow-menu" id="narrow-menu">
+            <ul>
+                  {{ range .Site.Menus.main }}
+                  <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+                  {{ end }}
+            </ul>
+            <button class="cross" id="close"></button>
       </div>
-    </div>
-    <div class="garden-header">
-      <h1>Radicle Garden</h1>
-      <a class="button" href="/docs.html#start"
-        >Follow our guide to contribute<span>→</span></a
-      >
-    </div>
-    <div class="gardens-content">
-      <pre>
+      <div class="nav-bar">
+            <a href="/" class="rad-nav-logo"></a>
+            <button class="hamburger" id="open">Menu</button>
+            <div class="bar">
+                  <nav>
+                        <ul>
+                              {{ range .Site.Menus.main }}
+                              <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+                              {{ end }}
+                        </ul>
+                  </nav>
+                  <a href="/docs.html#start" class="header-btn">try</a>
+            </div>
+      </div>
+      <div class="garden-header">
+            <h1>Radicle Garden</h1>
+            <a class="button" href="/docs.html#start">Follow our guide to contribute<span>→</span></a>
+      </div>
+      <div class="gardens-content">
+            <pre>
 &#43;------------------&#43;
 |                  |
 |                  |
@@ -52,7 +48,7 @@
 |                  |
 &#43;------------------&#43;
       </pre>
-      <pre>
+            <pre>
 &#43;------------------&#43;
 |                  |
 |                  |
@@ -62,7 +58,7 @@
 |xxxxxxxxxxxxxxxxxx|
 &#43;------------------*
       </pre>
-      <pre>
+            <pre>
 *                  *
 
 
@@ -72,12 +68,12 @@
 
 *                  *
       </pre>
-      <pre>
+            <pre>
 &lt;script&gt;
 alert(&#39;get pwned&#39;);
 &lt;/script&gt;
       </pre>
-      <pre>
+            <pre>
 &#43;------.............
 |      |
  . |      |
@@ -87,7 +83,7 @@ alert(&#39;get pwned&#39;);
 |     feels
 |       must
       </pre>
-      <pre>
+            <pre>
 ..#####......######.
 ..#d_m#...f..#town#.
 ..#####.###..######t
@@ -97,7 +93,7 @@ alert(&#39;get pwned&#39;);
 .#5##.#6#..#&#43;#...###
 .####.###..#&gt;#..t%%#
       </pre>
-      <pre>
+            <pre>
       ___
  ____/   \        ~o
 /____|[4]|___ ~o~
@@ -107,7 +103,7 @@ alert(&#39;get pwned&#39;);
 .....::.............
 ............~darthlu
       </pre>
-      <pre>
+            <pre>
 &#39;     ~m455  ` , :(_
 ,   &#39;  ____ ,  .%,:(
     , /  \ \ , %%%:(
@@ -117,7 +113,7 @@ alert(&#39;get pwned&#39;);
   &#34; ,  ::  `  . ..:(
     .  ::`  , .:::(
       </pre>
-      <pre>
+            <pre>
 ╔══════════════════╗
 ║~gildev   _/\_    ║
 ║        _/ __ \_  ║
@@ -127,7 +123,7 @@ alert(&#39;get pwned&#39;);
 -.| *| |   | .|   |-
 ╚══════════|.|═════╝
       </pre>
-      <pre>
+            <pre>
 &#43;------------------&#43;
 |                  |
 |                  |
@@ -137,7 +133,7 @@ alert(&#39;get pwned&#39;);
 |                  |
 &#43;------------------&#43;
       </pre>
-      <pre>
+            <pre>
 *                  *
 
 
@@ -147,12 +143,12 @@ alert(&#39;get pwned&#39;);
 
 *                  *
       </pre>
-      <pre>
+            <pre>
 &lt;script&gt;
 alert(&#39;get pwned&#39;);
 &lt;/script&gt;
       </pre>
-      <pre>
+            <pre>
 &#43;------------------&#43;
 |                  |
 |                  |
@@ -162,7 +158,7 @@ alert(&#39;get pwned&#39;);
 |                  |
 &#43;------------------&#43;
       </pre>
-      <pre>
+            <pre>
 &#43;------------------&#43;
 |                  |
 |                  |
@@ -172,7 +168,7 @@ alert(&#39;get pwned&#39;);
 |xxxxxxxxxxxxxxxxxx|
 &#43;------------------*
       </pre>
-      <pre>
+            <pre>
 *                  *
 
 
@@ -182,12 +178,12 @@ alert(&#39;get pwned&#39;);
 
 *                  *
       </pre>
-      <pre>
+            <pre>
 &lt;script&gt;
 alert(&#39;get pwned&#39;);
 &lt;/script&gt;
       </pre>
-      <pre>
+            <pre>
 &#43;------.............
 |      |
   . |      |
@@ -197,7 +193,7 @@ alert(&#39;get pwned&#39;);
 |     feels
 |       must
       </pre>
-      <pre>
+            <pre>
 ..#####......######.
 ..#d_m#...f..#town#.
 ..#####.###..######t
@@ -207,7 +203,7 @@ alert(&#39;get pwned&#39;);
 .#5##.#6#..#&#43;#...###
 .####.###..#&gt;#..t%%#
       </pre>
-      <pre>
+            <pre>
       ___
   ____/   \        ~o
 /____|[4]|___ ~o~
@@ -217,7 +213,7 @@ alert(&#39;get pwned&#39;);
 .....::.............
 ............~darthlu
       </pre>
-      <pre>
+            <pre>
 &#39;     ~m455  ` , :(_
 ,   &#39;  ____ ,  .%,:(
     , /  \ \ , %%%:(
@@ -227,7 +223,7 @@ alert(&#39;get pwned&#39;);
   &#34; ,  ::  `  . ..:(
     .  ::`  , .:::(
       </pre>
-      <pre>
+            <pre>
 ╔══════════════════╗
 ║~gildev   _/\_    ║
 ║        _/ __ \_  ║
@@ -237,7 +233,7 @@ alert(&#39;get pwned&#39;);
 -.| *| |   | .|   |-
 ╚══════════|.|═════╝
       </pre>
-      <pre>
+            <pre>
 &#43;------------------&#43;
 |                  |
 |                  |
@@ -247,7 +243,7 @@ alert(&#39;get pwned&#39;);
 |                  |
 &#43;------------------&#43;
       </pre>
-      <pre>
+            <pre>
 *                  *
 
 
@@ -257,12 +253,12 @@ alert(&#39;get pwned&#39;);
 
 *                  *
       </pre>
-      <pre>
+            <pre>
 &lt;script&gt;
 alert(&#39;get pwned&#39;);
 &lt;/script&gt;
       </pre>
-      <pre>
+            <pre>
 &#43;------------------&#43;
 |                  |
 |                  |
@@ -272,7 +268,7 @@ alert(&#39;get pwned&#39;);
 |                  |
 &#43;------------------&#43;
       </pre>
-      <pre>
+            <pre>
 &#43;------------------&#43;
 |                  |
 |                  |
@@ -282,7 +278,7 @@ alert(&#39;get pwned&#39;);
 |xxxxxxxxxxxxxxxxxx|
 &#43;------------------*
       </pre>
-      <pre>
+            <pre>
 *                  *
 
 
@@ -292,12 +288,12 @@ alert(&#39;get pwned&#39;);
 
 *                  *
       </pre>
-      <pre>
+            <pre>
 &lt;script&gt;
 alert(&#39;get pwned&#39;);
 &lt;/script&gt;
       </pre>
-      <pre>
+            <pre>
 &#43;------.............
 |      |
   . |      |
@@ -307,7 +303,7 @@ alert(&#39;get pwned&#39;);
 |     feels
 |       must
       </pre>
-      <pre>
+            <pre>
 ..#####......######.
 ..#d_m#...f..#town#.
 ..#####.###..######t
@@ -317,7 +313,7 @@ alert(&#39;get pwned&#39;);
 .#5##.#6#..#&#43;#...###
 .####.###..#&gt;#..t%%#
       </pre>
-      <pre>
+            <pre>
       ___
   ____/   \        ~o
 /____|[4]|___ ~o~
@@ -327,7 +323,7 @@ alert(&#39;get pwned&#39;);
 .....::.............
 ............~darthlu
       </pre>
-      <pre>
+            <pre>
 &#39;     ~m455  ` , :(_
 ,   &#39;  ____ ,  .%,:(
     , /  \ \ , %%%:(
@@ -337,7 +333,7 @@ alert(&#39;get pwned&#39;);
   &#34; ,  ::  `  . ..:(
     .  ::`  , .:::(
       </pre>
-      <pre>
+            <pre>
 ╔══════════════════╗
 ║~gildev   _/\_    ║
 ║        _/ __ \_  ║
@@ -347,7 +343,7 @@ alert(&#39;get pwned&#39;);
 -.| *| |   | .|   |-
 ╚══════════|.|═════╝
       </pre>
-      <pre>
+            <pre>
 &#43;------------------&#43;
 |                  |
 |                  |
@@ -357,7 +353,7 @@ alert(&#39;get pwned&#39;);
 |                  |
 &#43;------------------&#43;
       </pre>
-      <pre>
+            <pre>
 *                  *
 
 
@@ -367,12 +363,12 @@ alert(&#39;get pwned&#39;);
 
 *                  *
       </pre>
-      <pre>
+            <pre>
 &lt;script&gt;
 alert(&#39;get pwned&#39;);
 &lt;/script&gt;
       </pre>
-      <pre>
+            <pre>
 &#43;------------------&#43;
 |                  |
 |                  |
@@ -382,7 +378,7 @@ alert(&#39;get pwned&#39;);
 |                  |
 &#43;------------------&#43;
       </pre>
-      <pre>
+            <pre>
 &#43;------------------&#43;
 |                  |
 |                  |
@@ -392,7 +388,7 @@ alert(&#39;get pwned&#39;);
 |xxxxxxxxxxxxxxxxxx|
 &#43;------------------*
       </pre>
-      <pre>
+            <pre>
 *                  *
 
 
@@ -402,12 +398,12 @@ alert(&#39;get pwned&#39;);
 
 *                  *
       </pre>
-      <pre>
+            <pre>
 &lt;script&gt;
 alert(&#39;get pwned&#39;);
 &lt;/script&gt;
       </pre>
-      <pre>
+            <pre>
 &#43;------.............
 |      |
   . |      |
@@ -417,7 +413,7 @@ alert(&#39;get pwned&#39;);
 |     feels
 |       must
       </pre>
-      <pre>
+            <pre>
 ..#####......######.
 ..#d_m#...f..#town#.
 ..#####.###..######t
@@ -427,7 +423,7 @@ alert(&#39;get pwned&#39;);
 .#5##.#6#..#&#43;#...###
 .####.###..#&gt;#..t%%#
       </pre>
-      <pre>
+            <pre>
       ___
   ____/   \        ~o
 /____|[4]|___ ~o~
@@ -437,7 +433,7 @@ alert(&#39;get pwned&#39;);
 .....::.............
 ............~darthlu
       </pre>
-      <pre>
+            <pre>
 &#39;     ~m455  ` , :(_
 ,   &#39;  ____ ,  .%,:(
     , /  \ \ , %%%:(
@@ -447,7 +443,7 @@ alert(&#39;get pwned&#39;);
   &#34; ,  ::  `  . ..:(
     .  ::`  , .:::(
       </pre>
-      <pre>
+            <pre>
 ╔══════════════════╗
 ║~gildev   _/\_    ║
 ║        _/ __ \_  ║
@@ -457,7 +453,7 @@ alert(&#39;get pwned&#39;);
 -.| *| |   | .|   |-
 ╚══════════|.|═════╝
       </pre>
-      <pre>
+            <pre>
 &#43;------------------&#43;
 |                  |
 |                  |
@@ -467,7 +463,7 @@ alert(&#39;get pwned&#39;);
 |                  |
 &#43;------------------&#43;
       </pre>
-      <pre>
+            <pre>
 *                  *
 
 
@@ -477,12 +473,12 @@ alert(&#39;get pwned&#39;);
 
 *                  *
       </pre>
-      <pre>
+            <pre>
 &lt;script&gt;
 alert(&#39;get pwned&#39;);
 &lt;/script&gt;
       </pre>
-      <pre>
+            <pre>
 &#43;------------------&#43;
 |                  |
 |                  |
@@ -492,7 +488,7 @@ alert(&#39;get pwned&#39;);
 |                  |
 &#43;------------------&#43;
       </pre>
-      <pre>
+            <pre>
 &#43;------------------&#43;
 |                  |
 |                  |
@@ -502,7 +498,7 @@ alert(&#39;get pwned&#39;);
 |xxxxxxxxxxxxxxxxxx|
 &#43;------------------*
       </pre>
-      <pre>
+            <pre>
 *                  *
 
 
@@ -512,12 +508,12 @@ alert(&#39;get pwned&#39;);
 
 *                  *
       </pre>
-      <pre>
+            <pre>
 &lt;script&gt;
 alert(&#39;get pwned&#39;);
 &lt;/script&gt;
       </pre>
-      <pre>
+            <pre>
 &#43;------.............
 |      |
   . |      |
@@ -527,7 +523,7 @@ alert(&#39;get pwned&#39;);
 |     feels
 |       must
       </pre>
-      <pre>
+            <pre>
 ..#####......######.
 ..#d_m#...f..#town#.
 ..#####.###..######t
@@ -537,7 +533,7 @@ alert(&#39;get pwned&#39;);
 .#5##.#6#..#&#43;#...###
 .####.###..#&gt;#..t%%#
       </pre>
-      <pre>
+            <pre>
       ___
   ____/   \        ~o
 /____|[4]|___ ~o~
@@ -547,7 +543,7 @@ alert(&#39;get pwned&#39;);
 .....::.............
 ............~darthlu
       </pre>
-      <pre>
+            <pre>
 &#39;     ~m455  ` , :(_
 ,   &#39;  ____ ,  .%,:(
     , /  \ \ , %%%:(
@@ -557,7 +553,7 @@ alert(&#39;get pwned&#39;);
   &#34; ,  ::  `  . ..:(
     .  ::`  , .:::(
       </pre>
-      <pre>
+            <pre>
 ╔══════════════════╗
 ║~gildev   _/\_    ║
 ║        _/ __ \_  ║
@@ -567,7 +563,7 @@ alert(&#39;get pwned&#39;);
 -.| *| |   | .|   |-
 ╚══════════|.|═════╝
       </pre>
-      <pre>
+            <pre>
 &#43;------------------&#43;
 |                  |
 |                  |
@@ -577,7 +573,7 @@ alert(&#39;get pwned&#39;);
 |                  |
 &#43;------------------&#43;
       </pre>
-      <pre>
+            <pre>
 *                  *
 
 
@@ -587,12 +583,12 @@ alert(&#39;get pwned&#39;);
 
 *                  *
       </pre>
-      <pre>
+            <pre>
 &lt;script&gt;
 alert(&#39;get pwned&#39;);
 &lt;/script&gt;
       </pre>
-      <pre>
+            <pre>
 &#43;------------------&#43;
 |                  |
 |                  |
@@ -602,7 +598,7 @@ alert(&#39;get pwned&#39;);
 |                  |
 &#43;------------------&#43;
       </pre>
-      <pre>
+            <pre>
 &#43;------------------&#43;
 |                  |
 |                  |
@@ -612,7 +608,7 @@ alert(&#39;get pwned&#39;);
 |xxxxxxxxxxxxxxxxxx|
 &#43;------------------*
       </pre>
-      <pre>
+            <pre>
 *                  *
 
 
@@ -622,12 +618,12 @@ alert(&#39;get pwned&#39;);
 
 *                  *
       </pre>
-      <pre>
+            <pre>
 &lt;script&gt;
 alert(&#39;get pwned&#39;);
 &lt;/script&gt;
       </pre>
-      <pre>
+            <pre>
 &#43;------.............
 |      |
   . |      |
@@ -637,7 +633,7 @@ alert(&#39;get pwned&#39;);
 |     feels
 |       must
       </pre>
-      <pre>
+            <pre>
 ..#####......######.
 ..#d_m#...f..#town#.
 ..#####.###..######t
@@ -647,7 +643,7 @@ alert(&#39;get pwned&#39;);
 .#5##.#6#..#&#43;#...###
 .####.###..#&gt;#..t%%#
       </pre>
-      <pre>
+            <pre>
       ___
   ____/   \        ~o
 /____|[4]|___ ~o~
@@ -657,7 +653,7 @@ alert(&#39;get pwned&#39;);
 .....::.............
 ............~darthlu
       </pre>
-      <pre>
+            <pre>
 &#39;     ~m455  ` , :(_
 ,   &#39;  ____ ,  .%,:(
     , /  \ \ , %%%:(
@@ -667,7 +663,7 @@ alert(&#39;get pwned&#39;);
   &#34; ,  ::  `  . ..:(
     .  ::`  , .:::(
       </pre>
-      <pre>
+            <pre>
 ╔══════════════════╗
 ║~gildev   _/\_    ║
 ║        _/ __ \_  ║
@@ -677,7 +673,7 @@ alert(&#39;get pwned&#39;);
 -.| *| |   | .|   |-
 ╚══════════|.|═════╝
       </pre>
-      <pre>
+            <pre>
 &#43;------------------&#43;
 |                  |
 |                  |
@@ -687,7 +683,7 @@ alert(&#39;get pwned&#39;);
 |                  |
 &#43;------------------&#43;
       </pre>
-      <pre>
+            <pre>
 *                  *
 
 
@@ -697,34 +693,33 @@ alert(&#39;get pwned&#39;);
 
 *                  *
       </pre>
-      <pre>
+            <pre>
 &lt;script&gt;
 alert(&#39;get pwned&#39;);
 &lt;/script&gt;
       </pre>
-    </div>
-    <section class="divider garden"></section>
-    <footer class="global-footer garden">
-      <ul>
-        <li><a href="/">About</a></li>
-        <li><a href="/">Blog</a></li>
-        <li><a href="/">Twitter</a></li>
-        <li><a href="/">Mastodon</a></li>
-        <li><a href="irc://freenode:1/radicle">IRC</a></li>
-        <li><a href="/">Email</a></li>
-        <li><a href="/">Code of conduct</a></li>
-        <li>
-          <a href="https://github.com/oscoin/radicle" target="blank">Github</a>
-        </li>
-        <li><a href="/">Radicle project</a></li>
-        <li>
-          <a href="https://github.com/oscoin/radicle/blob/master/LICENSE"
-            >License</a
-          >
-        </li>
-      </ul>
-    </footer>
-    <script src="{{ "js/perlin.js" | relURL }}"></script>
-    <script src="{{ "js/rad.js" | relURL }}"></script>
-  </body>
+      </div>
+      <section class="divider garden"></section>
+      <footer class="global-footer garden">
+            <ul>
+                  <li><a href="/">About</a></li>
+                  <li><a href="/">Blog</a></li>
+                  <li><a href="/">Twitter</a></li>
+                  <li><a href="/">Mastodon</a></li>
+                  <li><a href="irc://freenode:1/radicle">IRC</a></li>
+                  <li><a href="/">Email</a></li>
+                  <li><a href="/">Code of conduct</a></li>
+                  <li>
+                        <a href="https://github.com/oscoin/radicle" target="blank">Github</a>
+                  </li>
+                  <li><a href="/">Radicle project</a></li>
+                  <li>
+                        <a href="https://github.com/oscoin/radicle/blob/master/LICENSE">License</a>
+                  </li>
+            </ul>
+      </footer>
+      <script src="{{ "js/perlin.js" | relURL }}"></script>
+      <script src="{{ "js/rad.js" | relURL }}"></script>
+</body>
+
 </html>

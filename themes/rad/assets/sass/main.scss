@@ -1,0 +1,331 @@
+// imports
+@import "partials/reset";
+@import "partials/colors";
+@import "partials/fonts";
+@import "partials/buttons";
+@import "partials/docs";
+@import "partials/blog";
+@import "partials/gardens";
+@import "partials/divider";
+@import "partials/nav-bar";
+@import "partials/footer";
+
+// Home Page
+// ---------
+
+// Header styles
+
+header {
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  grid-template-rows: 406px;
+  border-bottom: 1px solid $black;
+  @media (max-width: 980px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 406px 406px;
+    border-bottom: none;
+  }
+  @media (max-width: 640px) {
+    grid-template-rows: 320px 320px;
+  }
+}
+
+.left-header {
+  margin: 16px;
+  .small-nav {
+    display: flex;
+    justify-content: space-between;
+    nav {
+      @media (max-width: 640px) {
+        display: none;
+      }
+    }
+  }
+  .title {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 64px;
+    h1 {
+      font-size: 28px;
+      line-height: 38px;
+      text-align: center;
+      margin: 42px 0 24px 0;
+    }
+    .logo {
+      width: 297px;
+      height: 50px;
+      background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550228984/radicle-logo-alpha_n94rqc.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    @media (max-width: 640px) {
+      padding: 24px;
+      h1 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-top: 24px;
+      }
+      .logo {
+        width: 220px;
+        height: 37px;
+      }
+    }
+  }
+}
+
+.right-header {
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550439747/radicle-growth-2_i2dohu.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// section styles
+
+.large-content {
+  @media (min-width: 1680px) {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: auto 1fr;
+    .collab {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .try {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+    }
+    .stack {
+      grid-column: 1;
+      grid-row: 2;
+    }
+    .divider {
+      display: none;
+    }
+  }
+}
+
+.collab {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 24px;
+  padding: 64px 48px;
+  h2 {
+    margin-bottom: 16px;
+    overflow: hidden;
+    height: 33px;
+  }
+  .overlay {
+    position: absolute;
+    display: none;
+  }
+  @media (max-width: 980px), (min-width: 1680px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap: 64px;
+    padding: 144px 32px;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 640px;
+      p {
+        text-align: center;
+      }
+    }
+  }
+  @media (max-width: 640px) {
+    padding: 48px 32px;
+    grid-row-gap: 36px;
+    h2 {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.try {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $black;
+  color: $white;
+  text-align: center;
+  padding: 96px 0 24px 0;
+  h1 {
+    padding: 0 32px;
+  }
+  @media (max-width: 640px) {
+    padding: 36px 0;
+  }
+}
+
+.try-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    color: $blue;
+    padding: 64px 32px 24px 32px;
+  }
+  p {
+    max-width: 640px;
+  }
+  .terminal {
+    margin-top: 32px;
+    max-width: 640px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+  }
+  .blue {
+    background-color: $blue;
+  }
+  @media (max-width: 640px) {
+    h2 {
+      padding: 36px 24px 16px 24px;
+    }
+    p {
+      max-width: 80vw;
+    }
+    .terminal {
+      width: 80vw;
+      margin-top: 24px;
+      pre {
+        width: 72vw !important;
+        font-size: 12px !important;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.guide-cta {
+  margin: 64px 26px 36px 26px;
+}
+
+.globe {
+  margin: 48px 0 32px;
+  height: 280px;
+  width: 280px;
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550437129/globe-ascii-bw_bfq3ql.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (min-width: 1680px) {
+    display: none;
+  }
+  @media (max-width: 640px) {
+    height: 240px;
+    width: 240px;
+  }
+}
+
+.stack {
+  background-color: $red;
+  color: $black;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .text {
+    max-width: 720px;
+  }
+  h1 {
+    padding-bottom: 48px;
+  }
+  p {
+    margin-bottom: 3em;
+  }
+  a {
+    margin-top: 3em;
+    color: $white;
+    background: none;
+    border: 1px solid $white;
+    max-width: 360px;
+  }
+
+  .illustration {
+    background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550437112/stack6_txj7ii.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 540px;
+    height: 0;
+    padding: 0; /* reset */
+    padding-bottom: 248px;
+    @media (max-width: 640px) {
+      width: 100%;
+      padding-bottom: calc(100% * 213 / 462);
+    }
+  }
+}
+
+footer {
+  background-color: $white;
+  color: $black;
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    margin: 0 auto 64px auto;
+    max-width: 1680px;
+    ul li a {
+      line-height: 28px;
+      color: $black;
+    }
+    @media (max-width: 980px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      grid-gap: 0;
+      ul {
+        padding: 0 48px;
+        grid-row: 3;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        line-height: 32px;
+        li {
+          margin-right: 18px;
+        }
+      }
+    }
+    @media (min-width: 980px) {
+      padding: 0 48px;
+    }
+    @media (min-width: 1680px) {
+      margin-top: 64px;
+    }
+  }
+  .footer-text {
+    padding: 0 48px;
+    @media (max-width: 980px) {
+      grid-row: 1;
+    }
+    h2 {
+      color: $red;
+      padding: 32px 0 24px 0;
+    }
+    p.p2p-links {
+      margin-top: 48px;
+      word-break: break-all;
+    }
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 58px;
+    @media (max-width: 980px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.garden-header {
+  display: flex;
+  margin-top: 64px;
+  height: 406px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $blue;
+  color: $white;
+  text-align: center;
+  @media (max-width: 640px) {
+    height: 320px;
+  }
+  h1 {
+    margin-bottom: 1em;
+  }
+  a {
+    border: 1px solid $white;
+  }
+}
+.gardens-content {
+  background-color: $blue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  pre {
+    color: $white;
+    font-family: "Courier New", Courier, monospace;
+  }
+}

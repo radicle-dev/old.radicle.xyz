@@ -1,23 +1,11 @@
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>{{ $.Site.Title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="{{ "css/styles.css" | relURL }}"
-    />
-    <link rel="stylesheet" type="text/css" href="{{ "css/asciinema-player.css" | relURL }}" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ "css/asciinema-theme-blue.css" | relURL }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ "css/asciinema-theme-white.css" | relURL }}"
-    />
-  </head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>{{ $.Site.Title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="{{ "css/asciinema-player.css" | relURL }}" />
+  <link rel="stylesheet" type="text/css" href="{{ "css/asciinema-theme-blue.css" | relURL }}" />
+  <link rel="stylesheet" type="text/css" href="{{ "css/asciinema-theme-white.css" | relURL }}" />
+  {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+</head>
