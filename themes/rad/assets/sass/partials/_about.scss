@@ -14,18 +14,10 @@
   }
   h1 {
     margin: 1em 0;
+    text-align: center;
+    color: $blue;
   }
   p {
     margin-bottom: 1.5em;
-  }
-}
-.gardens-content {
-  background-color: $blue;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  pre {
-    color: $white;
-    font-family: "Courier New", Courier, monospace;
   }
 }
