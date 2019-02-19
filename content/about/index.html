@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>{{ $.Site.Title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+</head>
+
+<body>
+  <div class="narrow-menu" id="narrow-menu">
+    <ul>
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+    <button class="cross" id="close"></button>
+  </div>
+  <div class="nav-bar">
+    <a href="/" class="rad-nav-logo"></a>
+    <button class="hamburger" id="open">Menu</button>
+    <div class="bar">
+      <nav>
+        <ul>
+          {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+      <a href="/docs.html#start" class="header-btn">try</a>
+    </div>
+  </div>
+  <div class="garden-header">
+    <h1>Radicle Garden</h1>
+    <p>Welcome to the radicle garden. This is our community garden where everyone can add there own little plot
+      and learn about how Radicle works at the same time.</p>
+    <a class="button" href="/docs.html#start">Follow our guide to contribute<span>→</span></a>
+  </div>
+  <section class="divider garden"></section>
+  <footer class="global-footer garden">
+    <ul>
+      <li><a href="/">About</a></li>
+      <li><a href="/">Blog</a></li>
+      <li><a href="/">Twitter</a></li>
+      <li><a href="/">Mastodon</a></li>
+      <li><a href="irc://freenode:1/radicle">IRC</a></li>
+      <li><a href="/">Email</a></li>
+      <li><a href="/">Code of conduct</a></li>
+      <li>
+        <a href="https://github.com/oscoin/radicle" target="blank">Github</a>
+      </li>
+      <li><a href="/">Radicle project</a></li>
+      <li>
+        <a href="https://github.com/oscoin/radicle/blob/master/LICENSE">License</a>
+      </li>
+    </ul>
+  </footer>
+  <script src="{{ "js/perlin.js" | relURL }}"></script>
+  <script src="{{ "js/rad.js" | relURL }}"></script>
+</body>
+
+</html>
