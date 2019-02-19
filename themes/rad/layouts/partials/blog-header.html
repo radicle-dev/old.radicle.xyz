@@ -1,0 +1,44 @@
+<body>
+  <div class="narrow-menu" id="narrow-menu">
+    <ul>
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+    <button class="cross" id="close"></button>
+  </div>
+  <div class="nav-bar">
+    <a href="/" class="rad-nav-logo"></a>
+    <button class="hamburger" id="open">Menu</button>
+    <div class="bar">
+      <nav>
+        <ul>
+          {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+      <a href="/docs.html#start" class="header-btn">try</a>
+    </div>
+  </div>
+  <div class="docs-content">
+    <aside>
+      <ul>
+        {{- range (where .Data.Pages "Section" "docs").Reverse }}
+        <li><a href="/docs{{string "#"}}{{ .Title | anchorize }}">{{ .Title }}</a></li>
+        {{- end }}
+      </ul>
+    </aside>
+
+    <main>
+
+      {{ range .Pages.Reverse }}
+      <section class="chapter">
+        {{ .Content }}
+      </section>
+      <section class="divider white line opacity"></section>
+      {{ end }}
+
+    </main>
+  </div>
+  <section class="divider white line opacity"></section>
