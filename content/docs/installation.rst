@@ -10,7 +10,9 @@ markup: rst
 Installation
 ============
 
-**disclaimer**: Radicle is alpha technology and in heavy development. it’s important to remember that this is experimental software and should be treated as such. This release is aimed for developers and early-adopters who want to get a glimpse into what we are building and help shape the product through feedback or contributing directly to the Radicle project.
+**Disclaimer**: *Radicle is alpha technology and in heavy development. All your data may be lost. We do not guarantee backwards compatibility between releases. It’s important to remember that this is experimental software and should be treated as such.*
+
+*This release is aimed for developers and early-adopters who want to get a glimpse into what we are building and help shape the product through feedback or contributions to the Radicle project.*
 
 OS X
 ====
