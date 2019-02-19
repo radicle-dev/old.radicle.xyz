@@ -402,22 +402,11 @@
   </div>
   <section class="divider white line opacity"></section>
   <footer class="global-footer">
-    <ul>
-      <li><a href="/">About</a></li>
-      <li><a href="/blog.html">Blog</a></li>
-      <li><a href="/">Twitter</a></li>
-      <li><a href="/">Mastodon</a></li>
-      <li><a href="irc://freenode:1/radicle">IRC</a></li>
-      <li><a href="/">Email</a></li>
-      <li><a href="/">Code of conduct</a></li>
-      <li>
-        <a href="https://github.com/oscoin/radicle" target="blank">Github</a>
-      </li>
-      <li><a href="/">Radicle project</a></li>
-      <li>
-        <a href="https://github.com/oscoin/radicle/blob/master/LICENSE">License</a>
-      </li>
-    </ul>
+        <ul>
+          {{ range .Site.Menus.footer }}
+          <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
   </footer>
   <script src="{{ "js/perlin.js" | relURL }}"></script>
   <script src="{{ "js/rad.js" | relURL }}"></script>

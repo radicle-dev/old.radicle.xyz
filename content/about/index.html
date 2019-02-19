@@ -33,30 +33,28 @@
       <a href="/docs.html#start" class="header-btn">try</a>
     </div>
   </div>
-  <div class="garden-header">
-    <h1>Radicle Garden</h1>
+  <div id="about">
+  <br>
+  <br>
+  <br>
+    <h1>About</h1>
+    <p>Welcome to the radicle garden. This is our community garden where everyone can add there own little plot
+      and learn about how Radicle works at the same time.</p>
+    <a class="button" href="/docs.html#start">Follow our guide to contribute<span>→</span></a>
+  </div>
+  <div id="coc">
+    <h1>Code of conduct</h1>
     <p>Welcome to the radicle garden. This is our community garden where everyone can add there own little plot
       and learn about how Radicle works at the same time.</p>
     <a class="button" href="/docs.html#start">Follow our guide to contribute<span>→</span></a>
   </div>
   <section class="divider garden"></section>
   <footer class="global-footer garden">
-    <ul>
-      <li><a href="/">About</a></li>
-      <li><a href="/">Blog</a></li>
-      <li><a href="/">Twitter</a></li>
-      <li><a href="/">Mastodon</a></li>
-      <li><a href="irc://freenode:1/radicle">IRC</a></li>
-      <li><a href="/">Email</a></li>
-      <li><a href="/">Code of conduct</a></li>
-      <li>
-        <a href="https://github.com/oscoin/radicle" target="blank">Github</a>
-      </li>
-      <li><a href="/">Radicle project</a></li>
-      <li>
-        <a href="https://github.com/oscoin/radicle/blob/master/LICENSE">License</a>
-      </li>
-    </ul>
+        <ul>
+          {{ range .Site.Menus.footer }}
+          <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
   </footer>
   <script src="{{ "js/perlin.js" | relURL }}"></script>
   <script src="{{ "js/rad.js" | relURL }}"></script>
