@@ -33,28 +33,29 @@
       <a href="/docs.html#start" class="header-btn">try</a>
     </div>
   </div>
-  <div id="about">
-  <br>
-  <br>
-  <br>
-    <h1>About</h1>
-    <p>Welcome to the radicle garden. This is our community garden where everyone can add there own little plot
-      and learn about how Radicle works at the same time.</p>
-    <a class="button" href="/docs.html#start">Follow our guide to contribute<span>→</span></a>
+  <div class="about-content">
+    <section id="about">
+      <h1>About</h1>
+      <p>
+        Welcome to the radicle garden. This is our community garden where everyone can add there own little plot
+        and learn about how Radicle works at the same time.
+      </p>
+    </section>
+    <section id="coc">
+      <h1>Code of conduct</h1>
+      <p>
+        Welcome to the radicle garden. This is our community garden where everyone can add there own little plot
+        and learn about how Radicle works at the same time.
+      </p>
+    </section>
   </div>
-  <div id="coc">
-    <h1>Code of conduct</h1>
-    <p>Welcome to the radicle garden. This is our community garden where everyone can add there own little plot
-      and learn about how Radicle works at the same time.</p>
-    <a class="button" href="/docs.html#start">Follow our guide to contribute<span>→</span></a>
-  </div>
-  <section class="divider garden"></section>
-  <footer class="global-footer garden">
-        <ul>
-          {{ range .Site.Menus.footer }}
-          <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
-          {{ end }}
-        </ul>
+  <section class="divider white line opacity"></section>
+  <footer class="global-footer">
+    <ul>
+      {{ range .Site.Menus.footer }}
+      <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
   </footer>
   <script src="{{ "js/perlin.js" | relURL }}"></script>
   <script src="{{ "js/rad.js" | relURL }}"></script>
