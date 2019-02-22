@@ -1,18 +1,32 @@
-
 # Intro
+
 `radicle` is a system for code collaboration that has several advantages over
 existing systems:
 
-- It is completely peer-to-peer
+- It is completely [peer-to-peer](https://en.wikipedia.org/wiki/Peer-to-peer)
 - It is easily modifiable and programmable
 - It is extensible
-
-...
 
 We've built a couple of "apps" in the radicle system. One example is
 `rad-issues`, a p2p issue tracker.
 
-    TODO: demo rad-issues interactions
+```
+$ rad issue list
+state    #    title                    author        updated
+open     32   can't log in             juliendonck   2019-01-25T13:27
+open     23   some title               cloudhead     2019-01-25T13:27
+closed   12   why doesn't this work?   xla           2019-01-25T13:27
+```
+
+```
+$ rad issue new
+<opens text editor>
+```
+
+```
+$ rad issue comment #33 'I have doubts'
+Commented on issue 33 in docs
+```
 
 You don't need to understand any of what follows to use these apps. But how
 they work behind the scenes is quite interesting. What exactly happens when
@@ -21,18 +35,37 @@ see it? How is it replicated? How is it validated?
 
 # Background (IPFS)
 
-TODO
+[IPFS](https://ipfs.io/) (InterPlanetary file system) is a peer-to-peer
+distributed file system. One can think of IPFS as a network of computers
+operating in a manner similar to a BitTorrent swarm, exchanging files within a
+single Git repository, using hashes for addresses. `radicle` is built on top of
+the IPFS protocol, but runs on its own network.
 
 ## Replicated state machines
 
-The core component of `radicle` is a `radicle` **machine**. These are
-(replicated) state machines, which accept certain kinds of inputs, can change
-their state in response to those inputs, and can output a response. A simple
-example is a counter machine:
+The core component of `radicle` is a `radicle` **machine**. The word 'machine'
+is use in the sense of a *state machine*, that is, an abstract mathematical
+function, rather than a piece of hardware. Formally a state machine is defined by:
+- a set of possible states <i>S</i>,
+- a set of possible inputs <i>I</i>,
+- a set of possible outputs <i>O</i>,
+- a transition function <i>f</i> : <i>S</i> × <i>I</i> → <i>S</i> × <i>O</i>,
+- a distinguished starting state <i>s</i><sub>0</sub>.
 
-   TODO: make proper picture
-   | state: n
-   | possible inputs: increment, get-counter
+The state machine starts in state <i>s</i><sub>0</sub>, and this state is
+updated according to the inputs given to the machine. If at some point it is in
+state <i>s</i> then the input <i>i</i> will make it transition to state
+<i>s'</i> while outputting <i>o</i>, where <i>f</i>(<i>s</i>, <i>i</i>) =
+(<i>s'</i>, <i>o</i>).
+
+A simple example is a counter machine:
+- <i>S</i> = ℤ
+- <i>I</i> = {`increment`, `get-counter`}
+- <i>O</i> = {`ok`} ∪ ℤ
+- <i>f</i>(<i>n</i>, <i>i</i>) = (<i>n</i> + 1, `ok`) when <i>i</i> =
+  `increment` and <i>f</i>(<i>n</i>, <i>i</i>) = (<i>n</i>, <i>n</i>) when
+  <i>i</i> = `get-counter`.
+- <i>s</i><sub>0</sub> = 0.
 
 People can define their own machines, or set up new ones with an existing
 definition.
