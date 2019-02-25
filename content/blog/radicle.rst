@@ -12,8 +12,9 @@ author: Firstname lastname
 Radicle
 =======
 
-   | … because ’tis the Origin of the Root… The Radicle is likewise called the seminal Root.
-   | — Vallemont, Curiosities of nature and art in husbandry and gardening (1707)
+    because ’tis the Origin of the Root… The Radicle is likewise called the seminal Root.
+
+    -- Vallemont, Curiosities of nature and art in husbandry and gardening (1707)
 
 Radicle is a peer-to-peer stack for creating open source software together. A collaboration environment that’s designed to be:
 
@@ -25,7 +26,7 @@ Radicle is a peer-to-peer stack for creating open source software together. A co
 
 Radicle integrates with distributed version control systems like git and includes a high-level language with reprogrammable semantics, P2P networking for sharing application state, and flexible command line tools. Inspired by P2P protocols like `secure scuttlebutt`_, radicle connects distributed version control with peer-to-peer networking and extends the idea of replicated logs to fully re-programmable state machines we call *chains*.
 
-Today we’re releasing a core component of the radicle stack, an implementation of the `radicle language`_, along with a `pape `_ describing its formal semantics.
+Today we’re releasing a core component of the radicle stack, an implementation of the `radicle language`_, along with a `paper`_ describing its formal semantics.
 
 The radicle stack
 ^^^^^^^^^^^^^^^^^
