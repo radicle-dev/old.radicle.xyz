@@ -1,6 +1,6 @@
 ---
 
-title: "Radicle P2P Architecture"
+title: "FAQ"
 date: 2019-02-05T18:13:32+01:00
 draft: true
 markup: rst
@@ -15,9 +15,9 @@ FAQ
 Isn’t git already a distributed version control system?
 =======================================================
 
-Yes! Git is a software application and versioned document format where repositories can be distributed via email, self-hosted services like Gitea, or through third-party platforms like GitHub or GitLab.
+Yes! Git as a VCS (version control system) allows for collaboration on software projects to be distributed across mutliple computers. Using git, repositories can be distributed via email, self-hosted services like Gitea, or through third-party platforms like GitHub or GitLab. These services all serve as a way to have a canonical source of truth for the state of a project.
 
-Most software development also requires some form of social coordination, notably, issues and proposals i.e. GitHub’s pull requests or GitLab’s merge requests. The radicle CLI sits right alongside git, bringing the benefits of local repository storage to project issues and proposals.
+However, most software development also requires some form of social coordination, notably, issues and proposals i.e. GitHub’s pull requests or GitLab’s merge requests. Radicle tries to take these aspects of code collaboration and create a distributed state management system simliar to git. The radicle CLI sits right alongside git, bringing the benefits of local repository storage to project issues and proposals.
 
 Radicle’s peer-to-peer model allows you to directly exchange repos, issues, and diff proposals with your collaborators, without a third party host.
 
@@ -35,7 +35,7 @@ The radicle commands that interact with your source code (like proposing and mer
 What is the difference between Radicle and other P2P projects like Dat or Scuttlebutt?
 =========================================================================================
 
-While taking inspiration from other P2P projects like ZeroNet, Dat, and Scuttlebutt -- as well as making use of IPFS’s data replication capabilities -- Radicle’s design centers on creating peer-to-peer tools for open source software development.
+While taking inspiration from other P2P projects like ZeroNet, Dat, and Scuttlebutt — as well as making use of IPFS for data replication — Radicle’s design centers on creating peer-to-peer tools for open source software development.
 
 That said, there are some conceptual differences between Radicle and the P2P protocols above that are worth noting.
 
@@ -47,7 +47,7 @@ In Radicle, everything is centered around peer-to-peer collaboration tooling. Ph
 
 Through one lens these RSMs look quite similar to Scuttlebutt feeds, where instead of feeds representing a chain of messages signed by a Scuttlebutt user, RSMs represent a chain of updates to the state of a Radicle app.
 
-Unlike Scuttlebutt however, Radicle apps have no social graph to allow data to propagate throughout the network. Rather than relying on its own custom network and replication layer, Radicle uses IPFS as the peer-to-peer infrastructure on which to build Radicle apps. RSM updates are written as IPFS objects, using IPLD to link between objects, and IPNS to have persistent pointers for resolving the current state of a given RSM.
+Unlike Scuttlebutt however, Radicle apps have no social graph to allow data to propagate throughout the network. Rather than relying on its own custom network and replication layer, Radicle uses IPFS as the peer-to-peer infrastructure on which to build Radicle apps. RSM updates are written as IPFS objects, using IPLD to link between these IPFS objects, and lastly we use IPNS to give us persistent identifiers for RSMs that resolve to the current state.
 
 
 If i am a project owner, can I get updates from contributors if we are not online at the same time?
@@ -62,12 +62,14 @@ We’re aware that this is not ideal from a usability perspective, and are curre
 Can I collaborate on a local area network without an internet connection?
 =========================================================================
 
-No. IPFS requires a direct connection to bootstrap nodes in order to read and write data from the network.
+No. IPFS needs to connect to bootstrap nodes in order to read and write data from the network so a direct connection to the internet is required.
 
 Can I collaborate privately?
 ============================
 
-Radicle does not explicitly support private collaboration. All data, projects, and peer-to-peer communication is publicly available on the IPFS network, such that anybody with your project ID can find out everything about your project.
+Radicle does not explicitly support private collaboration. All data, projects, and peer-to-peer communication is publicly available on the IPFS network to anyone who knows your project ID.
+
+
 
 Can I use the Radicle collaboration apps with my favorite editor?
 =================================================================

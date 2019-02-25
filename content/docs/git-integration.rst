@@ -1,14 +1,14 @@
 ---
 
-title: "Git Repository Integration"
+title: "Git Integration"
 date: 2019-02-05T18:13:08+01:00
 draft: true
 markup: rst
 
 ---
-==========================
-Git Repository Integration
-==========================
+===============
+Git Integration
+===============
 
 
 Preamble

@@ -23,5 +23,5 @@ Linux
 Build From Source
 =================
 
-Background processes
-====================
+Running Background processes
+============================
