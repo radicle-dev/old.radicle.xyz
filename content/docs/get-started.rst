@@ -250,4 +250,3 @@ That's it!
 
 🌻
 
-Find more info at the `Radicle Docs <https://radicle.xyz/docs>`_. And if you have any questions, or hit a snag on the way, get in touch at contact@radicle.xyz or on feenode in the `#radicle <irc://freenode:1/radicle>`_ channel.
