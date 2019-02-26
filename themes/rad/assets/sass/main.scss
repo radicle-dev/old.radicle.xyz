@@ -311,6 +311,9 @@ footer {
     @media (max-width: 980px) {
       grid-row: 1;
     }
+    h1 {
+      padding-bottom: 48px;
+    }
     h2 {
       color: $red;
       padding: 32px 0 24px 0;

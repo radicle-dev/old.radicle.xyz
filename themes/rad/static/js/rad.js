@@ -75,8 +75,8 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
   const selectors = [
     "#peer h2",
-    "#prog h2",
     "#term h2",
+    "#prog h2",
   ];
   const lines = [
     [
@@ -105,21 +105,6 @@ document.addEventListener('DOMContentLoaded', function () {
       "Peer–to–peer",
     ],
     [
-      "–––––a––a–––",
-      "–––––a––ab––",
-      "–––––a––ab–e",
-      "–––g–a––ab–e",
-      "–––g–a––able",
-      "–––g–ammable",
-      "––og–ammable",
-      "–rogrammable",
-      "Programmable",
-      "Programmable",
-      "Programmable",
-      "Programmable",
-      "Programmable",
-    ],
-    [
         "&gt;",
         "&gt;▌",
         "&gt;T",
@@ -142,6 +127,21 @@ document.addEventListener('DOMContentLoaded', function () {
         "Terminal–first",
         "Terminal–first",
         "Terminal–first",
+    ],
+    [
+      "–––––a––a–––",
+      "–––––a––ab––",
+      "–––––a––ab–e",
+      "–––g–a––ab–e",
+      "–––g–a––able",
+      "–––g–ammable",
+      "––og–ammable",
+      "–rogrammable",
+      "Programmable",
+      "Programmable",
+      "Programmable",
+      "Programmable",
+      "Programmable",
     ],
   ];
 
