@@ -31,12 +31,14 @@
     </aside>
 
     <main>
+      <h1>Radicle Blog</h1>
+
 
       {{ range .Pages.Reverse }}
       <section class="chapter">
+        <h4 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
         {{ .Content }}
       </section>
-      <section class="divider white line opacity"></section>
       {{ end }}
 
     </main>
