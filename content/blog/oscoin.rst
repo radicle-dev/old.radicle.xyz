@@ -4,7 +4,7 @@ title: "Oscoin"
 date: 2019-02-11
 draft: true
 markup: rst
-author: "Oscoin author"
+author: "Oscoin Author"
 
 ---
 

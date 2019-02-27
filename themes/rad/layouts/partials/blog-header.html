@@ -21,26 +21,17 @@
       <a href="/docs.html#start" class="header-btn">try</a>
     </div>
   </div>
-  <div class="docs-content">
-    <aside>
-      <ul>
-        {{- range (where .Data.Pages "Section" "docs").Reverse }}
-        <li><a href="/docs{{string "#"}}{{ .Title | anchorize }}">{{ .Title }}</a></li>
-        {{- end }}
-      </ul>
-    </aside>
+  <div class="blog-content">
 
-    <main>
       <h1>Radicle Blog</h1>
 
 
       {{ range .Pages.Reverse }}
-      <section class="chapter">
-        <h4 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
+      <article>
+        <span id="date"> {{ .Date.Format "Mon Jan 2, 2006" }}  — {{ .Params.Author }}</span>
         {{ .Content }}
-      </section>
+      </article>
       {{ end }}
 
-    </main>
   </div>
   <section class="divider white line opacity"></section>
