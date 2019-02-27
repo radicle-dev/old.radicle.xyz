@@ -10,17 +10,17 @@ markup: rst
 How replication works
 =====================
 
-``radicle`` state machines are replicated using IPFS. The state of a machine is
+``radicle`` state machines are replicated using IPFS_. The state of a machine is
 fully determined by its input log, and this is exactly what is stored and
 replicated on IPFS as a linked list. The *empty* ``radicle`` machine has the
 address ``zdpuAyyGtvC37aeZid2zh7LAGKCbFTn9MzdqoPpbNQm3BCwWT``, which is just the
-CID (content-addressed identifier) of ``{"radicle": true}``; there is no
+CID_ (content-addressed identifier) of ``{"radicle": true}``; there is no
 significance to this, it's just a way of choosing a CID to represent the empty
 list of expressions. Subsequent inputs (which are just sequences of ``radicle``
 expressions) are stored as documents containing the expressions and a link to
 the previous input. One only needs the address of the latest input, the
 *"head"*, to be able to recover the whole log. The owner of a machine uses an
-IPNS_ link to point to the head of the list, the name of this link then becomes
+IPNS_ link to point to the head of the list, and the name of this link is then
 the *name* of the machine also.
 
 TODO: maybe an image of a linked list of radicle expressions stored on IPFS.
@@ -31,16 +31,17 @@ Writing to an RSM (ipfs-pubsub)
 To add expressions to a machine, one creates a document with the expressions to
 be added and adds a link to the previous head of the linked list of inputs:
 
-.. code:: json
-  {
-    "expression": "4",
-    "previous": {
-      "/": "zdpuApnKnQHsRmEFowFcXW7D4KRHDQzCf8RJStF3SVVGA1pTL"
+.. code-block:: json
+
+    {
+      "expressions": ["(def x 42)", "(def y (+ x x))"],
+      "previous": {
+        "/": "zdpuApnKnQHsRmEFowFcXW7D4KRHDQzCf8RJStF3SVVGA1pTL"
+      }
     }
-  }
-    
+
 The IPNS link of the machine is then updated to point to the CID of this new
-document.
+document. This is all done automatically by the ``radicle`` daemon.
 
 Of course, only the owner of the IPNS link (the person who knows the private key
 paired to the public key the IPNS name is derived from) can update the IPNS
@@ -102,8 +103,8 @@ For more information about the ``radicle`` language, check out the RadicleDocs_.
 The radicle daemon / how relaying works
 =======================================
 
-
-
+.. _IPFS: https://docs.ipfs.io/
+.. _CID: https://docs.ipfs.io/guides/concepts/cid/
 .. _IPNS: https://docs.ipfs.io/guides/concepts/ipns/
 .. _IPFSPubsub: https://blog.ipfs.io/25-pubsub/
 .. _Scheme: http://www.scheme-reports.org/
