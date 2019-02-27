@@ -1,10 +1,10 @@
 ---
 
 title: "Oscoin"
-date: 2019-02-011
+date: 2019-02-11
 draft: true
 markup: rst
-author: Firstname lastname
+author: "Oscoin author"
 
 ---
 
