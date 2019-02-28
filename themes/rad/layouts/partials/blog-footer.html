@@ -1,0 +1,12 @@
+<footer class="global-footer">
+        <ul>
+          {{ range .Site.Menus.footer }}
+          <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+</footer>
+<script src="{{ "js/perlin.js" | relURL }}"></script>
+<script src="{{ "js/rad.js" | relURL }}"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.js" integrity="sha384-ern5NCRqs6nJ/a4Ik0nB9hnKVH5HwV2XRUYdQl09OB/vvd1Lmmqbg1Mh+mYUclXx" crossorigin="anonymous"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>renderMathInElement(document.body);</script>

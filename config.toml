@@ -1,0 +1,117 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Radicle 🌱"
+theme = "rad"
+
+[params]
+  author = "Monadic"
+  description = "A peer-to-peer stack for code collaboration"
+  cta = "install"
+
+# Nav menu
+
+[[menu.main]]
+  name = "Source"
+  url  = "https://github.com/oscoin/radicle"
+  identifier = "source"
+  weight = 1
+
+[[menu.main]]
+  name = "Docs"
+  url  = "/docs"
+  identifier = "docs"
+  weight = 2
+
+[[menu.main]]
+  name = "Garden"
+  url  = "/garden"
+  identifier = "garden"
+  weight = 3
+
+[[menu.main]]
+  name = "Blog"
+  url  = "/blog"
+  identifier = "blog"
+  weight = 4
+
+# Footer
+[[menu.footer]]
+  name = "About"
+  url  = "/about"
+  identifier = "about"
+  weight = 1
+
+[[menu.footer]]
+  name = "Code of conduct"
+  url  = "/about#coc"
+  identifier = "coc"
+  weight = 2
+
+[[menu.footer]]
+  name = "Twitter"
+  url  = "https://twitter.com/radicle_xyz"
+  identifier = "twitter"
+  weight = 3
+
+[[menu.footer]]
+  name = "Mastodon"
+  url  = "https://github.com/oscoin/radicle"
+  identifier = "mastodon"
+  weight = 4
+
+[[menu.footer]]
+  name = "IRC"
+  url  = "irc://freenode:1/radicle"
+  identifier = "irc"
+  weight = 5
+
+[[menu.footer]]
+  name = "Email"
+  url  = "mailto:devs@radicle.xyz"
+  identifier = "devmail"
+  weight = 6
+
+[[menu.footer]]
+  name = "Newsletter"
+  url  = "#"
+  identifier = "newsletter"
+  weight = 7
+
+[[menu.footer]]
+  name = "Github"
+  url  = "https://github.com/oscoin/radicle"
+  identifier = "github"
+  weight = 8
+
+[[menu.footer]]
+  name = "License"
+  url  = "https://github.com/oscoin/radicle/blob/master/LICENSE"
+  identifier = "license"
+  weight = 9
+
+# Nav docs
+[[menu.docs]]
+  name = "Doc 1"
+  url  = "https://github.com/oscoin/radicle"
+  identifier = "doc1"
+  weight = 1
+
+[[menu.docs]]
+  name = "Doc 2"
+  url  = "radicle"
+  identifier = "docs2"
+  weight = 2
+  parent= "doc1"
+
+[[menu.docs]]
+  name = "Doc 3"
+  url  = "radicle"
+  identifier = "docs3"
+  weight = 2
+  parent= "doc1"
+
+[[menu.docs]]
+  name = "Doc 4"
+  url  = "https://github.com/oscoin/radicle"
+  identifier = "doc4"
+  weight = 1

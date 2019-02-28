@@ -1,0 +1,36 @@
+<body>
+  <div class="narrow-menu" id="narrow-menu">
+    <ul>
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+    <button class="cross" id="close"></button>
+  </div>
+  <div class="nav-bar">
+    <a href="/" class="rad-nav-logo"></a>
+    <button class="hamburger" id="open">Menu</button>
+    <div class="bar">
+      <nav>
+        <ul>
+          {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+      <a href="/docs.html#start" class="header-btn">install</a>
+    </div>
+  </div>
+  <div class="blog-content">
+
+    <h1>Radicle Blog</h1>
+
+
+    {{ range .Pages.Reverse }}
+    <article>
+      {{ .Content }}
+    </article>
+    {{ end }}
+
+  </div>
+  <section class="divider white line opacity"></section>

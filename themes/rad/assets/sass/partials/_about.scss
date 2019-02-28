@@ -1,0 +1,23 @@
+.about-content {
+  display: flex;
+  margin-top: 64px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $black;
+  section {
+    max-width: 720px;
+    padding: 0 24px;
+  }
+  @media (max-width: 640px) {
+    height: 320px;
+  }
+  h1 {
+    margin: 1em 0;
+    text-align: center;
+    color: $blue;
+  }
+  p {
+    margin-bottom: 1.5em;
+  }
+}

@@ -1,0 +1,106 @@
+// doc styles
+
+.blog-content {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 32px;
+  h1 {
+    color: $blue;
+    text-align: center;
+    margin: 144px 32px 96px;
+  }
+  article {
+    margin-bottom: 4em;
+    line-height: 24px;
+    h1 {
+      font-family: FoundersGrotesk, Arial, sans-serif;
+      font-size: 27px;
+      line-height: 32px;
+      font-weight: normal;
+      font-style: normal;
+      text-align: left;
+      margin: 0 0 2em 0;
+      color: $black;
+    }
+    h2 {
+      margin: 2em 0 1em;
+      font-family: FoundersGroteskMedium, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: normal;
+      font-style: normal;
+      @media (max-width: 640px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    p {
+      margin-bottom: 1em;
+    }
+    ul {
+      margin-bottom: 1em;
+      list-style-type: none;
+      li {
+        padding-left: 26px;
+        &:before {
+          content: "\2014";
+          position: absolute;
+          margin-left: -24px;
+        }
+      }
+    }
+
+    ol {
+      margin-bottom: 1em;
+      list-style-position: inside;
+      font-size: 14px;
+      line-height: 18px;
+      color: rgba($black, 0.6);
+      word-break: break-all;
+      li {
+        list-style-type: bullets;
+        margin-bottom: 9px;
+      }
+    }
+    em {
+      font-family: VulfMono, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 22px;
+      font-style: normal;
+      font-weight: normal;
+    }
+    blockquote {
+      padding: 1em 2em;
+      color: rgba($black, 0.6);
+    }
+    .attribution {
+      font-style: normal;
+      font-weight: normal;
+    }
+    .footnote-reference {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+      top: -0.5em;
+    }
+    hr {
+      border: 0;
+      height: 6px;
+      background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550165007/wave-line_yzwo3f.svg");
+      background-repeat: repeat-x;
+      margin: 48px 0 32px;
+    }
+    @media (max-width: 640px) {
+      line-height: 22px;
+    }
+  }
+  .controls {
+    display: flex;
+    justify-content: space-between;
+  }
+}

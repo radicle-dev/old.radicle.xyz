@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>{{ $.Site.Title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+</head>
+
+<body>
+  <div class="narrow-menu" id="narrow-menu">
+    <ul>
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+    <button class="cross" id="close"></button>
+  </div>
+  <div class="nav-bar">
+    <a href="/" class="rad-nav-logo"></a>
+    <button class="hamburger" id="open">Menu</button>
+    <div class="bar">
+      <nav>
+        <ul>
+          {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+      <a href="/docs.html#start" class="header-btn">install</a>
+    </div>
+  </div>
+  <div class="about-content">
+    <section id="about">
+      <h1>About</h1>
+      <p>
+        Welcome to the radicle garden. This is our community garden where everyone can add there own little plot
+        and learn about how Radicle works at the same time.
+      </p>
+    </section>
+    <section id="coc">
+      <h1>Code of conduct</h1>
+      <p>
+        Welcome to the radicle garden. This is our community garden where everyone can add there own little plot
+        and learn about how Radicle works at the same time.
+      </p>
+    </section>
+  </div>
+  <section class="divider white line opacity"></section>
+  <footer class="global-footer">
+    <ul>
+      {{ range .Site.Menus.footer }}
+      <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </footer>
+  <script src="{{ "js/perlin.js" | relURL }}"></script>
+  <script src="{{ "js/rad.js" | relURL }}"></script>
+</body>
+
+</html>
