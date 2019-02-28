@@ -47,11 +47,14 @@ header {
   }
   span {
     font-family: FoundersGroteskMono, monospace;
-    padding-left: 16px;
+    margin: 0 16px 8px 16px;
     color: $blue;
     font-size: 14px;
-    height: 24px;
     text-align: center;
+    @media (max-width: 640px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 
   .title {
