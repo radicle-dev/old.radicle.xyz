@@ -32,23 +32,33 @@ header {
 }
 
 .left-header {
-  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   .small-nav {
     display: flex;
     justify-content: space-between;
+    margin: 16px;
     nav {
       @media (max-width: 640px) {
         display: none;
       }
     }
   }
+  span {
+    font-family: FoundersGroteskMono, monospace;
+    padding-left: 16px;
+    color: $blue;
+    font-size: 14px;
+    height: 24px;
+    text-align: center;
+  }
+
   .title {
     display: flex;
-    height: 100%;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 64px;
+    padding: 0 64px;
     h1 {
       font-size: 28px;
       line-height: 38px;
