@@ -12,6 +12,8 @@ author: "Radicle Author"
 Radicle
 =======
 
+*February 11, 2019 — Radicle Author*
+
     because ’tis the Origin of the Root… The Radicle is likewise called the seminal Root.
 
     -- Vallemont, Curiosities of nature and art in husbandry and gardening (1707)

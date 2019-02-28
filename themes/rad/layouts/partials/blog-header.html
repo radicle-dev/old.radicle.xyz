@@ -18,20 +18,19 @@
           {{ end }}
         </ul>
       </nav>
-      <a href="/docs.html#start" class="header-btn">try</a>
+      <a href="/docs.html#start" class="header-btn">install</a>
     </div>
   </div>
   <div class="blog-content">
 
-      <h1>Radicle Blog</h1>
+    <h1>Radicle Blog</h1>
 
 
-      {{ range .Pages.Reverse }}
-      <article>
-        <span id="date"> {{ .Date.Format "Mon Jan 2, 2006" }}  — {{ .Params.Author }}</span>
-        {{ .Content }}
-      </article>
-      {{ end }}
+    {{ range .Pages.Reverse }}
+    <article>
+      {{ .Content }}
+    </article>
+    {{ end }}
 
   </div>
   <section class="divider white line opacity"></section>

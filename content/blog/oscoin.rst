@@ -12,6 +12,8 @@ author: "Oscoin Author"
 Oscoin
 ======
 
+*February 11, 2019 — Oscoin Author*
+
    | It is in this light that we must recognize that only a restoration
      of open-source culture, and all that enables across the full
      spectrum of open-source possibilities, can allow humanity to
@@ -24,10 +26,10 @@ Over the last few decades, with the emergence of open-source software,
 we’ve experienced an unprecedented acceleration in the development of
 our digital infrastructure, one that has become a new *commons* — a
 public good we are now collectively responsible for. But we are all
-familiar with cases like Heartbleed,1 with developer burn-out,2 with
-projects acquired by ill-incentivized or incompetent parties.34 Today,
+familiar with cases like Heartbleed, [#]_ with developer burn-out, [#]_ with
+projects acquired by ill-incentivized or incompetent parties. [#]_ [#]_ Today,
 many valuable OSS projects are unable to define themselves in
-traditional market terms,5 while others find it incompatible with their
+traditional market terms, [#]_ while others find it incompatible with their
 ethics and struggle without financial support.
 
 But what if we had the means to improve upon this? What if we could
@@ -42,8 +44,8 @@ we can fulfill this vision today.
 We live in a time when the original promise of the internet has failed
 us. Our online activity is owned by a few large corporations, and a
 large part of open-source collaboration is locked in for-profit
-products. What used to be an open and decentralized process 6 is now
-controlled by a few major players. 7 The reason is that OSS is no longer
+products. What used to be an open and decentralized process [#]_ is now
+controlled by a few major players. [#]_ The reason is that OSS is no longer
 just about the code — it’s about much more today, including
 distribution, hosting, collaboration and financing, and these
 requirements were only able to be met by centralized for-profit
@@ -63,8 +65,8 @@ The key components of such a system include:
 
 -  A new token called **open source coin**.
 -  A blockchain of commit hashes.
--  A permissionless network with proof-of-stake8 membership.
--  A treasury system as seen in Dash,9 to fund open-source work on the
+-  A permissionless network with proof-of-stake [#]_ membership.
+-  A treasury system as seen in Dash, [#]_ to fund open-source work on the
    network, including oscoin’s own roadmap.
 -  An on-chain governance system based on proposals, allowing atomic
    changes to smart-contract or regular code, including the oscoin
@@ -73,8 +75,8 @@ The key components of such a system include:
    defining the token distribution
 
 
-Fundamentally, we are proposing a crypto-economy10 based on the ideas of
-’inflation funding’11 and ’curation markets.’12 By design, token supply
+Fundamentally, we are proposing a crypto-economy [#]_ based on the ideas of
+inflation funding [#]_ and curation markets. [#]_ By design, token supply
 increases at a predefined rate through minting. These newly minted
 tokens are used to reward open-source projects. Furthermore, an open
 marketplace is introduced in which participants can coordinate and
@@ -95,34 +97,25 @@ the project or would like to reach out, we can be found at: **hello** at
 
 Thanks for reading,
 
-[@cloudhead](https://twitter.com/cloudhead) and
-[@lftherios](https://twitter.com/lftherios)
+`@cloudhead
+<https://twitter.com/cloudhead>`_ and
+`@lftherios
+<https://twitter.com/lftherios>`_
 
 --------------
 
-1.  Heartbleed.
-    http://veridicalsystems.com/blog/of-money-responsibility-and-pride/
-    ↩
-2.  Roads and Bridges. The Unseen labor behind our digital
-    infrastructure
-    https://www.fordfoundation.org/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/
-    ↩
-3.  The Node.js vs io.js: Why the fork?!?
-    http://anandmanisankar.com/posts/nodejs-iojs-why-the-fork/ ↩
-4.  The Sudden Death and Eternal Life of Solaris
-    http://dtrace.org/blogs/bmc/2017/09/04/the-sudden-death-and-eternal-life-of-solaris/
-    ↩
-5.  Open-Source Won. So, Now What?
-    https://www.wired.com/2016/08/open-source-won-now/ ↩
-6.  Before GitHub, the majority of open-source contributions were sent
-    as patches to maintainers on mailing lists. This is still how the
-    Linux kernel project operates. ↩
-7.  The Problem with putting all the world’s code on github.
-    https://www.wired.com/2015/06/problem-putting-worlds-code-github/ ↩
-8.  Proof-of-stake consensus.
-    https://en.wikipedia.org/wiki/Proof-of-stake ↩
-9.  Dash’s “treasury system.”
-    https://en.wikipedia.org/wiki/Dash_(cryptocurrency)#Governance_and_funding
-    ↩
-10. Blockchains will replace networks with markets.
-    [https://twitter.com/naval/status/877467629308395521?lang=en](https:/
+.. [#] Heartbleed. http://veridicalsystems.com/blog/of-money-responsibility-and-pride/
+
+.. [#] Roads and Bridges. The Unseen labor behind our digital infrastructure https://www.fordfoundation.org/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/
+
+.. [#] The Node.js vs io.js: Why the fork?!? http://anandmanisankar.com/posts/nodejs-iojs-why-the-fork/
+.. [#] The Sudden Death and Eternal Life of Solaris http://dtrace.org/blogs/bmc/2017/09/04/the-sudden-death-and-eternal-life-of-solaris/
+
+.. [#] Open-Source Won. So, Now What? https://www.wired.com/2016/08/open-source-won-now/
+.. [#] Before GitHub, the majority of open-source contributions were sent as patches to maintainers on mailing lists. This is still how the Linux kernel project operates.
+.. [#] The Problem with putting all the world’s code on github. https://www.wired.com/2015/06/problem-putting-worlds-code-github/
+.. [#] Proof-of-stake consensus. https://en.wikipedia.org/wiki/Proof-of-stake
+.. [#] Dash’s “treasury system.” https://en.wikipedia.org/wiki/Dash_(cryptocurrency)#Governance_and_funding
+.. [#] Blockchains will replace networks with markets. https://twitter.com/naval/status/877467629308395521?lang=en
+.. [#] Funding the Evolution of Blockchains https://medium.com/@FEhrsam/funding-the-evolution-of-blockchains-87d160988481
+.. [#] Introducing 'Curation Markets'. https://medium.com/@simondlr/introducing-curation-markets-trade-popularity-of-memes-information-with-code-70bf6fed9881

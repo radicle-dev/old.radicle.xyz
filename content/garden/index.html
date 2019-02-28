@@ -30,7 +30,7 @@
           {{ end }}
         </ul>
       </nav>
-      <a href="/docs.html#start" class="header-btn">try</a>
+      <a href="/docs.html#start" class="header-btn">install</a>
     </div>
   </div>
   <div class="garden-header">
@@ -704,11 +704,11 @@ alert(&#39;get pwned&#39;);
   </div>
   <section class="divider garden"></section>
   <footer class="global-footer garden">
-        <ul>
-          {{ range .Site.Menus.footer }}
-          <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
-          {{ end }}
-        </ul>
+    <ul>
+      {{ range .Site.Menus.footer }}
+      <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
   </footer>
   <script src="{{ "js/perlin.js" | relURL }}"></script>
   <script src="{{ "js/rad.js" | relURL }}"></script>
