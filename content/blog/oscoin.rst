@@ -63,16 +63,12 @@ community.
 
 The key components of such a system include:
 
--  A new token called **open source coin**.
--  A blockchain of commit hashes.
--  A permissionless network with proof-of-stake [#]_ membership.
--  A treasury system as seen in Dash, [#]_ to fund open-source work on the
-   network, including oscoin’s own roadmap.
--  An on-chain governance system based on proposals, allowing atomic
-   changes to smart-contract or regular code, including the oscoin
-   protocol itself.
--  A community-owned ‘blessed’ code repository of smart-contracts
-   defining the token distribution
+- A new token called **open source coin**.
+- A blockchain of commit hashes.
+- A permissionless network with proof-of-stake [#]_ membership.
+- A treasury system as seen in Dash, [#]_ to fund open-source work on the network, including oscoin’s own roadmap.
+- An on-chain governance system based on proposals, allowing atomic changes to smart-contract or regular code, including the oscoin protocol itself.
+- A community-owned ‘blessed’ code repository of smart-contracts defining the token distribution
 
 
 Fundamentally, we are proposing a crypto-economy [#]_ based on the ideas of

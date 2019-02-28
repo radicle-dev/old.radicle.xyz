@@ -54,16 +54,16 @@
       }
     }
 
-    ol {
+    .footnote {
       margin-bottom: 1em;
-      list-style-position: inside;
       font-size: 14px;
       line-height: 18px;
       color: rgba($black, 0.6);
-      word-break: break-all;
-      li {
-        list-style-type: bullets;
-        margin-bottom: 9px;
+      td {
+        word-break: break-all;
+      }
+      .label {
+        width: 30px;
       }
     }
     em {
