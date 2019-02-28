@@ -153,6 +153,8 @@ document.addEventListener('DOMContentLoaded', function () {
   let currentEl = document.querySelector(selectors[idxSelectors]);
   let currentLines = lines[idxSelectors];
 
+  if (currentEl === null) { return; }
+
   function type() {
     now = Date.now();
     elapsed = now - then;
@@ -184,28 +186,39 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-const navBar = document.getElementById("nav");
 
-window.addEventListener("scroll", function() {
-  var y = window.scrollY;
-  if (y > 0) {
-    navBar.style.top = "0";
-  } else {
-    navBar.style.top = "-64px";
+document.addEventListener('DOMContentLoaded', function() {
+  const navBar = document.getElementById("nav");
+
+  window.addEventListener("scroll", function() {
+    if (navBar === null) { return; }
+
+    var y = window.scrollY;
+    if (y > 0) {
+      navBar.style.top = "0";
+    } else {
+      navBar.style.top = "-64px";
+    }
+  });
+
+  let els = document.getElementsByClassName('cross');
+
+  for (var i = 0; i < els.length; i++) {
+    els[i].onclick = function () {
+      narrowNav.style.top="-182px"
+    };
   }
+
+  var hamburger = document.getElementById('open');
+  var hamburger2 = document.getElementById('narrow-open');
+  var narrowNav = document.getElementById("narrow-menu");
+
+  (hamburger || {}).onclick = function () {
+    narrowNav.style.top="0"
+  };
+  (hamburger2 || {}).onclick = function () {
+    narrowNav.style.top="0"
+  };
+
 });
 
-var hamburger = document.getElementById('open');
-var hamburger2 = document.getElementById('narrow-open');
-var cross = document.getElementById('close');
-var narrowNav = document.getElementById("narrow-menu");
-
-hamburger.onclick = function () {
-  narrowNav.style.top="0"
-};
-hamburger2.onclick = function () {
-  narrowNav.style.top="0"
-};
-cross.onclick = function () {
-  narrowNav.style.top="-182px"
-};
