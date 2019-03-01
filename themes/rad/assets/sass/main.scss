@@ -226,13 +226,15 @@ header {
 }
 
 .globe {
-  margin: 48px 0 32px;
-  height: 280px;
-  width: 280px;
+  margin: 20px 40px 30px 0;
+  height: 380px;
+  width: 380px;
   background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550437129/globe-ascii-bw_bfq3ql.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-filter: contrast(2.5);
+  filter: contrast(2.5);
   @media (min-width: 1680px) {
     display: none;
   }
