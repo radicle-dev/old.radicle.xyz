@@ -16,7 +16,7 @@ Isn’t git already a distributed version control system?
 
 Yes! Git as a VCS (version control system) allows for collaboration on software projects to be distributed across mutliple computers. Using git, repositories can be distributed via email, self-hosted services like Gitea, or through third-party platforms like GitHub or GitLab. These services all serve as a way to have a canonical source of truth for the state of a project.
 
-However, most software development also requires some form of social coordination, notably, issues and proposals i.e. GitHub’s pull requests or GitLab’s merge requests. Radicle tries to take these aspects of code collaboration and create a distributed state management system simliar to git. The radicle CLI sits right alongside git, bringing the benefits of local repository storage to project issues and proposals.
+However, most software development also requires some form of social coordination, notably, issues and proposals i.e. GitHub’s pull requests or GitLab’s merge requests. Radicle tries to take these aspects of code collaboration and create a distributed state management system simliar to git. The Radicle CLI sits right alongside git, bringing the benefits of local repository storage to project issues and proposals.
 
 Radicle’s peer-to-peer model allows you to directly exchange repos, issues, and diff proposals with your collaborators, without a third party host.
 
@@ -28,7 +28,7 @@ Yes. Radicle apps function 100% independently of where you host your code, be it
 
 Select how you’d like to host your code when initializing a Radicle project with the ``rad project init`` command, which will prompt you to select where you want to set your git remote.
 
-The radicle commands that interact with your source code (like proposing and merging diffs), will call out directly to git under the hood. So if there are any problems, you can use the existing git commands for managing merge conflicts.
+The Radicle commands that interact with your source code (like proposing and merging diffs), will call out directly to git under the hood. So if there are any problems, you can use the existing git commands for managing merge conflicts.
 
 
 What is the difference between Radicle and other P2P projects like Dat or Scuttlebutt?
