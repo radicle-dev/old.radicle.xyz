@@ -6,3 +6,21 @@
 ## Start
 
 `hugo server --verbose --watch -D`
+
+## Deploy
+
+Currently the static content lives in a bucket on [GCS](https://cloud.google.com/storage/). In order to deploy build
+the latest version of the content with:
+
+```
+hugo --cleanDestinationDir
+```
+
+To sync the files with the storage bucket you need to be authenticated with
+`gcloud` on an account which access to the monadic infrastructure project.
+
+If you have access and the google-cloud-sdk tools installed run:
+
+```
+gsutil -m rsync -d -R public/ gs://alpha.radicle.xyz
+```
