@@ -21,7 +21,7 @@ However, most software development also requires some form of social coordinatio
 Radicle’s peer-to-peer model allows you to directly exchange repos, issues, and diff proposals with your collaborators, without a third party host.
 
 
-Can I use radicle with GitHub, GitLab, or another code hosting service?
+Can I use Radicle with GitHub, GitLab, or another code hosting service?
 =======================================================================
 
 Yes. Radicle apps function 100% independently of where you host your code, be it GitHub, GitLab, or IPFS. This means you can use Radicle for managing issues and code contributions and still continue to host your code on a service like GitHub.
