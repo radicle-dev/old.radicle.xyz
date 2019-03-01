@@ -10,7 +10,7 @@ author: "Julian Arni and James Haydon"
 
 # Intro
 
-`radicle` is a system for code collaboration that has several advantages over
+`radicle` is a system for code collaboration that PPhas several advantages over
 existing systems:
 
 - It is completely [peer-to-peer](https://en.wikipedia.org/wiki/Peer-to-peer)
