@@ -56,26 +56,23 @@ the IPFS protocol, but runs on its own network.
 The core component of `radicle` is a `radicle` **machine**. The word 'machine'
 is use in the sense of a *state machine*, that is, an abstract mathematical
 function, rather than a piece of hardware. Formally a state machine is defined by:
-- a set of possible states <i>S</i>,
-- a set of possible inputs <i>I</i>,
-- a set of possible outputs <i>O</i>,
-- a transition function <i>f</i> : <i>S</i> × <i>I</i> → <i>S</i> × <i>O</i>,
-- a distinguished starting state <i>s</i><sub>0</sub>.
+- a set of possible states \\(S\\),
+- a set of possible inputs \\(I\\),
+- a set of possible outputs \\(O\\),
+- a transition function \\(f : S \times I \to S \times O\\),
+- a distinguished starting state \\(s_0\\).
 
-The state machine starts in state <i>s</i><sub>0</sub>, and this state is
-updated according to the inputs given to the machine. If at some point it is in
-state <i>s</i> then the input <i>i</i> will make it transition to state
-<i>s'</i> while outputting <i>o</i>, where <i>f</i>(<i>s</i>, <i>i</i>) =
-(<i>s'</i>, <i>o</i>).
+The state machine starts in state \\(s_0\\), and this state is updated according
+to the inputs given to the machine. If at some point it is in state \\(s\\) then
+the input \\(i\\) will make it transition to state \\(s'\\) while outputting
+\\(o\\), where \\(f(s, i) = (s', o)\\).
 
 A simple example is a counter machine:
-- <i>S</i> = ℤ
-- <i>I</i> = {`increment`, `get-counter`}
-- <i>O</i> = {`ok`} ∪ ℤ
-- <i>f</i>(<i>n</i>, <i>i</i>) = (<i>n</i> + 1, `ok`) when <i>i</i> =
-  `increment` and <i>f</i>(<i>n</i>, <i>i</i>) = (<i>n</i>, <i>n</i>) when
-  <i>i</i> = `get-counter`.
-- <i>s</i><sub>0</sub> = 0.
+- \\(S = \mathbb{Z}\\)
+- \\(I = \\{\mathtt{increment}, \mathtt{getCounter}\\}\\)
+- \\(O = \\{\mathtt{ok}\\} \cup \mathbb{Z}\\)
+- \\[ f(n, i) = \begin{cases} (n + 1, \mathtt{ok}) & \text{when } i = \mathtt{increment} \\\ (n,n) & \text{when } i = \mathtt{getCounter} \end{cases}. \\]
+- \\(s_0 = 0\\).
 
 People can define their own machines, or set up new ones with an existing
 definition.
