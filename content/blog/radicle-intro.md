@@ -8,9 +8,9 @@ author: "Julian Arni and James Haydon"
 
 ---
 
-# Intro
+# Radicle
 
-`radicle` is a system for code collaboration that PPhas several advantages over
+`radicle` is a system for code collaboration that has several advantages over
 existing systems:
 
 - It is completely [peer-to-peer](https://en.wikipedia.org/wiki/Peer-to-peer)
@@ -43,19 +43,18 @@ they work behind the scenes is quite interesting. What exactly happens when
 create a new issue tracker? Or when someone submits a new issue? How do others
 see it? How is it replicated? How is it validated?
 
-# Background (IPFS)
-
-[IPFS](https://ipfs.io/) (InterPlanetary file system) is a peer-to-peer
-distributed file system. One can think of IPFS as a network of computers
-operating in a manner similar to a BitTorrent swarm, exchanging files within a
-single Git repository, using hashes for addresses. `radicle` is built on top of
-the IPFS protocol, but runs on its own network.
-
-## Replicated state machines
+The radicle stack uses [IPFS](https://ipfs.io/) (InterPlanetary file system) for
+replicating state. IPFS is a peer-to-peer distributed file system. One can think
+of IPFS as a network of computers operating in a manner similar to a BitTorrent
+swarm, exchanging files within a single Git repository, using hashes for
+addresses. `radicle` is built on top of the IPFS protocol, but runs on its own
+network.
 
 The core component of `radicle` is a `radicle` **machine**. The word 'machine'
-is use in the sense of a *state machine*, that is, an abstract mathematical
-function, rather than a piece of hardware. Formally a state machine is defined by:
+is used in the sense of a [state
+machine](https://en.wikipedia.org/wiki/State_machine_replication), that is, an
+abstract mathematical function, rather than a piece of hardware. Formally a
+state machine is defined by:
 - a set of possible states \\(S\\),
 - a set of possible inputs \\(I\\),
 - a set of possible outputs \\(O\\),
@@ -63,9 +62,9 @@ function, rather than a piece of hardware. Formally a state machine is defined b
 - a distinguished starting state \\(s_0\\).
 
 The state machine starts in state \\(s_0\\), and this state is updated according
-to the inputs given to the machine. If at some point it is in state \\(s\\) then
-the input \\(i\\) will make it transition to state \\(s'\\) while outputting
-\\(o\\), where \\(f(s, i) = (s', o)\\).
+to the inputs (elements of \\(I\\)) given to the machine. If at some point it is
+in state \\(s\\) then the input \\(i\\) will make it transition to state
+\\(s'\\) while outputting \\(o\\), where \\(f(s, i) = (s', o)\\).
 
 A simple example is a counter machine:
 - \\(S = \mathbb{Z}\\)
@@ -74,11 +73,11 @@ A simple example is a counter machine:
 - \\[ f(n, i) = \begin{cases} (n + 1, \mathtt{ok}) & \text{when } i = \mathtt{increment} \\\ (n,n) & \text{when } i = \mathtt{getCounter} \end{cases}. \\]
 - \\(s_0 = 0\\).
 
-People can define their own machines, or set up new ones with an existing
-definition.
+People can define their own `radicle` machines, or set up new ones with an
+existing definition.
 
 Where does a machine "exist"? Where does it execute? Part of the idea of the
-radicle architecture is somewhat abstracting away from any such notion. For the
+`radicle` architecture is somewhat abstracting away from any such notion. For the
 most part, it's sufficient to know that it does exist, and that you can
 interact with it.
 (TODO: improve flow / better locate this sentence)
@@ -91,30 +90,32 @@ current state of a machine, we need to communicate two things:
 - The definition of the machine,
 - The inputs that have already been processed by the machine.
 
-Picture:
-
-```
-M : M0 -[i0]-> M1 -[i1]-> M2 -[i3]-> ... -[in]-> M{n+1}
-N : N0 -[i0]-> N1 -[i1]-> N2 -[i3]-> ... -[in]-> N{n+1}
-...
-
-```
+So we end up with a bunch of machines \\(M\\), \\(N\\), etc. with starting
+states \\(M_0\\), \\(N_0\\), evolving according to the different inputs they
+receive:
+\\[
+\begin{eqnarray}
+M &:& M_0 \xrightarrow{i_0} M_1 \xrightarrow{i_1} M_2 \xrightarrow{i_2} \cdots \\\\\
+N &:& N_0 \xrightarrow{j_0} N_1 \xrightarrow{j_1} N_2 \xrightarrow{j_2} \cdots \\\\\
+&& \cdots
+\end{eqnarray}
+\\]
 
 Rather than come up with a separate way of formally specifying machine
-definitions, radicle starts from a single *root* machine `R`, a special machine
-which can come to behave like any other given the correct inputs:
-
-Picture:
-
-```
-R --> ... --> M0 -[i0]-> M1 -[i1]-> M2 -[i3]-> ... -[in]-> M{n+1}
-  --> ... --> N0 -[i0]-> N1 -[i1]-> N2 -[i3]-> ... -[in]-> N{n+1}
-```
+definitions, `radicle` starts from a single *root* machine \\(R\\), a special
+machine which can come to behave like any other given the correct inputs:
+\\[
+\begin{eqnarray}
+M &:& R \to \cdots \to M_0 \xrightarrow{i_0} M_1 \xrightarrow{i_1} M_2 \xrightarrow{i_2} \cdots \\\\\
+N &:& R \to \cdots \to N_0 \xrightarrow{j_0} N_1 \xrightarrow{j_1} N_2 \xrightarrow{j_2} \cdots \\\\\
+&& \cdots
+\end{eqnarray}
+\\]
 
 In this way the the boundary between a machine's definition and its operation
 becomes blurred. In any case, a machine is now completely determined by its
-input log, and its *state* is recovered by feeding these inputs to the root
-machine `R`.
+input log, and its state is recovered by feeding these inputs to the root
+machine \\(R\\).
 
 What this gives us is the ability to define machines as a pointers to linked
 list stored on IPFS; the list of all the expressions submitted to that
