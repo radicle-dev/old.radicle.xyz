@@ -22,5 +22,5 @@ To sync the files with the storage bucket you need to be authenticated with
 If you have access and the google-cloud-sdk tools installed run:
 
 ```
-gsutil -m rsync -d -R public/ gs://alpha.radicle.xyz
+gsutil -m -h 'Cache-Control:public,max-age=600' cp -R public/* gs://alpha.radicle.xyz
 ```
