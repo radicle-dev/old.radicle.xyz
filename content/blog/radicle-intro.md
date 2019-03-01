@@ -80,7 +80,7 @@ Where does a machine "exist"? Where does it execute? Part of the idea of the
 `radicle` architecture is somewhat abstracting away from any such notion. For the
 most part, it's sufficient to know that it does exist, and that you can
 interact with it.
-(TODO: improve flow / better locate this sentence)
+<!-- TODO: improve flow / better locate this sentence -->
 
 Crucially, machines are **deterministic**. If you start from any machine, in any
 state, giving it the same set of inputs will always result in the same set of
@@ -125,7 +125,7 @@ resolve the pointer, fetch the data from IPFS, and then evaluate the set of
 expressions that gives you. You can then query that materialized machine for
 e.g. it's state (`get-counter`).
 
-   TODO: IPFS linked list picture
+<!-- TODO: IPFS linked list picture -->
 
 By fetching the data, you are also replicating it. So if someone else wants it
 and you are more easily reachable than other replicators, or others are offline,
@@ -139,7 +139,7 @@ different ones) share blocks on IPFS; so if you already have *a* counter app,
 you already have part of other ones, and fetching the history of other ones will
 be faster.
 
-TODO: IPFS linked list with shared suffix
+<!-- TODO: IPFS linked list with shared suffix -->
 ```
 R --> ... --> ... --> M0 -[i0]-> M1 -[i1]-> M2 -[i3]-> ... -[in]-> M{n+1}
           --> ... --> N0 -[i0]-> N1 -[i1]-> N2 -[i3]-> ... -[in]-> N{n+1}
@@ -183,4 +183,4 @@ sends that input to the relevant pubsub channel, so that the owner can add it
 to IPFS and update the machine's pointer. (This means that if the owner is
 offline, writing won't work, and the machine becomes read-only.)
 
-TODO: mention that the owner can also rewrite history?
+<!-- TODO: mention that the owner can also rewrite history? -->
