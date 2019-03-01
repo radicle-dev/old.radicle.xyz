@@ -49,7 +49,7 @@ Through one lens these RSMs look quite similar to Scuttlebutt feeds, where inste
 Unlike Scuttlebutt however, Radicle apps have no social graph to allow data to propagate throughout the network. Rather than relying on its own custom network and replication layer, Radicle uses IPFS as the peer-to-peer infrastructure on which to build Radicle apps. RSM updates are written as IPFS objects, using IPLD to link between these IPFS objects, and lastly we use IPNS to give us persistent identifiers for RSMs that resolve to the current state.
 
 
-If i am a project owner, can I get updates from contributors if we are not online at the same time?
+If I am a project owner, can I get updates from contributors if we are not online at the same time?
 ===================================================================================================
 
 Currently the owner of the project must be online in order to receive any proposed RSM updates from a contributor. Once received and processed, these updates will be written to IPFS by the project owner, and made available to all users who follow that project.
@@ -61,7 +61,7 @@ We’re aware that this is not ideal from a usability perspective, and are curre
 Can I collaborate on a local area network without an internet connection?
 =========================================================================
 
-No. IPFS needs to connect to bootstrap nodes in order to read and write data from the network so a direct connection to the internet is required.
+LAN-only collaboration isn't supported yet. IPFS still needs to connect to outside bootstrap nodes in order to read and write data from the network so a direct connection to the internet is required.
 
 Can I collaborate privately?
 ============================
