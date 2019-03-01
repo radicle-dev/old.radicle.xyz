@@ -10,7 +10,7 @@ author: "Julian Arni and James Haydon"
 
 # Radicle
 
-`radicle` is a system for code collaboration that has several advantages over
+Radicle is a system for code collaboration that has several advantages over
 existing systems:
 
 - It is completely [peer-to-peer](https://en.wikipedia.org/wiki/Peer-to-peer)
@@ -47,10 +47,10 @@ The radicle stack uses [IPFS](https://ipfs.io/) (InterPlanetary file system) for
 replicating state. IPFS is a peer-to-peer distributed file system. One can think
 of IPFS as a network of computers operating in a manner similar to a BitTorrent
 swarm, exchanging files within a single Git repository, using hashes for
-addresses. `radicle` is built on top of the IPFS protocol, but runs on its own
+addresses. Radicle is built on top of the IPFS protocol, but runs on its own
 network.
 
-The core component of `radicle` is a `radicle` **machine**. The word 'machine'
+The core component of Radicle is a Radicle **machine**. The word 'machine'
 is used in the sense of a [state
 machine](https://en.wikipedia.org/wiki/State_machine_replication), that is, an
 abstract mathematical function, rather than a piece of hardware. Formally a
@@ -73,11 +73,11 @@ A simple example is a counter machine:
 - \\[ f(n, i) = \begin{cases} (n + 1, \mathtt{ok}) & \text{when } i = \mathtt{increment} \\\ (n,n) & \text{when } i = \mathtt{getCounter} \end{cases}. \\]
 - \\(s_0 = 0\\).
 
-People can define their own `radicle` machines, or set up new ones with an
+People can define their own Radicle machines, or set up new ones with an
 existing definition.
 
 Where does a machine "exist"? Where does it execute? Part of the idea of the
-`radicle` architecture is somewhat abstracting away from any such notion. For the
+Radicle architecture is somewhat abstracting away from any such notion. For the
 most part, it's sufficient to know that it does exist, and that you can
 interact with it.
 <!-- TODO: improve flow / better locate this sentence -->
@@ -102,7 +102,7 @@ N &:& N_0 \xrightarrow{j_0} N_1 \xrightarrow{j_1} N_2 \xrightarrow{j_2} \cdots \
 \\]
 
 Rather than come up with a separate way of formally specifying machine
-definitions, `radicle` starts from a single *root* machine \\(R\\), a special
+definitions, Radicle starts from a single *root* machine \\(R\\), a special
 machine which can come to behave like any other given the correct inputs:
 \\[
 \begin{eqnarray}
