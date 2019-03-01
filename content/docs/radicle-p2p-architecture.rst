@@ -7,6 +7,10 @@ markup: rst
 
 ---
 
+========================
+Radicle P2P Architecture
+========================
+
 How replication works
 =====================
 
