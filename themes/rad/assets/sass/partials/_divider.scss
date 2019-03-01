@@ -30,6 +30,12 @@
       opacity: 0.2;
     }
   }
+  &.line.white {
+    svg path {
+      fill: transparent;
+      stroke: $white;
+    }
+  }
   &.footer {
     @media (min-width: 980px) {
       display: none;
