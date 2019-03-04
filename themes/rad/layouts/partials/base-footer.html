@@ -1,0 +1,7 @@
+
+       	<ul>
+          {{ range .Site.Menus.footer }}
+          <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+{{- partial "base-scripts.html" . -}}

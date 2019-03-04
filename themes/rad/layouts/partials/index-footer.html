@@ -1,0 +1,48 @@
+<footer>
+  <div class="footer-content">
+    <ul>
+      {{ range .Site.Menus.footer }}
+      <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+    <section
+      class="divider white line footer"
+      data-rad-divider-density="15"
+      data-rad-divider-ondulation="30"
+      data-rad-divider-speed="30">
+    </section>
+    <div class="footer-text">
+      <h1>Get involved</h1>
+      <div class="footer-grid">
+        <p>
+          We dogfood Radicle! See our
+          <a href="/docs#issues">issues documentation</a> for instructions on how to check out the
+          Radicle repo and submit an issue directly. <br /><br />
+          Radicle source code project ID: _____________
+          <br /><br />
+          You can also send us an email at
+          <a href="mailto:radicle@monadic.xyz">radicle@monadic.xyz</a>, or
+          drop in the
+          <a href="irc://freenode:1/radicle">#radicle</a> IRC channel on
+          freenode.
+        </p>
+        <p>
+          The Radicle development team posts weekly updates on the P2P social
+          network <a href="https://www.scuttlebutt.nz/">Secure Scuttlebutt</a>.
+          <br /><br />
+          Connect to our <a href="pub.os.computer">pub</a>
+          and follow the #radicle-weekly-updates channel to see what we’re
+          working on.
+        </p>
+      </div>
+      <p class="p2p-links">
+        Find this site on the decentralized web:<br /><br />
+        <a href="">dat://445b0dbc94c371e6f3a2e80da8b1107cc8f6ba13e65318c43018a8d94ef8254a</a><br />
+        <a href="">ipns://QmZrL4YkmgC7x3ZAicHx9s3fkoNgVmg87zHMSsmjRnhM23</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="{{ "js/perlin.js" | relURL }}"></script>
+<script src="{{ "js/rad.js" | relURL }}"></script>
+<script src="{{ "js/asciinema-player.js" | relURL }}"></script>
