@@ -111,7 +111,7 @@ There's only one issue for this project at the moment. Let's take a closer look 
   Comments:
     <TODO> It looks like your garden doesn't have the correct dimensions. All gardens should be 20 characters wide and 8 lines high.
 
-If we wanted to add another comment we could run $ rad issue comment ``<issue-number> <body>`` which would open the default editor, set with the $EDITOR environment variable.
+If we wanted to add another comment we could run ``$ rad issue comment <issue-number> <body>`` which would open the default editor, set with the $EDITOR environment variable.
 
 Creating an issue works just like adding a git commit message—add text at the top and save the file to create the comment.
 
