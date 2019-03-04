@@ -55,14 +55,14 @@ Now let's take a look at what's in these garden text files:
 
   $ cat garden1.txt
 
-  ╔══════════════════╗
-  ║      %           ║
-  ║       \_         ║
-  ║       | %        ║
-  ║.-`-...l..-..~-`..║
-  ║                  ║
-  ║                  ║
-  ╚══════════════════╝
+                      
+         %            
+          \_          
+          | %         
+  ..-`-...l..-..~-`.,.
+                      
+                      
+                       
 
 Oh, very pretty.
 
