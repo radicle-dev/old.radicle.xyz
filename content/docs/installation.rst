@@ -22,7 +22,7 @@ OS X
 Linux
 =====
 
-Install From Source
+Install from source
 ===================
 
 To build Radicle from source you need to install `stack`_.
@@ -46,5 +46,5 @@ more sophisticated setup see “Running Background processes” below.
 .. _ipfs: https://docs.ipfs.io/introduction/install/
 .. _git-remote-ipfs: https://github.com/oscoin/ipfs/tree/master/git-remote-ipfs#install
 
-Running Background processes
+Running background processes
 ============================
