@@ -16,13 +16,35 @@ Installation
 
 *This release is aimed for developers and early-adopters who want to get a glimpse into what we are building and help shape the product through feedback or contributions to the Radicle project.*
 
+External Dependencies
+=====================
+
 OS X
 ====
+
+
+.. code-block::
+
+   brew tap oscoin/radicle
+   brew install radicle-alpha
+
+
+To run the `rad` commands, you must have both a Radicle daemon, and Radicle IPFS daemon running.
+For OS X users these can be accessed using `brew services <https://github.com/Homebrew/homebrew-services>`_
+with the following commands:
+
+.. code-block::
+
+   brew services start radicle-alpha-ipfs
+   brew services start radicle-alpha
+
 
 Linux
 =====
 
-Install from source
+TBD
+
+Install From Source
 ===================
 
 To build Radicle from source you need to install `stack`_.
