@@ -11,20 +11,20 @@ author: "Julian Arni and James Haydon"
 # Radicle
 
 Radicle is a system for code collaboration that has several advantages over
-existing systems:
+existing tools. In particular Radicle is:
 
-- It is completely [peer-to-peer](https://en.wikipedia.org/wiki/Peer-to-peer)
-- It is easily modifiable and programmable
-- It is extensible
+- Completely [peer-to-peer](https://en.wikipedia.org/wiki/Peer-to-peer)
+- Easily modifiable and programmable
+- Extensible
 
-We've built a couple of "apps" in the radicle system. One example is
-`rad-issues`, a p2p issue tracker.
+We've built several "apps" using the radicle system. One example,
+`rad-issues`, is a P2P issue tracker.
 
 ```
 $ rad issue list
 state    #    title                    author        updated
 open     32   can't log in             juliendonck   2019-01-25T13:27
-open     23   some title               cloudhead     2019-01-25T13:27
+open     23   typo fix                 cloudhead     2019-01-25T13:27
 closed   12   why doesn't this work?   xla           2019-01-25T13:27
 ```
 
@@ -40,8 +40,8 @@ Commented on issue 33 in docs
 
 You don't need to understand any of what follows to use these apps. But how
 they work behind the scenes is quite interesting. What exactly happens when
-create a new issue tracker? Or when someone submits a new issue? How do others
-see it? How is it replicated? How is it validated?
+we create a new issue tracker? Or when someone submits a new issue? How do peers
+see it? How are messages replicated? Or validated?
 
 The radicle stack uses [IPFS](https://ipfs.io/) (InterPlanetary file system) for
 replicating state. IPFS is a peer-to-peer distributed file system. One can think
@@ -51,10 +51,11 @@ addresses. Radicle is built on top of the IPFS protocol, but runs on its own
 network.
 
 The core component of Radicle is a Radicle **machine**. The word 'machine'
-is used in the sense of a [state
+refers to [state
 machine](https://en.wikipedia.org/wiki/State_machine_replication), that is, an
 abstract mathematical function, rather than a piece of hardware. Formally a
 state machine is defined by:
+
 - a set of possible states \\(S\\),
 - a set of possible inputs \\(I\\),
 - a set of possible outputs \\(O\\),
@@ -62,11 +63,12 @@ state machine is defined by:
 - a distinguished starting state \\(s_0\\).
 
 The state machine starts in state \\(s_0\\), and this state is updated according
-to the inputs (elements of \\(I\\)) given to the machine. If at some point it is
-in state \\(s\\) then the input \\(i\\) will make it transition to state
-\\(s'\\) while outputting \\(o\\), where \\(f(s, i) = (s', o)\\).
+to the inputs (elements of \\(I\\)) given to the machine. If at some point the machine is
+in state \\(s\\) then the input \\(i\\) will cause a transition to state
+\\(s'\\) and output \\(o\\), where \\(f(s, i) = (s', o)\\).
 
 A simple example is a counter machine:
+
 - \\(S = \mathbb{Z}\\)
 - \\(I = \\{\mathtt{increment}, \mathtt{getCounter}\\}\\)
 - \\(O = \\{\mathtt{ok}\\} \cup \mathbb{Z}\\)
@@ -77,14 +79,14 @@ People can define their own Radicle machines, or set up new ones with an
 existing definition.
 
 Where does a machine "exist"? Where does it execute? Part of the idea of the
-Radicle architecture is somewhat abstracting away from any such notion. For the
-most part, it's sufficient to know that it does exist, and that you can
+Radicle architecture is to abstract away from any such notion. For the
+most part, it's sufficient to know that a machine exists, and that you can
 interact with it.
 <!-- TODO: improve flow / better locate this sentence -->
 
 Crucially, machines are **deterministic**. If you start from any machine, in any
-state, giving it the same set of inputs will always result in the same set of
-outputs, and the same new state. Therefore in order for everyone to agree on the
+state, given the same set of inputs will always result in the same set of
+outputs, and the same new state. Therefore, in order for everyone to agree on the
 current state of a machine, we need to communicate two things:
 
 - The definition of the machine,
@@ -112,33 +114,34 @@ N &:& R \to \cdots \to N_0 \xrightarrow{j_0} N_1 \xrightarrow{j_1} N_2 \xrightar
 \end{eqnarray}
 \\]
 
-In this way the the boundary between a machine's definition and its operation
-becomes blurred. In any case, a machine is now completely determined by its
+In this way the boundary between a machine's definition and its operation
+is blurred. In any case, a machine is now completely determined by its
 input log, and its state is recovered by feeding these inputs to the root
 machine \\(R\\).
 
-What this gives us is the ability to define machines as a pointers to linked
+This gives us the ability to define machines as pointers to a linked
 list stored on IPFS; the list of all the expressions submitted to that
-machine. Adding new inputs means adding the data to IPFS, and then updating the
+machine. Adding new inputs means adding that data to IPFS, then updating the
 pointer to point to the new data. In order to materialize that machine, you can
-resolve the pointer, fetch the data from IPFS, and then evaluate the set of
-expressions that gives you. You can then query that materialized machine for
-e.g. it's state (`get-counter`).
+resolve the pointer, fetch the data from IPFS, and then evaluate the resulting set of
+expressions. You can then query the materialized machine for
+e.g. its state (`get-counter`).
 
 <!-- TODO: IPFS linked list picture -->
 
-By fetching the data, you are also replicating it. So if someone else wants it
-and you are more easily reachable than other replicators, or others are offline,
+By fetching data, you also automatically replicate it to the network. So if someone else requests that data
+and you're more easily reachable than other peers, or they are offline,
 you help ensure its availability. One nice feature of this architecture is that
-machines that are popular are more available. Currently we pin all the data
+popular machines are more available. Currently we pin all data
 indefinitely, but with a system to unpin data that's rarely used locally, we
-have a very simple but elegant replication and garbage collection
-infrastructure. Another nice feature is that machines that have common prefixes
-(their initial definition is the same - e.g., they are both counter apps, albeit
-different ones) share blocks on IPFS; so if you already have *a* counter app,
-you already have part of other ones, and fetching the history of other ones will
+have a simple, yet elegant, replication and garbage collection
+infrastructure. Another useful feature is that machines with common prefixes
+i.e. their initial definition is the same, for instance two counter apps,
+these apps will share IPFS blocks; so if you already have *a* counter app,
+you will already have part similar applications, so fetching the history of subsequent counters will
 be faster.
 
+<!-- TODO: "but with a system to unpin data..." clause doesn't make it clear if this system exists yet -->
 <!-- TODO: IPFS linked list with shared suffix -->
 ```
 R --> ... --> ... --> M0 -[i0]-> M1 -[i1]-> M2 -[i3]-> ... -[in]-> M{n+1}
@@ -149,36 +152,35 @@ This fetching and materializing isn't manual. Instead, participants of the
 network have a **radicle daemon** that runs in the background; when you first
 query a machine, you ask that daemon for the current state of the machine. It
 resolves the pointer, fetches the data via IPFS, materializes it for you,
-and returns the result of your query. After that, it subscribes/polls
-("follows") the pointer for updates, automatically replicating and
+and returns the result of your query. After the initial query, your daemon will subscribe (follow)
+that pointer for updates, automatically replicating and
 materializing further updates. If you query again, you get the latest data
 almost immediately.
 
-Mostly you'll be running this daemon locally. It won't be available to anyone
+Mostly you'll be running this daemon locally—meaning it won't be available to anyone
 else but you. But you can also run it in a publicly exposed computer for anyone
-to access. This gives us two things.
+to access. This has two advantages:
 
 First, it makes running a machine-replication service trivial. If you are
-worried about your data not being available when you are offline, you can
-simply query a public daemon for your machine, causing it to start replication.
+worried about your data not being available when you're offline, you can
+simply query a public daemon for your machine, causing that daemon to replicate it.
 When you go offline, your data will have replicated to servers that are always
-online, so it will still be available. We provide some such public daemons, but
+online, so it will continue to be available. We provide some such public daemons, but
 you can run your own and contribute to the health of your machines, or of the
-network generally. (Note that there's still not authentication mechanism in
-these daemons, so there's still the possibility of DOS attacks if you go this
-route.)
+network generally. *Note that while Radicle is still in alpha daemons have no authentication mechanim, 
+thus there is a possibility of DOS attacks if you enable this option.*
 
 Secondly, because the radicle daemon is just an HTTP server, this gives you the
-possibility of having websites that have your machine as the data layer. (This
-is still a very manual process, which we hope to in the future make easier.)
+possibility of creating websites that use your machine as the data layer. (This
+is still a very manual process, which we aim to automate and simplify in the future.)
 
 How does the pointer work? We back it with an IPNS pointer. [Explain IPNS.] So
-each pointer has an *owner* who is allowed to modify what it points to. The
-owner of the pointer is also in a way the owner of the machine. They can in
-theory choose which new inputs get accepted (though accepting inputs is an
-automatic process guided by the semantics of the machine, so in normal
-operation this won't happen). The owner's radicle daemon subscribes to an
-(IPFS) pubsub channel, and anyone who wants to submit new inputs to a machine
+each pointer has an *owner* who is allowed to modify what IPNS points to. The
+owner of the pointer is also, in a way, the owner of the machine. In
+theory, they can choose which new inputs are accepted (though accepting inputs is an
+automatic process guided by the semantics of the machine, so under normal
+conditions this won't happen). The owner's radicle daemon subscribes to an
+IPFS pubsub channel, and anyone who wants to submit new inputs to a machine
 sends that input to the relevant pubsub channel, so that the owner can add it
 to IPFS and update the machine's pointer. (This means that if the owner is
 offline, writing won't work, and the machine becomes read-only.)
