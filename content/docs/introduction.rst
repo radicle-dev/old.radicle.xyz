@@ -35,7 +35,7 @@ like Github still play an essential role in the open source ecosystem.
 
 This desire for P2P communities to be using P2P tools more generally isn’t
 really new. Scuttlebutt has long discussions around new ideas of “teamware_.”
-Projects like git-ssb_ and git-remote-ipfs_ have existed for some time already.
+Projects like git-ssb_ and git-remote-ipld_ have existed for some time already.
 
 Rather than thinking of solutions for decentralized code collaboration within
 the scope of a single P2P protocol, Radicle tries to take what it can learn
@@ -68,7 +68,7 @@ Contributions to the Radicle project and interactions with the community should 
 
 .. _teamware: https://viewer.scuttlebot.io/%25ZyZge6x3sXi4kROFfhnGs8URgPEDq1thPjC0D8tPfms%3D.sha256
 .. _git-ssb: https://git.scuttlebot.io/%25n92DiQh7ietE%2BR%2BX%2FI403LQoyf2DtR3WQfCkDKlheQU%3D.sha256
-.. _git-remote-ipfs: https://github.com/ipfs-shipyard/git-remote-ipld
+.. _git-remote-ipld: https://github.com/ipfs-shipyard/git-remote-ipld
 .. _`this blogpost`: ../blog/radicle-intro
 .. _`Try Radicle`: ./#try-radicle
 .. _github: https://github.com/oscoin/radicle
