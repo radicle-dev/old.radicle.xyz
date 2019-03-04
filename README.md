@@ -3,24 +3,19 @@
 1. [Install hugo](https://gohugo.io/getting-started/installing/)
 2. Install rst2html ` pip install docutils`
 
-## Start
+## Develop
 
-`hugo server --verbose --watch -D`
+```
+make watch
+```
 
 ## Deploy
 
-Currently the static content lives in a bucket on [GCS](https://cloud.google.com/storage/). In order to deploy build
-the latest version of the content with:
+Currently the static content lives in a bucket on
+[GCS](https://cloud.google.com/storage/).In order to deploy build the latest
+version of the content you need access to that bucket through a google account
+and then run:
 
 ```
-hugo --cleanDestinationDir
-```
-
-To sync the files with the storage bucket you need to be authenticated with
-`gcloud` on an account which access to the monadic infrastructure project.
-
-If you have access and the google-cloud-sdk tools installed run:
-
-```
-gsutil -m -h 'Cache-Control:public,max-age=600' cp -R public/* gs://alpha.radicle.xyz
+make deploy
 ```
