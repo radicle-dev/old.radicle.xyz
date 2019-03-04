@@ -1,4 +1,25 @@
 function animateDivider(el) {
+  const defaultDensity = 5;
+  const defaultOndulation = 75;
+  const defaultSpeed = 5;
+
+  // Read config variables from data attributes.
+  let density = parseInt(
+    el.getAttribute('data-rad-divider-density') || defaultDensity,
+  );
+
+  if (isNaN(density)) { density = defaultDensity; }
+
+  let ondulation = parseInt(
+    el.getAttribute('data-rad-divider-ondulation') || defaultOndulation,
+  );
+
+  if (isNaN(ondulation)) { ondulation = defaultOndulation; }
+
+  let speed = parseInt(el.getAttribute('data-rad-divider-speed') || defaultSpeed);
+
+  if (isNaN(speed)) { speed = defaultSpeed; }
+
   let width = el.clientWidth;
   let isLine = el.classList.contains('line');
 
@@ -13,12 +34,13 @@ function animateDivider(el) {
 
   let yoff = 0;
 
-  let interval = 1000 / 30;
+  let interval = 1000 / 60;
   let then = Date.now();
-  let start = then;
   let elapsed;
 
   let noise = Noise(Math.random());
+  density = density / 1000;
+  speed = speed / 1000;
 
   function animate() {
     if (width !== el.clientWidth) {
@@ -29,21 +51,20 @@ function animateDivider(el) {
     now = Date.now();
     elapsed = now - then;
 
-
     if (elapsed > interval) {
       let xoff = 0;
       let xs = [];
 
       for (var x = 0; x < width; x++) {
         let n = noise.perlin2(xoff, yoff)
-        let y = 75 - (75 * n)
+        let y = ondulation - (ondulation * n)
 
         xs.push([x, y]);
 
-        xoff += 0.005;
+        xoff += density;
       }
 
-      yoff += 0.005;
+      yoff += speed;
 
       let prefix = 'M0,0 ' + width + ',0 ';
 
@@ -105,28 +126,28 @@ document.addEventListener('DOMContentLoaded', function () {
       "Peer–to–peer",
     ],
     [
-        "&gt;",
-        "&gt;▌",
-        "&gt;T",
-        "&gt;Te▌",
-        "&gt;Ter",
-        "&gt;Term▌",
-        "&gt;Termi",
-        "&gt;Termin▌",
-        "&gt;Termina",
-        "&gt;Terminal▌",
-        "&gt;Terminal–",
-        "&gt;Terminal–f▌",
-        "&gt;Terminal–fi",
-        "&gt;Terminal–fir▌",
-        "&gt;Terminal–firs",
-        "&gt;Terminal–first▌",
-        "&gt;Terminal–first",
-        "Terminal–first",
-        "Terminal–first",
-        "Terminal–first",
-        "Terminal–first",
-        "Terminal–first",
+      "&gt;",
+      "&gt;▌",
+      "&gt;T",
+      "&gt;Te▌",
+      "&gt;Ter",
+      "&gt;Term▌",
+      "&gt;Termi",
+      "&gt;Termin▌",
+      "&gt;Termina",
+      "&gt;Terminal▌",
+      "&gt;Terminal–",
+      "&gt;Terminal–f▌",
+      "&gt;Terminal–fi",
+      "&gt;Terminal–fir▌",
+      "&gt;Terminal–firs",
+      "&gt;Terminal–first▌",
+      "&gt;Terminal–first",
+      "Terminal–first",
+      "Terminal–first",
+      "Terminal–first",
+      "Terminal–first",
+      "Terminal–first",
     ],
     [
       "–––––a––a–––",
@@ -164,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
       then = now - (elapsed % interval);
       idxLines += 1;
 
-      if (idxLines >= currentLines.length -1) {
+      if (idxLines >= currentLines.length - 1) {
         idxLines = 0;
         idxSelectors += 1;
       }
@@ -187,10 +208,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const navBar = document.getElementById("nav");
 
-  window.addEventListener("scroll", function() {
+  window.addEventListener("scroll", function () {
     if (navBar === null) { return; }
 
     var y = window.scrollY;
@@ -205,7 +226,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   for (var i = 0; i < els.length; i++) {
     els[i].onclick = function () {
-      narrowNav.style.top="-182px"
+      narrowNav.style.top = "-182px"
     };
   }
 
@@ -214,10 +235,10 @@ document.addEventListener('DOMContentLoaded', function() {
   var narrowNav = document.getElementById("narrow-menu");
 
   (hamburger || {}).onclick = function () {
-    narrowNav.style.top="0"
+    narrowNav.style.top = "0"
   };
   (hamburger2 || {}).onclick = function () {
-    narrowNav.style.top="0"
+    narrowNav.style.top = "0"
   };
 
 });
