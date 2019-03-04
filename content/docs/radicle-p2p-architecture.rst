@@ -4,6 +4,7 @@ title: "Radicle P2P Architecture"
 date: 2019-02-06T17:31:11+01:00
 draft: true
 markup: rst
+weight: 6
 
 ---
 
@@ -93,10 +94,10 @@ inputs. The code forming a Radicle *app* has two components:
   users submit valid inputs and to visualise the current state of the
   machine. It isn't strictly necessary to use the Radicle language for this
   but doing so presents several advantages:
-  
+
   - A perfect fit with the radicle data model: Being a LISP, it's very natural
     to create an manipulate Radicle expressions in Radicle itself.
-    
+
   - Code sharing code between the UX and machine: Just like it's attractive to
     use the same language on the frontend and backend of a traditional web-app
     (e.g. Node/JS, Clojure/Clojurescript, etc.), using Radicle for the UX
