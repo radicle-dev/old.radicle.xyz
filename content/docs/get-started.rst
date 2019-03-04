@@ -19,11 +19,11 @@ Contribute to the Radicle Garden
 
 The Radicle Garden is a project created using Radicle, with a rendered output hosted found at https://radicle.xyz/garden. A Radicle project contains a git repository as well as the all the issues and proposals associated with that repo.
 
-Before we start contributing, we'll need to download a copy to our computer by checking out the project. To do that we need the project-id: ``<PROJECT-ID>``, and then we'll run:
+Before we start contributing, we'll need to download a copy to our computer by checking out the project. To do that we need the project-id: ``12D3KooWSeVNi5qTpDULRMR8UQhhQZfk4taUGRaLoLF7BgAAsUQW``, and then we'll run:
 
 ::
 
-  $ rad project checkout <PROJECT-ID>
+  $ rad project checkout 12D3KooWSeVNi5qTpDULRMR8UQhhQZfk4taUGRaLoLF7BgAAsUQW
     Cloning into ./acme/
     remote: Enumerating objects: 70, done.
     remote: Counting objects: 100% (70/70), done.
@@ -39,7 +39,7 @@ Before we start contributing, we'll need to download a copy to our computer by c
 
 In the output shown above we can see that ``rad project`` uses git behind the scenes to clone the project from a remote repo hosted on IPFS into a new folder named after the project-id.
 
-Let's learn a little more about this project by moving into the newly created directory with ``$ cd <PROJECT-ID>`` and then listing what's in the folder.
+Let's learn a little more about this project by moving into the newly created directory with ``$ cd radicle-garden`` and then listing what's in the folder.
 
 ::
 
@@ -90,8 +90,8 @@ Like our git repo, Radicle stores issue and proposal chains locally and distribu
 ::
 
   $ rad issue list
-  state    issue #   title                                author        updated            unread
-  open     1         Diff proposal not accepted           juliendonck   2019-01-25 13:27   *
+  state    issue #   title                        author        updated         
+  open     1         Diff proposal not accepted   juliendonck   2019-01-25 13:27
 
 There's only one issue for this project at the moment. Let's take a closer look with ``$ rad issue show 1``.
 
@@ -193,8 +193,8 @@ Let's say a collaborator already proposed a diff, using the steps outlined in th
 ::
 
   $ rad diff list
-  state      diff #    commit                                  author        updated            unread
-  pending    3f9e302   Make documentation more accessible      jane doe      2019-01-25 13:27   *
+  state      diff #    commit                               author        updated         
+  pending    3f9e302   Make documentation more accessible   jane doe      2019-01-25 13:27
 
 Then we can inspect the diff with:
 
@@ -242,8 +242,8 @@ Let's check the proposal status one more time to confirm:
 ::
 
   $ rad diff list
-  state      diff #    commit           author        updated            unread
-  accempted  3f9e302   Sewing seeds     jane doe      2019-01-25 13:27   *
+  state      diff #    commit           author        updated           
+  accempted  3f9e302   Sewing seeds     jane doe      2019-01-25 13:27  
 
 That's it!
 
