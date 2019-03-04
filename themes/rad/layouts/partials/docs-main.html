@@ -2,7 +2,7 @@
   <aside>
     <ul>
       {{- range (where .Data.Pages "Section" "docs") }}
-      <li><a href="/docs{{string "#"}}{{ .Title | anchorize }}">{{ .Title }}</a></li>
+      <li><a href="#{{ .Title | anchorize }}">{{ .Title }}</a></li>
       {{- end }}
     </ul>
   </aside>

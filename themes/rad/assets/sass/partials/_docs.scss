@@ -1,7 +1,6 @@
 // doc styles
 
 .docs-content {
-  margin-top: 64px;
   display: grid;
   grid-template-columns: 280px auto;
   grid-template-rows: minmax(min-content, auto);
@@ -66,6 +65,8 @@ main {
     }
 
     .document {
+      padding-top: 64px;
+
       p {
         word-break: normal;
         margin-bottom: 1em;
