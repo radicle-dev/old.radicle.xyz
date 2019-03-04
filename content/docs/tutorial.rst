@@ -1,15 +1,16 @@
 ---
 
-title: "Radicle Guide"
+title: "Radicle Tutorial"
 date: 2019-02-05T18:12:34+01:00
 markup: rst
-weight: 3
 
 ---
 
-=============
-Radicle Guide
-=============
+================
+Radicle Tutorial
+================
+
+*Once you've finished installing Radicle, now you're ready to try some of the basic commands.*
 
 Welcome to the Radicle Garden, a new-found island located somewhere off the ASCII shores of `tilde.town <http://tilde.town/~troido/cadastre/town.html>`_. Today we're going to learn how to use the Radicle collaboration apps by adding a plot of our own to the `Radicle Garden <../garden>`_ map, then we'll walk through how the Radicle Garden project was created and steps for managing contributions as a maintainer.
 
@@ -91,7 +92,7 @@ Like our git repo, Radicle stores issue and proposal chains locally and distribu
 ::
 
   $ rad issue list
-  state    issue #   title                        author        updated
+  state    issue #   title                        author        updated         
   open     1         Diff proposal not accepted   juliendonck   2019-01-25 13:27
 
 There's only one issue for this project at the moment. Let's take a closer look with ``$ rad issue show 1``.
@@ -99,21 +100,18 @@ There's only one issue for this project at the moment. Let's take a closer look 
 ::
 
   $ rad issue show 1
-  open 0 Diff proposal not accepted Julien Donck 2019-03-04T16:41:47Z
+  Issue:  #1 Diff proposal not accepted
+  Author: juliendonck
+  Date:   Fri Nov 16 17:51:36 2018 +0100
+  ---
+  Description:
+    I made a proposal to add my garden to the map, but when I run `rad diff list` the state is listed as rejected.
 
-  **State:** open
-  **Labels:** []
+  ---
+  Comments:
+    <TODO> It looks like your garden doesn't have the correct dimensions. All gardens should be 20 characters wide and 8 lines high.
 
-  I made a proposal to add my garden to the map, but when I run `rad diff list` the state is listed as rejected.
-
-  Comments
-  --------
-
-  ### hxrts [2019-03-04T16:43:26Z]
-
-  It looks like your garden doesn't have the correct dimensions. All gardens should be 20 characters wide and 8 lines high.
-
-If we wanted to add another comment we could run $ rad issue comment ``<issue-number> <body>`` which would open the default editor, set with the $EDITOR environment variable.
+If we wanted to add another comment we could run ``$ rad issue comment <issue-number> <body>`` which would open the default editor, set with the $EDITOR environment variable.
 
 Creating an issue works just like adding a git commit message—add text at the top and save the file to create the comment.
 
@@ -195,7 +193,7 @@ Let's say a collaborator already proposed a diff, using the steps outlined in th
 ::
 
   $ rad diff list
-  state      diff #    commit                               author        updated
+  state      diff #    commit                               author        updated         
   pending    3f9e302   Make documentation more accessible   jane doe      2019-01-25 13:27
 
 Then we can inspect the diff with:
@@ -244,8 +242,8 @@ Let's check the proposal status one more time to confirm:
 ::
 
   $ rad diff list
-  state      diff #    commit           author        updated
-  accempted  3f9e302   Sewing seeds     jane doe      2019-01-25 13:27
+  state      diff #    commit           author        updated           
+  accempted  3f9e302   Sewing seeds     jane doe      2019-01-25 13:27  
 
 That's it!
 

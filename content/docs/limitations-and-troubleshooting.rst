@@ -26,14 +26,14 @@ Radicle State Machine data with the following commands:
 
 ``rm -rf ~/.local/share/radicle/machines.json``
 
-IPNS lifetime [julian]
-=======================
+IPNS lifetime
+=============
 
-Networking Issues (firewall, nat traversal) [julian]
-====================================================
+Networking Issues (firewall, nat traversal)
+===========================================
 
-Replication & Availability (cannot resolve RSMs) [julian]
-==========================================================
+Replication & Availability (cannot resolve RSMs)
+================================================
 
-``git-ipfs`` limitations [kim]
-==============================
+``git-ipfs`` limitations
+========================

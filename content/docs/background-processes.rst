@@ -15,24 +15,24 @@ Background Processes
 OS X
 ====
 
-``brew services start``
+Please see `installation <#installation>`_
 
 Linux
 =====
 
-``systemd blah``
+Please see `installation <#installation>`_
 
 Manual
 ======
 
+Please see `installation <#installation>`_
+
 radicle daemon
 ==============
+
+TBD
 
 radicle ipfs daemon
 ===================
 
-notes on daemons:
-
-- how do i check if htey're running
-- how do i start them
-- how do i debug them
+TBD
