@@ -60,9 +60,9 @@ Now let's take a look at what's in these garden text files:
           \_          
           | %         
   ..-`-...l..-..~-`.,.
-                      
-                      
-                       
+  ....................
+  ....................
+  .................... 
 
 Oh, very pretty.
 
@@ -116,8 +116,6 @@ Creating an issue works just like adding a git commit message—add text at the 
 Now let's make our own garden by creating a new text file, ``$ touch mygarden.txt`` and open the file with your favorite editor.
 
 As mentioned in the issue above, the text should fit in a box of 20 characters wide and 8 lines high.
-
--- TODO: should users be able to add metadata fields? that have, for instance, their own Radicle project address? Maybe visible with a hover function? --
 
 Once we've planted a few vegatables and feel happy with our garden, we'll save the file and commit it to the repo using git.
 
