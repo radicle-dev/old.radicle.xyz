@@ -64,6 +64,8 @@ you can see by following the #radicle-weekly-updates channel. If you’re not a
 scuttlebutt user already, pop over to IRC and we can give you an invite to our
 own Scuttlebutt pub :)
 
+Contributions to the Radicle project and interactions with the community should adhere to our [code of conduct](https://github.com/oscoin/radicle/tree/master/code-of-conduct.md).
+
 .. _teamware: https://viewer.scuttlebot.io/%25ZyZge6x3sXi4kROFfhnGs8URgPEDq1thPjC0D8tPfms%3D.sha256
 .. _git-ssb: https://git.scuttlebot.io/%25n92DiQh7ietE%2BR%2BX%2FI403LQoyf2DtR3WQfCkDKlheQU%3D.sha256
 .. _git-remote-ipfs: https://github.com/ipfs-shipyard/git-remote-ipld
