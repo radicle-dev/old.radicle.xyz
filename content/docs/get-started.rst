@@ -19,11 +19,11 @@ Contribute to the Radicle Garden
 
 The Radicle Garden is a project created using Radicle, with a rendered output hosted found at https://radicle.xyz/garden. A Radicle project contains a git repository as well as the all the issues and proposals associated with that repo.
 
-Before we start contributing, we'll need to download a copy to our computer by checking out the project. To do that we need the project-id: ``<PROJECT-ID>``, and then we'll run:
+Before we start contributing, we'll need to download a copy to our computer by checking out the project. To do that we need the project-id: ``12D3KooWSeVNi5qTpDULRMR8UQhhQZfk4taUGRaLoLF7BgAAsUQW``, and then we'll run:
 
 ::
 
-  $ rad project checkout <PROJECT-ID>
+  $ rad project checkout 12D3KooWSeVNi5qTpDULRMR8UQhhQZfk4taUGRaLoLF7BgAAsUQW
     Cloning into ./acme/
     remote: Enumerating objects: 70, done.
     remote: Counting objects: 100% (70/70), done.
@@ -39,7 +39,7 @@ Before we start contributing, we'll need to download a copy to our computer by c
 
 In the output shown above we can see that ``rad project`` uses git behind the scenes to clone the project from a remote repo hosted on IPFS into a new folder named after the project-id.
 
-Let's learn a little more about this project by moving into the newly created directory with ``$ cd <PROJECT-ID>`` and then listing what's in the folder.
+Let's learn a little more about this project by moving into the newly created directory with ``$ cd radicle-garden`` and then listing what's in the folder.
 
 ::
 
