@@ -19,7 +19,7 @@ choices we’ve made, a good place to start is `this blogpost`_ on the Radicle
 architecture.
 
 If you want to dive straight in and play around with Radicle for yourself,
-follow the installation instructions and then the `Try Radicle`_ guide in the
+follow the installation instructions and then the `Radicle Tutorial`_ in the
 docs below.
 
 
@@ -69,6 +69,6 @@ Contributions to the Radicle project and interactions with the community should 
 .. _git-ssb: https://git.scuttlebot.io/%25n92DiQh7ietE%2BR%2BX%2FI403LQoyf2DtR3WQfCkDKlheQU%3D.sha256
 .. _git-remote-ipld: https://github.com/ipfs-shipyard/git-remote-ipld
 .. _`this blogpost`: ../blog/radicle-intro
-.. _`Try Radicle`: ./#try-radicle
+.. _`Radicle Tutorial`: ./#tutorial-part-1-contributor
 .. _github: https://github.com/oscoin/radicle
 .. _`Secure Scuttlebutt`: https://scuttlebutt.nz
