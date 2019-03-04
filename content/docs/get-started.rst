@@ -90,8 +90,8 @@ Like our git repo, Radicle stores issue and proposal chains locally and distribu
 ::
 
   $ rad issue list
-  state    issue #   title                                author        updated            unread
-  open     1         Diff proposal not accepted           juliendonck   2019-01-25 13:27   *
+  state    issue #   title                        author        updated         
+  open     1         Diff proposal not accepted   juliendonck   2019-01-25 13:27
 
 There's only one issue for this project at the moment. Let's take a closer look with ``$ rad issue show 1``.
 
@@ -193,8 +193,8 @@ Let's say a collaborator already proposed a diff, using the steps outlined in th
 ::
 
   $ rad diff list
-  state      diff #    commit                                  author        updated            unread
-  pending    3f9e302   Make documentation more accessible      jane doe      2019-01-25 13:27   *
+  state      diff #    commit                               author        updated         
+  pending    3f9e302   Make documentation more accessible   jane doe      2019-01-25 13:27
 
 Then we can inspect the diff with:
 
@@ -242,8 +242,8 @@ Let's check the proposal status one more time to confirm:
 ::
 
   $ rad diff list
-  state      diff #    commit           author        updated            unread
-  accempted  3f9e302   Sewing seeds     jane doe      2019-01-25 13:27   *
+  state      diff #    commit           author        updated           
+  accempted  3f9e302   Sewing seeds     jane doe      2019-01-25 13:27  
 
 That's it!
 
