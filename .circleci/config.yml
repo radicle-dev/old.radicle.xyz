@@ -18,6 +18,8 @@ jobs:
           command: |
             set -ex
 
+            echo exit 0 > /usr/sbin/policy-rc.d
+
             apt-get install -y python-pip
             # NOTE(xla): There is no auto-confirm for pip.
             /usr/bin/yes | pip install docutils
