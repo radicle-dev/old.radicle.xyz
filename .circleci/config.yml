@@ -10,8 +10,13 @@ jobs:
       - run:
           name: Install Dependencies
           command: |
+            set -ex
+
             apt-get update
-            apt-get install -y build-essential hugo python-docutils python-openssl
+            apt-get install -y build-essential python-docutils python-openssl wget
+
+            wget https://github.com/gohugoio/hugo/releases/download/v0.54.0/hugo_0.54.0_Linux-64bit.deb
+            dpkg -i hugo*.deb
 
       - run:
           name: Deploy
