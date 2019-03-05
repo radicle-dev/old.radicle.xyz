@@ -1,0 +1,24 @@
+<header>
+  <div class="left-header">
+    <div class="small-nav">
+      <a href="/docs#installation-setup" class="header-btn">{{ $.Site.Params.cta }}</a>
+      <nav>
+        <ul>
+          {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+      <button class="hamburger" id="narrow-open">Menu</button>
+    </div>
+
+    <div class="title">
+      <div class="logo"></div>
+      <h1>{{ $.Site.Params.description }}</h1>
+    </div>
+    <span class="disclaimer">
+      WARNING: experimental software, not for production use
+    </span>
+  </div>
+  <div class="right-header"></div>
+</header>

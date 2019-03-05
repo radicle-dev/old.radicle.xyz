@@ -43,7 +43,7 @@ theme = "rad"
 
 [[menu.footer]]
   name = "Code of conduct"
-  url  = "/about#coc"
+  url  = "https://github.com/oscoin/radicle/code-of-conduct.md"
   identifier = "coc"
   weight = 2
 
@@ -72,9 +72,9 @@ theme = "rad"
   weight = 6
 
 [[menu.footer]]
-  name = "Newsletter"
-  url  = "#"
-  identifier = "newsletter"
+  name = "White paper"
+  url  = "https://ipfs.io/ipfs/QmadmGA6mBWZ93Wv4XKuCu9wdPf7Da8pjH3Corzpe9VGZg"
+  identifier = "whitepaper"
   weight = 7
 
 [[menu.footer]]

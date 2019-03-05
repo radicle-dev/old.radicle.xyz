@@ -2,28 +2,37 @@
 
 @font-face {
   font-family: "FoundersGrotesk";
-  src: url("../fonts/FoundersGroteskTextWeb-Regular.eot?") format("eot"),
-    url("../fonts/FoundersGroteskTextWeb-Regular.woff2") format("woff2"),
-    url("../fonts/FoundersGroteskTextWeb-Regular.woff") format("woff");
+  src: url("../fonts/FoundersGroteskTextWeb-Regular.woff2") format("woff2"),
+    url("../fonts/FoundersGroteskTextWeb-Regular.woff") format("woff"),
+    url("../fonts/FoundersGroteskTextWeb-Regular.eot?") format("eot");
 }
+
+@font-face {
+  font-family: "FoundersGroteskItalic";
+  src: url("../fonts/FoundersGroteskTextWeb-RegularItalic.woff2") format("woff2"),
+    url("../fonts/FoundersGroteskTextWeb-RegularItalic.woff") format("woff"),
+    url("../fonts/FoundersGroteskTextWeb-RegularItalic.eot?") format("eot");
+}
+
 @font-face {
   font-family: "FoundersGroteskMedium";
-  src: url("../fonts/FoundersGroteskTextWeb-Medium.eot?") format("eot"),
-    url("../fonts/FoundersGroteskTextWeb-Medium.woff2") format("woff2"),
-    url("../fonts/FoundersGroteskTextWeb-Medium.woff") format("woff");
+  src: url("../fonts/FoundersGroteskTextWeb-Medium.woff2") format("woff2"),
+    url("../fonts/FoundersGroteskTextWeb-Medium.woff") format("woff"),
+    url("../fonts/FoundersGroteskTextWeb-Medium.eot?") format("eot");
 }
+
 @font-face {
   font-family: "FoundersGroteskMono";
-  src: url("../fonts/FoundersGroteskMonoWeb-Regular.eot?") format("eot"),
-    url("../fonts/FoundersGroteskMonoWeb-Regular.woff2") format("woff2"),
-    url("../fonts/FoundersGroteskMonoWeb-Regular.woff") format("woff");
+  src: url("../fonts/FoundersGroteskMonoWeb-Regular.woff2") format("woff2"),
+    url("../fonts/FoundersGroteskMonoWeb-Regular.woff") format("woff"),
+    url("../fonts/FoundersGroteskMonoWeb-Regular.eot?") format("eot");
 }
 
 @font-face {
   font-family: "VulfMono";
-  src: url("../fonts/Vulf_Mono-Light_Italic_web.ttf") format("eot"),
-    url("../fonts/Vulf_Mono-Light_Italic_web.woff2") format("woff2"),
-    url("../fonts/Vulf_Mono-Light_Italic_web.woff") format("woff");
+  src: url("../fonts/Vulf_Mono-Light_Italic_web.woff2") format("woff2"),
+    url("../fonts/Vulf_Mono-Light_Italic_web.woff") format("woff"),
+    url("../fonts/Vulf_Mono-Light_Italic_web.ttf") format("eot");
 }
 
 @font-face {
@@ -42,11 +51,13 @@ body {
   font-size: 18px;
   line-height: 22px;
   overflow-x: hidden;
+
   @media (max-width: 640px) {
     font-size: 16px;
     line-height: 20px;
   }
 }
+
 p.captions {
   font-family: FoundersGrotesk, Arial, sans-serif;
   font-size: 16px;
@@ -59,6 +70,7 @@ h1 {
   line-height: 52px;
   font-weight: normal;
   font-style: normal;
+
   @media (max-width: 640px) {
     font-size: 24px;
     line-height: 32px;
@@ -71,11 +83,13 @@ h2 {
   line-height: 33px;
   font-weight: normal;
   font-style: normal;
+
   @media (max-width: 640px) {
     font-size: 21px;
     line-height: 24px;
   }
 }
+
 h3 {
   font-family: FoundersGrotesk, Arial, sans-serif;
   font-size: 27px;
@@ -83,12 +97,14 @@ h3 {
   font-weight: normal;
   font-style: normal;
 }
+
 h4 {
   font-family: FoundersGroteskMedium, Arial, sans-serif;
   font-size: 18px;
   line-height: 22px;
   font-weight: normal;
   font-style: normal;
+
   @media (max-width: 640px) {
     font-size: 16px;
     line-height: 20px;
@@ -100,6 +116,7 @@ pre {
   font-family: FoundersGroteskMono, monospace;
   font-size: 16px;
   line-height: 22px;
+
   @media (max-width: 640px) {
     font-size: 14px;
     line-height: 18px;
@@ -112,6 +129,12 @@ strong {
   font-style: normal;
 }
 
+em {
+  font-family: FoundersGroteskItalic, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
 p {
   code {
     opacity: 0.8;
@@ -120,12 +143,15 @@ p {
 
 a {
   color: $blue;
+
   &.active {
     opacity: 0.8;
   }
+
   &:hover {
     text-decoration: underline;
   }
+
   @media (max-width: 640px) {
     font-size: 16px;
     line-height: 20px;

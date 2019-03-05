@@ -1,29 +1,16 @@
-<div class="narrow-menu" id="narrow-menu">
-  <ul>
-    {{ range .Site.Menus.main }}
-    <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
-    {{ end }}
-  </ul>
-  <button class="cross" id="close"></button>
-</div>
-<div class="nav-bar" id="nav">
-  <a href="/" class="rad-nav-logo"></a>
-  <button class="hamburger" id="open">Menu</button>
-  <div class="bar">
-    <nav>
-      <ul>
-        {{ range .Site.Menus.main }}
-        <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
-        {{ end }}
-      </ul>
-    </nav>
-    <a href="/docs.html#installation" class="header-btn">{{ $.Site.Params.cta }}</a>
+<body>
+  <div class="narrow-menu" id="narrow-menu">
+    <ul>
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+    <button class="cross" id="close"></button>
   </div>
-</div>
-<header>
-  <div class="left-header">
-    <div class="small-nav">
-      <a href="/docs.html#installation" class="header-btn">{{ $.Site.Params.cta }}</a>
+  <div class="nav-bar">
+    <a href="/" class="rad-nav-logo"></a>
+    <button class="hamburger" id="open">Menu</button>
+    <div class="bar">
       <nav>
         <ul>
           {{ range .Site.Menus.main }}
@@ -31,16 +18,6 @@
           {{ end }}
         </ul>
       </nav>
-      <button class="hamburger" id="narrow-open">Menu</button>
+      <a href="/docs/#installation-setup" class="header-btn">install</a>
     </div>
-
-    <div class="title">
-      <div class="logo"></div>
-      <h1>{{ $.Site.Params.description }}</h1>
-    </div>
-    <span class="disclaimer">
-      WARNING: experimental software, not for production use.
-    </span>
   </div>
-  <div class="right-header"></div>
-</header>

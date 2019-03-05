@@ -1,0 +1,21 @@
+<div class="docs-content">
+  <aside>
+    <ul>
+      {{- range (where .Data.Pages "Section" "docs") }}
+      <li><a href="#{{ .Title | anchorize }}">{{ .Title }}</a></li>
+      {{- end }}
+    </ul>
+  </aside>
+
+  <main>
+
+    {{ range .Pages }}
+    <section class="chapter">
+      {{ .Content }}
+    </section>
+    <div class="divider white line opacity"></div>
+    {{ end }}
+
+  </main>
+</div>
+<div class="divider white line opacity"></div>

@@ -1,10 +1,10 @@
 ---
 
 title: "Radicle"
-date: 2019-02-11
+date: 2018-10-12
 draft: true
 markup: rst
-author: "Radicle Author"
+author: "Sam Hart"
 
 ---
 
@@ -12,34 +12,32 @@ author: "Radicle Author"
 Radicle
 =======
 
-*February 11, 2019 — Radicle Author*
-
     because ’tis the Origin of the Root… The Radicle is likewise called the seminal Root.
 
     -- Vallemont, Curiosities of nature and art in husbandry and gardening (1707)
 
 Radicle is a peer-to-peer stack for creating open source software together. A collaboration environment that’s designed to be:
 
--  **Offline first**: all data, including issues, comments and other social artifacts is yours & lives on your machine.
--  **Peer-to-peer**: with no central server or intermediary in control.
--  **Cryptographically secure**: user data that is tamper-proof & unforgeable, using public key cryptography.
--  **Programmable**: developers can program the way in which they collaborate.
--  **Interoperable & open**: reflecting the values of the open source community.
+- **Offline first** : all data, including issues, comments and other social artifacts is yours & lives on your machine.
+- **Peer-to-peer** : with no central server or intermediary in control.
+- **Cryptographically secure** : user data that is tamper-proof & unforgeable, using public key cryptography.
+- **Programmable** : developers can program the way in which they collaborate.
+- **Interoperable & open** : reflecting the values of the open source community.
 
-Radicle integrates with distributed version control systems like git and includes a high-level language with reprogrammable semantics, P2P networking for sharing application state, and flexible command line tools. Inspired by P2P protocols like `secure scuttlebutt`_, radicle connects distributed version control with peer-to-peer networking and extends the idea of replicated logs to fully re-programmable state machines we call *chains*.
 
-Today we’re releasing a core component of the radicle stack, an implementation of the `radicle language`_, along with a `paper`_ describing its formal semantics.
+Radicle integrates with distributed version control systems like git and includes a high-level language with reprogrammable semantics, P2P networking for sharing application state, and flexible command line tools. Inspired by P2P protocols like `secure scuttlebutt <https://www.scuttlebutt.nz/>`_, radicle connects distributed version control with peer-to-peer networking and extends the idea of replicated logs to fully re-programmable state machines we call *chains*.
+
+Today we’re releasing a core component of the radicle stack, an implementation of the radicle language, along with a `paper <https://ipfs.io/ipfs/QmadmGA6mBWZ93Wv4XKuCu9wdPf7Da8pjH3Corzpe9VGZg>`_ describing its formal semantics.
 
 The radicle stack
 ^^^^^^^^^^^^^^^^^
 
 The radicle language is the basis for a stack of components that together compose a fully featured collaborative programming environment.
 
-**radicle**: Language for specifying, interpreting, and dynamically modifying the semantics of arbitrary state machines.
+- **radicle apps** : Library of collaboration primitives, including projects, issues, and diff proposals.
+- **radicle language** : Specialized Lisp dialect for specifying, interpreting, and dynamically modifying the semantics of arbitrary state machines.
+- **radicle daemon** : Peer-to-peer gossip and state replication layer for publishing and subscribing to updates from other collaborators over IPFS.
 
-**radicle-p2p**: Peer-to-peer gossip and state replication layer for publishing and subscribing to updates from other collaborators.
-
-**radicle-lib**: Library of collaboration primitives, including repos, orgs, revisions, issues, comments, feeds, plus tools for creating and manipulating chains.
 
 In the coming months we’ll be sharing more details about these components and making an initial release available for developers, along with tutorials on how to get started.
 
@@ -52,7 +50,7 @@ Not only can radicle programs evolve as they advance, this sequential evaluation
 
 The radicle language features a number of design choices intended specifically for the above use-case:
 
--  High-level, LISP dialect in the flavor of `Black`_.
+-  High-level, LISP dialect in the flavor of `Black <http://pllab.is.ocha.ac.jp/%7Easai/Black/>`_.
 -  Ability to redefine the ``eval`` function, changing the semantics of the language.
 -  Lexically scoped with a hyperstatic global environment, i.e. free variable resolution takes place at definition-site rather than call-site.
 -  First-class functions for side-effect free computation on chain.
@@ -60,7 +58,7 @@ The radicle language features a number of design choices intended specifically f
 -  Deterministic effects system for managing state.
 -  Syntax closely resembling Clojure.
 
-For a more in-depth overview of the radicle language, refer to our `paper`_.
+For a more in-depth overview of the radicle language, refer to our `paper <https://ipfs.io/ipfs/QmadmGA6mBWZ93Wv4XKuCu9wdPf7Da8pjH3Corzpe9VGZg>`_.
 
 New ways to collaborate on code
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -71,11 +69,12 @@ Like many P2P systems, radicle uses an offline-first model. Issues, comments, an
 
 Making any kind of semantic modification to a decentralized data structure is typically difficult to coordinate and prone to forks, but radicle’s programmable evaluator makes this process straightforward, safe, and immediate. Additionally, built-in aggregate signatures allow for the definition of custom security models to read or modify each chain, even to revise an access control policy.
 
-Finally, radicle comes with sensible defaults, ensuring you can be productive right away, while also giving programmers a flexible system for rolling their own software collaboration workflow. Inspired in many ways by `Emacs`_, radicle is designed as an extensible system, where developers can share their programs with one another and extend their revision control environment however they like.
+Finally, radicle comes with sensible defaults, ensuring you can be productive right away, while also giving programmers a flexible system for rolling their own software collaboration workflow. Inspired in many ways by `Emacs <https://www.gnu.org/software/emacs/>`_, radicle is designed as an extensible system, where developers can share their programs with one another and extend their revision control environment however they like.
 
-We’re very excited to `open-source`_ the radicle language and soon the full radicle stack.
+We’re very excited to `open source <https://github.com/oscoin/radicle>`_ the radicle language and soon the full radicle stack.
 
-✌️
+﹏🌾﹏🌾﹏
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _Black: http://pllab.is.ocha.ac.jp/%7Easai/Black/
 .. _Emacs: https://www.gnu.org/software/emacs/

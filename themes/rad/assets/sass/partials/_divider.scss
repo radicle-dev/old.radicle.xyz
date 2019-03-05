@@ -1,5 +1,7 @@
 .divider {
   background-color: $red;
+  height: 150px;
+  display: block;
 
   svg path {
     fill: $black;
@@ -9,27 +11,40 @@
 
   &.white {
     background-color: $white;
+
     svg path {
       fill: $red;
       stroke: $red;
     }
   }
+
   &.garden {
     background-color: $blue;
+
     svg path {
       fill: $blue;
       stroke: $white;
     }
   }
+
   &.line {
     svg path {
       fill: transparent;
       stroke: $black;
     }
+
     &.opacity {
       opacity: 0.2;
     }
   }
+
+  &.line.white-line {
+    svg path {
+      fill: transparent;
+      stroke: $white;
+    }
+  }
+
   &.footer {
     @media (min-width: 980px) {
       display: none;
