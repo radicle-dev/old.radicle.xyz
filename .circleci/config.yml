@@ -11,7 +11,7 @@ jobs:
           name: Install Dependencies
           command: |
             apt-get update
-            apt-get install -y build-essential docutils hugo python-openssl
+            apt-get install -y build-essential hugo python-docutils python-openssl
 
       - run:
           name: Deploy
