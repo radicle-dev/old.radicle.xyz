@@ -94,24 +94,14 @@ the current state of a machine, we need to communicate two things:
 So we end up with a bunch of machines \\(M\\), \\(N\\), etc. with starting
 states \\(M_0\\), \\(N_0\\), evolving according to the different inputs they
 receive:
-\\[
-\begin{eqnarray}
-M &:& M_0 \xrightarrow{i_0} M_1 \xrightarrow{i_1} M_2 \xrightarrow{i_2} \cdots \\\\\
-N &:& N_0 \xrightarrow{j_0} N_1 \xrightarrow{j_1} N_2 \xrightarrow{j_2} \cdots \\\\\
-&& \cdots
-\end{eqnarray}
-\\]
+
+![machines](/img/machines.png)
 
 Rather than come up with a separate way of formally specifying machine
 definitions, Radicle starts from a single *root* machine \\(R\\), a special
 machine which can come to behave like any other given the correct inputs:
-\\[
-\begin{eqnarray}
-M &:& R \to \cdots \to M_0 \xrightarrow{i_0} M_1 \xrightarrow{i_1} M_2 \xrightarrow{i_2} \cdots \\\\\
-N &:& R \to \cdots \to N_0 \xrightarrow{j_0} N_1 \xrightarrow{j_1} N_2 \xrightarrow{j_2} \cdots \\\\\
-&& \cdots
-\end{eqnarray}
-\\]
+
+![machines with a common root](/img/machines-common-root.png)
 
 In this way the boundary between a machine's definition and its operation
 is blurred. In any case, a machine is now completely determined by its
@@ -160,11 +150,7 @@ you will already have part similar applications, so fetching the history of subs
 be faster.
 
 <!-- TODO: "but with a system to unpin data..." clause doesn't make it clear if this system exists yet -->
-<!-- TODO: IPFS linked list with shared suffix -->
-```
-R --> ... --> ... --> M0 -[i0]-> M1 -[i1]-> M2 -[i3]-> ... -[in]-> M{n+1}
-          --> ... --> N0 -[i0]-> N1 -[i1]-> N2 -[i3]-> ... -[in]-> N{n+1}
-```
+![machines sharing some inputs on IPFS](/img/machines-sharing.png)
 
 This fetching and materializing isn't manual. Instead, participants of the
 network have a **radicle daemon** that runs in the background; when you first
