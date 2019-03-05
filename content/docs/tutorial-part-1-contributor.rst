@@ -13,9 +13,7 @@ Tutorial Part 1: Contributor
 
 *Once you've finished installing Radicle you're ready to try the Radicle tutorial.*
 
-*In the Radicle tutorial you'll learn to use some of the basic collaboration tools.*
-
-*First you'll contribute changes to a Radicle project started by someone else. In this section you'll learn the three commands: rad project, rad issues, and rad diff.*
+*In the Radicle tutorial you'll learn to use some of the basic collaboration tools. First you'll contribute changes to a Radicle project maintained by someone else. In this section you'll learn the three commands: rad project, rad issues, and rad diff.*
 
 *Then, in part 2, you'll see the other side by walking through the maintainer workflow.*
 
@@ -169,6 +167,4 @@ If we want to see the status of our diff we can do that with:
 As long as our garden is the correct dimensions, it shouldn't take long for our proposed diff to be accepted and then we'll be able to see our garden on the map at https://radicle.xyz/garden.
 
 
-
-==== add conclusion
-
+*That's the end of Part 1. If you feel comfortable with that material you can move on to Part 2 of this tutorial, which explains what the same process looks like as a `Maintainer <#tutorial-part-2-maintainer>`_.

@@ -14,7 +14,7 @@ Tutorial Part 2: Maintainer
 Creating the Radicle Garden & managing contributions
 ====================================================
 
-====== explain that this isn't something you can't go through
+*Part 2 of this tutorial walks through how to setup a project as a Maintainer. As an example, we'll be using the Radicle Garden again, however in this instance we won't have a contributor on the other side, so while we'll explain the steps, you may have to get a friend to act as a contributor if you'd like to see this entire workflow in action.*
 
 Now that we've shown off our green thumb, let's see what happens on the other side of the collaboration by seeing how the Radicle Garden project was created and how to manage contributions as a maintainer.
 
