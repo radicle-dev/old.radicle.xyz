@@ -18,9 +18,11 @@ jobs:
           command: |
             set -ex
 
-            # NOTE(xla): There is no auto-confirm for pip.
-            /usr/bin/yes | pip install docutils
+            pip install docutils
 
+      - run:
+          name: Deploy
+          command: |
             export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
             apt-get install -y --force-yes python-openssl
