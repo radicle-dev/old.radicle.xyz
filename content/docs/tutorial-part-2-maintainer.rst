@@ -55,7 +55,7 @@ If we'd like to invite others to contribute, we'll need to give them our project
 ::
 
   $ rad project show-id
-  => 12D3KooWDdviavVJx13oZ7RFiuVNYoNzRAaE8GawoKYNDKHBQYqK
+  => 12D3KooW...
   => Share this project id for people to collaborate with you on your project.
 
 Let's say a collaborator already proposed a diff, using the steps outlined in the first section of this guide. We can see a list of all proposed diffs, as well as the status of each diff, with ``$ rad diff list``.
@@ -63,8 +63,8 @@ Let's say a collaborator already proposed a diff, using the steps outlined in th
 ::
 
   $ rad diff list
-  state      diff #    commit                               author        updated
-  pending    3f9e302   Make documentation more accessible   jane doe      2019-01-25 13:27
+  state     diff #  commit                               author     updated
+  pending   2       Make documentation more accessible   jane doe   2019-01-25 13:27
 
 Then we can inspect the diff with:
 
