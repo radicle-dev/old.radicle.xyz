@@ -27,6 +27,8 @@ jobs:
       - run:
           name: Deploy
           command: |
+            export CLOUDSDK_PYTHON_SITEPACKAGES=1
+
             echo "$GCLOUD_SERVICE_KEY" | \
               gcloud auth activate-service-account \
                 circleci-radiclexyz-uploader@opensourcecoin.iam.gserviceaccount.com \
