@@ -174,15 +174,23 @@ Secondly, because the radicle daemon is just an HTTP server, this gives you the
 possibility of creating websites that use your machine as the data layer. (This
 is still a very manual process, which we aim to automate and simplify in the future.)
 
-How does the pointer work? We back it with an IPNS pointer. [Explain IPNS.] So
-each pointer has an *owner* who is allowed to modify what IPNS points to. The
-owner of the pointer is also, in a way, the owner of the machine. In
-theory, they can choose which new inputs are accepted (though accepting inputs is an
+How does the pointer work? We back it with an IPNS pointer. IPNS
+(Inter-Planetary Name System) is a way of maintaining mutable links to IPFS
+objects. An IPNS *name* is the hash of a public key. So each name has an
+*owner*: the person who knows the private key corresponding to the public one,
+because one needs this key to sign updates to what the link points to. The owner
+of the pointer is also, in a way, the owner of the Radicle machine. In theory,
+they can choose which new inputs are accepted (though accepting inputs is an
 automatic process guided by the semantics of the machine, so under normal
-conditions this won't happen). The owner's radicle daemon subscribes to an
-IPFS pubsub channel, and anyone who wants to submit new inputs to a machine
-sends that input to the relevant pubsub channel, so that the owner can add it
-to IPFS and update the machine's pointer. (This means that if the owner is
-offline, writing won't work, and the machine becomes read-only.)
+conditions this won't happen). The owner's radicle daemon subscribes to an IPFS
+pubsub channel, and anyone who wants to submit new inputs to a machine sends
+that input to the relevant pubsub channel, so that the owner can add it to IPFS
+and update the machine's pointer. (This means that if the owner is offline,
+writing won't work, and the machine becomes read-only.)
 
-<!-- TODO: mention that the owner can also rewrite history? -->
+Because the owner can point the link to *anything*, not just an extension of the
+previous linked list of inputs, they could in theory re-write the history of
+their Radicle machine. Such behaviour would be easily detectable by (the
+daemon's of) other users following this machine. In the future a daemon would
+stop following such a machine and mark it as invalid, and possibly notify other
+users on the network.
