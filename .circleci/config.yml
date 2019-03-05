@@ -13,20 +13,14 @@ jobs:
             apt-get update
             apt-get install -y hugo
 
-      # - run:
-      #     name: Install docutils
-      #     command: |
-      #       set -ex
-
-      #       echo exit 0 > /usr/sbin/policy-rc.d
-
-      #       apt-get install -y python-pip
-      #       # NOTE(xla): There is no auto-confirm for pip.
-      #       /usr/bin/yes | pip install docutils
-
       - run:
-          name: Deploy
+          name: Install docutils
           command: |
+            set -ex
+
+            # NOTE(xla): There is no auto-confirm for pip.
+            /usr/bin/yes | pip install docutils
+
             export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
             apt-get install -y --force-yes python-openssl
