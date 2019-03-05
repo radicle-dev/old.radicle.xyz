@@ -128,8 +128,8 @@ As mentioned in the issue above, the text should fit in a box of 20 characters w
 Once we've planted a few vegatables and feel happy with our garden, we'll save the file, add the staged file and commit it to the repo using git.
 
 ::
-
-  $ git commit -a -m "Sewing seeds"
+  $ git add .
+  $ git commit -m "Sewing seeds"
   [master (root-commit) 798c5c4] Sewing seeds
    1 files changed, 8 insertions(+)
    create mode 100644 YYY-MM-DD_username.txt
