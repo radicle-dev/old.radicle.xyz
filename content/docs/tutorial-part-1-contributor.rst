@@ -26,13 +26,13 @@ Make sure you've got `Radicle installed <#installation-setup>`_ and let's dig in
 Contribute to the Radicle Garden
 ================================
 
-The Radicle Garden is a project created using Radicle, with a rendered output hosted found at https://radicle.xyz/garden. A Radicle project contains a git repository as well as the all the issues and proposals associated with that repo.
+The Radicle Garden is a project created using Radicle, with a hosted version found at https://radicle.xyz/garden. A Radicle project contains a git repository as well as the all the issues and proposals associated with that repo.
 
 Before we start contributing, we'll need to download a copy to our computer by checking out the project. To do that we need the project-id: ``12D3KooWSeVNi5qTpDULRMR8UQhhQZfk4taUGRaLoLF7BgAAsUQW``, and then we'll run:
 
 ::
 
-  $ rad project checkout 2D3KooWSeVNi5qTpDULRMR8UQhhQZfk4taUGRaLoLF7BgAAsUQW
+  $ rad project checkout 12D3KooWSeVNi5qTpDULRMR8UQhhQZfk4taUGRaLoLF7BgAAsUQW
   radicle-garden
   Initialized empty Git repository in /home/gardener/projects/radicle-garden/.git/
   Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
