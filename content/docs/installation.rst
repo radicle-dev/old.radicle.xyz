@@ -40,10 +40,25 @@ with the following commands:
    brew services start radicle-alpha
 
 
-Linux
-=====
+Debian/Ubuntu
+=============
 
-TBD
+For Debian-based systems we provide packages.
+
+.. code-block::
+
+    wget https://storage.googleapis.com/static.radicle.xyz/releases/radicle_2019.03.05_amd64.deb
+    apt install ./radicle_2019.03.05_amd64.deb
+
+The package includes systemd service files for the Radicle daemon. To
+start the deamon run
+
+.. code-block::
+
+    systemctl --user start radicle-daemon
+
+This will also start the ``radicle-ipfs`` service. You can check the
+status of a service with ``systemctl --user status <service>``.
 
 Install From Source
 ===================
