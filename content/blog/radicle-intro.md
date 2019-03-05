@@ -50,11 +50,10 @@ swarm, exchanging files within a single Git repository, using hashes for
 addresses. Radicle is built on top of the IPFS protocol, but runs on its own
 network.
 
-The core component of Radicle is a Radicle **machine**. The word 'machine'
-refers to [state
-machine](https://en.wikipedia.org/wiki/State_machine_replication), that is, an
-abstract mathematical function, rather than a piece of hardware. Formally a
-state machine is defined by:
+The core component of an app is a *Radicle machine*. The word 'machine' refers
+to [state machine](https://en.wikipedia.org/wiki/State_machine_replication),
+that is, an abstract mathematical function, rather than a piece of
+hardware. Formally a state machine is defined by:
 
 - a set of possible states \\(S\\),
 - a set of possible inputs \\(I\\),
@@ -85,9 +84,9 @@ interact with it.
 <!-- TODO: improve flow / better locate this sentence -->
 
 Crucially, machines are **deterministic**. If you start from any machine, in any
-state, given the same set of inputs will always result in the same set of
-outputs, and the same new state. Therefore, in order for everyone to agree on the
-current state of a machine, we need to communicate two things:
+state, providing the same set of inputs will always result in the same set of
+outputs, and the same new state. Therefore, in order for everyone to agree on
+the current state of a machine, we need to communicate two things:
 
 - The definition of the machine,
 - The inputs that have already been processed by the machine.
@@ -118,6 +117,25 @@ In this way the boundary between a machine's definition and its operation
 is blurred. In any case, a machine is now completely determined by its
 input log, and its state is recovered by feeding these inputs to the root
 machine \\(R\\).
+
+For example, to create the counter state machine above as a Radicle machine, one
+can use the following inputs:
+
+```
+;; prelude here
+
+(def s (ref 0))
+
+(def eval
+  (fn [input rad-state]
+    (match input
+      :increment (eval '(write-ref s (+ 1 (read-ref s))) rad-state)
+      :getCounter (list (read-ref s) rad-state))))
+```
+
+In this example we have omitted the Radicle *prelude* which is a set of basic
+modules containing many useful functions for writing state machines. In this
+case we need it to have access to the pattern matching functionality.
 
 This gives us the ability to define machines as pointers to a linked
 list stored on IPFS; the list of all the expressions submitted to that
