@@ -27,7 +27,7 @@ jobs:
       - run:
           name: Deploy
           command: |
-            export CLOUDSDK_PYTHON_SITEPACKAGES=1
+            apt-get install -y python-openssl
 
             echo "$GCLOUD_SERVICE_KEY" | \
               gcloud auth activate-service-account \
