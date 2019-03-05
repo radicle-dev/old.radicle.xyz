@@ -18,9 +18,13 @@ jobs:
             wget https://github.com/gohugoio/hugo/releases/download/v0.54.0/hugo_0.54.0_Linux-64bit.deb
             dpkg -i hugo*.deb
 
+            hugo version
+
       - run:
           name: Deploy
           command: |
+            set -ex
+
             export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
             echo "$GCLOUD_SERVICE_KEY" | \
