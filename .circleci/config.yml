@@ -1,0 +1,31 @@
+version: 2
+jobs:
+  deploy:
+    docker:
+      - image: google/cloud-sdk
+
+    steps:
+      - checkout
+
+      - run:
+        name: Install Hugo
+        command: |
+          apt-get update
+          apt-get install -y hugo
+
+      - run:
+        name: Install docutils
+        command: |
+          apt-get install -y python-pip
+          # NOTE(xla): There is no auto-confirm for pip.
+          /usr/bin/yes | pip install docutils
+
+      - run:
+        name: Deploy
+        command: |
+          echo "$GCLOUD_SERVICE_KEY" | \
+            gcloud auth activate-service-account \
+              circleci-radiclexyz-uploader@opensourcecoin.iam.gserviceaccount.com \
+              --key-file
+
+          make deploy
