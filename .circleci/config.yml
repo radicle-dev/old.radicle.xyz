@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ubuntu:18.04
+      - image: google/cloud-sdk
 
     steps:
       - checkout
@@ -13,16 +13,16 @@ jobs:
             apt-get update
             apt-get install -y hugo
 
-      - run:
-          name: Install docutils
-          command: |
-            set -ex
+      # - run:
+      #     name: Install docutils
+      #     command: |
+      #       set -ex
 
-            exit 1
+      #       echo exit 0 > /usr/sbin/policy-rc.d
 
-            apt-get install -y python-pip
-            # NOTE(xla): There is no auto-confirm for pip.
-            /usr/bin/yes | pip install docutils
+      #       apt-get install -y python-pip
+      #       # NOTE(xla): There is no auto-confirm for pip.
+      #       /usr/bin/yes | pip install docutils
 
       - run:
           name: Deploy
