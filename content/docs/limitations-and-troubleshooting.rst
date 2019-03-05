@@ -12,8 +12,10 @@ Limitations & Troubleshooting
 =============================
 
 
-Installation Troubleshooting [julian]
-======================================
+Installation Troubleshooting
+============================
+
+Work in progress
 
 Clearing All Machine History
 ============================
@@ -41,7 +43,7 @@ problem. We plan to eventually increase the length of time IPNS records last.
 
 
 Networking Issues (firewall, NAT)
-===========================================
+=================================
 
 Many networks, such as cafés and offices, are behind a firewall or NAT.
 Depending on the exact configuration, this may not present a problem, but often
@@ -71,5 +73,9 @@ when you're offline.
 Replication & Availability (cannot resolve RSMs)
 ================================================
 
-``git-ipfs`` limitations
+Work in progress
+
+git-ipfs limitations
 ========================
+
+Work in progress
