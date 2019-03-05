@@ -43,7 +43,7 @@ problem. We plan to eventually increase the length of time IPNS records last.
 Networking Issues (firewall, NAT)
 ===========================================
 
-Many networks, such as caffés and offices, are behind a firewall or NAT.
+Many networks, such as cafés and offices, are behind a firewall or NAT.
 Depending on the exact configuration, this may not present a problem, but often
 it does. In particular, two computers that are behind an untraversable firewall
 or NAT will not be able to read data from, or write data to, one another.
