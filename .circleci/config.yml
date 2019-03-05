@@ -8,24 +8,24 @@ jobs:
       - checkout
 
       - run:
-        name: Install Hugo
-        command: |
-          apt-get update
-          apt-get install -y hugo
+          name: Install Hugo
+          command: |
+            apt-get update
+            apt-get install -y hugo
 
       - run:
-        name: Install docutils
-        command: |
-          apt-get install -y python-pip
-          # NOTE(xla): There is no auto-confirm for pip.
-          /usr/bin/yes | pip install docutils
+          name: Install docutils
+          command: |
+            apt-get install -y python-pip
+            # NOTE(xla): There is no auto-confirm for pip.
+            /usr/bin/yes | pip install docutils
 
       - run:
-        name: Deploy
-        command: |
-          echo "$GCLOUD_SERVICE_KEY" | \
-            gcloud auth activate-service-account \
-              circleci-radiclexyz-uploader@opensourcecoin.iam.gserviceaccount.com \
-              --key-file
+          name: Deploy
+          command: |
+            echo "$GCLOUD_SERVICE_KEY" | \
+              gcloud auth activate-service-account \
+                circleci-radiclexyz-uploader@opensourcecoin.iam.gserviceaccount.com \
+                --key-file
 
-          make deploy
+            make deploy
