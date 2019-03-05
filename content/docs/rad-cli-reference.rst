@@ -2,7 +2,6 @@
 
 title: "Rad CLI Reference"
 date: 2019-02-05T18:12:57+01:00
-draft: true
 markup: rst
 weight: 6
 
