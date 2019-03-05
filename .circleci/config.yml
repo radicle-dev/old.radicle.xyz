@@ -30,6 +30,6 @@ jobs:
             echo "$GCLOUD_SERVICE_KEY" | \
               gcloud auth activate-service-account \
                 circleci-radiclexyz-uploader@opensourcecoin.iam.gserviceaccount.com \
-                --key-file=~
+                --key-file=-
 
             make deploy
