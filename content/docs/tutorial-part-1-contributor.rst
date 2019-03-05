@@ -32,10 +32,7 @@ Before we start contributing, we'll need to download a copy to our computer by c
 
 ::
 
-  $ rad project checkout 12D3KooWSeVNi5qTpDULRMR8UQhhQZfk4taUGRaLoLF7BgAAsUQW
-
-::
-
+  $ rad project checkout 2D3KooWSeVNi5qTpDULRMR8UQhhQZfk4taUGRaLoLF7BgAAsUQW
   radicle-garden
   Initialized empty Git repository in /home/gardener/projects/radicle-garden/.git/
   Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
@@ -55,8 +52,6 @@ Let's learn a little more about this project by moving into the newly created di
 ::
 
   $ ls -a
-
-::
   .  ..  .git  2019-03-01_chia.txt  2019-03-02_garbanzo.txt
 
 
@@ -68,16 +63,13 @@ Now let's take a look at what's in these garden text files:
 
   $ cat 2019-03-01_chia.txt
 
-::
-
-                      
-         %            
-          \_          
-          | %         
+         %
+          \_
+          | %
   ..-`-...l..-..~-`.,.
   ....................
   ....................
-  .................... 
+  ....................
 
 Oh, very pretty.
 
@@ -85,16 +77,14 @@ Oh, very pretty.
 
   $ cat 2019-03-02_garbanzo.txt
 
-::
-
-               🌞    
-     ☁               
-     ____🐓_         
+               🌞
+     ☁
+     ____🐓_
   ---|     |---------
     /       \      🌵
-                     
-          ~~         
-     🐍         ~~   
+
+          ~~
+     🐍         ~~
 
 
 
@@ -105,32 +95,29 @@ Like our git repo, Radicle stores issue and proposal chains locally and distribu
 ::
 
   $ rad issue list
-
-::
-
-  state    issue #   title                        author        updated         
+  state    issue #   title                        author        updated
   open     1         Diff proposal not accepted   juliendonck   2019-01-25 13:27
 
 There's only one issue for this project at the moment. Let's take a closer look with ``$ rad issue show 1``.
 
 ::
 
-  $ rad issue show 1
+  $ rad issue show 0
+  open  0  Diff proposal not accepted  Julien Donck  2019-03-04T16:41:47Z
 
-::
+  **State:** open
+  **Labels:** []
 
-  Issue:  #1 Diff proposal not accepted
-  Author: juliendonck
-  Date:   Fri Nov 16 17:51:36 2018 +0100
-  ---
-  Description:
-    I made a proposal to add my garden to the map, but when I run `rad diff list` the state is listed as rejected.
+  I made a proposal to add my garden to the map, but when I run `rad diff list` the state is listed as rejected.
 
-  ---
-  Comments:
-    <TODO> It looks like your garden doesn't have the correct dimensions. All gardens should be 20 characters wide and 8 lines high.
+  Comments
+  --------
 
-If we wanted to add another comment we could run ``$ rad issue comment <issue-number> <body>`` which would open the default editor, set with the $EDITOR environment variable.
+  ### hxrts [2019-03-04T16:43:26Z]
+
+  It looks like your garden doesn't have the correct dimensions. All gardens should be 20 characters wide and 8 lines high.
+
+If we wanted to add another comment we could run ``$ rad issue comment <issue-number> <body>``.
 
 Creating an issue works just like adding a git commit message—add text at the top and save the file to create the comment.
 
@@ -142,10 +129,7 @@ Once we've planted a few vegatables and feel happy with our garden, we'll save t
 
 ::
 
-  git commit -a -m "Sewing seeds"
-
-::
-
+  $ git commit -a -m "Sewing seeds"
   [master (root-commit) 798c5c4] Sewing seeds
    1 files changed, 8 insertions(+)
    create mode 100644 YYY-MM-DD_username.txt
@@ -162,9 +146,11 @@ If we want to see the status of our diff we can do that with:
 ::
 
   $ rad diff list
-  (pending) [<MY-NAME>] 3f9e302 - Sewing seeds | <DIFF-ID>
+  state     #  commit                  author  updated
+  pending   1  YYY-MM-DD_username.txt  hxrts   2019-03-04T21:23:34Z
 
 As long as our garden is the correct dimensions, it shouldn't take long for our proposed diff to be accepted and then we'll be able to see our garden on the map at https://radicle.xyz/garden.
 
+|
 
-*That's the end of Part 1. If you feel comfortable with that material you can move on to Part 2 of this tutorial, which explains what the same process looks like as a `Maintainer <#tutorial-part-2-maintainer>`_.
+That's the end of Part 1. If you feel comfortable with that material you can move on to Part 2 of this tutorial, which explains what the same process looks like as a `Maintainer <#tutorial-part-2-maintainer>`_.

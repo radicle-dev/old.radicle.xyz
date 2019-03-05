@@ -11,10 +11,11 @@ weight: 4
 Tutorial Part 2: Maintainer
 ===========================
 
+*Part 2 of this tutorial walks through how to setup a project as a Maintainer. As an example, we'll be using the Radicle Garden again, however in this instance we won't have a contributor on the other side, so while we'll explain the steps, you may have to get a friend to act as a contributor if you'd like to see this entire workflow in action.*
+
+
 Creating the Radicle Garden & managing contributions
 ====================================================
-
-*Part 2 of this tutorial walks through how to setup a project as a Maintainer. As an example, we'll be using the Radicle Garden again, however in this instance we won't have a contributor on the other side, so while we'll explain the steps, you may have to get a friend to act as a contributor if you'd like to see this entire workflow in action.*
 
 Now that we've shown off our green thumb, let's see what happens on the other side of the collaboration by seeing how the Radicle Garden project was created and how to manage contributions as a maintainer.
 
@@ -34,15 +35,18 @@ We're going to choose option 1 to crate a P2P repo that's distributed with IPFS.
 
 ::
 
-  Initialised empty Git repository in ~/acme/.git
-      adding "origin" remote: ipfs://QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG
-
-  => Assembled rad-issues machine => Assembled rad-diff machine
-
-  Your project id is 554179. See the id of your project by running:
-      rad project show-id
-  Run --help to get started
-      rad issue --help rad diff --help
+  => Assembled rad-issue machine
+  => Assembled rad-diff machine
+  => project id: 12D3KooW...
+  => adding "origin" remote: ipfs://ipns/12D3KooW...
+  [master (root-commit) e3f2a9a] Radicle Setup
+  Resolving IPNS name 12D3KooW...
+  Pushed 1 objects
+  Updating IPNS link 12D3KooW... to /ipfs/12D3KooW...
+  To ipfs://ipns/12D3KooW...
+  * [new branch]      master -> master
+  Branch 'master' set up to track remote branch 'master' from 'origin'.
+  => project created!
 
 Now we're setup with everything we need to collaborate: a git repo, issues, and proposals.
 
@@ -50,15 +54,16 @@ If we'd like to invite others to contribute, we'll need to give them our project
 
 ::
 
-  $ rad project show
-  <PROJECT-ID>
+  $ rad project show-id
+  => 12D3KooWDdviavVJx13oZ7RFiuVNYoNzRAaE8GawoKYNDKHBQYqK
+  => Share this project id for people to collaborate with you on your project.
 
 Let's say a collaborator already proposed a diff, using the steps outlined in the first section of this guide. We can see a list of all proposed diffs, as well as the status of each diff, with ``$ rad diff list``.
 
 ::
 
   $ rad diff list
-  state      diff #    commit                               author        updated         
+  state      diff #    commit                               author        updated
   pending    3f9e302   Make documentation more accessible   jane doe      2019-01-25 13:27
 
 Then we can inspect the diff with:
@@ -66,20 +71,16 @@ Then we can inspect the diff with:
 ::
 
   $ rad diff show <DIFF-NUMBER>
-  (pending) [jane doe] 3f9e302 - Sewing seeds | <DIFF-NUMBER>
+  accepted 0 Sewing seeds jane doe 2019-03-04T16:49:28Z
 
-  created at 2019-01-22T09:32:37Z
+  From b118c572a441a774d4577ccb68f67fcfacc58df2 Mon Sep 17 00:00:00 2001
+  From: jane doe <jane@doe.xyz>
+  Date: Mon, 4 Mar 2019 17:47:15 +0100
+  Subject: [PATCH] Sewing seeds
 
-  From 3f9e302ef68c74251c49cd4d1bf17452b713620 Mon Sep 17 00:00:00 2001
-  From: jane doe jane@doe.com
-  Date: Wed, 16 Jan 2019 10:35:58 +0000
-  Subject: Sewing seeds
-
-  Description of the feature
   ---
-  garden3.txt | 8 ++++++++
-  1 file changed, 8 insertions(+)
-  // ...
+  mygarden.txt | 8 ++++++++
+  ...
 
 Maybe we'd like to add a comment to request additional changes:
 
@@ -107,8 +108,8 @@ Let's check the proposal status one more time to confirm:
 ::
 
   $ rad diff list
-  state      diff #    commit           author        updated           
-  accempted  3f9e302   Sewing seeds     jane doe      2019-01-25 13:27  
+  state     diff #  commit        author    updated
+  accepted  2       Sewing seeds  jane doe  2019-01-25 13:27
 
 That's it!
 
