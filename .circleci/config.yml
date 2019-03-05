@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: google/cloud-sdk
+      - image: ubuntu:18.04
 
     steps:
       - checkout
@@ -17,8 +17,6 @@ jobs:
           name: Install docutils
           command: |
             set -ex
-
-            echo exit 0 > /usr/sbin/policy-rc.d
 
             apt-get install -y python-pip
             # NOTE(xla): There is no auto-confirm for pip.
