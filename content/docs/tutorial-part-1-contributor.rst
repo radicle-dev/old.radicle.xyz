@@ -121,7 +121,7 @@ If we wanted to add another comment we could run ``$ rad issue comment <issue-nu
 
 Creating an issue works just like adding a git commit message—add text at the top and save the file to create the comment.
 
-Now let's make our own garden by creating a new text file, ``$ touch yyy-mm-dd_username.txt`` and open the file with your favorite editor.
+Now let's make our own garden now. First of let's create a new branch and check it out, ``$ git checkout -b my-garden``. Then we'll create a new text file, ``$ touch yyy-mm-dd_username.txt`` and open the file with your favorite editor.
 
 As mentioned in the issue above, the text should fit in a box of 20 characters wide and 8 lines high.
 
@@ -149,7 +149,7 @@ If we want to see the status of our diff we can do that with:
   state     #  commit                  author  updated
   pending   1  YYY-MM-DD_username.txt  hxrts   2019-03-04T21:23:34Z
 
-As long as our garden is the correct dimensions, it shouldn't take long for our proposed diff to be accepted and then we'll be able to see our garden on the map at https://radicle.xyz/garden.
+As long as our garden is the correct dimensions, it shouldn't take long for our proposed diff to be accepted and then we'll be able to see our garden on the map at https://radicle.xyz/garden. Also if you check out master, ``$ git checkout master``, and pull in the latest changes, ``$ git pull origin master``, you should see your garden file there as well.
 
 |
 
