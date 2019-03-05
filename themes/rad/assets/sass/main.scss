@@ -112,7 +112,7 @@ header {
 // section styles
 
 .large-content {
-  @media (min-width: 1680px) {
+  @media (min-width: 1920px) {
     display: grid;
     grid-template-columns: 50vw 50vw;
     grid-template-rows: auto 1fr;
@@ -157,7 +157,7 @@ header {
   }
 
   @media (max-width: 980px),
-  (min-width: 1680px) {
+  (min-width: 1920px) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
     grid-row-gap: 64px;
@@ -269,7 +269,7 @@ header {
   -webkit-filter: contrast(2.5);
   filter: contrast(2.5);
 
-  @media (min-width: 1680px) {
+  @media (min-width: 1920px) {
     display: none;
   }
 
@@ -334,7 +334,7 @@ footer {
     grid-template-columns: 1fr 3fr;
     grid-template-rows: auto;
     margin: 0 auto 64px auto;
-    max-width: 1680px;
+    max-width: 1920px;
 
     ul li a {
       line-height: 28px;
@@ -364,7 +364,7 @@ footer {
       padding: 0 48px;
     }
 
-    @media (min-width: 1680px) {
+    @media (min-width: 1920px) {
       margin-top: 64px;
     }
   }
