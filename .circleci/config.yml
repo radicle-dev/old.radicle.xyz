@@ -18,6 +18,8 @@ jobs:
           command: |
             set -ex
 
+            exit 1
+
             apt-get install -y python-pip
             # NOTE(xla): There is no auto-confirm for pip.
             /usr/bin/yes | pip install docutils
