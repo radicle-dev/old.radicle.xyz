@@ -11,20 +11,20 @@ weight: 6
 Rad CLI Reference
 =================
 
-``rad issue`` commands
-======================
+rad issue commands
+==================
 
 .. code-block::
 
   rad issue - Radicle Issue CLI
-  
+
      Usage:
           rad issue list [(--filter-by-state | --state | -s) <state>] [--fancy]
           rad issue new
           rad issue [show | close] <issue-number>
           rad issue comment <issue-number> <comment>
           rad issue help
-  
+
        list         - Lists all issues
                       The list can be filtered by state:
                         open, closed
@@ -41,20 +41,20 @@ Rad CLI Reference
                       This command is restricted to the maintainer of the project.
        help         - Print this help and exit
 
-``rad diff`` commands
-=====================
+rad diff commands
+=================
 
 .. code-block::
 
   rad diff - Radicle Diff CLI
-  
+
      Usage:
           rad diff list [(-s | --state | --filter-by-state) <state>] [--fancy]
           rad diff propose <commit>
           rad diff [show | retract | accept | reject] <diff-number>
           rad diff comment <diff-number> <comment>
           rad diff help
-  
+
        list         - Lists all diffs
                       The list can be filtered by state:
                         pending, retracted, accepted, rejected
@@ -77,8 +77,8 @@ Rad CLI Reference
                       This command is restricted to the maintainer of the project.
        help         - Print this help and exit
 
-``rad project`` commands
-========================
+rad project commands
+====================
 
 
 .. code-block::
@@ -94,22 +94,22 @@ Rad CLI Reference
        show-id      - Show the project id
        checkout     - Checkout a project
 
-``rad key`` commands
-====================
+rad key commands
+================
 
 .. code-block::
 
   rad key - Radicle Key Management CLI
-  
+
      Usage:
           rad key create [--force]
           rad key help
-  
+
      Creates a new key pair. If `--force` is appended, an existing key pair
      file will be overwritten.
      Per default, key pairs are stored in `$HOME/.config/radicle/my-keys.rad`
      this can be adjusted by setting `$XDG_CONFIG_HOME`.
-  
+
      The key pair is used for signing actions in the apps. Note that some actions
      are restricted to certain key pairs so deleting or overwriting your key pair
      can lead to loss of some authorisations.
