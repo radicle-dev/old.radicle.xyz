@@ -21,7 +21,7 @@ Tutorial Part 1: Contributor
 
 Welcome to the Radicle Garden, a new-found island located somewhere off the ASCII shores of `tilde.town <http://tilde.town/~troido/cadastre/town.html>`_. Today we're going to learn how to use the Radicle collaboration apps by adding a plot of our own to the `Radicle Garden <../garden>`_ map, then we'll walk through how the Radicle Garden project was created and steps for managing contributions as a maintainer.
 
-Make sure you've got `Radicle installed <#installation>`_ and let's dig in.
+Make sure you've got `Radicle installed <#installation-setup>`_ and let's dig in.
 
 Contribute to the Radicle Garden
 ================================
