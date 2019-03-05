@@ -68,13 +68,11 @@ main {
       padding-top: 64px;
 
       p {
-        word-break: normal;
         margin-bottom: 1em;
       }
     }
 
     .section {
-      word-break: break-all;
 
       h2 {
         word-break: normal;
@@ -87,13 +85,13 @@ main {
       }
 
       p {
-        word-break: normal;
         margin-bottom: 1em;
       }
 
       code,
       tt,
       .pre {
+        word-break: break-all;
         background-color: #f2f2f2;
         padding: 1px 3px;
         color: rgba($black, .8);
@@ -109,6 +107,7 @@ main {
       }
 
       pre {
+        word-break: break-all;
         background-color: #f2f2f2;
         padding: 16px;
         margin: 1em 0;
@@ -124,11 +123,27 @@ main {
         }
       }
 
-      cite {
-        font-family: FoundersGroteskItalic, Arial, sans-serif;
-        font-weight: normal;
-        font-style: normal;
+      ul {
+        margin-bottom: 1em;
+        list-style-type: none;
+
+        li {
+          padding-left: 26px;
+
+          &:before {
+            content: "\2014";
+            position: absolute;
+            margin-left: -24px;
+          }
+        }
       }
+
+      ol {
+        margin-bottom: 1em;
+        list-style-type: decimal;
+        padding-left: 26px;
+      }
+
     }
   }
 
