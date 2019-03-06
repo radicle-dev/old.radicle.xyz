@@ -26,7 +26,6 @@
       </p>
     </div>
   </section>
-
   <section class="try">
     <h1>Collaborate with Radicle</h1>
 
@@ -39,8 +38,16 @@
         <code>rad diff</code>.
       </p>
       <div class="terminal">
-        <asciinema-player autoplay font-size="14px" loop preload src="video/project.cast" theme="white">
-        </asciinema-player>
+        <pre>
+$ rad project init
+? What's the name of your project? radicle-garden
+? Briefly describe your project? A community garden
+=> Creating git repository
+=> Adding "origin" remote: ipfs://ipns/12D3KooW...
+=> Adding issues to your project
+=> Adding diffs to your project
+=> Project created with id: 12D3KooW...
+          </pre>
       </div>
     </div>
 
@@ -51,8 +58,15 @@
         Create, view, list, and comment to heart's content.
       </p>
       <div class="terminal blue">
-        <asciinema-player autoplay font-size="14px" loop preload src="video/issue.cast" theme="blue">
-        </asciinema-player>
+        <pre>
+$ rad issue list
+#  state   title                author   updated
+1  open    Diff not accepted    janedoe  2019-01-25 13:27
+0  closed  How do I contribute  randy    2019-01-25 09:14
+
+$ rad issue comment 1 "probably the wrong size"
+Added comment to issue #1
+          </pre>
       </div>
     </div>
 
@@ -65,8 +79,15 @@
         model.
       </p>
       <div class="terminal">
-        <asciinema-player autoplay font-size="14px" loop preload src="video/diff.cast" theme="white">
-        </asciinema-player>
+        <pre>
+$ rad diff list
+#  state     commit                author   updated
+1  pending   Make docs friendlier  janedoe  2019-01-25 13:27
+0  accepted  Typo fixes            willyg   2019-01-25 09:14
+
+$ rad diff accept 1
+Merging proposal #2 with master
+          </pre>
       </div>
     </div>
 
