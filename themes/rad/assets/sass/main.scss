@@ -7,6 +7,7 @@
 @import "partials/blog";
 @import "partials/garden";
 @import "partials/about";
+@import "partials/404";
 @import "partials/divider";
 @import "partials/nav-bar";
 @import "partials/footer";
@@ -102,11 +103,15 @@ header {
   }
 }
 
+// .right-header {
+//   background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550439747/radicle-growth-2_i2dohu.gif");
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
+
 .right-header {
-  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550439747/radicle-growth-2_i2dohu.gif");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  video {}
 }
 
 // section styles
@@ -262,7 +267,7 @@ header {
   margin: 10px 40px 0 0;
   height: 300px;
   width: 300px;
-  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550437129/globe-ascii-bw_bfq3ql.gif");
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550437129/radicle.xyz/globe-ascii-bw_bfq3ql.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
