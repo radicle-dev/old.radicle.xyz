@@ -22,7 +22,7 @@ jobs:
             apt-get install -y build-essential python-docutils python-openssl wget
 
             wget "https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb"
-            apt-get install "./hugo_extended_$HUGO_VERSION_Linux-64bit.deb"
+            apt-get install "./hugo_extended_${HUGO_VERSION}_Linux-64bit.deb"
             dpkg -i hugo*.deb
 
             hugo version
