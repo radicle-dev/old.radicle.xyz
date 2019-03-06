@@ -121,15 +121,15 @@ If we wanted to add another comment we could run ``$ rad issue comment <issue-nu
 
 Creating an issue works just like adding a git commit message—add text at the top and save the file to create the comment.
 
-Now let's make our own garden now. First of let's create a new branch and check it out, ``$ git checkout -b my-garden``. Then we'll create a new text file, ``$ touch yyy-mm-dd_username.txt`` and open the file with your favorite editor.
+Now let's make our own garden. First of let's create a new branch and check it out, ``$ git checkout -b my-garden``. Then we'll create a new text file, ``$ touch yyy-mm-dd_username.txt`` and open the file with your favorite editor.
 
 As mentioned in the issue above, the text should fit in a box of 20 characters wide and 8 lines high.
 
 Once we've planted a few vegatables and feel happy with our garden, we'll save the file, add the staged file and commit it to the repo using git.
 
 ::
-
-  $ git commit -a -m "Sewing seeds"
+  $ git add .
+  $ git commit -m "Sewing seeds"
   [master (root-commit) 798c5c4] Sewing seeds
    1 files changed, 8 insertions(+)
    create mode 100644 YYY-MM-DD_username.txt

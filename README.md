@@ -1,7 +1,8 @@
 ## Prerequisits
 
-1. [Install hugo](https://gohugo.io/getting-started/installing/)
-2. Install rst2html ` pip install docutils`
+1. [Install hugo](https://gohugo.io/getting-started/installing/). Make sure you
+   get the extended version that includes the SCSS processor.
+2. Install rst2html and Pygments with ` pip install --user docutils Pygments`.
 
 ## Develop
 
