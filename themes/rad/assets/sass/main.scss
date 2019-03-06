@@ -103,16 +103,14 @@ header {
   }
 }
 
-// .right-header {
-//   background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550439747/radicle-growth-2_i2dohu.gif");
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
-
 .right-header {
-  video {}
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1551908176/creepy-compressed_kewumd.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+
 
 // section styles
 
@@ -209,6 +207,7 @@ header {
   }
 }
 
+
 .try-section {
   display: flex;
   flex-direction: column;
@@ -225,16 +224,18 @@ header {
 
   .terminal {
     margin-top: 32px;
-    max-width: 660px;
-    height: 204px;
+    width: 640px;
+    height: 220px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: $white;
+    color: $black;
+    text-align: left;
+    padding: 16px;
   }
 
   .blue {
     background-color: $blue;
+    color: $white;
   }
 
   @media (max-width: 640px) {
