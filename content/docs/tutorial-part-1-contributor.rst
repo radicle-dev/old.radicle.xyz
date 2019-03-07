@@ -141,7 +141,7 @@ Now let's propose our patch upstream using the commit hash of this git branch.
   $ rad patch propose 798c5c4
   Proposing patch #1 to 12D3KooWSeVNi5qTpDULRMR8UQhhQZfk4taUGRaLoLF7BgAAsUQW
 
-*Note: Make sure that your branch is only 1 commit ahead of master or the patch proposal will fail.*
+*Note: Make sure that your commit is on top of origin/master or the patch proposal will fail.*
 
 If we want to see the status of our patch we can do that with:
 
