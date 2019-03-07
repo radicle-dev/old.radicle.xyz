@@ -113,7 +113,7 @@ There's only one issue for this project at the moment. Let's take a closer look 
   Comments
   --------
 
-  ### hxrts [2019-03-04T16:43:26Z]
+  ### johndoe [2019-03-04T16:43:26Z]
 
   It looks like your garden doesn't have the correct dimensions. All gardens should be 20 characters wide and 8 lines high.
 
@@ -121,7 +121,7 @@ If we wanted to add another comment we could run ``$ rad issue comment <issue-nu
 
 Creating an issue works just like adding a git commit message—add text at the top and save the file to create the comment.
 
-Now let's make our own garden. First of let's create a new branch and check it out, ``$ git checkout -b my-garden``. Then we'll create a new text file, ``$ touch yyy-mm-dd_username.txt`` and open the file with your favorite editor.
+Now let's make our own garden. First of let's create a new branch and check it out, ``$ git checkout -b my-garden``. Then we'll create a new text file, ``$ touch yyyy-mm-dd_username.txt`` and open the file with your favorite editor.
 
 As mentioned in the issue above, the text should fit in a box of 20 characters wide and 8 lines high.
 
@@ -135,20 +135,24 @@ Once we've planted a few vegatables and feel happy with our garden, we'll save t
    1 files changed, 8 insertions(+)
    create mode 100644 YYY-MM-DD_username.txt
 
-Now let's propose our patch upstream using the HEAD of this git branch.
+Now let's propose our patch upstream using the commit hash of this git branch.
 
 ::
 
-  $ rad patch propose HEAD
-  Proposing <PATCH-ID> to <PROJECT-ID>
+  $ rad patch propose 798c5c4
+  Proposing patch #1 to 12D3KooWSeVNi5qTpDULRMR8UQhhQZfk4taUGRaLoLF7BgAAsUQW
+
+*Note: Make sure that your branch is only 1 commit ahead of master or the patch proposal will fail.*
 
 If we want to see the status of our patch we can do that with:
 
 ::
 
   $ rad patch list
-  state     #  commit                   author  updated
-  pending   1  YYYY-MM-DD_username.txt  hxrts   2019-03-04T21:23:34Z
+  state     #  commit        author    updated
+  pending   1  Sewing seeds  janedoe   2019-03-04T21:23:34Z
+
+*Note: the author comes from your local .gitconfig.*
 
 As long as our garden is the correct dimensions, it shouldn't take long for our proposed patch to be accepted and then we'll be able to see our garden on the map at https://radicle.xyz/garden. Also if you check out master, ``$ git checkout master``, and pull in the latest changes, ``$ git pull origin master``, you should see your garden file there as well.
 
