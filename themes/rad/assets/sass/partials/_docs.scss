@@ -52,6 +52,10 @@ main {
   border-left: 1px solid rgba($black, 0.2);
   width: 100%;
 
+  .divider:last-child {
+    display: none;
+  }
+
   .chapter {
     padding: 0 48px 48px 48px;
     margin: 0 auto;
