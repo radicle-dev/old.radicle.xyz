@@ -34,7 +34,7 @@ To collaborate on a project, all you need to do is share your project id.
 
 The main commands:
 
-- ``rad project init`` : Creates a new project.
+- ``rad project init`` : Creates a new project
 - ``rad project checkout`` : Checkout (clone) someone else's project
 - ``rad issue list`` : List the issues in a project
 - ``rad issue new`` : Create a new issue in a project
