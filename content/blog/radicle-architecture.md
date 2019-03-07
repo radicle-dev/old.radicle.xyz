@@ -102,13 +102,13 @@ We then end up with several machines \\(M\\), \\(N\\), etc. with starting
 states \\(M_0\\), \\(N_0\\), evolving according to the various inputs they
 receive:
 
-> ![machines](/img/machines.png)
+![machines](/img/machines.png)
 
 Rather than come up with a separate way to formally specify machine
 definitions, Radicle starts from a single *root* machine \\(R\\), a special
 machine which may eventually behave like any other, given the correct inputs:
 
-> ![machines with a common root](/img/machines-common-root.png)
+![machines with a common root](/img/machines-common-root.png)
 
 In this way a Radicle machine's definition and its operation
 are coincident. A machine is completely determined by its
