@@ -19,8 +19,9 @@ choices we’ve made, a good place to start is `this blogpost`_ on the Radicle
 architecture.
 
 If you want to dive straight in and play around with Radicle for yourself,
-follow the installation instructions and then the `Radicle Tutorial`_ in the
+follow the `installation instructions`_ and then the `Radicle Tutorial`_ in the
 docs below.
 
 .. _`this blogpost`: ../blog/radicle-intro
 .. _`Radicle Tutorial`: ./#tutorial-part-1-contributor
+.. _`installation instructions`: ./#installation-setup
