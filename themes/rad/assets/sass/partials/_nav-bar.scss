@@ -14,44 +14,53 @@
   position: fixed;
   transition: none;
   top: 0;
+
   .bar {
     display: flex;
     justify-self: flex-end;
+
     .header-btn {
       margin-left: 20px;
     }
+
     @media (max-width: 640px) {
       display: none;
     }
   }
+
   &#nav {
     transition: top 0.2s;
     top: -64px;
     left: 0;
   }
 }
+
 .hamburger {
   text-indent: -9999px;
   width: 20px;
   display: flex;
   justify-self: flex-end;
-  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550050429/hamburger_rs9dhv.svg");
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550050429/radicle.xyz/hamburger_rs9dhv.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
+
   @media (min-width: 640px) {
     display: none;
   }
 }
+
 nav {
   ul {
     display: flex;
+
     li {
       font-size: 16px;
       margin-left: 20px;
     }
   }
+
   a {
     color: $red;
   }
@@ -60,7 +69,7 @@ nav {
 .rad-nav-logo {
   width: 106px;
   height: 24px;
-  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549882894/radicle-logo-2_el4fmz.svg");
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549882894/radicle.xyz/radicle-logo-2_el4fmz.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -79,10 +88,12 @@ nav {
   z-index: 11;
   transition: top 0.2s;
   width: 100%;
+
   li {
     color: $white;
     line-height: 30px;
   }
+
   a {
     color: $white;
   }
@@ -91,7 +102,7 @@ nav {
 .cross {
   height: 17px;
   width: 17px;
-  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550050945/cross_h4rofi.svg");
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550050945/radicle.xyz/cross_h4rofi.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
