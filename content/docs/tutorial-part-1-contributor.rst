@@ -51,7 +51,7 @@ Let's learn a little more about this project by moving into the newly created di
 ::
 
   $ ls -a
-  .  ..  .git  2019-03-01_chia.txt  2019-03-02_garbanzo.txt
+  .  ..  .git  2019-03-01_tulip.txt  2019-03-02_mesa.txt
 
 
 As we can see, the Radicle project folder has a .git directly inside, like any other git repo.
@@ -60,7 +60,7 @@ Now let's take a look at what's in these garden text files:
 
 ::
 
-  $ cat 2019-03-01_chia.txt
+  $ cat 2019-03-01_tulip.txt
 
                   ☼
 
@@ -76,7 +76,7 @@ Oh, very pretty.
 
 ::
 
-  $ cat 2019-03-02_garbanzo.txt
+  $ cat 2019-03-02_mesa.txt
 
                🌞
      ☁
