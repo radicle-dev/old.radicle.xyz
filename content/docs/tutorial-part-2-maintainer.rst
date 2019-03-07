@@ -36,7 +36,7 @@ We're going to choose option 1 to crate a P2P repo that's distributed with IPFS.
 ::
 
   => Assembled rad-issue machine
-  => Assembled rad-diff machine
+  => Assembled rad-patch machine
   => project id: 12D3KooW...
   => adding "origin" remote: ipfs://ipns/12D3KooW...
   [master (root-commit) e3f2a9a] Radicle Setup
@@ -58,19 +58,19 @@ If we'd like to invite others to contribute, we'll need to give them our project
   => 12D3KooW...
   => Share this project id for people to collaborate with you on your project.
 
-Let's say a collaborator already proposed a diff, using the steps outlined in the first section of this guide. We can see a list of all proposed diffs, as well as the status of each diff, with ``$ rad diff list``.
+Let's say a collaborator already proposed a patch, using the steps outlined in the first section of this guide. We can see a list of all proposed patches, as well as the status of each patch, with ``$ rad patch list``.
 
 ::
 
-  $ rad diff list
-  state     diff #  commit                               author     updated
-  pending   2       Make documentation more accessible   jane doe   2019-01-25 13:27
+  $ rad patch list
+  state     patch #  commit                               author     updated
+  pending   2        Make documentation more accessible   jane doe   2019-01-25 13:27
 
-Then we can inspect the diff with:
+Then we can inspect the patch with:
 
 ::
 
-  $ rad diff show <DIFF-NUMBER>
+  $ rad patch show <PATCH-NUMBER>
   accepted 0 Sewing seeds jane doe 2019-03-04T16:49:28Z
 
   From b118c572a441a774d4577ccb68f67fcfacc58df2 Mon Sep 17 00:00:00 2001
@@ -86,32 +86,31 @@ Maybe we'd like to add a comment to request additional changes:
 
 ::
 
-  $ rad diff comment <DIFF-NUMBER> "Nice feature, but here is my comment..."
-  Added comment to Diff <DIFF-NUMBER>
+  $ rad patch comment <PATCH-NUMBER> "Nice feature, but here is my comment..."
+  Added comment to Patch <PATCH-NUMBER>
 
 And then we can either reject the proposal:
 
 ::
 
-  $ rad diff reject <DIFF-NUMBER>
-  Diff <DIFF-NUMBER> has been rejected
+  $ rad patch reject <PATCH-NUMBER>
+  Patch <PATCH-NUMBER> has been rejected
 
 or accept it:
 
 ::
 
-  $ rad diff accept <DIFF-NUMBER>
-  Merging proposal <DIFF-NUMBER> with master
+  $ rad patch accept <PATCH-NUMBER>
+  Merging proposal <PATCH-NUMBER> with master
 
 Let's check the proposal status one more time to confirm:
 
 ::
 
-  $ rad diff list
-  state     diff #  commit        author    updated
+  $ rad patch list
+  state     patch #  commit        author    updated
   accepted  2       Sewing seeds  jane doe  2019-01-25 13:27
 
 That's it!
 
 🌻
-

@@ -33,7 +33,7 @@ with the following commands:
    brew services start radicle-alpha-ipfs
    brew services start radicle-alpha
 
-Finally, interacting with the Radicle apps requires that you have a set of Radicle keys. You
+Finally, interacting with the Radicle utilities requires that you have a set of Radicle keys. You
 can initialize your keys with the ``rad key create`` command.
 
 
@@ -57,7 +57,7 @@ start the deamon run
 This will also start the ``radicle-ipfs`` service. You can check the
 status of a service with ``systemctl --user status <service>``.
 
-Finally, interacting with the Radicle apps requires that you have a set of Radicle keys. You
+Finally, interacting with the Radicle utilities requires that you have a set of Radicle keys. You
 can initialize your keys with the ``rad key create`` command.
 
 Install From Source
@@ -92,7 +92,7 @@ To run these manually, you can use the following ``rad`` commands:
    rad daemon-ipfs
    rad daemon-radicle
 
-Finally, interacting with the Radicle apps requires that you have a set of Radicle keys. You
+Finally, interacting with the Radicle utilities requires that you have a set of Radicle keys. You
 can initialize your keys with the ``rad key create`` command.
 
 .. _stack: https://docs.haskellstack.org/en/latest/install_and_upgrade/

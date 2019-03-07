@@ -11,17 +11,16 @@ weight: 3
 Tutorial Part 1: Contributor
 ============================
 
-*Once you've finished installing Radicle you're ready to try the Radicle tutorial.*
+Make sure you in `install Radicle <#installation-setup>`_ if you haven't already, and then you're set to try the Radicle tutorial.
 
-*In the Radicle tutorial you'll learn to use some of the basic collaboration tools. First you'll contribute changes to a Radicle project maintained by someone else. In this section you'll learn the three commands: rad project, rad issues, and rad diff.*
+In the Radicle tutorial you'll learn to use some of the basic collaboration tools. First you'll contribute changes to a Radicle project maintained by someone else. In this section you'll learn the three commands: ``rad project``, ``rad issues``, and ``rad patch``.
 
-*Then, in part 2, you'll see the other side by walking through the maintainer workflow.*
+Then, in part 2, you'll see the other side by walking through the maintainer workflow.
 
 🌿
 
-Welcome to the Radicle Garden, a new-found island located somewhere off the ASCII shores of `tilde.town <http://tilde.town/~troido/cadastre/town.html>`_. Today we're going to learn how to use the Radicle collaboration apps by adding a plot of our own to the `Radicle Garden <../garden>`_ map, then we'll walk through how the Radicle Garden project was created and steps for managing contributions as a maintainer.
+Welcome to the Radicle Garden, a new-found island located somewhere off the ASCII shores of `tilde.town <http://tilde.town/~troido/cadastre/town.html>`_. Today we're going to learn how to use the Radicle collaboration utilities by adding a plot of our own to the `Radicle Garden <../garden>`_ map, then we'll walk through how the Radicle Garden project was created and steps for managing contributions as a maintainer.
 
-Make sure you've got `Radicle installed <#installation-setup>`_ and let's dig in.
 
 Contribute to the Radicle Garden
 ================================
@@ -96,19 +95,19 @@ Like our git repo, Radicle stores issue and proposal chains locally and distribu
 
   $ rad issue list
   state    issue #   title                        author        updated
-  open     1         Diff proposal not accepted   juliendonck   2019-01-25 13:27
+  open     1         Patch proposal not accepted  juliendonck   2019-01-25 13:27
 
 There's only one issue for this project at the moment. Let's take a closer look with ``$ rad issue show 1``.
 
 ::
 
   $ rad issue show 0
-  open  0  Diff proposal not accepted  Julien Donck  2019-03-04T16:41:47Z
+  open  0  Patch proposal not accepted  Julien Donck  2019-03-04T16:41:47Z
 
   **State:** open
   **Labels:** []
 
-  I made a proposal to add my garden to the map, but when I run `rad diff list` the state is listed as rejected.
+  I made a proposal to add my garden to the map, but when I run `rad patch list` the state is listed as rejected.
 
   Comments
   --------
@@ -121,35 +120,36 @@ If we wanted to add another comment we could run ``$ rad issue comment <issue-nu
 
 Creating an issue works just like adding a git commit message—add text at the top and save the file to create the comment.
 
-Now let's make our own garden. First of let's create a new branch and check it out, ``$ git checkout -b my-garden``. Then we'll create a new text file, ``$ touch yyy-mm-dd_username.txt`` and open the file with your favorite editor.
+Now let's make our own garden. First of let's create a new branch and check it out, ``$ git checkout -b my-garden``. Then we'll create a new text file, ``$ touch YYYY-MM-DD_username.txt`` and open the file with your favorite editor.
 
 As mentioned in the issue above, the text should fit in a box of 20 characters wide and 8 lines high.
 
-Once we've planted a few vegatables and feel happy with our garden, we'll save the file, add the staged file and commit it to the repo using git.
+Once we've planted a few vegetables and feel happy with our garden, we'll save the file, add the staged file and commit it to the repo using git.
 
 ::
+
   $ git add .
   $ git commit -m "Sewing seeds"
   [master (root-commit) 798c5c4] Sewing seeds
    1 files changed, 8 insertions(+)
-   create mode 100644 YYY-MM-DD_username.txt
+   create mode 100644 YYYY-MM-DD_username.txt
 
-Now let's propose our diff upstream using the HEAD of this git branch.
-
-::
-
-  $ rad diff propose HEAD
-  Proposing <DIFF-ID> to <PROJECT-ID>
-
-If we want to see the status of our diff we can do that with:
+Now let's propose our patch upstream using the HEAD of this git branch.
 
 ::
 
-  $ rad diff list
-  state     #  commit                  author  updated
-  pending   1  YYY-MM-DD_username.txt  hxrts   2019-03-04T21:23:34Z
+  $ rad patch propose HEAD
+  Proposing <PATCH-ID> to <PROJECT-ID>
 
-As long as our garden is the correct dimensions, it shouldn't take long for our proposed diff to be accepted and then we'll be able to see our garden on the map at https://radicle.xyz/garden. Also if you check out master, ``$ git checkout master``, and pull in the latest changes, ``$ git pull origin master``, you should see your garden file there as well.
+If we want to see the status of our patch we can do that with:
+
+::
+
+  $ rad patch list
+  state     #  commit                   author  updated
+  pending   1  YYYY-MM-DD_username.txt  hxrts   2019-03-04T21:23:34Z
+
+As long as our garden is the correct dimensions, it shouldn't take long for our proposed patch to be accepted and then we'll be able to see our garden on the map at https://radicle.xyz/garden. Also if you check out master, ``$ git checkout master``, and pull in the latest changes, ``$ git pull origin master``, you should see your garden file there as well.
 
 |
 
