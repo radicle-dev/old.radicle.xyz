@@ -2,35 +2,43 @@
 
 title: "Background Processes"
 date: 2019-02-05T18:13:14+01:00
-draft: true
 markup: rst
+weight: 9
 
 ---
+
 ====================
 Background Processes
 ====================
 
-OS X
-====
+Radicle requires 2 background processes to be running: radicle-daemon and radicle-ipfs-daemon.
 
-``brew services start``
-
-Linux
-=====
-
-``systemd blah``
-
-Manual
-======
+If you have installed Radicle via the brew / debian packages, the necessary background processes
+should be already available as systemd or brew services respectively (see `installation <#installation-setup>`_).
 
 radicle daemon
 ==============
 
+The Radicle daemon is what manages your Radicle State Machines, accepting valid Radicle expressions as inputs
+from Radicle apps on your machine, or from other apps on the Radicle IPFS network.
+
+To run the radicle daemon:
+
+.. code-block::
+
+  rad daemon-radicle
+
+Radicle daemon
+
 radicle ipfs daemon
 ===================
 
-notes on daemons:
+The Radicle IPFS daemon is the process that runs an IPFS daemon, bootstrapping to our own separate Radicle
+IPFS network. Since all Radicle data is written as IPFS objects, the Radicle daemon must communicate with
+the Radicle IPFS daemon to actually persist any data to disk and expose it on the IPFS network.
 
-- how do i check if htey're running
-- how do i start them
-- how do i debug them
+To run the radicle IPFS daemon:
+
+.. code-block::
+
+  rad daemon-ipfs

@@ -1,0 +1,42 @@
+version: 2
+jobs:
+  build:
+    # branches:
+    #   only:
+    #     - master
+
+    docker:
+      - image: google/cloud-sdk
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install Dependencies
+          environment:
+            HUGO_VERSION: 0.54.0
+          command: |
+            set -ex
+
+            apt-get update
+            apt-get install -y build-essential python-docutils python-openssl wget
+
+            wget "https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb"
+            apt-get install "./hugo_extended_${HUGO_VERSION}_Linux-64bit.deb"
+            dpkg -i hugo*.deb
+
+            hugo version
+
+      - run:
+          name: Deploy
+          command: |
+            set -ex
+
+            export CLOUDSDK_PYTHON_SITEPACKAGES=1
+
+            echo "$GCLOUD_SERVICE_KEY" | \
+              gcloud auth activate-service-account \
+                circleci-radiclexyz-uploader@opensourcecoin.iam.gserviceaccount.com \
+                --key-file=-
+
+            make deploy

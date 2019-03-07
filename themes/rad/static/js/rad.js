@@ -88,7 +88,7 @@ function animateDivider(el) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  const dividers = document.querySelectorAll('section.divider');
+  const dividers = document.querySelectorAll('div.divider');
 
   dividers.forEach(animateDivider);
 });

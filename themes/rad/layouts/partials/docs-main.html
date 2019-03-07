@@ -1,21 +1,21 @@
 <div class="docs-content">
-    <aside>
-      <ul>
-        {{- range (where .Data.Pages "Section" "docs").Reverse }}
-        <li><a href="/docs{{string "#"}}{{ .Title | anchorize }}">{{ .Title }}</a></li>
-        {{- end }}
-      </ul>
-    </aside>
+  <aside>
+    <ul>
+      {{- range (where .Data.Pages "Section" "docs") }}
+      <li><a href="#{{ .Title | anchorize }}">{{ .Title }}</a></li>
+      {{- end }}
+    </ul>
+  </aside>
 
-    <main>
+  <main>
 
-      {{ range .Pages.Reverse }}
-      <section class="chapter">
-        {{ .Content }}
-      </section>
-      <section class="divider white line opacity"></section>
-      {{ end }}
+    {{ range .Pages }}
+    <section class="chapter">
+      {{ .Content }}
+    </section>
+    <div class="divider white line opacity"></div>
+    {{ end }}
 
-    </main>
-  </div>
-  <section class="divider white line opacity"></section>
+  </main>
+</div>
+<div class="divider white line opacity"></div>
