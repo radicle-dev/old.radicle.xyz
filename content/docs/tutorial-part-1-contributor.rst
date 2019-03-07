@@ -11,17 +11,16 @@ weight: 3
 Tutorial Part 1: Contributor
 ============================
 
-*Once you've finished installing Radicle you're ready to try the Radicle tutorial.*
+Make sure you in `install Radicle <#installation-setup>`_ if you haven't already, and then you're set to try the Radicle tutorial.
 
-*In the Radicle tutorial you'll learn to use some of the basic collaboration tools. First you'll contribute changes to a Radicle project maintained by someone else. In this section you'll learn the three commands: rad project, rad issues, and rad patch.*
+In the Radicle tutorial you'll learn to use some of the basic collaboration tools. First you'll contribute changes to a Radicle project maintained by someone else. In this section you'll learn the three commands: ``rad project``, ``rad issues``, and ``rad patch``.
 
-*Then, in part 2, you'll see the other side by walking through the maintainer workflow.*
+Then, in part 2, you'll see the other side by walking through the maintainer workflow.
 
 🌿
 
 Welcome to the Radicle Garden, a new-found island located somewhere off the ASCII shores of `tilde.town <http://tilde.town/~troido/cadastre/town.html>`_. Today we're going to learn how to use the Radicle collaboration utilities by adding a plot of our own to the `Radicle Garden <../garden>`_ map, then we'll walk through how the Radicle Garden project was created and steps for managing contributions as a maintainer.
 
-Make sure you've got `Radicle installed <#installation-setup>`_ and let's dig in.
 
 Contribute to the Radicle Garden
 ================================
