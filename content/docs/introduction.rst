@@ -23,5 +23,5 @@ follow the `installation instructions`_ and then the `Radicle Tutorial`_ in the
 docs below.
 
 .. _`this blogpost`: ../blog/radicle-intro
-.. _`Radicle Tutorial`: ./#tutorial-part-1-contributor
+.. _`Radicle Tutorial`: ./#tutorial-1-contributor
 .. _`installation instructions`: ./#installation-setup
