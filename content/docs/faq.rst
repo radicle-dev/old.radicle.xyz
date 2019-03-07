@@ -33,7 +33,7 @@ The Radicle commands that interact with your source code (like proposing and mer
 
 
 What is the difference between Radicle and other P2P projects like Dat or Scuttlebutt?
-=========================================================================================
+======================================================================================
 
 While taking inspiration from other P2P projects like ZeroNet, Dat, and Scuttlebutt — as well as making use of IPFS for data replication — Radicle’s design centers on creating peer-to-peer tools for open source software development.
 
@@ -72,6 +72,6 @@ Radicle does not explicitly support private collaboration. All data, projects, a
 
 
 Can I use the Radicle collaboration utilities with my favorite editor?
-=================================================================
+======================================================================
 
 Yes. ``rad issues`` and ``rad proposals`` uses whichever text editor is set in the $EDITOR environment variable. Set your default editor with ``export EDITOR=vim`` by executing the command in your terminal or setting the $EDITOR environment variable in your ``.bash_profile``.
