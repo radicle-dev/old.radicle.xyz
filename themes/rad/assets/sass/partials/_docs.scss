@@ -19,6 +19,7 @@ aside {
   grid-row: 2;
   padding: 48px 36px;
   color: $black;
+  z-index: 1;
 
   li {
     line-height: 22px;
@@ -69,7 +70,7 @@ main {
     }
 
     .document {
-      padding-top: 64px;
+      padding-top: 18px;
 
 
 
