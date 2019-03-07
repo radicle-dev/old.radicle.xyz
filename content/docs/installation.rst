@@ -3,7 +3,7 @@
 title: "Installation & Setup"
 date: 2019-02-05T18:12:27+01:00
 markup: rst
-weight: 2
+weight: 3
 
 ---
 ====================

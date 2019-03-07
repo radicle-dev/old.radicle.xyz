@@ -3,7 +3,7 @@
 title: "Radicle P2P Architecture"
 date: 2019-02-06T17:31:11+01:00
 markup: rst
-weight: 7
+weight: 8
 
 ---
 
