@@ -36,7 +36,7 @@ to check the status of all running services. On Linux use the commands
 
 to check the status of the IPFS daemon and the radicle daemon respectively.
 
-radicle ipfs daemon
+Radicle ipfs daemon
 ===================
 
 The Radicle IPFS daemon is the process that runs an IPFS daemon, bootstrapping
@@ -50,7 +50,7 @@ To run the radicle IPFS daemon manually:
 
   rad daemon-ipfs
 
-radicle daemon
+Radicle daemon
 ==============
 
 The Radicle daemon is what manages your Radicle State Machines, accepting valid
