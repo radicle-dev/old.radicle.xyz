@@ -1,6 +1,6 @@
 ---
 
-title: "Radicle"
+title: "Introducing Radicle"
 date: 2018-10-12
 draft: true
 markup: rst
@@ -8,9 +8,9 @@ author: "Sam Hart"
 
 ---
 
-=======
-Radicle
-=======
+===================
+Introducing Radicle
+===================
 
     because ’tis the Origin of the Root… The Radicle is likewise called the seminal Root.
 
@@ -25,23 +25,22 @@ Radicle is a peer-to-peer stack for creating open source software together. A co
 - **Interoperable & open** : reflecting the values of the open source community.
 
 
-Radicle integrates with distributed version control systems like git and includes a high-level language with reprogrammable semantics, P2P networking for sharing application state, and flexible command line tools. Inspired by P2P protocols like `secure scuttlebutt <https://www.scuttlebutt.nz/>`_, radicle connects distributed version control with peer-to-peer networking and extends the idea of replicated logs to fully re-programmable state machines we call *chains*.
+Radicle integrates with distributed version control systems like git and includes a high-level language with reprogrammable semantics, P2P networking for sharing application state, and flexible command line tools. Inspired by P2P protocols like `Secure Scuttlebutt <https://www.scuttlebutt.nz/>`_, radicle connects distributed version control with peer-to-peer networking and extends the idea of replicated logs to fully re-programmable state machines we call *chains*.
 
 Today we’re releasing a core component of the radicle stack, an implementation of the radicle language, along with a `paper <https://ipfs.io/ipfs/QmadmGA6mBWZ93Wv4XKuCu9wdPf7Da8pjH3Corzpe9VGZg>`_ describing its formal semantics.
 
-The radicle stack
+The Radicle stack
 ^^^^^^^^^^^^^^^^^
 
 The radicle language is the basis for a stack of components that together compose a fully featured collaborative programming environment.
 
-- **radicle apps** : Library of collaboration primitives, including projects, issues, and patch proposals.
-- **radicle language** : Specialized Lisp dialect for specifying, interpreting, and dynamically modifying the semantics of arbitrary state machines.
-- **radicle daemon** : Peer-to-peer gossip and state replication layer for publishing and subscribing to updates from other collaborators over IPFS.
-
+- **Radicle utilities** : Library of collaboration primitives, including projects, issues, and diff proposals.
+- **Radicle language** : Specialized Lisp dialect for specifying, interpreting, and dynamically modifying the semantics of arbitrary state machines.
+- **Radicle daemon** : Peer-to-peer gossip and state replication layer for publishing and subscribing to updates from other collaborators over IPFS.
 
 In the coming months we’ll be sharing more details about these components and making an initial release available for developers, along with tutorials on how to get started.
 
-The radicle language
+The Radicle language
 ^^^^^^^^^^^^^^^^^^^^
 
 Radicle is a universal re-programmable state machine. More precisely, it’s a domain specific language for creating replicated state machines that can dynamically modify their semantics.
@@ -50,7 +49,7 @@ Not only can radicle programs evolve as they advance, this sequential evaluation
 
 The radicle language features a number of design choices intended specifically for the above use-case:
 
--  High-level, LISP dialect in the flavor of `Black <http://pllab.is.ocha.ac.jp/%7Easai/Black/>`_.
+-  High-level, Lisp dialect in the flavor of `Black <http://pllab.is.ocha.ac.jp/%7Easai/Black/>`_.
 -  Ability to redefine the ``eval`` function, changing the semantics of the language.
 -  Lexically scoped with a hyperstatic global environment, i.e. free variable resolution takes place at definition-site rather than call-site.
 -  First-class functions for side-effect free computation on chain.
@@ -73,12 +72,13 @@ Finally, radicle comes with sensible defaults, ensuring you can be productive ri
 
 We’re very excited to `open source <https://github.com/oscoin/radicle>`_ the radicle language and soon the full radicle stack.
 
+
 ﹏🌾﹏🌾﹏
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _Black: http://pllab.is.ocha.ac.jp/%7Easai/Black/
 .. _Emacs: https://www.gnu.org/software/emacs/
 .. _open-source: https://github.com/oscoin/radicle
-.. _secure scuttlebutt: https://www.scuttlebutt.nz/
+.. _Secure Scuttlebutt: https://www.scuttlebutt.nz/
 .. _radicle language: https://github.com/oscoin/radicle
 .. _paper: https://ipfs.io/ipfs/QmadmGA6mBWZ93Wv4XKuCu9wdPf7Da8pjH3Corzpe9VGZg
