@@ -3,7 +3,7 @@
 title: "Background Processes"
 date: 2019-02-05T18:13:14+01:00
 markup: rst
-weight: 9
+weight: 10
 
 ---
 
@@ -16,7 +16,8 @@ Radicle requires 2 background processes to be running: ``radicle-ipfs`` and
 
 If you have installed Radicle via the brew or debian packages, the necessary
 background processes should already be available as brew or systemd services
-respectively (see `installation <#installation>`_).
+respectively (see `installation <#installation-setup>`_).
+
 
 If you are experiencing problems with Radicle, you should check the status of
 these services.
@@ -62,3 +63,4 @@ To run the radicle daemon manually:
 .. code-block::
 
   rad daemon-radicle
+  

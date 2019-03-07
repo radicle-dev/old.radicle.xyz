@@ -3,7 +3,7 @@
 title: "Installation & Setup"
 date: 2019-02-05T18:12:27+01:00
 markup: rst
-weight: 2
+weight: 3
 
 ---
 ====================
@@ -24,8 +24,7 @@ OS X
    brew install radicle-alpha
 
 
-To run the ``rad`` commands, you must have both a Radicle daemon, and Radicle IPFS daemon running.
-For OS X users these can be accessed using `brew services <https://github.com/Homebrew/homebrew-services>`_
+To run the ``rad`` commands, you must have both a Radicle daemon, and Radicle IPFS daemon running. You can have them always run in the background using `brew services <https://github.com/Homebrew/homebrew-services>`_
 with the following commands:
 
 .. code-block::
@@ -33,7 +32,11 @@ with the following commands:
    brew services start radicle-alpha-ipfs
    brew services start radicle-alpha
 
+
+Or if you prefer running them manually every time, check the `section below <#manually-running-background-processes>`_.
+
 Finally, interacting with the Radicle utilities requires that you have a set of Radicle keys. You
+
 can initialize your keys with the ``rad key create`` command.
 
 
@@ -47,18 +50,19 @@ For Debian-based systems we provide packages.
     wget https://storage.googleapis.com/static.radicle.xyz/releases/radicle_2019.03.05_amd64.deb
     apt install ./radicle_2019.03.05_amd64.deb
 
-The package includes systemd service files for the Radicle daemon. To
-start the deamon run
+To run the ``rad`` commands, you must have both a Radicle daemon, and Radicle IPFS daemon running. The package includes systemd service files to always have the daemons running in the background. To start the daemons run:
 
 .. code-block::
 
     systemctl --user start radicle-daemon
 
-This will also start the ``radicle-ipfs`` service. You can check the
-status of a service with ``systemctl --user status <service>``.
+You can check the status of a service with ``systemctl --user status <service>``.
+
+Or if you prefer running them manually every time, check the `section below <#manually-running-background-processes>`_.
 
 Finally, interacting with the Radicle utilities requires that you have a set of Radicle keys. You
 can initialize your keys with the ``rad key create`` command.
+
 
 Install From Source
 ===================

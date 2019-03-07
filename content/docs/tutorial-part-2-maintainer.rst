@@ -1,14 +1,14 @@
 ---
 
-title: "Tutorial Part 2: Maintainer"
+title: "Tutorial 2: Maintainer"
 date: 2019-02-05T18:12:34+01:00
 markup: rst
-weight: 4
+weight: 5
 
 ---
 
 ===========================
-Tutorial Part 2: Maintainer
+Tutorial 2: Maintainer
 ===========================
 
 *Part 2 of this tutorial walks through how to setup a project as a Maintainer. As an example, we'll be using the Radicle Garden again, however in this instance we won't have a contributor on the other side, so while we'll explain the steps, you may have to get a friend to act as a contributor if you'd like to see this entire workflow in action.*

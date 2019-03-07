@@ -26,38 +26,50 @@
       </p>
     </div>
   </section>
-
   <section class="try">
     <h1>Collaborate with Radicle</h1>
 
     <div class="try-section">
       <h2>Setup a project</h2>
       <p>
-        <code>rad project</code> allows you to register your git projects on
-        the radicle network and connect your repo to other radicle
-        applications, like <code>rad issues</code> and
-        <code>rad patch</code>.
+        <code>rad project</code> allows you to create, checkout, manage, and publish a project, comprised of issues,
+        patch proposals, and a git repo.
       </p>
       <div class="terminal">
-        <asciinema-player autoplay font-size="14px" loop preload src="video/project.cast" theme="white">
-        </asciinema-player>
+        <pre>
+$ rad project init
+? What's the name of your project? radicle-garden
+? Briefly describe your project? A community garden
+=> Creating git repository
+=> Adding "origin" remote: ipfs://ipns/12D3KooW...
+=> Adding issues to your project
+=> Adding patches to your project
+=> Project created with id: 12D3KooW...
+          </pre>
       </div>
     </div>
 
     <div class="try-section">
-      <h2>Manage your issues</h2>
+      <h2>Manage issues</h2>
       <p>
         <code>rad issue</code> brings issue management to the command line.
         Create, view, list, and comment to heart's content.
       </p>
       <div class="terminal blue">
-        <asciinema-player autoplay font-size="14px" loop preload src="video/issue.cast" theme="blue">
-        </asciinema-player>
+        <pre>
+$ rad issue list
+#  state   title                author   updated
+1  open    Patch not accepted   janedoe  2019-01-25 13:27
+0  closed  How do I contribute  randy    2019-01-25 09:14
+
+$ rad issue comment 1 "probably the wrong size"
+Added comment to issue #1
+          </pre>
       </div>
     </div>
 
     <div class="try-section">
-      <h2>Collaborate on code</h2>
+      <h2>Propose patches</h2>
       <p>
         <code>rad patch</code> gives you the tools to collaborate on git
         repositories, completely P2P. Propose and track changes to projects you follow using a patch-based
@@ -65,17 +77,24 @@
         model.
       </p>
       <div class="terminal">
-        <asciinema-player autoplay font-size="14px" loop preload src="video/diff.cast" theme="white">
-        </asciinema-player>
+        <pre>
+$ rad patch list
+#  state     commit                author   updated
+1  pending   Make docs friendlier  janedoe  2019-01-25 13:27
+0  accepted  Typo fixes            willyg   2019-01-25 09:14
+
+$ rad patch accept 1
+Merging proposal #2 with master
+          </pre>
       </div>
     </div>
 
-    <a class="button guide-cta" href="/docs#tutorial-part-1-contributor">Learn Radicle with our intro guide<span>→</span></a>
+    <a class="button guide-cta" href="/docs#tutorial-1-contributor">Learn Radicle with our intro guide<span>→</span></a>
 
     <div class="globe"></div>
   </section>
 
-  <div class="divider" data-rad-divider-density="5" data-rad-divider-ondulation="40" data-rad-divider-speed="5">
+  <div class="divider" data-rad-divider-density="2" data-rad-divider-ondulation="40" data-rad-divider-speed="3">
   </div>
 
   <section class="stack">
@@ -102,7 +121,7 @@
     </a>
   </section>
 
-  <div class="divider white" data-rad-divider-density="10" data-rad-divider-ondulation="40" data-rad-divider-speed="10">
+  <div class="divider white" data-rad-divider-density="4" data-rad-divider-ondulation="60" data-rad-divider-speed="5">
   </div>
 </div>
 {{ end }}

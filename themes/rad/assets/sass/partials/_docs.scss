@@ -52,6 +52,10 @@ main {
   border-left: 1px solid rgba($black, 0.2);
   width: 100%;
 
+  .divider:last-child {
+    display: none;
+  }
+
   .chapter {
     padding: 0 48px 48px 48px;
     margin: 0 auto;
@@ -67,12 +71,7 @@ main {
     .document {
       padding-top: 64px;
 
-      p {
-        margin-bottom: 1em;
-      }
-    }
 
-    .section {
 
       h2 {
         word-break: normal;
@@ -143,7 +142,6 @@ main {
         list-style-type: decimal;
         padding-left: 26px;
       }
-
     }
   }
 

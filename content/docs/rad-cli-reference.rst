@@ -3,7 +3,7 @@
 title: "Rad CLI Reference"
 date: 2019-02-05T18:12:57+01:00
 markup: rst
-weight: 6
+weight: 7
 
 ---
 =================
@@ -45,7 +45,7 @@ rad patch commands
 
 .. code-block::
 
-  rad patch - Radicle Patch CLI
+  rad patch - Radicle patch CLI
 
      Usage:
           rad patch list [(-s | --state | --filter-by-state) <state>] [--fancy]

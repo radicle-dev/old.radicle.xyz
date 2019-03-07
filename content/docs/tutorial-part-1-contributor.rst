@@ -1,14 +1,14 @@
 ---
 
-title: "Tutorial Part 1: Contributor"
+title: "Tutorial 1: Contributor"
 date: 2019-02-05T18:12:34+01:00
 markup: rst
-weight: 3
+weight: 4
 
 ---
 
 ============================
-Tutorial Part 1: Contributor
+Tutorial 1: Contributor
 ============================
 
 Make sure you in `install Radicle <#installation-setup>`_ if you haven't already, and then you're set to try the Radicle tutorial.
@@ -89,20 +89,20 @@ Oh, very pretty.
 
 What lovely gardens. It looks like each garden file contains an ASCII image. These images are combined to create the community garden page located at https://radicle.xyz/garden.
 
-Like our git repo, Radicle stores issue and proposal chains locally and distributes them over the IPFS network. To look at a list of issues we'll run ``$ rad issue list`` while inside the git repo.
+Like our git repo, Radicle stores your issues and patches locally and distributes them over the IPFS network. To look at a list of issues we'll run ``$ rad issue list`` while inside the git repo.
 
 ::
 
   $ rad issue list
-  state    issue #   title                        author        updated
-  open     1         Patch proposal not accepted  juliendonck   2019-01-25 13:27
+  state    #   title                         author    updated
+  open     1   Patch proposal not accepted   janedoe   2019-03-04T16:41:47Z
 
 There's only one issue for this project at the moment. Let's take a closer look with ``$ rad issue show 1``.
 
 ::
 
   $ rad issue show 0
-  open  0  Patch proposal not accepted  Julien Donck  2019-03-04T16:41:47Z
+  open  0  Patch proposal not accepted  janedoe  2019-03-04T16:41:47Z
 
   **State:** open
   **Labels:** []
@@ -112,7 +112,7 @@ There's only one issue for this project at the moment. Let's take a closer look 
   Comments
   --------
 
-  ### hxrts [2019-03-04T16:43:26Z]
+  ### johndoe [2019-03-04T16:43:26Z]
 
   It looks like your garden doesn't have the correct dimensions. All gardens should be 20 characters wide and 8 lines high.
 
@@ -134,23 +134,27 @@ Once we've planted a few vegetables and feel happy with our garden, we'll save t
    1 files changed, 8 insertions(+)
    create mode 100644 YYYY-MM-DD_username.txt
 
-Now let's propose our patch upstream using the HEAD of this git branch.
+Now let's propose our patch upstream using the commit hash of this git branch.
 
 ::
 
-  $ rad patch propose HEAD
-  Proposing <PATCH-ID> to <PROJECT-ID>
+  $ rad patch propose 798c5c4
+  Proposing patch #1 to 12D3KooWSeVNi5qTpDULRMR8UQhhQZfk4taUGRaLoLF7BgAAsUQW
+
+*Note: Make sure that your commit is on top of origin/master or the patch will fail.*
 
 If we want to see the status of our patch we can do that with:
 
 ::
 
   $ rad patch list
-  state     #  commit                   author  updated
-  pending   1  YYYY-MM-DD_username.txt  hxrts   2019-03-04T21:23:34Z
+  state     #  commit        author    updated
+  pending   1  Sewing seeds  janedoe   2019-03-04T21:23:34Z
+
+*Note: the author comes from your local .gitconfig.*
 
 As long as our garden is the correct dimensions, it shouldn't take long for our proposed patch to be accepted and then we'll be able to see our garden on the map at https://radicle.xyz/garden. Also if you check out master, ``$ git checkout master``, and pull in the latest changes, ``$ git pull origin master``, you should see your garden file there as well.
 
 |
 
-That's the end of Part 1. If you feel comfortable with that material you can move on to Part 2 of this tutorial, which explains what the same process looks like as a `Maintainer <#tutorial-part-2-maintainer>`_.
+That's the end of Part 1. If you feel comfortable with that material you can move on to Part 2 of this tutorial, which explains what the same process looks like as a `Maintainer <#tutorial-2-maintainer>`_.

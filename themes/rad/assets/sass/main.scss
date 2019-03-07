@@ -7,6 +7,7 @@
 @import "partials/blog";
 @import "partials/garden";
 @import "partials/about";
+@import "partials/404";
 @import "partials/divider";
 @import "partials/nav-bar";
 @import "partials/footer";
@@ -79,7 +80,7 @@ header {
     .logo {
       width: 297px;
       height: 50px;
-      background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550228984/radicle-logo-alpha_n94rqc.svg");
+      background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550228984/radicle.xyz/radicle-logo-alpha_n94rqc.svg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -103,11 +104,13 @@ header {
 }
 
 .right-header {
-  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550439747/radicle-growth-2_i2dohu.gif");
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1551908176/radicle.xyz/creepy-compressed_kewumd.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
 
 // section styles
 
@@ -204,6 +207,7 @@ header {
   }
 }
 
+
 .try-section {
   display: flex;
   flex-direction: column;
@@ -220,16 +224,18 @@ header {
 
   .terminal {
     margin-top: 32px;
-    max-width: 660px;
-    height: 204px;
+    width: 640px;
+    height: 220px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: $white;
+    color: $black;
+    text-align: left;
+    padding: 16px;
   }
 
   .blue {
     background-color: $blue;
+    color: $white;
   }
 
   @media (max-width: 640px) {
@@ -262,7 +268,7 @@ header {
   margin: 10px 40px 0 0;
   height: 300px;
   width: 300px;
-  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550437129/globe-ascii-bw_bfq3ql.gif");
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550437129/radicle.xyz/globe-ascii-bw_bfq3ql.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -308,7 +314,7 @@ header {
   }
 
   .illustration {
-    background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1551109351/stack7_zr0mkv.svg");
+    background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1551109351/radicle.xyz/stack7_zr0mkv.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

@@ -3,7 +3,7 @@
 title: "FAQ"
 date: 2019-02-05T18:13:32+01:00
 markup: rst
-weight: 11
+weight: 12
 
 ---
 
@@ -11,6 +11,25 @@ weight: 11
 FAQ
 ===
 
+Why Radicle
+===========
+
+When looking at the peer-to-peer tech landscape, it’s common to see projects
+bootstrapping their own technology. P2P developer communities strive to be
+active users and advocates of the tools they create, but it can be difficult
+to move off of centralized platforms entirely, especially when organizations
+like Github still play an essential role in the open source ecosystem.
+
+This desire for P2P communities to be using P2P tools more generally isn’t
+really new. Scuttlebutt has long discussions around new ideas of “teamware_.”
+Projects like git-ssb_ and git-remote-ipld_ have existed for some time already.
+
+Rather than thinking of solutions for decentralized code collaboration within
+the scope of a single P2P protocol, Radicle tries to take what it can learn
+from existing solutions in the ecosystem, using these technologies directly
+where possible, and build towards a compelling vision of a technology stack
+that enables open source communities to easily to develop decentralized code
+collaboration tools and applications.
 
 Isn’t git already a distributed version control system?
 =======================================================
@@ -74,4 +93,8 @@ Radicle does not explicitly support private collaboration. All data, projects, a
 Can I use the Radicle collaboration utilities with my favorite editor?
 ======================================================================
 
-Yes. ``rad issues`` and ``rad proposals`` uses whichever text editor is set in the $EDITOR environment variable. Set your default editor with ``export EDITOR=vim`` by executing the command in your terminal or setting the $EDITOR environment variable in your ``.bash_profile``.
+Yes. ``rad issue`` and ``rad patch`` uses whichever text editor is set in the $EDITOR environment variable. Set your default editor with ``export EDITOR=vim`` by executing the command in your terminal or setting the $EDITOR environment variable in your ``.bash_profile``.
+
+.. _teamware: https://viewer.scuttlebot.io/%25ZyZge6x3sXi4kROFfhnGs8URgPEDq1thPjC0D8tPfms%3D.sha256
+.. _git-ssb: https://git.scuttlebot.io/%25n92DiQh7ietE%2BR%2BX%2FI403LQoyf2DtR3WQfCkDKlheQU%3D.sha256
+.. _git-remote-ipld: https://github.com/ipfs-shipyard/git-remote-ipld
