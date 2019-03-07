@@ -1,15 +1,15 @@
 ---
 
-title: "Getting involved"
+title: "Get involved"
 date: 2019-02-05T18:13:32+01:00
 markup: rst
 weight: 13
 
 ---
 
-================
-Getting involved
-================
+============
+Get involved
+============
 
 
 For general inquiries, chatter, or questions, the easiest ways to get in touch

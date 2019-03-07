@@ -11,34 +11,54 @@ weight: 10
 Background Processes
 ====================
 
-Radicle requires 2 background processes to be running: radicle-daemon and radicle-ipfs-daemon.
+Radicle requires 2 background processes to be running: ``radicle-ipfs`` and
+``radicle-daemon``. These are described in greater details below.
 
-If you have installed Radicle via the brew / debian packages, the necessary background processes
-should be already available as systemd or brew services respectively (see `installation <#installation-setup>`_).
+If you have installed Radicle via the brew or debian packages, the necessary
+background processes should already be available as brew or systemd services
+respectively (see `installation <#installation-setup>`_).
 
-radicle daemon
-==============
+If you are experiencing problems with Radicle, you should check the status of
+these services.
 
-The Radicle daemon is what manages your Radicle State Machines, accepting valid Radicle expressions as inputs
-from Radicle apps on your machine, or from other apps on the Radicle IPFS network.
-
-To run the radicle daemon:
+On OSX run:
 
 .. code-block::
 
-  rad daemon-radicle
+   brew services list
 
-Radicle daemon
+to check the status of all running services. On Linux use the commands
+
+.. code-block::
+
+   systemctl --user status radicle-ipfs
+   systemctl --user status radicle-daemon
+
+to check the status of the IPFS daemon and the radicle daemon respectively.
 
 radicle ipfs daemon
 ===================
 
-The Radicle IPFS daemon is the process that runs an IPFS daemon, bootstrapping to our own separate Radicle
-IPFS network. Since all Radicle data is written as IPFS objects, the Radicle daemon must communicate with
-the Radicle IPFS daemon to actually persist any data to disk and expose it on the IPFS network.
+The Radicle IPFS daemon is the process that runs an IPFS daemon, bootstrapping
+to our own separate Radicle IPFS network. Since all Radicle data is written as
+IPFS objects, the Radicle daemon must communicate with the Radicle IPFS daemon
+to actually persist any data to disk and expose it on the IPFS network.
 
-To run the radicle IPFS daemon:
+To run the radicle IPFS daemon manually:
 
 .. code-block::
 
   rad daemon-ipfs
+
+radicle daemon
+==============
+
+The Radicle daemon is what manages your Radicle State Machines, accepting valid
+Radicle expressions as inputs from Radicle apps on your machine, or from other
+apps on the Radicle IPFS network.
+
+To run the radicle daemon manually:
+
+.. code-block::
+
+  rad daemon-radicle
