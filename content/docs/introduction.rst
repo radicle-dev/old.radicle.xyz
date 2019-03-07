@@ -25,3 +25,12 @@ docs below.
 .. _`this blogpost`: ../blog/radicle-intro
 .. _`Radicle Tutorial`: ./#tutorial-1-contributor
 .. _`installation instructions`: ./#installation-setup
+
+::
+
+     (%)(%)(%)
+     '|''|''|'
+     \|/\|/\|/
+    [~~~~~~~~~]
+  ___|~~~~~~~|___
+     |_______|
