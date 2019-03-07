@@ -1,6 +1,6 @@
 ---
 
-title: "Tutorial Part 1: Contributor"
+title: "Tutorial 1: Contributor"
 date: 2019-02-05T18:12:34+01:00
 markup: rst
 weight: 4
@@ -8,7 +8,7 @@ weight: 4
 ---
 
 ============================
-Tutorial Part 1: Contributor
+Tutorial 1: Contributor
 ============================
 
 Make sure you in `install Radicle <#installation-setup>`_ if you haven't already, and then you're set to try the Radicle tutorial.
@@ -157,4 +157,4 @@ As long as our garden is the correct dimensions, it shouldn't take long for our 
 
 |
 
-That's the end of Part 1. If you feel comfortable with that material you can move on to Part 2 of this tutorial, which explains what the same process looks like as a `Maintainer <#tutorial-part-2-maintainer>`_.
+That's the end of Part 1. If you feel comfortable with that material you can move on to Part 2 of this tutorial, which explains what the same process looks like as a `Maintainer <#tutorial-2-maintainer>`_.
