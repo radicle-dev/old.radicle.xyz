@@ -36,7 +36,7 @@ Writing to an RSM (ipfs-pubsub)
 To add expressions to a machine, one creates a document with the expressions to
 be added and adds a link to the previous head of the linked list of inputs:
 
-.. code-block:: json
+::
 
     {
       "expressions": ["(def x 42)", "(def y (+ x x))"],
