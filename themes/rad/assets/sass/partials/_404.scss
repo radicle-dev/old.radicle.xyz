@@ -1,4 +1,15 @@
 .four-o-four {
-  padding-top: 64px;
+  display: flex;
+  height: 75vh;
+  justify-content: center;
   text-align: center;
+  padding: 32px;
+
+  h1 {
+    color: $magenta;
+  }
+
+  p {
+    margin-top: 1em;
+  }
 }
