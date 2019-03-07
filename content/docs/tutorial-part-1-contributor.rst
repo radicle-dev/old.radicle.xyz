@@ -3,7 +3,7 @@
 title: "Tutorial Part 1: Contributor"
 date: 2019-02-05T18:12:34+01:00
 markup: rst
-weight: 3
+weight: 4
 
 ---
 

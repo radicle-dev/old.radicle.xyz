@@ -3,7 +3,7 @@
 title: "Rad CLI Reference"
 date: 2019-02-05T18:12:57+01:00
 markup: rst
-weight: 6
+weight: 7
 
 ---
 =================
