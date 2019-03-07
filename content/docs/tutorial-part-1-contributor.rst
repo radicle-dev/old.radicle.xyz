@@ -13,7 +13,7 @@ Tutorial Part 1: Contributor
 
 *Once you've finished installing Radicle you're ready to try the Radicle tutorial.*
 
-*In the Radicle tutorial you'll learn to use some of the basic collaboration tools. First you'll contribute changes to a Radicle project maintained by someone else. In this section you'll learn the three commands: rad project, rad issues, and rad diff.*
+*In the Radicle tutorial you'll learn to use some of the basic collaboration tools. First you'll contribute changes to a Radicle project maintained by someone else. In this section you'll learn the three commands: rad project, rad issues, and rad patch.*
 
 *Then, in part 2, you'll see the other side by walking through the maintainer workflow.*
 
@@ -96,19 +96,19 @@ Like our git repo, Radicle stores issue and proposal chains locally and distribu
 
   $ rad issue list
   state    issue #   title                        author        updated
-  open     1         Diff proposal not accepted   juliendonck   2019-01-25 13:27
+  open     1         Patch proposal not accepted  juliendonck   2019-01-25 13:27
 
 There's only one issue for this project at the moment. Let's take a closer look with ``$ rad issue show 1``.
 
 ::
 
   $ rad issue show 0
-  open  0  Diff proposal not accepted  Julien Donck  2019-03-04T16:41:47Z
+  open  0  Patch proposal not accepted  Julien Donck  2019-03-04T16:41:47Z
 
   **State:** open
   **Labels:** []
 
-  I made a proposal to add my garden to the map, but when I run `rad diff list` the state is listed as rejected.
+  I made a proposal to add my garden to the map, but when I run `rad patch list` the state is listed as rejected.
 
   Comments
   --------
@@ -135,22 +135,22 @@ Once we've planted a few vegetables and feel happy with our garden, we'll save t
    1 files changed, 8 insertions(+)
    create mode 100644 YYYY-MM-DD_username.txt
 
-Now let's propose our diff upstream using the HEAD of this git branch.
+Now let's propose our patch upstream using the HEAD of this git branch.
 
 ::
 
-  $ rad diff propose HEAD
-  Proposing <DIFF-ID> to <PROJECT-ID>
+  $ rad patch propose HEAD
+  Proposing <PATCH-ID> to <PROJECT-ID>
 
-If we want to see the status of our diff we can do that with:
+If we want to see the status of our patch we can do that with:
 
 ::
 
-  $ rad diff list
+  $ rad patch list
   state     #  commit                  author  updated
   pending   1  YYY-MM-DD_username.txt  hxrts   2019-03-04T21:23:34Z
 
-As long as our garden is the correct dimensions, it shouldn't take long for our proposed diff to be accepted and then we'll be able to see our garden on the map at https://radicle.xyz/garden. Also if you check out master, ``$ git checkout master``, and pull in the latest changes, ``$ git pull origin master``, you should see your garden file there as well.
+As long as our garden is the correct dimensions, it shouldn't take long for our proposed patch to be accepted and then we'll be able to see our garden on the map at https://radicle.xyz/garden. Also if you check out master, ``$ git checkout master``, and pull in the latest changes, ``$ git pull origin master``, you should see your garden file there as well.
 
 |
 

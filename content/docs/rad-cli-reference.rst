@@ -40,21 +40,21 @@ rad issue commands
                       This command is restricted to the maintainer of the project.
        help         - Print this help and exit
 
-rad diff commands
-=================
+rad patch commands
+==================
 
 .. code-block::
 
-  rad diff - Radicle Diff CLI
+  rad patch - Radicle Patch CLI
 
      Usage:
-          rad diff list [(-s | --state | --filter-by-state) <state>] [--fancy]
-          rad diff propose <commit>
-          rad diff [show | retract | accept | reject] <diff-number>
-          rad diff comment <diff-number> <comment>
-          rad diff help
+          rad patch list [(-s | --state | --filter-by-state) <state>] [--fancy]
+          rad patch propose <commit>
+          rad patch [show | retract | accept | reject] <patch-number>
+          rad patch comment <patch-number> <comment>
+          rad patch help
 
-       list         - Lists all diffs
+       list         - Lists all patches
                       The list can be filtered by state:
                         pending, retracted, accepted, rejected
                       The flags for filtering by state:
@@ -63,16 +63,16 @@ rad diff commands
                       <state2> ...'.
                       If the option '--fancy' is appended, the list is opened via
                       fzf (note that fzf has to be installed).
-       propose      - Create a new diff from a single commit
-       show         - Show a diff
-       comment      - Add a comment to a diff
-       retract      - Retract your own diff
-                      This command is restricted to the creator of the diff or the
+       propose      - Create a new patch from a single commit
+       show         - Show a patch
+       comment      - Add a comment to a patch
+       retract      - Retract your own patch
+                      This command is restricted to the creator of the patch or the
                       maintainer of the project.
-       accept       - Accept a diff
+       accept       - Accept a patch
                       Automatically merges to master and pushes to origin. This
                       command is restricted to the maintainer of the project.
-       reject       - Reject a diff
+       reject       - Reject a patch
                       This command is restricted to the maintainer of the project.
        help         - Print this help and exit
 
