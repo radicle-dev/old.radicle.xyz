@@ -146,8 +146,8 @@ If we want to see the status of our patch we can do that with:
 ::
 
   $ rad patch list
-  state     #  commit                  author  updated
-  pending   1  YYY-MM-DD_username.txt  hxrts   2019-03-04T21:23:34Z
+  state     #  commit                   author  updated
+  pending   1  YYYY-MM-DD_username.txt  hxrts   2019-03-04T21:23:34Z
 
 As long as our garden is the correct dimensions, it shouldn't take long for our proposed patch to be accepted and then we'll be able to see our garden on the map at https://radicle.xyz/garden. Also if you check out master, ``$ git checkout master``, and pull in the latest changes, ``$ git pull origin master``, you should see your garden file there as well.
 
