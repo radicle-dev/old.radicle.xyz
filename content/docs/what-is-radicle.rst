@@ -45,5 +45,5 @@ Radicle was designed to make it easy to create new utilities and apps, or
 modify existing ones. If you want bug reports to necessarily have "How to
 reproduce" sections, or if you want patches that touch certain directories to
 be deemed invalid and immediately rejected, or if you want only certain people
-to be allowed to be open issues, you can do all that. However, this involves
+to be allowed to open issues, you can do all that. However, this involves
 programming in the Radicle language, for which documentation is still lacking.
