@@ -68,7 +68,7 @@ making requests to the Radicle daemon. For example ``rad-issue`` might need
 to know who the author of issue ``5`` is. To do this, it sends a *query* to the
 Radicle daemon, which is just an expression to be speculatively evaluated on
 the machine. Once the result is obtained, the expression (and the resulting
-state) is discarded. For example an utility could query machine
+state) is discarded. For example a utility could query machine
 ``12D3KooWBdkbHsG35HpEegK4ecr2MU3Um61B3rqhiGmSBrEi6eKQ`` with the expression
 ``(lookup :author (issue-by-number 5))``. The daemon will make sure the machine
 is loaded and up to date before evaluating the expression, and it will also
@@ -79,13 +79,13 @@ When a daemon executes a query, it *pins* all the expressions it had to download
 from IPFS. Therefore querying a machine also has the effect of seeding it to
 other peers.
 
-The radicle language & how utilities are written
-===========================================
+The Radicle language & how utilities are written
+================================================
 
 Radicle machines are just sequences of expressions of the Radicle
 *language*; a LISP heavily inspired by Scheme_, modified to be fully
 deterministic and have the ability to restrict the validity of future
-inputs. The code forming a Radicle *utility* has two components:
+inputs. The code forming a Radicle machine has two components:
 
 - The *machine code*, that is, the inputs of the Radicle state machine,
 
@@ -100,7 +100,7 @@ inputs. The code forming a Radicle *utility* has two components:
   - Code sharing code between the UX and machine: Just like it's attractive to
     use the same language on the frontend and backend of a traditional web-app
     (e.g. Node/JS, Clojure/Clojurescript, etc.), using Radicle for the UX
-    code allows one to re-use utility functions, validation logic, etc. that was
+    code allows one to re-use machine functions, validation logic, etc. that was
     already needed for the machine code.
 
 For more information about the Radicle language, check out the RadicleDocs_.

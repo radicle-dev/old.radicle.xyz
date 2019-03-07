@@ -56,7 +56,7 @@ the following command:
 ``rad project checkout <RAD_PROJECT_ID>``
 
 For making code contributions to Radicle we still accept PR’s through our
-github_, since the rad patch utility only works with single commit changes.
+github_, since the ``rad patch`` utility only works with single commit changes.
 
 Lastly, the core Radicle team does weekly updates on `Secure Scuttlebutt`_, which
 you can see by following the #radicle-weekly-updates channel. If you’re not a
