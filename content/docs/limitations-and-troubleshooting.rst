@@ -21,7 +21,7 @@ Work in progress
 Clearing All Machine History
 ============================
 
-Sometimes all the things you tried still don't seem to work..
+Sometimes all the things you tried still don't seem to work.
 
 If all else fails and you are having strange errors with daemons starting
 or interacting with the radicle commands, you can try wiping all of your
