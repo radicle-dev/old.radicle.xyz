@@ -1,7 +1,7 @@
 function animateDivider(el) {
-  const defaultDensity = 5;
-  const defaultOndulation = 75;
-  const defaultSpeed = 5;
+  const defaultDensity = 3;
+  const defaultOndulation = 50;
+  const defaultSpeed = 4;
 
   // Read config variables from data attributes.
   let density = parseInt(
