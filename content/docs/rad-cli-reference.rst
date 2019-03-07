@@ -41,7 +41,7 @@ rad issue commands
        help         - Print this help and exit
 
 rad patch commands
-=================
+==================
 
 .. code-block::
 
