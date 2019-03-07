@@ -109,6 +109,6 @@ rad key commands
      Per default, key pairs are stored in `$HOME/.config/radicle/my-keys.rad`
      this can be adjusted by setting `$XDG_CONFIG_HOME`.
 
-     The key pair is used for signing actions in the apps. Note that some actions
+     The key pair is used for signing actions in the utils. Note that some actions
      are restricted to certain key pairs so deleting or overwriting your key pair
      can lead to loss of some authorisations.

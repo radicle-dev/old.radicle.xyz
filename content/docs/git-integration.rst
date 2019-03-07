@@ -11,7 +11,7 @@ weight: 8
 Git Integration
 ===============
 
-Radicle apps are centered around code collaboration. They usually expect that
+Radicle utilities are centered around code collaboration. They usually expect that
 the directory from which ``rad`` commands are executed is a ``git`` repository.
 There is, however, no restriction on how the ``git`` repository is shared with
 others: you can use any ``git`` hosting service (such as GitHub or GitLab), or a
