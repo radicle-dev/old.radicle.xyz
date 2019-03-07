@@ -79,8 +79,7 @@ Work in progress
 git-ipfs limitations
 ====================
 
-Replication
-~~~~~~~~~~~
+**Replication**
 
 Data is replicated across the IPFS network based on demand: as soon as someone
 requests a particular piece of data, the network tries to find peers which
@@ -98,8 +97,7 @@ repositories. We hope to address this in a future release. Meanwhile, if you
 would like pushes to be replicated without your computer being online
 permanently, we recommend to employ a pinning service such as (???)
 
-Storage Space and Network Bandwidth
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Storage Space and Network Bandwidth**
 
 Git repositories employ a compression technique called packfiles_ to store
 ``git`` objects efficiently. How exactly a packfile is constructed is subject to
@@ -127,8 +125,7 @@ at least one order of magitude higher than in the traditional client-server
 model.
 
 
-Pushing Changes as a Collaborator
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Pushing Changes as a Collaborator**
 
 Similar to RSMs, we leverage IPNS_ to address the latest changes to a ``git``
 repository stored on IPFS. As a consequence, only the owner of that particular
