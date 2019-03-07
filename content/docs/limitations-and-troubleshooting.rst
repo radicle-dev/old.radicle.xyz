@@ -97,6 +97,8 @@ repositories. We hope to address this in a future release. Meanwhile, if you
 would like pushes to be replicated without your computer being online
 permanently, we recommend to employ a pinning service such as (???)
 
+|
+
 **Storage Space and Network Bandwidth**
 
 Git repositories employ a compression technique called packfiles_ to store
@@ -124,6 +126,7 @@ repository on the local ``ipfs daemon``, and to replicate it over the network is
 at least one order of magitude higher than in the traditional client-server
 model.
 
+|
 
 **Pushing Changes as a Collaborator**
 
