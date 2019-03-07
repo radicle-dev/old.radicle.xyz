@@ -13,7 +13,7 @@ Tutorial Part 1: Contributor
 
 *Once you've finished installing Radicle you're ready to try the Radicle tutorial.*
 
-*In the Radicle tutorial you'll learn to use some of the basic collaboration tools. First you'll contribute changes to a Radicle project maintained by someone else. In this section you'll learn the three commands: rad project, rad issues, and rad patch.*
+*In the Radicle tutorial you'll learn to use some of the basic collaboration tools. First you'll contribute changes to a Radicle project maintained by someone else. In this section you'll learn the three commands: rad project, rad issue, and rad patch.*
 
 *Then, in part 2, you'll see the other side by walking through the maintainer workflow.*
 
@@ -95,15 +95,15 @@ Like our git repo, Radicle stores your issues and patches locally and distribute
 ::
 
   $ rad issue list
-  state    issue #   title                        author        updated
-  open     1         Patch proposal not accepted   juliendonck   2019-01-25 13:27
+  state    #   title                         author    updated
+  open     1   Patch proposal not accepted   janedoe   2019-03-04T16:41:47Z
 
 There's only one issue for this project at the moment. Let's take a closer look with ``$ rad issue show 1``.
 
 ::
 
   $ rad issue show 0
-  open  0  Patch proposal not accepted  Julien Donck  2019-03-04T16:41:47Z
+  open  0  Patch proposal not accepted  janedoe  2019-03-04T16:41:47Z
 
   **State:** open
   **Labels:** []

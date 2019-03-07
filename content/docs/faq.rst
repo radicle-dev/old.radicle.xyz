@@ -93,7 +93,7 @@ Radicle does not explicitly support private collaboration. All data, projects, a
 Can I use the Radicle collaboration apps with my favorite editor?
 =================================================================
 
-Yes. ``rad issues`` and ``rad proposals`` uses whichever text editor is set in the $EDITOR environment variable. Set your default editor with ``export EDITOR=vim`` by executing the command in your terminal or setting the $EDITOR environment variable in your ``.bash_profile``.
+Yes. ``rad issue`` and ``rad patch`` uses whichever text editor is set in the $EDITOR environment variable. Set your default editor with ``export EDITOR=vim`` by executing the command in your terminal or setting the $EDITOR environment variable in your ``.bash_profile``.
 
 .. _teamware: https://viewer.scuttlebot.io/%25ZyZge6x3sXi4kROFfhnGs8URgPEDq1thPjC0D8tPfms%3D.sha256
 .. _git-ssb: https://git.scuttlebot.io/%25n92DiQh7ietE%2BR%2BX%2FI403LQoyf2DtR3WQfCkDKlheQU%3D.sha256
