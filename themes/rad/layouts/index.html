@@ -35,7 +35,7 @@
         <code>rad project</code> allows you to register your git projects on
         the radicle network and connect your repo to other radicle
         applications, like <code>rad issues</code> and
-        <code>rad diff</code>.
+        <code>rad patch</code>.
       </p>
       <div class="terminal">
         <pre>
@@ -45,7 +45,7 @@ $ rad project init
 => Creating git repository
 => Adding "origin" remote: ipfs://ipns/12D3KooW...
 => Adding issues to your project
-=> Adding diffs to your project
+=> Adding patches to your project
 => Project created with id: 12D3KooW...
           </pre>
       </div>
@@ -61,7 +61,7 @@ $ rad project init
         <pre>
 $ rad issue list
 #  state   title                author   updated
-1  open    Diff not accepted    janedoe  2019-01-25 13:27
+1  open    Patch not accepted    janedoe  2019-01-25 13:27
 0  closed  How do I contribute  randy    2019-01-25 09:14
 
 $ rad issue comment 1 "probably the wrong size"
@@ -73,19 +73,19 @@ Added comment to issue #1
     <div class="try-section">
       <h2>Collaborate on code</h2>
       <p>
-        <code>rad diff</code> gives you the tools to collaborate on git
+        <code>rad patch</code> gives you the tools to collaborate on git
         repositories, completely P2P. Propose and track changes to projects you follow using a patch-based
         collaboration
         model.
       </p>
       <div class="terminal">
         <pre>
-$ rad diff list
+$ rad patch list
 #  state     commit                author   updated
 1  pending   Make docs friendlier  janedoe  2019-01-25 13:27
 0  accepted  Typo fixes            willyg   2019-01-25 09:14
 
-$ rad diff accept 1
+$ rad patch accept 1
 Merging proposal #2 with master
           </pre>
       </div>

@@ -38,7 +38,7 @@ Yes! Git as a VCS (version control system) allows for collaboration on software 
 
 However, most software development also requires some form of social coordination, notably, issues and proposals i.e. GitHub’s pull requests or GitLab’s merge requests. Radicle tries to take these aspects of code collaboration and create a distributed state management system simliar to git. The Radicle CLI sits right alongside git, bringing the benefits of local repository storage to project issues and proposals.
 
-Radicle’s peer-to-peer model allows you to directly exchange repos, issues, and diff proposals with your collaborators, without a third party host.
+Radicle’s peer-to-peer model allows you to directly exchange repos, issues, and patch proposals with your collaborators, without a third party host.
 
 
 Can I use Radicle with GitHub, GitLab, or another code hosting service?
@@ -48,7 +48,7 @@ Yes. Radicle apps function 100% independently of where you host your code, be it
 
 Select how you’d like to host your code when initializing a Radicle project with the ``rad project init`` command, which will prompt you to select where you want to set your git remote.
 
-The Radicle commands that interact with your source code (like proposing and merging diffs), will call out directly to git under the hood. So if there are any problems, you can use the existing git commands for managing merge conflicts.
+The Radicle commands that interact with your source code (like proposing and merging patches), will call out directly to git under the hood. So if there are any problems, you can use the existing git commands for managing merge conflicts.
 
 
 What is the difference between Radicle and other P2P projects like Dat or Scuttlebutt?
@@ -74,7 +74,7 @@ If I am a project owner, can I get updates from contributors if we are not onlin
 
 Currently the owner of the project must be online in order to receive any proposed RSM updates from a contributor. Once received and processed, these updates will be written to IPFS by the project owner, and made available to all users who follow that project.
 
-To alleviate this, one workaround is to run Radicle from a server that will always be online, setting that radicle-daemon to be the project owner. However, this means that all issue management and merging of diff proposals must happen from that server.
+To alleviate this, one workaround is to run Radicle from a server that will always be online, setting that radicle-daemon to be the project owner. However, this means that all issue management and merging of patch proposals must happen from that server.
 
 We’re aware that this is not ideal from a usability perspective, and are currently investigating alternative ways to help with this problem.
 

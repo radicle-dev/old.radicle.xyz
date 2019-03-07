@@ -34,7 +34,7 @@ The radicle stack
 
 The radicle language is the basis for a stack of components that together compose a fully featured collaborative programming environment.
 
-- **radicle apps** : Library of collaboration primitives, including projects, issues, and diff proposals.
+- **radicle apps** : Library of collaboration primitives, including projects, issues, and patch proposals.
 - **radicle language** : Specialized Lisp dialect for specifying, interpreting, and dynamically modifying the semantics of arbitrary state machines.
 - **radicle daemon** : Peer-to-peer gossip and state replication layer for publishing and subscribing to updates from other collaborators over IPFS.
 
