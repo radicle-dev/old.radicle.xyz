@@ -52,6 +52,7 @@ main {
   justify-self: center;
   border-left: 1px solid rgba($black, 0.2);
   width: 100%;
+  padding-top: 90px;
 
   .divider:last-child {
     display: none;
@@ -70,9 +71,6 @@ main {
     }
 
     .document {
-      padding-top: 18px;
-
-
 
       h2 {
         word-break: normal;
