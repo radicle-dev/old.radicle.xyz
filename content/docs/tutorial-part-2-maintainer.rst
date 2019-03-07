@@ -114,4 +114,3 @@ Let's check the proposal status one more time to confirm:
 That's it!
 
 🌻
-

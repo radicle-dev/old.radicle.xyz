@@ -41,7 +41,7 @@ the scope of a single P2P protocol, Radicle tries to take what it can learn
 from existing solutions in the ecosystem, using these technologies directly
 where possible, and build towards a compelling vision of a technology stack
 that enables open source communities to easily to develop decentralized code
-collaboration tools and applications.
+collaboration tools.
 
 Getting involved
 ----------------
@@ -53,10 +53,10 @@ As of the alpha release, we’re using Radicle for managing our issues. If you
 want to track or submit issues, you can checkout the project on Radicle with
 the following command:
 
-``rad project checkout <<RAD_PROJECT_ID>>``
+``rad project checkout <RAD_PROJECT_ID>``
 
 For making code contributions to Radicle we still accept PR’s through our
-github_, since the rad diff app only works with single commit changes.
+github_, since the rad patch utility only works with single commit changes.
 
 Lastly, the core Radicle team does weekly updates on `Secure Scuttlebutt`_, which
 you can see by following the #radicle-weekly-updates channel. If you’re not a

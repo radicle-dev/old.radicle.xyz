@@ -138,7 +138,7 @@ repository where only the owner has push access. The equivalent to GitHub's
 name, or just the empty URL ``ipfs://``, and pushing to that.
 
 Note that this is mostly useful if you employ a pinning service, or want to
-collaborate with people synchronously. The ``rad diff`` app allows you to share
+collaborate with people synchronously. The ``rad patch`` utility allows you to share
 patches without the need for pushing them.
 
 
@@ -146,4 +146,3 @@ patches without the need for pushing them.
 .. _heuristics: https://github.com/git/git/blob/master/Documentation/technical/pack-heuristics.txt
 .. _IPLD: https://ipld.io
 .. _IPNS: https://docs.ipfs.io/guides/concepts/ipns/
-
