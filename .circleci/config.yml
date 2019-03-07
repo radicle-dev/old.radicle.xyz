@@ -36,7 +36,7 @@ jobs:
     executor: cloud-sdk
     steps:
       - attach_workspace:
-        at: /tmp
+          at: /tmp
 
       - run: |
           set -ex
