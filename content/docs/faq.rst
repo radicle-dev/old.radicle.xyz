@@ -44,7 +44,7 @@ Radicle’s peer-to-peer model allows you to directly exchange repos, issues, an
 Can I use Radicle with GitHub, GitLab, or another code hosting service?
 =======================================================================
 
-Yes. Radicle apps function 100% independently of where you host your code, be it GitHub, GitLab, or IPFS. This means you can use Radicle for managing issues and code contributions and still continue to host your code on a service like GitHub.
+Yes. The Radicle utilties function 100% independently of where you host your code, be it GitHub, GitLab, or IPFS. This means you can use Radicle for managing issues and code contributions and still continue to host your code on a service like GitHub.
 
 Select how you’d like to host your code when initializing a Radicle project with the ``rad project init`` command, which will prompt you to select where you want to set your git remote.
 
@@ -52,7 +52,7 @@ The Radicle commands that interact with your source code (like proposing and mer
 
 
 What is the difference between Radicle and other P2P projects like Dat or Scuttlebutt?
-=========================================================================================
+======================================================================================
 
 While taking inspiration from other P2P projects like ZeroNet, Dat, and Scuttlebutt — as well as making use of IPFS for data replication — Radicle’s design centers on creating peer-to-peer tools for open source software development.
 
@@ -64,9 +64,9 @@ Similarly, we might say Scuttlebutt is “people-centric,” where each person o
 
 In Radicle, everything is centered around peer-to-peer collaboration tooling. Phrased another way, Radicle is program-centric. These peer-to-peer programs, also known as Radicle State Machines or RSMs, use the model of a state machine represented by a hash-linked list of inputs that are sequentially applied to the initial program state.
 
-Through one lens these RSMs look quite similar to Scuttlebutt feeds, where instead of feeds representing a chain of messages signed by a Scuttlebutt user, RSMs represent a chain of updates to the state of a Radicle app.
+Through one lens these RSMs look quite similar to Scuttlebutt feeds, where instead of feeds representing a chain of messages signed by a Scuttlebutt user, RSMs represent a chain of updates to the state of a Radicle program.
 
-Unlike Scuttlebutt however, Radicle apps have no social graph to allow data to propagate throughout the network. Rather than relying on its own custom network and replication layer, Radicle uses IPFS as the peer-to-peer infrastructure on which to build Radicle apps. RSM updates are written as IPFS objects, using IPLD to link between these IPFS objects, and lastly we use IPNS to give us persistent identifiers for RSMs that resolve to the current state.
+Unlike Scuttlebutt however, Radicle programs have no social graph to allow data to propagate throughout the network. Rather than relying on its own custom network and replication layer, Radicle uses IPFS as the peer-to-peer infrastructure on which to build Radicle programs. RSM updates are written as IPFS objects, using IPLD to link between these IPFS objects, and lastly we use IPNS to give us persistent identifiers for RSMs that resolve to the current state.
 
 
 If I am a project owner, can I get updates from contributors if we are not online at the same time?
@@ -90,8 +90,8 @@ Radicle does not explicitly support private collaboration. All data, projects, a
 
 
 
-Can I use the Radicle collaboration apps with my favorite editor?
-=================================================================
+Can I use the Radicle collaboration utilities with my favorite editor?
+======================================================================
 
 Yes. ``rad issue`` and ``rad patch`` uses whichever text editor is set in the $EDITOR environment variable. Set your default editor with ``export EDITOR=vim`` by executing the command in your terminal or setting the $EDITOR environment variable in your ``.bash_profile``.
 

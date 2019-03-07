@@ -25,19 +25,19 @@ these services.
 On OSX run:
 
 .. code-block::
-   
+
    brew services list
 
 to check the status of all running services. On Linux use the commands
-   
+
 .. code-block::
-   
+
    systemctl --user status radicle-ipfs
    systemctl --user status radicle-daemon
 
 to check the status of the IPFS daemon and the radicle daemon respectively.
-   
-radicle ipfs daemon
+
+Radicle ipfs daemon
 ===================
 
 The Radicle IPFS daemon is the process that runs an IPFS daemon, bootstrapping
@@ -51,11 +51,11 @@ To run the radicle IPFS daemon manually:
 
   rad daemon-ipfs
 
-radicle daemon
+Radicle daemon
 ==============
 
 The Radicle daemon is what manages your Radicle State Machines, accepting valid
-Radicle expressions as inputs from Radicle apps on your machine, or from other
+Radicle expressions as inputs from Radicle utilities on your machine, or from other
 apps on the Radicle IPFS network.
 
 To run the radicle daemon manually:

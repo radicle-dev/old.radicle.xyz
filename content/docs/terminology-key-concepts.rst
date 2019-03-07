@@ -26,8 +26,8 @@ Radicle daemon
 
 TBD
 
-Radicle apps
-============
+Radicle utilities
+=================
 
 TBD
 
@@ -41,4 +41,3 @@ Storage & Networking in Radicle / Radicle & IPFS / radicle-p2p
 
 For more information on the peer-to-peer aspects of Radicle, see
 `Radicle P2P Architecture <#radicle-p2p-architecture>`_
-

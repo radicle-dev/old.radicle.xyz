@@ -11,17 +11,16 @@ weight: 4
 Tutorial Part 1: Contributor
 ============================
 
-*Once you've finished installing Radicle you're ready to try the Radicle tutorial.*
+Make sure you in `install Radicle <#installation-setup>`_ if you haven't already, and then you're set to try the Radicle tutorial.
 
-*In the Radicle tutorial you'll learn to use some of the basic collaboration tools. First you'll contribute changes to a Radicle project maintained by someone else. In this section you'll learn the three commands: rad project, rad issue, and rad patch.*
+In the Radicle tutorial you'll learn to use some of the basic collaboration tools. First you'll contribute changes to a Radicle project maintained by someone else. In this section you'll learn the three commands: ``rad project``, ``rad issues``, and ``rad patch``.
 
-*Then, in part 2, you'll see the other side by walking through the maintainer workflow.*
+Then, in part 2, you'll see the other side by walking through the maintainer workflow.
 
 🌿
 
-Welcome to the Radicle Garden, a new-found island located somewhere off the ASCII shores of `tilde.town <http://tilde.town/~troido/cadastre/town.html>`_. Today we're going to learn how to use the Radicle collaboration apps by adding a plot of our own to the `Radicle Garden <../garden>`_ map, then we'll walk through how the Radicle Garden project was created and steps for managing contributions as a maintainer.
+Welcome to the Radicle Garden, a new-found island located somewhere off the ASCII shores of `tilde.town <http://tilde.town/~troido/cadastre/town.html>`_. Today we're going to learn how to use the Radicle collaboration utilities by adding a plot of our own to the `Radicle Garden <../garden>`_ map, then we'll walk through how the Radicle Garden project was created and steps for managing contributions as a maintainer.
 
-Make sure you've got `Radicle installed <#installation-setup>`_ and let's dig in.
 
 Contribute to the Radicle Garden
 ================================
@@ -121,11 +120,11 @@ If we wanted to add another comment we could run ``$ rad issue comment <issue-nu
 
 Creating an issue works just like adding a git commit message—add text at the top and save the file to create the comment.
 
-Now let's make our own garden. First of let's create a new branch and check it out, ``$ git checkout -b my-garden``. Then we'll create a new text file, ``$ touch yyy-mm-dd_username.txt`` and open the file with your favorite editor.
+Now let's make our own garden. First of let's create a new branch and check it out, ``$ git checkout -b my-garden``. Then we'll create a new text file, ``$ touch YYYY-MM-DD_username.txt`` and open the file with your favorite editor.
 
 As mentioned in the issue above, the text should fit in a box of 20 characters wide and 8 lines high.
 
-Once we've planted a few vegatables and feel happy with our garden, we'll save the file, add the staged file and commit it to the repo using git.
+Once we've planted a few vegetables and feel happy with our garden, we'll save the file, add the staged file and commit it to the repo using git.
 
 ::
 
@@ -133,7 +132,7 @@ Once we've planted a few vegatables and feel happy with our garden, we'll save t
   $ git commit -m "Sewing seeds"
   [master (root-commit) 798c5c4] Sewing seeds
    1 files changed, 8 insertions(+)
-   create mode 100644 YYY-MM-DD_username.txt
+   create mode 100644 YYYY-MM-DD_username.txt
 
 Now let's propose our patch upstream using the HEAD of this git branch.
 
