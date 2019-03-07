@@ -11,10 +11,11 @@ weight: 2
 What is Radicle?
 ================
 
-
-Radicle is a new stack and set of utilities for code collaboration. Think of it
-as a Github/Gitlab replacement - though you can also combine Radicle with these
-services, if you're not ready to switch completely.
+Radicle is a new stack for code collaboration, that includes a few simple
+utilities we've created for this initial release to demonstrate the core
+functionality. Think of Radicle as a Github or Gitlab alternative—though you can
+also combine Radicle with these services if you're not ready to switch over
+entirely.
 
 Instead of being hosted by Github's servers, or hosted on servers that you
 yourself manage and deploy, issues, patches (i.e.,
@@ -41,9 +42,9 @@ The main commands:
 - ``rad patch propose`` : Propose that a commit be merged into a project
 - ``rad patch accept`` : Merge a patch
 
-Radicle was designed to make it easy to create new utilities and apps, or
-modify existing ones. If you want bug reports to necessarily have "How to
-reproduce" sections, or if you want patches that touch certain directories to
-be deemed invalid and immediately rejected, or if you want only certain people
-to be allowed to open issues, you can do all that. However, this involves
+Radicle was designed to make it easy to create new utilities, or
+modify existing ones. If you want to require that bug reports have "How to
+reproduce" sections, or if you want patches touching certain directories to
+be deemed invalid and immediately rejected, or if you want to allow only certain people
+to open issues, you can do all that. However, this involves
 programming in the Radicle language, for which documentation is still lacking.
