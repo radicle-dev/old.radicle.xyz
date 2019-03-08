@@ -126,6 +126,22 @@ Now let's make our own garden. First of let's create a new branch and check it o
 
 As mentioned in the issue above, the text should fit in a box of 20 characters wide and 8 lines high.
 
+http://ascii.co.uk/art
+http://www.ascii-art.de/ascii/
+https://asciiart.website/
+https://www.asciiart.eu/
+
+::
+
+  ╔══════════════════╗
+  ║                  ║
+  ║                  ║
+  ║                  ║
+  ║                  ║
+  ║                  ║
+  ║                  ║
+  ╚══════════════════╝
+
 Once we've planted a few vegetables and feel happy with our garden, we'll save the file, add the staged file and commit it to the repo using git.
 
 ::
