@@ -62,6 +62,10 @@ main {
     display: none;
   }
 
+  .divider:last-child {
+    display: none;
+  }
+
   .chapter {
     padding: 0 48px 48px 48px;
     margin: 0 auto;
@@ -75,6 +79,7 @@ main {
     }
 
     .document {
+      padding-top: 64px;
 
       h2 {
         word-break: normal;

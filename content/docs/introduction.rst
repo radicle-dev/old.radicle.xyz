@@ -22,8 +22,6 @@ If you want to dive straight in and play around with Radicle for yourself,
 follow the `installation instructions`_ and then the `Radicle Tutorial`_ in the
 docs below.
 
-|
-
 ::
 
      ;;;;;        ;;;;;        ;;;;;
@@ -33,6 +31,7 @@ docs below.
    ..;;;;;..    ..;;;;;..    ..;;;;;..
     ':::::'      ':::::'      ':::::'
       ':`          ':`          ':`
+
 
 .. _`this blogpost`: ../blog/radicle-intro
 .. _`Radicle Tutorial`: ./#tutorial-1-contributor
