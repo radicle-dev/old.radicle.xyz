@@ -1,0 +1,3 @@
+<div class="div {{ if .IsNamedParams }}{{ if .Get "class" }}{{ .Get "class" }}{{ end }}{{ end }}" {{ if .IsNamedParams }}{{ if .Get "style" }} style="{{ .Get "style" | safeCSS }}"{{ end }}{{ end }}>
+{{ .Inner }}
+</div>
