@@ -57,10 +57,10 @@ that is, an abstract mathematical function rather than a piece of
 hardware.
 
 Where does a machine "exist"? Where does it execute? Part of the idea behind the
-Radicle architecture is to abstract away any such notion. Whether on your local 
-device, or the larger P2P network, as long as a machine is available it can 
-be retreived from its IPFS address. For the most part, it's sufficient to know 
-that a machine exists, and that you can interact with it. 
+Radicle architecture is to abstract away any such notion. Whether on your local
+device, or the larger P2P network, as long as a machine is available it can
+be retreived from its IPFS address. For the most part, it's sufficient to know
+that a machine exists, and that you can interact with it.
 
 As far as what a Radicle machine *is*. Formally, it is a state machine defined by:
 
@@ -77,15 +77,19 @@ in state \\(s\\) then the input \\(i\\) will cause a transition to state
 
 A simple example is a counter machine where:
 
-> \\(S = \mathbb{Z}\\)
+{{% div style="padding: 0.2em 0 0.2em 2em;" %}}
 
-> \\(I = \\{\mathtt{increment}, \mathtt{getCounter}\\}\\)
+\\(S = \mathbb{Z}\\)
 
-> \\(O = \\{\mathtt{ok}\\} \cup \mathbb{Z}\\)
+\\(I = \\{\mathtt{increment}, \mathtt{getCounter}\\}\\)
 
-> \\( f(n, i) = \begin{cases} (n + 1, \mathtt{ok}) & \text{when } i = \mathtt{increment} \\\ (n,n) & \text{when } i = \mathtt{getCounter} \end{cases} \\)
+\\(O = \\{\mathtt{ok}\\} \cup \mathbb{Z}\\)
 
-> \\(s_0 = 0\\)
+\\( f(n, i) = \begin{cases} (n + 1, \mathtt{ok}) & \text{when } i = \mathtt{increment} \\\ (n,n) & \text{when } i = \mathtt{getCounter} \end{cases} \\)
+
+\\(s_0 = 0\\)
+
+{{% /div %}}
 
 People can define their own Radicle machines, or set up new ones with an
 existing definition.
@@ -102,13 +106,21 @@ We then end up with several machines \\(M\\), \\(N\\), etc. with starting
 states \\(M_0\\), \\(N_0\\), evolving according to the various inputs they
 receive:
 
+{{% div style="margin: 0 auto; width: 70%; padding: 1em 0 0.5em 0;" %}}
+
 ![machines](/img/machines.png)
+
+{{% /div %}}
 
 Rather than come up with a separate way to formally specify machine
 definitions, Radicle starts from a single *root* machine \\(R\\), a special
 machine which may eventually behave like any other, given the correct inputs:
 
+{{% div style="margin: 0 auto; width: 80%; padding: 1.8em 0 0.5em 0;" %}}
+
 ![machines with a common root](/img/machines-common-root.png)
+
+{{% /div %}}
 
 In this way a Radicle machine's definition and its operation
 are coincident. A machine is completely determined by its
@@ -138,13 +150,13 @@ This gives us the ability to define machines as pointers to a linked
 list stored on IPFS; the list of all the expressions submitted to that
 machine. Adding new inputs means adding that data to IPFS, then updating the
 pointer, directing it to the new data. To materialize the machine,
-the pointer is resolved, data from IPFS fetched, and the resulting set of expressions evaluated. 
+the pointer is resolved, data from IPFS fetched, and the resulting set of expressions evaluated.
 One can then query the materialized machine, for example, by requesting the current state (`get-counter`).
 
 <!-- TODO: IPFS linked list picture -->
 
 By fetching data, you also replicate it automatically, seeing it for others on the network.
-If someone requests data and other peers are offline, you help ensure its availability. 
+If someone requests data and other peers are offline, you help ensure its availability.
 One nice feature of this architecture is that
 popular machines will be more available. Currently we pin all data
 indefinitely, however with a system to unpin data that's rarely used locally, we
@@ -154,7 +166,11 @@ i.e. their initial definition is the same, will already be available. For instan
 these machines share several initial IPFS blocks. Once a single counter machine has been cached,
 the shared sequence of the second will be already be available.
 
-> ![machines sharing some inputs on IPFS](/img/machines-sharing.png)
+{{% div style="padding: 0.5em 0 1em 0;" %}}
+
+![machines sharing some inputs on IPFS](/img/machines-sharing.png)
+
+{{% /div %}}
 
 This fetching and materializing isn't manual. Instead, participants of the
 network have a **radicle daemon** that runs in the background; when you first
@@ -176,13 +192,13 @@ When you go offline, your data will have replicated to servers that are always
 online, so it will continue to be available. We provide some such public daemons, but
 you can run your own and contribute to the health of your favorite machines.
 
-*Note: While Radicle is still in alpha, daemons have no authentication mechanim, 
+*Note: While Radicle is still in alpha, daemons have no authentication mechanim,
 thus there is a possibility of DOS attacks if you enable this option.*
 
 Secondly, because the radicle daemon is just an HTTP server, this enables the
 possibility of creating websites that use your machine as a data layer.
 
-*Note: This can only be accomplished manually at present, however, we aim to automate and 
+*Note: This can only be accomplished manually at present, however, we aim to automate and
 simplify this process in the future.*
 
 How does the pointer work? We back it with an IPNS pointer. IPNS
