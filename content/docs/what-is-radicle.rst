@@ -18,7 +18,7 @@ also combine Radicle with these services if you're not ready to switch over
 entirely.
 
 Instead of being hosted by Github's servers, or hosted on servers that you
-yourself manage and deploy, issues, patches (i.e.,
+yourself manage and deploy, issues, patches (i.e.
 pull-requests/merge-requests) and optionally repos are distributed via IPFS. To
 use it, you don't need to rely on centralized services, nor go through the
 trouble of self-hosting.
@@ -34,7 +34,7 @@ To collaborate on a project, all you need to do is share your project id.
 
 The main commands:
 
-- ``rad project init`` : Creates a new project.
+- ``rad project init`` : Creates a new project
 - ``rad project checkout`` : Checkout (clone) someone else's project
 - ``rad issue list`` : List the issues in a project
 - ``rad issue new`` : Create a new issue in a project

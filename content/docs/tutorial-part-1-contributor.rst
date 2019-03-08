@@ -51,7 +51,7 @@ Let's learn a little more about this project by moving into the newly created di
 ::
 
   $ ls -a
-  .  ..  .git  2019-03-01_chia.txt  2019-03-02_garbanzo.txt
+  .  ..  .git  2019-03-01_tulip.txt  2019-03-02_mesa.txt
 
 
 As we can see, the Radicle project folder has a .git directly inside, like any other git repo.
@@ -60,21 +60,23 @@ Now let's take a look at what's in these garden text files:
 
 ::
 
-  $ cat 2019-03-01_chia.txt
+  $ cat 2019-03-01_tulip.txt
 
-         %
-          \_
-          | %
-  ..-`-...l..-..~-`.,.
-  ....................
-  ....................
-  ....................
+                  ☼
+
+      (%)(%)(%)
+      '|''|''|'
+      \|/\|/\|/
+     [~~~~~~~~~]
+  ____|~~~~~~~|_______
+      |_______|
+
 
 Oh, very pretty.
 
 ::
 
-  $ cat 2019-03-02_garbanzo.txt
+  $ cat 2019-03-02_mesa.txt
 
                🌞
      ☁
@@ -122,7 +124,28 @@ Creating an issue works just like adding a git commit message—add text at the 
 
 Now let's make our own garden. First of let's create a new branch and check it out, ``$ git checkout -b my-garden``. Then we'll create a new text file, ``$ touch YYYY-MM-DD_username.txt`` and open the file with your favorite editor.
 
-As mentioned in the issue above, the text should fit in a box of 20 characters wide and 8 lines high.
+
+As mentioned in the issue above, the text should fit in a box of 20 characters wide and 8 lines high. Here is an empty 20 x 8 frame to start us off.
+
+::
+
+  ╔══════════════════╗
+  ║                  ║
+  ║                  ║
+  ║                  ║
+  ║                  ║
+  ║                  ║
+  ║                  ║
+  ╚══════════════════╝
+
+And few ASCII art collections for inspiration:
+
+- http://ascii.co.uk/art
+- http://www.ascii-art.de/ascii/
+- https://asciiart.website/
+- https://www.asciiart.eu/
+
+Also, feel free to copy some of the existing plots in the `garden <https://radicle.xyz/garden>`_ as a starting point.
 
 Once we've planted a few vegetables and feel happy with our garden, we'll save the file, add the staged file and commit it to the repo using git.
 

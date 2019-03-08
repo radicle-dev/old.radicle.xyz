@@ -23,15 +23,15 @@ theme = "rad"
   weight = 2
 
 [[menu.main]]
-  name = "Garden"
-  url  = "/garden"
-  identifier = "garden"
-  weight = 3
-
-[[menu.main]]
   name = "Blog"
   url  = "/blog"
   identifier = "blog"
+  weight = 3
+
+[[menu.main]]
+  name = "Garden"
+  url  = "/garden"
+  identifier = "garden"
   weight = 4
 
 # Footer
@@ -42,9 +42,9 @@ theme = "rad"
   weight = 1
 
 [[menu.footer]]
-  name = "Code of conduct"
-  url  = "https://github.com/oscoin/radicle/code-of-conduct.md"
-  identifier = "coc"
+  name = "White paper"
+  url  = "https://ipfs.io/ipfs/QmadmGA6mBWZ93Wv4XKuCu9wdPf7Da8pjH3Corzpe9VGZg"
+  identifier = "whitepaper"
   weight = 2
 
 [[menu.footer]]
@@ -52,12 +52,6 @@ theme = "rad"
   url  = "https://twitter.com/radicle_xyz"
   identifier = "twitter"
   weight = 3
-
-[[menu.footer]]
-  name = "Mastodon"
-  url  = "https://github.com/oscoin/radicle"
-  identifier = "mastodon"
-  weight = 4
 
 [[menu.footer]]
   name = "IRC"
@@ -72,21 +66,21 @@ theme = "rad"
   weight = 6
 
 [[menu.footer]]
-  name = "White paper"
-  url  = "https://ipfs.io/ipfs/QmadmGA6mBWZ93Wv4XKuCu9wdPf7Da8pjH3Corzpe9VGZg"
-  identifier = "whitepaper"
-  weight = 7
-
-[[menu.footer]]
   name = "Github"
   url  = "https://github.com/oscoin/radicle"
   identifier = "github"
-  weight = 8
+  weight = 7
 
 [[menu.footer]]
   name = "License"
   url  = "https://github.com/oscoin/radicle/blob/master/LICENSE"
   identifier = "license"
+  weight = 8
+
+[[menu.footer]]
+  name = "Code of conduct"
+  url  = "https://github.com/oscoin/radicle/code-of-conduct.md"
+  identifier = "coc"
   weight = 9
 
 # Nav docs

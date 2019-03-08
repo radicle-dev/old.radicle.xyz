@@ -265,7 +265,7 @@ header {
 }
 
 .globe {
-  margin: 10px 40px 0 0;
+  margin: 10px 30px 0 0;
   height: 300px;
   width: 300px;
   background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550437129/radicle.xyz/globe-ascii-bw_bfq3ql.gif");
@@ -341,6 +341,10 @@ footer {
     grid-template-rows: auto;
     margin: 0 auto 64px auto;
     max-width: 1920px;
+
+    ul {
+      margin-top: 0.6em;
+    }
 
     ul li a {
       line-height: 28px;

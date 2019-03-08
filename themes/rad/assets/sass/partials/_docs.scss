@@ -19,6 +19,7 @@ aside {
   grid-row: 2;
   padding: 48px 36px;
   color: $black;
+  z-index: 1;
 
   li {
     line-height: 22px;
@@ -51,6 +52,15 @@ main {
   justify-self: center;
   border-left: 1px solid rgba($black, 0.2);
   width: 100%;
+  padding-top: 7em;
+
+  .divider:last-child {
+    display: none;
+  }
+
+  .divider:last-child {
+    display: none;
+  }
 
   .divider:last-child {
     display: none;
@@ -65,13 +75,10 @@ main {
 
     h1 {
       color: $blue;
-      margin: 1em 0 1em;
+      margin: 0.2em auto 1em auto;
     }
 
     .document {
-      padding-top: 64px;
-
-
 
       h2 {
         word-break: normal;

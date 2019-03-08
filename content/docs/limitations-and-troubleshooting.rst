@@ -21,7 +21,7 @@ Work in progress
 Clearing All Machine History
 ============================
 
-Sometimes all the things you tried still don't seem to work..
+Sometimes all the things you tried still don't seem to work.
 
 If all else fails and you are having strange errors with daemons starting
 or interacting with the radicle commands, you can try wiping all of your
@@ -79,8 +79,7 @@ Work in progress
 git-ipfs limitations
 ====================
 
-Replication
-~~~~~~~~~~~
+**Replication**
 
 Data is replicated across the IPFS network based on demand: as soon as someone
 requests a particular piece of data, the network tries to find peers which
@@ -98,8 +97,9 @@ repositories. We hope to address this in a future release. Meanwhile, if you
 would like pushes to be replicated without your computer being online
 permanently, we recommend to employ a pinning service such as (???)
 
-Storage Space and Network Bandwidth
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+|
+
+**Storage Space and Network Bandwidth**
 
 Git repositories employ a compression technique called packfiles_ to store
 ``git`` objects efficiently. How exactly a packfile is constructed is subject to
@@ -126,9 +126,9 @@ repository on the local ``ipfs daemon``, and to replicate it over the network is
 at least one order of magitude higher than in the traditional client-server
 model.
 
+|
 
-Pushing Changes as a Collaborator
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Pushing Changes as a Collaborator**
 
 Similar to RSMs, we leverage IPNS_ to address the latest changes to a ``git``
 repository stored on IPFS. As a consequence, only the owner of that particular
