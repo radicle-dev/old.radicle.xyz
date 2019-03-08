@@ -54,12 +54,6 @@ theme = "rad"
   weight = 3
 
 [[menu.footer]]
-  name = "Mastodon"
-  url  = "https://mastodon.social/@radicle"
-  identifier = "mastodon"
-  weight = 4
-
-[[menu.footer]]
   name = "IRC"
   url  = "irc://freenode:1/radicle"
   identifier = "irc"
