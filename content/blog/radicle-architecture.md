@@ -107,7 +107,7 @@ receive:
 
 {{% div style="margin: 0 auto; width: 70%; padding: 1em 0 0.5em 0;" %}}
 
-![machines](https://res.cloudinary.com/juliendonck/image/upload/v1552087014/radicle.xyz/machines.png)
+![machines](/img/machines.png)
 
 {{% /div %}}
 
@@ -117,7 +117,7 @@ machine which may eventually behave like any other, given the correct inputs:
 
 {{% div style="margin: 0 auto; width: 80%; padding: 1.8em 0 0.5em 0;" %}}
 
-![machines with a common root](https://res.cloudinary.com/juliendonck/image/upload/v1552087014/radicle.xyz/machines-common-root.png)
+![machines with a common root](/img/machines-common-root.png)
 
 {{% /div %}}
 
@@ -167,7 +167,7 @@ second will already be available.
 
 {{% div style="padding: 0.5em 0 1em 0;" %}}
 
-![machines sharing some inputs on IPFS](https://res.cloudinary.com/juliendonck/image/upload/v1552087014/radicle.xyz/machines-sharing.png)
+![machines sharing some inputs on IPFS](/img/machines-sharing.png)
 
 {{% /div %}}
 
