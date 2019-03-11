@@ -80,7 +80,7 @@ header {
     .logo {
       width: 297px;
       height: 50px;
-      background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550228984/radicle.xyz/radicle-logo-alpha_n94rqc.svg");
+      background-image: url("/img/radicle-logo-alpha.svg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -104,7 +104,7 @@ header {
 }
 
 .right-header {
-  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1551908176/radicle.xyz/creepy-compressed_kewumd.gif");
+  background-image: url("/img/creepy.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -268,7 +268,7 @@ header {
   margin: 10px 30px 0 0;
   height: 300px;
   width: 300px;
-  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550437129/radicle.xyz/globe-ascii-bw_bfq3ql.gif");
+  background-image: url("/img/globe-ascii-bw.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -314,7 +314,7 @@ header {
   }
 
   .illustration {
-    background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1551109351/radicle.xyz/stack7_zr0mkv.svg");
+    background-image: url("/img/radicle-stack.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
