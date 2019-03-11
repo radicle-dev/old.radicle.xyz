@@ -69,7 +69,7 @@ Making any kind of semantic modification to a decentralized data structure is ty
 
 Finally, radicle comes with sensible defaults, ensuring you can be productive right away, while also giving programmers a flexible system for rolling their own software collaboration workflow. Inspired in many ways by `Emacs <https://www.gnu.org/software/emacs/>`_, radicle is designed as an extensible system, where developers can share their programs with one another and extend their revision control environment however they like.
 
-We’re very excited to `open source <https://github.com/oscoin/radicle>`_ the radicle language and soon the full radicle stack.
+We’re very excited to `open source <https://github.com/radicle-dev/radicle>`_ the radicle language and soon the full radicle stack.
 
 
 ﹏🌾﹏🌾﹏
@@ -77,7 +77,7 @@ We’re very excited to `open source <https://github.com/oscoin/radicle>`_ the r
 
 .. _Black: http://pllab.is.ocha.ac.jp/%7Easai/Black/
 .. _Emacs: https://www.gnu.org/software/emacs/
-.. _open-source: https://github.com/oscoin/radicle
+.. _open-source: https://github.com/radicle-dev/radicle
 .. _Secure Scuttlebutt: https://www.scuttlebutt.nz/
-.. _radicle language: https://github.com/oscoin/radicle
+.. _radicle language: https://github.com/radicle-dev/radicle
 .. _paper: https://ipfs.io/ipfs/QmadmGA6mBWZ93Wv4XKuCu9wdPf7Da8pjH3Corzpe9VGZg
