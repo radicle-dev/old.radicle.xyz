@@ -33,7 +33,7 @@ $ rad issue new
 ```
 
 ```
-$ rad issue comment #33 'I have doubts'
+$ rad issue comment 33 'I have doubts'
 Commented on issue 33 in docs
 ```
 
@@ -58,10 +58,10 @@ hardware.
 Where does a machine "exist"? Where does it execute? Part of the idea behind the
 Radicle architecture is to abstract away any such notion. Whether on your local
 device, or the larger P2P network, as long as a machine is available it can
-be retreived from its IPFS address. For the most part, it's sufficient to know
+be retrieved from its IPFS address. For the most part, it's sufficient to know
 that a machine exists, and that you can interact with it.
 
-As far as what a Radicle machine *is*. Formally, it is a state machine defined by:
+As far as what a Radicle machine *is*: formally, it is a state machine defined by:
 
 - a set of possible states \\(S\\)
 - a set of possible inputs \\(I\\)

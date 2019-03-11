@@ -36,7 +36,6 @@ with the following commands:
 Or if you prefer running them manually every time, check the `section below <#manually-running-background-processes>`_.
 
 Finally, interacting with the Radicle utilities requires that you have a set of Radicle keys. You
-
 can initialize your keys with the ``rad key create`` command.
 
 
@@ -84,7 +83,7 @@ Note that `stack` might take as much as 4GB of memory to build Radicle.
 Manually running background processes
 =====================================
 
-Radicle requires 2 background processes to be running: radicle-daemon and radicle-ipfs-daemon.
+Radicle requires 2 background processes to be running: ``radicle-daemon`` and ``radicle-ipfs-daemon``.
 
 If you have installed Radicle via the brew / debian packages, the necessary background processes
 should be already available as systemd or brew services respectively (see above).
