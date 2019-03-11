@@ -98,18 +98,19 @@ Merging proposal #2 with master
     <div class="text">
       <h1>Radicle Stack</h1>
       <p>
-        Each Radicle app is a peer-to-peer program that syncs with anyone
-        who checks out your open source project.
+        Radicle utilities are built in a deterministic programming language
+        (the Radicle language). Each instance of a utility is a replicated
+        state machine (or simply <em>machine</em>) with its history distributed
+        and replicated via IPFS.
         <br /><br />
-        Taking inspiration from the original git model, where a single
-        repo maintainer accepts patches, our Radicle alpha apps are administered
-        by the project owner -- updates can be submitted by any
-        peer on the Radicle network.
+
+        The Radicle daemon materializes machines locally from their history,
+        allowing you to query it or submit new expressions.
+
         <br /><br />
-        In the coming months we’ll be sharing more about the Radicle technical stack
-        and releasing documentation that will allow you
-        to write your own apps using the same peer-to-peer
-        infrastructure.
+
+        We have also built an IPFS-based git remote helper, so you can host
+        your git repository on IPFS as well.
       </p>
     </div>
     <div class="illustration"></div>
