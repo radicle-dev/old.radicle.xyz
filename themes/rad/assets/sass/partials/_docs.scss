@@ -58,17 +58,10 @@ main {
     display: none;
   }
 
-  .divider:last-child {
-    display: none;
-  }
-
-  .divider:last-child {
-    display: none;
-  }
-
   .chapter {
     padding: 0 48px 48px 48px;
     margin: 0 auto;
+    width: 100%;
     max-width: 960px;
     line-height: 24px;
     color: $black;
@@ -81,7 +74,6 @@ main {
     .document {
 
       h2 {
-        word-break: normal;
         font-family: FoundersGrotesk, Arial, sans-serif;
         font-size: 27px;
         line-height: 32px;
@@ -97,36 +89,18 @@ main {
       code,
       tt,
       .pre {
-        word-break: break-all;
+        overflow-x: auto;
         background-color: #f2f2f2;
         padding: 1px 3px;
         color: rgba($black, .8);
-        font-family: FoundersGroteskMono, monospace;
-        font-size: 16px;
-        line-height: 22px;
-
-        @media (max-width: 640px) {
-          font-size: 14px;
-          line-height: 18px;
-        }
-
       }
 
       pre {
-        word-break: break-all;
+        overflow-x: auto;
         background-color: #f2f2f2;
         padding: 16px;
         margin: 1em 0;
         color: rgba($black, .8);
-        font-size: 16px;
-        line-height: 22px;
-        white-space: pre-wrap;
-        word-wrap: break-all;
-
-        @media (max-width: 640px) {
-          font-size: 14px;
-          line-height: 18px;
-        }
       }
 
       ul {
