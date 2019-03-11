@@ -4,9 +4,8 @@
     <div id="peer">
       <h2>Peer–to–peer</h2>
       <p>
-        Open source development is a peer&ndash;to&ndash;peer process.
-        With Radicle you can collaborate directly, without giving your
-        data to third parties or setting up your own server.
+        Radicle a decentralized, collaborative revision control system built on IPFS.
+        Write open source software without giving your data to third parties or setting up a server.
       </p>
     </div>
     <div id="term">
@@ -14,15 +13,15 @@
       <p>
         A Radicle project contains a git repository, plus the associated
         issues and proposals. Access all the conversations
-        around your codebase from the comfort of your command line.
+        that happen around your codebase from your command line.
       </p>
     </div>
     <div id="prog">
       <h2>Programmable</h2>
       <p>
-        Each Radicle utility is a little P2P program we call a Radicle <em>machine</em>.
-        Change them to suit your needs, or create entirely new ones.
-        Developer resources coming soon!
+        Each Radicle utility is a P2P program we call a Radicle <em>machine</em>.
+        Need a custom issues system? Modify our version to suit your needs, or create an entirely new utility.
+        Dev resources coming soon!
       </p>
     </div>
   </section>
@@ -100,14 +99,12 @@ Merging proposal #2 with master
       <p>
         Radicle utilities are written in the Radicle language, a deterministic Lisp dialect for creating P2P programs.
         Each utility is a replicated state machine with state updates distributed and replicated via IPFS.
-      </p>
-      <p>
+        <br><br>
         The Radicle daemon materializes machines from the local event log,
         allowing you to query a machine's state or submit new expressions.
-      </p>
-      <p>
-        We've also built an git remote helper for IPFS, so you can also host
-        your git repository on the distributed web.
+        <br><br>
+        <tt>rad project</tt> connects our simple utilities <tt>rad issues</tt>, <tt>rad patches</tt>, and the
+        IPFS git remote helper, creating a collaboration stack that lives entirely on the distributed web.
       </p>
     </div>
     <div class="illustration"></div>

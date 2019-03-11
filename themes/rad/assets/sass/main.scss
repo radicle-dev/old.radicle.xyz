@@ -293,6 +293,13 @@ header {
   flex-direction: column;
   align-items: center;
 
+  tt {
+    color: rgba($black, .8);
+    background-color: rgba(0,0,0,0.1);
+    padding: 1px 3px 2px 3px;
+    margin: 1px;
+  }
+
   .text {
     max-width: 720px;
   }
