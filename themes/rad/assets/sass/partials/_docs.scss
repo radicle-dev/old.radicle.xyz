@@ -6,8 +6,13 @@
   grid-template-rows: minmax(min-content, auto);
   grid-gap: 0;
 
+  @media (max-width: 1240px) {
+    grid-template-columns: 25vw 75vw;
+  }
+
   @media (max-width: 980px) {
-    grid-template-columns: auto;
+    display: flex;
+    flex-direction: column;
   }
 }
 
