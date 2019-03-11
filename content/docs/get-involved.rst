@@ -19,7 +19,7 @@ As of the alpha release, we’re using Radicle for managing our issues. If you
 want to track or submit issues, you can checkout the project on Radicle with
 the following command:
 
-``rad project checkout <PROJECT_ID>``
+``rad project checkout 12D3KooWSKJexYNhJLEinqZTxhRt5RvmBquDaHPLDXjvpVu8VSWd``
 
 For making code contributions to Radicle we still accept PR’s through our
 github_, since the rad patch app only works with single commit changes.

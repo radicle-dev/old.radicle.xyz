@@ -314,11 +314,11 @@ header {
   }
 
   .illustration {
-    background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1551109351/radicle.xyz/stack7_zr0mkv.svg");
+    background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1552304664/radicle.xyz/radicle-stack.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 540px;
+    width: 546px;
     height: 0;
     padding: 0;
     /* reset */
@@ -326,7 +326,7 @@ header {
 
     @media (max-width: 640px) {
       width: 100%;
-      padding-bottom: calc(100% * 213 / 462);
+      padding-bottom: calc(100% * 213 / 472);
     }
   }
 }
