@@ -25,7 +25,7 @@ Welcome to the Radicle Garden, a new-found island located somewhere off the ASCI
 Contribute to the Radicle Garden
 ================================
 
-The Radicle Garden is a project created using Radicle, with a hosted version found at https://radicle.xyz/garden. A Radicle project contains a git repository as well as the all the issues and proposals associated with that repo.
+The Radicle Garden is a project created using Radicle, with a hosted version found at `radicle.xyz/garden <../garden>`_. A Radicle project contains a git repository as well as the all the issues and proposals associated with that repo.
 
 Before we start contributing, we'll need to download a copy to our computer by checking out the project. To do that we need the project-id: ``12D3KooWSeVNi5qTpDULRMR8UQhhQZfk4taUGRaLoLF7BgAAsUQW``, and then we'll run:
 
