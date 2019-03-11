@@ -4,25 +4,25 @@
     <div id="peer">
       <h2>Peer–to–peer</h2>
       <p>
-        Open source development is a fundamentally P2P process. The Radicle stack builds on IPFS to
-        enable fully peer-to-peer conversations with code.
+        The Radicle stack builds on IPFS, which means it works without a centralized server. No hassle with setting up
+        your own hosting, and no need to trust companies with your data.
       </p>
     </div>
     <div id="term">
       <h2>Terminal-first</h2>
       <p>
-        Radicle's collaboration apps bring issue management and patch proposal
-        tools into the terminal. Coordinate
-        with peers and manage contributions using simple command line utilities.
+        A Radicle project contains a git repository as well as the
+        issues and proposals associated with that repo. All accessible from
+        your terminal.
       </p>
     </div>
     <div id="prog">
       <h2>Programmable</h2>
       <p>
-        Apps are written in the Radicle language, a Lisp dialect designed
-        specifically for creating programs that sync across a
-        peer-to-peer network. Resources for developing your
-        own Radicle apps coming soon!
+        Ever wanted to tweak your code collaboration service? With Radicle each 
+        unit of functionality &ndash;<em>a machine</em>&ndash; is its
+        own litte P2P program, written in the Radicle language. You can change
+        them to suit your needs, or create entirely new ones. More on this soon.
       </p>
     </div>
   </section>
@@ -52,8 +52,8 @@ $ rad project init
     <div class="try-section">
       <h2>Manage issues</h2>
       <p>
-        <code>rad issue</code> brings issue management to the command line.
-        Create, view, list, and comment to heart's content.
+        <code>rad issue</code> allows you to view, create, and comment on
+        issues directly from your project directory.
       </p>
       <div class="terminal blue">
         <pre>
@@ -69,13 +69,10 @@ Added comment to issue #1
     </div>
 
     <div class="try-section">
-      <h2>Propose patches</h2>
+      <h2>Propose changes</h2>
       <p>
-        <code>rad patch</code> gives you the tools to collaborate on git
-        repositories, completely P2P. Propose and track changes to projects you follow using a patch-based
-        collaboration
-        model.
-      </p>
+        <code>rad patch</code> provides a simple system for proposing and
+        discussing changes to a repository.  </p>
       <div class="terminal">
         <pre>
 $ rad patch list
