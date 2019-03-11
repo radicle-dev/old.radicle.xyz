@@ -12,7 +12,7 @@ theme = "rad"
 
 [[menu.main]]
   name = "Source"
-  url  = "https://github.com/oscoin/radicle"
+  url  = "https://github.com/radicle-dev/radicle"
   identifier = "source"
   weight = 1
 
@@ -67,26 +67,26 @@ theme = "rad"
 
 [[menu.footer]]
   name = "Github"
-  url  = "https://github.com/oscoin/radicle"
+  url  = "https://github.com/radicle-dev/radicle"
   identifier = "github"
   weight = 7
 
 [[menu.footer]]
   name = "License"
-  url  = "https://github.com/oscoin/radicle/blob/master/LICENSE"
+  url  = "https://github.com/radicle-dev/radicle/blob/master/LICENSE"
   identifier = "license"
   weight = 8
 
 [[menu.footer]]
   name = "Code of conduct"
-  url  = "https://github.com/oscoin/radicle/code-of-conduct.md"
+  url  = "https://github.com/radicle-dev/radicle/code-of-conduct.md"
   identifier = "coc"
   weight = 9
 
 # Nav docs
 [[menu.docs]]
   name = "Doc 1"
-  url  = "https://github.com/oscoin/radicle"
+  url  = "https://github.com/radicle-dev/radicle"
   identifier = "doc1"
   weight = 1
 
@@ -106,6 +106,6 @@ theme = "rad"
 
 [[menu.docs]]
   name = "Doc 4"
-  url  = "https://github.com/oscoin/radicle"
+  url  = "https://github.com/radicle-dev/radicle"
   identifier = "doc4"
   weight = 1
