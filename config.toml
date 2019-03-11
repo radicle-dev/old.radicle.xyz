@@ -61,7 +61,7 @@ theme = "rad"
 
 [[menu.footer]]
   name = "Email"
-  url  = "mailto:devs@radicle.xyz"
+  url  = "mailto:radicle@monadic.xyz"
   identifier = "devmail"
   weight = 6
 
