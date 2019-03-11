@@ -11,17 +11,17 @@ weight: 2
 What is Radicle?
 ================
 
-Radicle is a new stack for code collaboration, that includes a few simple
-utilities we've created for this initial release to demonstrate the core
+Radicle is a new stack for code collaboration, which includes a few simple
+utilities we've created for this first release to demonstrate the core
 functionality. Think of Radicle as a Github or Gitlab alternative—though you can
 also combine Radicle with these services if you're not ready to switch over
 entirely.
 
-Instead of being hosted by Github's servers, or hosted on servers that you
-yourself manage and deploy, issues, patches (i.e.
-pull-requests/merge-requests) and optionally repos are distributed via IPFS. To
-use it, you don't need to rely on centralized services, nor go through the
-trouble of self-hosting.
+Rather than being hosted on Github's cloud infrastructure, or a server that you
+manage and deploy yourself, issues, patches (i.e.
+pull-requests/merge-requests) and optionally repos are all distributed via IPFS. To
+use Radicle, you don't need to rely on centralized services, nor do you have to go 
+through the trouble of self-hosting.
 
 When you initialize or check out a Radicle project, Radicle stores the project
 id in the repository's git config. When you run commands like ``rad issue`` or

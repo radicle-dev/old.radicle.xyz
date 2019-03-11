@@ -1,0 +1,4 @@
+<pre class="mono{{ if .IsNamedParams }}{{ if .Get "class" }} {{ .Get "class" }}{{ end }}{{ end }}" {{ if .IsNamedParams }}{{ if .Get "style" }} style="{{ .Get "style" | safeCSS }}"{{ end }}{{ end }}>
+<!-- raw html -->  
+{{ .Inner }}
+</pre>

@@ -108,6 +108,11 @@ main {
 
       }
 
+      .mono {
+        background-color: inherit !important;
+	margin: auto !important;
+      }
+
       pre {
         word-break: break-all;
         background-color: #f2f2f2;
