@@ -47,8 +47,8 @@ For Debian-based systems we provide packages.
 
 .. code-block::
 
-    wget https://storage.googleapis.com/static.radicle.xyz/releases/radicle_2019.03.05_amd64.deb
-    apt install ./radicle_2019.03.05_amd64.deb
+    wget https://storage.googleapis.com/static.radicle.xyz/releases/radicle_latest_amd64.deb
+    sudo apt install ./radicle_latest_amd64.deb
 
 To run the ``rad`` commands, you must have both a Radicle daemon, and Radicle IPFS daemon running. The package includes systemd service files to always have the daemons running in the background. To start the daemons run:
 
