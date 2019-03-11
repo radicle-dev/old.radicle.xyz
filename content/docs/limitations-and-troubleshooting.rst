@@ -10,10 +10,6 @@ weight: 11
  Limitations & Troubleshooting
 ===============================
 
-CLI feedback
-============
-
-
 
 Clearing all machine history
 ============================
