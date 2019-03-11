@@ -49,7 +49,7 @@ Before we start contributing, we'll need to download a copy to our computer by c
   remote: Compressing objects: 100% (7/7), done.
   remote: Total 8 (delta 1), reused 4 (delta 1), pack-reused 0
   Unpacking objects: 100% (8/8), done.
-  From github.com:oscoin/radicle-garden
+  From github.com:radicle-dev/garden
    * [new branch]      master     -> origin/master
 
 

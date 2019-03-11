@@ -22,6 +22,7 @@ If you want to dive straight in and play around with Radicle for yourself,
 follow the `installation instructions`_ and then the `Radicle Tutorial`_ in the
 docs below.
 
+::
 
 {{< mono style="text-align: center" >}}
 
@@ -34,7 +35,5 @@ docs below.
    ':`          ':`          ':`   
 {{< /mono >}}
 
-
-.. _`this blogpost`: ../blog
 .. _`Radicle Tutorial`: ./#tutorial-1-contributor
 .. _`installation instructions`: ./#installation-setup

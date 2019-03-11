@@ -29,8 +29,8 @@ you can see by following the #radicle-weekly-updates channel. If you’re not a
 scuttlebutt user already, pop over to IRC and we can give you an invite to our
 own Scuttlebutt pub :)
 
-Contributions to the Radicle project and interactions with the community should adhere to our `code of conduct <https://github.com/oscoin/radicle/tree/master/code-of-conduct.md>`_.
+Contributions to the Radicle project and interactions with the community should adhere to our `code of conduct <https://github.com/radicle-dev/radicle/tree/master/code-of-conduct.md>`_.
 
 
-.. _github: https://github.com/oscoin/radicle
+.. _github: https://github.com/radicle-dev/radicle
 .. _`Secure Scuttlebutt`: https://scuttlebutt.nz

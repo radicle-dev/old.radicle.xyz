@@ -1,7 +1,7 @@
 # Nav docs
 [[menu.docs]]
   name = "Doc 1"
-  url  = "github.com/oscoin/radicle"
+  url  = "github.com/radicle-dev/radicle"
   identifier = "doc1"
   weight = 1
 

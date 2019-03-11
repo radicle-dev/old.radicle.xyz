@@ -17,11 +17,11 @@ functionality. Think of Radicle as a Github or Gitlab alternative—though you c
 also combine Radicle with these services if you're not ready to switch over
 entirely.
 
-Rather than being hosted on Github's cloud infrastructure, or a server that you
-manage and deploy yourself, issues, patches (i.e.
-pull-requests/merge-requests) and optionally repos are all distributed via IPFS. To
-use Radicle, you don't need to rely on centralized services, nor do you have to go 
-through the trouble of self-hosting.
+Instead of being hosted by Github's servers, or hosted on servers that you
+yourself manage and deploy, issues, patches (i.e.
+pull-requests/merge-requests) and optionally repos are distributed via IPFS. To
+use it, you don't need to rely on centralized services, nor go through the
+trouble of self-hosting.
 
 When you initialize or check out a Radicle project, Radicle stores the project
 id in the repository's git config. When you run commands like ``rad issue`` or

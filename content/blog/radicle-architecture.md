@@ -107,7 +107,7 @@ receive:
 
 {{% div style="margin: 0 auto; width: 70%; padding: 1em 0 0.5em 0;" %}}
 
-![machines](/img/machines.png)
+![machines](https://res.cloudinary.com/juliendonck/image/upload/v1552087014/radicle.xyz/machines.png)
 
 {{% /div %}}
 
@@ -117,7 +117,7 @@ machine which may eventually behave like any other, given the correct inputs:
 
 {{% div style="margin: 0 auto; width: 80%; padding: 1.8em 0 0.5em 0;" %}}
 
-![machines with a common root](/img/machines-common-root.png)
+![machines with a common root](https://res.cloudinary.com/juliendonck/image/upload/v1552087014/radicle.xyz/machines-common-root.png)
 
 {{% /div %}}
 
@@ -148,47 +148,49 @@ necessary here in order to access pattern matching functionality.
 Machines are materialized from the sequence of all received expressions, this sequence is maintained via a pointer to
 a linked list stored on IPFS. To materialize a Radicle machine,
 the pointer is resolved, fetching data from IPFS, and the resulting set of expressions is re-evaluated.
-One can then make a query to inspect the materialized machine. For example, 
+
+One can then make a query to inspect the materialized machine. For example,
 requesting the current state with `get-counter`.
 
 <!-- TODO: IPFS linked list picture -->
 
 
-Fetching data will also replicate those IPFS blocks automatically, ensuring availability 
+Fetching data will also replicate those IPFS blocks automatically, ensuring availability
 if other peers go offline. One nice feature of this architecture is that
 popular machines will be more available. Currently we pin all data
 indefinitely, however with a system to unpin rarely used data, we
 get a simple, elegant, replication and garbage collection
 infrastructure. Another useful feature is that machines with common prefixes
-i.e. they share initial definitions, will already be available. For instance, 
-consider two counter machines which share several initial IPFS blocks. Once 
-a single counter machine has been cached, the sequences common to the 
+
+i.e. they share initial definitions, will already be available. For instance,
+consider two counter machines which share several initial IPFS blocks. Once
+a single counter machine has been cached, the sequences common to the
 second will already be available.
 
 {{% div style="padding: 0.5em 0 1em 0;" %}}
 
-![machines sharing some inputs on IPFS](/img/machines-sharing.png)
+![machines sharing some inputs on IPFS](https://res.cloudinary.com/juliendonck/image/upload/v1552087014/radicle.xyz/machines-sharing.png)
 
 {{% /div %}}
 
 Instead of fetching and materializing manually, Radicle network participants each run a
 **radicle daemon** instance in the background.
 
-A query of the current state is made to the Radicle daemon. The daemon then resolves the pointer, 
-fetches the data stored on IPFS, re-materializes the machine, and returns the result. 
+A query of the current state is made to the Radicle daemon. The daemon then resolves the pointer,
+fetches the data stored on IPFS, re-materializes the machine, and returns the result.
 After the initial query, your daemon will subscribe (follow)
 that pointer for updates, automatically replicating and
 materializing further updates. If you make another query, you will get the latest data
 almost immediately.
 
 Mostly you'll be running this daemon locally—meaning it won't be available to anyone
-else but you. However, you can also choose to serve this data publicly, 
+else but you. However, you can also choose to serve this data publicly,
 which has two advantages (each with caveats, for now):
 
 First, it makes running a machine-replication service trivial. If you're
 worried about your data being unavailable while offline, you can
-simply query a public daemon for your machine, causing that daemon to replicate from 
-your instance. Then, when you go offline, the remote server can continue to make your 
+simply query a public daemon for your machine, causing that daemon to replicate from
+your instance. Then, when you go offline, the remote server can continue to make your
 machine available. We provide several such public daemons, but
 you can also run your own and help seed your favorite machines.
 
@@ -203,7 +205,7 @@ simplify this process in the future.*
 
 How does the pointer work? We back it with an IPNS pointer. IPNS
 (InterPlanetary Name System) is a way of maintaining mutable links to IPFS
-objects. An IPNS *name* is simply the hash of a public key. 
+objects. An IPNS *name* is simply the hash of a public key.
 The owner of the corresponding private key controls that IPNS name by signing updates to the IPNS pointer.
 The owner of the pointer is also, in a way, the owner of the Radicle machine.
 In theory, they can choose which new inputs are accepted (though accepting inputs is an
