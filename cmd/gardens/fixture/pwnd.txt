@@ -1,3 +1,0 @@
-<script>
-alert('get pwned');
-</script>

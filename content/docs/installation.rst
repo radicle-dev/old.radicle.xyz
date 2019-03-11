@@ -20,7 +20,7 @@ OS X
 
 .. code-block::
 
-   brew tap oscoin/radicle
+   brew tap radicle-dev/radicle
    brew install radicle-alpha
 
 
@@ -74,7 +74,7 @@ To build Radicle from source you need to install `stack`_.
 
 .. code-block::
 
-   git clone https://github.com/oscoin/radicle.git
+   git clone https://github.com/radicle-dev/radicle.git
    cd radicle
 
    stack install
