@@ -13,9 +13,9 @@ What is Radicle?
 
 Radicle is a new stack for code collaboration, that includes a few simple
 utilities we've created for this initial release to demonstrate the core
-functionality. Think of Radicle as a Github or Gitlab alternative—though you can
-also combine Radicle with these services if you're not ready to switch over
-entirely.
+functionality. Think of Radicle as a Github or Gitlab alternative (albeit an
+exceedingly simple one right now). You can also combine Radicle with these
+services if you're not ready to switch over entirely.
 
 Instead of being hosted by Github's servers, or hosted on servers that you
 yourself manage and deploy, issues, patches (i.e.

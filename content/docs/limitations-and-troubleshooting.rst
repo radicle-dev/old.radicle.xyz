@@ -10,30 +10,36 @@ weight: 11
  Limitations & Troubleshooting
 ===============================
 
+CLI feedback
+============
 
 
-Installation Troubleshooting
-============================
 
-Work in progress
-
-
-Clearing All Machine History
+Clearing all machine history
 ============================
 
 Sometimes all the things you tried still don't seem to work.
 
-If all else fails and you are having strange errors with daemons starting
-or interacting with the radicle commands, you can try wiping all of your
-Radicle State Machine data with the following commands:
+If all else fails and you are having strange errors when starting daemons
+or running Radicle commands, you can try wiping all of your
+Radicle State Machine data with the following command:
 
 ``rm -rf ~/.local/share/radicle/machines.json``
+
+P2P communication is slow
+=========================
+
+It may take a minute for ``rad issues`` and ```rad patch`` submissions to propogate, which
+you might encounter when using their respective ``rad issues list`` and ``rad patch list``
+commands. This happens because IPNS updates aren't propogated immediately. Faster P2P updates
+will be a priority in an upcoming release.
+
 
 IPNS lifetime
 =============
 
-Each machine is identified by an IPNS record. These, if not republished, last
-at most 24 hours. If the computer that owns the machine is offline or not
+Each machine is identified by an IPNS record which, if not republished, will last
+24 hours at most. If the computer that owns the machine is offline or not
 running the IPFS daemon for longer than that period, other computers will not
 be able to resolve your machine, and so will fail to read it even if there is
 no new data. Some 30 minutes or so after coming back online, your daemon will
@@ -42,8 +48,7 @@ automatically republish the record.
 Besides being online more often, there currently is no solution to this
 problem. We plan to eventually increase the length of time IPNS records last.
 
-
-Networking Issues (firewall, NAT)
+Networking issues (firewall, NAT)
 =================================
 
 Many networks, such as cafés and offices, are behind a firewall or NAT.
@@ -71,7 +76,7 @@ From your repo directory.
 This has the additional advantage of making your data available for reading
 when you're offline.
 
-Replication & Availability (cannot resolve RSMs)
+Replication & availability (cannot resolve RSMs)
 ================================================
 
 Work in progress

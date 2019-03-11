@@ -11,7 +11,7 @@ weight: 5
 Tutorial 2: Maintainer
 ===========================
 
-*Part 2 of this tutorial walks through how to setup a project as a Maintainer. As an example, we'll be using the Radicle Garden again, however in this instance we won't have a contributor on the other side, so while we'll explain the steps, you may have to get a friend to act as a contributor if you'd like to see this entire workflow in action.*
+*Part 2 of this tutorial walks through how to setup a project as a Maintainer. We'll use the Radicle Garden project again as an example, however, this time you'll need to find a friend to play the contributor role if want to see the entire workflow in action.*
 
 
 Creating the Radicle Garden & managing contributions
