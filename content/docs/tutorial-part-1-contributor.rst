@@ -27,11 +27,13 @@ Contribute to the Radicle Garden
 
 The Radicle Garden is a project created using Radicle, with a hosted version found at `radicle.xyz/garden <../garden>`_. A Radicle project contains a git repository as well as the all the issues and proposals associated with that repo.
 
-Before we start contributing, we'll need to download a copy to our computer by checking out the project. To do that we need the project-id: ``12D3KooWSeVNi5qTpDULRMR8UQhhQZfk4taUGRaLoLF7BgAAsUQW``, and then we'll run:
+Before we start contributing, we'll need to download a copy to our computer by
+checking out the project. To do that we need the project-id:
+``12D3KooWRsrUcqCFU3ompktgTo197gguibN3cjmgaoQy8AS54iHn``, and then we'll run:
 
 ::
 
-  $ rad project checkout 12D3KooWSeVNi5qTpDULRMR8UQhhQZfk4taUGRaLoLF7BgAAsUQW
+  $ rad project checkout 12D3KooWRsrUcqCFU3ompktgTo197gguibN3cjmgaoQy8AS54iHn
   radicle-garden
   Initialized empty Git repository in /home/gardener/projects/radicle-garden/.git/
   Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
@@ -162,7 +164,7 @@ Now let's propose our patch upstream using the commit hash of this git branch.
 ::
 
   $ rad patch propose 798c5c4
-  Proposing patch #1 to 12D3KooWSeVNi5qTpDULRMR8UQhhQZfk4taUGRaLoLF7BgAAsUQW
+  Proposing patch #1 to 12D3KooWRsrUcqCFU3ompktgTo197gguibN3cjmgaoQy8AS54iHn
 
 *Note: Make sure that your commit is on top of origin/master or the patch will fail.*
 
