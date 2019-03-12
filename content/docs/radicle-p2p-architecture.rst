@@ -103,11 +103,11 @@ inputs. The code forming a Radicle machine has two components:
     code allows one to re-use machine functions, validation logic, etc. that was
     already needed for the machine code.
 
-For more information about the Radicle language, check out the `Radicle Docs`_.
+For more information about the Radicle language, check out the `Radicle Language Docs`_.
 
 .. _IPFS: https://docs.ipfs.io/
 .. _CID: https://docs.ipfs.io/guides/concepts/cid/
 .. _IPNS: https://docs.ipfs.io/guides/concepts/ipns/
 .. _IPFSPubsub: https://blog.ipfs.io/25-pubsub/
 .. _Scheme: http://www.scheme-reports.org/
-.. _Radicle Docs: http://docs.radicle.xyz/en/latest/
+.. _Radicle Language Docs: http://docs.radicle.xyz/en/latest/
