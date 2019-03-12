@@ -274,8 +274,6 @@ header {
   background-size: cover;
   -webkit-filter: contrast(2.5);
   filter: contrast(2.5);
-  // background-color: #55f;
-  // background-blend-mode: multiply;
 
   @media (min-width: 1920px) {
     display: none;
@@ -295,11 +293,9 @@ header {
   flex-direction: column;
   align-items: center;
 
-  tt {
-    color: rgba($black, .8);
-    background-color: rgba(0,0,0,0.1);
+  code {
+    background-color: rgba(0, 0, 0, 0.1);
     padding: 1px 3px 2px 3px;
-    margin: 1px;
   }
 
   .text {
