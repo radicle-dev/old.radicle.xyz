@@ -100,7 +100,7 @@ While RSMs can be requested to be replicated by a remote Radicle daemon by using
 the ``rad replicate`` command, this mechanism currently does not include ``git``
 repositories. We hope to address this in a future release. Meanwhile, if you
 would like pushes to be replicated without your computer being online
-permanently, we recommend to employ a pinning service such as (???)
+permanently, we recommend to employ a pinning service.
 
 |
 
@@ -121,7 +121,7 @@ integrity of a packfile without first downloading it as a whole.
 IPFS (or, more precisely, IPLD_) works very similar to "loose" ``git`` objects:
 the address of an IPFS object (respectively block) is the hash of its contents,
 which in turn may link to other objects via their hashes. Unsurprisingly thus,
-the IPLD_ project has devised ``git`` storage on IPFS to use uncompressed loose
+the IPLD project has devised ``git`` storage on IPFS to use uncompressed loose
 ``git`` objects, which allows for a fairly efficient way to request a subset of
 the history of a ``git`` repository, leveraging the content-addressability of
 the objects.
@@ -137,9 +137,9 @@ model.
 
 Similar to RSMs, we leverage IPNS_ to address the latest changes to a ``git``
 repository stored on IPFS. As a consequence, only the owner of that particular
-IPNS_ name may update it to point to new refs. This is similar to a GitHub
+IPNS name may update it to point to new refs. This is similar to a GitHub
 repository where only the owner has push access. The equivalent to GitHub's
-``fork`` paradigm is to create another remote which points to a different IPNS_
+``fork`` paradigm is to create another remote which points to a different IPNS
 name, or just the empty URL ``ipfs://``, and pushing to that.
 
 Note that this is mostly useful if you employ a pinning service, or want to
