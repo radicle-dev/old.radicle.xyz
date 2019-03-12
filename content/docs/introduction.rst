@@ -22,15 +22,17 @@ If you want to dive straight in and play around with Radicle for yourself,
 follow the `installation instructions`_ and then the `Radicle Tutorial`_ in the
 docs below.
 
-::
+{{< mono style="text-align: center" >}}
 
-     ;;;;;        ;;;;;        ;;;;;
-     ;;;;;        ;;;;;        ;;;;;
-     ;;;;;        ;;;;;        ;;;;;
-     ;;;;;        ;;;;;        ;;;;;
-   ..;;;;;..    ..;;;;;..    ..;;;;;..
-    ':::::'      ':::::'      ':::::'
-      ':`          ':`          ':`
+  ;;;;;        ;;;;;        ;;;;;  
+  ;;;;;        ;;;;;        ;;;;;  
+  ;;;;;        ;;;;;        ;;;;;  
+  ;;;;;        ;;;;;        ;;;;;  
+..;;;;;..    ..;;;;;..    ..;;;;;..
+ ':::::'      ':::::'      ':::::' 
+   ':`          ':`          ':`   
+
+{{< /mono >}}
 
 
 .. _`this blogpost`: ../blog/radicle-intro
