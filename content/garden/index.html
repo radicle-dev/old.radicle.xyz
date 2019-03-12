@@ -41,13 +41,13 @@
   </div>
   <div class="gardens-content">
     {{- partial "plots.html" . -}}
-  <br>
+    <br>
   </div>
   <div class="divider garden line white-line"></div>
   <footer class="global-footer garden">
     <ul>
       {{ range .Site.Menus.footer }}
-      <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+      <li><a href="{{ .URL | safeURL }}">{{ .Pre }}{{ .Name }}</a></li>
       {{ end }}
     </ul>
   </footer>

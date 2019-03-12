@@ -58,7 +58,7 @@
   <footer class="global-footer">
     <ul>
       {{ range .Site.Menus.footer }}
-      <li><a href="{{ .URL | relLangURL }}">{{ .Pre }}{{ .Name }}</a></li>
+      <li><a href="{{ .URL | safeURL }}">{{ .Pre }}{{ .Name }}</a></li>
       {{ end }}
     </ul>
   </footer>

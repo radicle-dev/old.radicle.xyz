@@ -79,7 +79,7 @@ theme = "rad"
 
 [[menu.footer]]
   name = "Code of conduct"
-  url  = "https://github.com/radicle-dev/radicle/code-of-conduct.md"
+  url  = "https://github.com/radicle-dev/radicle/blob/master/code-of-conduct.md"
   identifier = "coc"
   weight = 9
 
