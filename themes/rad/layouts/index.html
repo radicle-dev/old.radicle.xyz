@@ -4,22 +4,22 @@
     <div id="peer">
       <h2>Peer–to–peer</h2>
       <p>
-        The Radicle stack builds on IPFS, which means it works without a centralized server. No hassle with setting up
+        The Radicle stack builds on IPFS, and works without a centralized server. No hassle with setting up
         your own hosting, and no need to trust companies with your data.
       </p>
     </div>
     <div id="term">
       <h2>Terminal-first</h2>
       <p>
-        A Radicle project contains a git repository as well as the
-        issues and proposals associated with that repo. All accessible from
-        your terminal.
+        A Radicle project contains a git repository, plus the associated
+        issues and proposals. Access all the issues and proposals
+        associated with your codebase right from your terminal.
       </p>
     </div>
     <div id="prog">
       <h2>Programmable</h2>
       <p>
-        Ever wanted to tweak your code collaboration service? With Radicle each 
+        Ever wanted to tweak your code collaboration service? With Radicle each
         unit of functionality &ndash;<em>a machine</em>&ndash; is its
         own litte P2P program, written in the Radicle language. You can change
         them to suit your needs, or create entirely new ones. More on this soon.
@@ -58,11 +58,11 @@ $ rad project init
       <div class="terminal blue">
         <pre>
 $ rad issue list
-#  state   title                author   updated
-1  open    Patch not accepted   janedoe  2019-01-25 13:27
-0  closed  How do I contribute  randy    2019-01-25 09:14
+#  state   title                 author   updated
+1  open    Patch not accepted    celia    2019-01-25 13:27
+0  closed  How do I contribute?  alex     2019-01-25 09:14
 
-$ rad issue comment 1 "probably the wrong size"
+$ rad issue comment 1 "probably the wrong dimensions"
 Added comment to issue #1
           </pre>
       </div>
@@ -72,13 +72,13 @@ Added comment to issue #1
       <h2>Propose changes</h2>
       <p>
         <code>rad patch</code> provides a simple system for proposing and
-        discussing changes to a repository.  </p>
+        discussing changes to a git repository. </p>
       <div class="terminal">
         <pre>
 $ rad patch list
 #  state     commit                author   updated
-1  pending   Make docs friendlier  janedoe  2019-01-25 13:27
-0  accepted  Typo fixes            willyg   2019-01-25 09:14
+1  pending   Make docs friendlier  vera     2019-01-25 13:27
+0  accepted  Typo fixes            jules    2019-01-25 09:14
 
 $ rad patch accept 1
 Merging proposal #2 with master
@@ -98,19 +98,19 @@ Merging proposal #2 with master
     <div class="text">
       <h1>Radicle Stack</h1>
       <p>
-        Radicle utilities are built in a deterministic programming language
-        (the Radicle language). Each instance of a utility is a replicated
-        state machine (or simply <em>machine</em>) with its history distributed
+        Radicle utilities are written in the Radicle language, a deterministic
+        Lisp dialect built for creating P2P programs.  Each instance of a
+        utility is a replicated state machine with state updates distributed
         and replicated via IPFS.
-        <br /><br />
-
-        The Radicle daemon materializes machines locally from their history,
-        allowing you to query it or submit new expressions.
-
-        <br /><br />
-
-        We have also built an IPFS-based git remote helper, so you can host
-        your git repository on IPFS as well.
+        <br><br>
+        The Radicle daemon materializes machines from the local event log,
+        allowing you to query a machine's state, and handles the submission of
+        new expressions.
+        <br><br>
+        We have also created an IPFS git remote helper for hosting your code on
+        IPFS.  Together with utilities such as <code>rad project</code> <code>rad
+        issues</code>, and <code>rad patches</code>, your can now have an
+        entirely decentralized code collaboration experience.
       </p>
     </div>
     <div class="illustration"></div>

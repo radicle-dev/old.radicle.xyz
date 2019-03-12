@@ -265,9 +265,9 @@ header {
 }
 
 .globe {
-  margin: 10px 30px 0 0;
-  height: 300px;
-  width: 300px;
+  margin: 10px 20px 30px 0;
+  height: 340px;
+  width: 340px;
   background-image: url("/img/globe-ascii-bw.gif");
   background-position: center;
   background-repeat: no-repeat;
@@ -292,6 +292,11 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  code {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1px 3px 2px 3px;
+  }
 
   .text {
     max-width: 720px;
@@ -320,6 +325,7 @@ header {
     background-size: cover;
     width: 546px;
     height: 0;
+    margin: 1em 0;
     padding: 0;
     /* reset */
     padding-bottom: 248px;

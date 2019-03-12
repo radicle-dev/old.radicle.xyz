@@ -15,8 +15,7 @@ first time or looking to dig into how the Radicle stack works from a technical
 perspective, you’re in the right place.
 
 For a technical overview of Radicle, including some of the architectural
-choices we’ve made, a good place to start is `this blogpost`_ on the Radicle
-architecture.
+choices we’ve made, a good place to start is the `Radicle P2P architecture`_ section below.
 
 If you want to dive straight in and play around with Radicle for yourself,
 follow the `installation instructions`_ and then the `Radicle Tutorial`_ in the
@@ -35,6 +34,6 @@ docs below.
 {{< /mono >}}
 
 
-.. _`this blogpost`: ../blog/radicle-intro
+.. _`Radicle P2P architecture`: ./#radicle-p2p-architecture
 .. _`Radicle Tutorial`: ./#tutorial-1-contributor
 .. _`installation instructions`: ./#installation-setup
