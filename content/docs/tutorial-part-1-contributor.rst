@@ -34,7 +34,7 @@ Welcome to the Radicle Garden, a new-found island located somewhere off the ASCI
 Contribute to the Radicle Garden
 ================================
 
-The Radicle Garden is a project created using Radicle, with a hosted version found at `radicle.xyz/garden <../garden>`_. A Radicle project contains a git repository as well as the all the issues and proposals associated with that repo.
+The Radicle Garden is a project created using Radicle, with a hosted version found at `www.radicle.xyz/garden <../garden>`_. A Radicle project contains a git repository as well as the all the issues and proposals associated with that repo.
 
 Before we start contributing, we'll need to download a copy to our computer by
 checking out the project. To do that we need the project-id:
@@ -100,7 +100,7 @@ Oh, very pretty.
 
 
 
-What lovely gardens. It looks like each garden file contains an ASCII image. These images are combined to create the community garden page located at https://radicle.xyz/garden.
+What lovely gardens. It looks like each garden file contains an ASCII image. These images are combined to create the community garden page located at `www.radicle.xyz/garden <../garden>`_.
 
 Like our git repo, Radicle stores your issues and patches locally and distributes them over the IPFS network. To look at a list of issues we'll run ``$ rad issue list`` while inside the git repo.
 
@@ -156,7 +156,7 @@ And few ASCII art collections for inspiration:
 - https://asciiart.website/
 - https://www.asciiart.eu/
 
-Also, feel free to copy some of the existing plots in the `garden <https://radicle.xyz/garden>`_ as a starting point.
+Also, feel free to copy some of the existing plots in the `garden </garden>`_ as a starting point.
 
 Once we've planted a few vegetables and feel happy with our garden, we'll save the file, add the staged file and commit it to the repo using git.
 
@@ -188,7 +188,7 @@ If we want to see the status of our patch we can do that with:
 *Note 1: The author comes from your local .gitconfig.*
 *Note 2: It may take a minute or so until you see your own patch.*
 
-As long as our garden is the correct dimensions, it shouldn't take long for our proposed patch to be accepted and then we'll be able to see our garden on the map at https://radicle.xyz/garden. Also if you check out master, ``$ git checkout master``, and pull in the latest changes, ``$ git pull origin master``, you should see your garden file there as well.
+As long as our garden is the correct dimensions, it shouldn't take long for our proposed patch to be accepted and then we'll be able to see our garden on the map at `www.radicle.xyz/garden <../garden>`_. Also if you check out master, ``$ git checkout master``, and pull in the latest changes, ``$ git pull origin master``, you should see your garden file there as well.
 
 |
 

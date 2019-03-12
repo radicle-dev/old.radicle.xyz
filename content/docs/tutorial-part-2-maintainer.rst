@@ -29,7 +29,7 @@ First we need to create the Radicle project. To do that we'll run ``$ rad projec
   ? What kind of repository would you like to use?
   1. New peer-to-peer repository (git-ipfs **EXPERIMENTAL**)
   2. Add your own remote (e.g.: github / gitlab / ...)
-      (see radicle.xyz/docs/storage for more info)
+      (see www.radicle.xyz/docs/#git-integration for more info)
 
 We're going to choose option 1 to crate a P2P repo that's distributed with IPFS. When we do, we'll see the following:
 
