@@ -4,8 +4,8 @@
     <div id="peer">
       <h2>Peer–to–peer</h2>
       <p>
-        Radicle is a decentralized, collaborative revision control system built on IPFS.
-        Write open source software without giving your data to third parties or the hassle of setting up a server.
+        The Radicle stack builds on IPFS, and works without a centralized server. No hassle with setting up
+        your own hosting, and no need to trust companies with your data.
       </p>
     </div>
     <div id="term">
@@ -13,16 +13,16 @@
       <p>
         A Radicle project contains a git repository, plus the associated
         issues and proposals. Access all the issues and proposals
-        associated with your codebase right from your command line.
+        associated with your codebase right from your terminal.
       </p>
     </div>
     <div id="prog">
       <h2>Programmable</h2>
       <p>
-        Each Radicle utility is a P2P program we call a Radicle <em>machine</em>.
-        Maybe the default Radicle utilities are missing a feature you need.
-        Modify our version to suit your requirements, or create an entirely new utility.
-        Dev resources coming soon!
+        Ever wanted to tweak your code collaboration service? With Radicle each
+        unit of functionality &ndash;<em>a machine</em>&ndash; is its
+        own litte P2P program, written in the Radicle language. You can change
+        them to suit your needs, or create entirely new ones. More on this soon.
       </p>
     </div>
   </section>
@@ -98,15 +98,19 @@ Merging proposal #2 with master
     <div class="text">
       <h1>Radicle Stack</h1>
       <p>
-        Radicle utilities are written in the Radicle language, a deterministic Lisp dialect for creating P2P programs.
-        Each utility is a replicated state machine with state updates distributed and replicated via IPFS.
+        Radicle utilities are written in the Radicle language, a deterministic
+        Lisp dialect built for creating P2P programs.  Each instance of a
+        utility is a replicated state machine with state updates distributed
+        and replicated via IPFS.
         <br><br>
         The Radicle daemon materializes machines from the local event log,
-        allowing you to query a machine's state or submit new expressions.
+        allowing you to query a machine's state, and handles the submission of
+        new expressions.
         <br><br>
-        <code>rad project</code> connects our simple utilities <code>rad issues</code>, <code>rad patches</code>, and
-        the
-        IPFS git remote helper, creating a collaboration stack that lives entirely on the distributed web.
+        We have also created an IPFS git remote helper for hosting your code on
+        IPFS.  Together with utilities such as <code>rad project</code> <code>rad
+        issues</code>, and <code>rad patches</code>, your can now have an
+        entirely decentralized code collaboration experience.
       </p>
     </div>
     <div class="illustration"></div>
