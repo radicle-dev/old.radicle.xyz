@@ -19,10 +19,13 @@ Creating the Radicle Garden & managing contributions
 
 Now that we've shown off our green thumb, let's see what happens on the other side of the collaboration by seeing how the Radicle Garden project was created and how to manage contributions as a maintainer.
 
-First we need to create the Radicle project. To do that we'll run ``$ rad project init`` and choose a project name.
+First we need to create the Radicle project. To do that we'll run ``$ rad project init``
+and choose a project name. Note that the project is create in your current
+working directory.
 
 ::
 
+  $ mkdir acme && cd acme
   $ rad project init
   ? What's the name of your project (Default: acme)? acme
   ? Briefly describe your project? This is my description
