@@ -18,13 +18,13 @@ In the Radicle tutorial you'll learn to use some of Radicle's basic collaboratio
 Then, in part 2, you'll see the other side of the collaboration by walking through the maintainer workflow.
 
 {{< mono style="text-align: center" >}}
-                  _(_)_                          wWWWw   _        
-      @@@@       (_)@(_)   vVVVv     _     @@@@  (___) _(_)_      
-     @@()@@ wWWWw  (_)\    (___)   _(_)_  @@()@@   Y  (_)@(_)     
-      @@@@  (___)     `|/    Y    (_)@(_)  @@@@   \|/   (_)\      
-       /      Y       \|    \|/    /(_)    \|      |/      |      
-    \ |     \ |/       | / \ | /  \|/       |/    \|      \|/     
-jgs \\|//   \\|///  \\\|//\\\|/// \|///  \\\|//  \\|//  \\\|//    
+                  _(_)_                          wWWWw   _
+      @@@@       (_)@(_)   vVVVv     _     @@@@  (___) _(_)_
+     @@()@@ wWWWw  (_)\    (___)   _(_)_  @@()@@   Y  (_)@(_)
+      @@@@  (___)     `|/    Y    (_)@(_)  @@@@   \|/   (_)\
+       /      Y       \|    \|/    /(_)    \|      |/      |
+    \ |     \ |/       | / \ | /  \|/       |/    \|      \|/
+jgs \\|//   \\|///  \\\|//\\\|/// \|///  \\\|//  \\|//  \\\|//
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 {{< /mono >}}
@@ -164,8 +164,8 @@ Once we've planted a few vegetables and feel happy with our garden, we'll save t
 ::
 
   $ git add .
-  $ git commit -m "Sewing seeds"
-  [master (root-commit) 798c5c4] Sewing seeds
+  $ git commit -m "Sowing seeds"
+  [master (root-commit) 798c5c4] Sowing seeds
    1 files changed, 8 insertions(+)
    create mode 100644 YYYY-MM-DD_username.txt
 
@@ -184,7 +184,7 @@ If we want to see the status of our patch we can do that with:
 
   $ rad patch list
   state     #  commit        author    updated
-  pending   1  Sewing seeds  jane      2019-03-04T21:23:34Z
+  pending   1  Sowing seeds  jane      2019-03-04T21:23:34Z
 
 *Note 1: The author name comes from the local .gitconfig.*
 *Note 2: It may take a minute or so until proposed patches show up in this list.*
