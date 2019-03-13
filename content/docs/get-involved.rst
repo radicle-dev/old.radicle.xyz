@@ -13,24 +13,20 @@ Get involved
 
 
 For general inquiries, chatter, or questions, the easiest ways to get in touch
-is on the #radicle IRC channel on Freenode, or via our dev-mailing list.
+is on the #radicle IRC channel on Freenode, or via our `dev mailing list`_.
 
-As of the alpha release, we’re using Radicle for managing our issues. If you
-want to track or submit issues, you can checkout the project on Radicle with
-the following command:
-
-``rad project checkout 12D3KooWPS3UXcvSZSXfi7P4J9Ut8MMVNvN63HHiCSP8rxj3RmtC``
-
-For making code contributions to Radicle we still accept PR’s through our
-github_, since the rad patch app only works with single commit changes.
+While Radicle is alpha software we still use GitHub_ for development (though we'll 
+transition to dogfooding Radicle soon). Issues and PRs welcome!
 
 Lastly, the core Radicle team does weekly updates on `Secure Scuttlebutt`_, which
 you can see by following the #radicle-weekly-updates channel. If you’re not a
 scuttlebutt user already, pop over to IRC and we can give you an invite to our
 own Scuttlebutt pub :)
 
-Contributions to the Radicle project and interactions with the community should adhere to our `code of conduct <https://github.com/radicle-dev/radicle/tree/master/code-of-conduct.md>`_.
+Also note, all contributions to the Radicle project and interactions with the community should 
+adhere to our `code of conduct <https://github.com/radicle-dev/radicle/tree/master/code-of-conduct.md>`_.
 
 
-.. _github: https://github.com/radicle-dev/radicle
+.. _GitHub: https://github.com/radicle-dev/radicle
+.. _dev mailing list: https://groups.google.com/a/monadic.xyz/forum/#!forum/radicle
 .. _`Secure Scuttlebutt`: https://scuttlebutt.nz
