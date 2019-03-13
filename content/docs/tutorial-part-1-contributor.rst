@@ -13,7 +13,7 @@ Tutorial 1: Contributor
 
 Make sure you in `install Radicle <#installation-setup>`_ if you haven't already, and then you're set to try the Radicle tutorial.
 
-In the Radicle tutorial you'll learn to use some of Radicle's basic collaboration tools. In the first half of the tutorial you'll contribute changes to a Radicle project maintained by someone else, where you'll learn the three main Radicle commands: ``rad project``, ``rad issues``, and ``rad patch``.
+In the Radicle tutorial you'll learn to use some of Radicle's basic collaboration tools. In the first half of the tutorial you'll contribute changes to a Radicle project maintained by someone else, where you'll learn the three main Radicle commands: ``rad project``, ``rad issue``, and ``rad patch``.
 
 Then, in part 2, you'll see the other side of the collaboration by walking through the maintainer workflow.
 
