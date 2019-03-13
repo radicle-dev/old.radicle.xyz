@@ -13,7 +13,7 @@ Get involved
 
 
 For general inquiries, chatter, or questions, the easiest ways to get in touch
-is on the #radicle IRC channel on Freenode, or via our dev-mailing list.
+is on the #radicle IRC channel on Freenode, or via our `dev mailing list`_.
 
 While Radicle is alpha software we still use GitHub_ for development (though we'll 
 transition to dogfooding Radicle soon). Issues and PRs welcome!
@@ -28,4 +28,5 @@ adhere to our `code of conduct <https://github.com/radicle-dev/radicle/tree/mast
 
 
 .. _GitHub: https://github.com/radicle-dev/radicle
+.. _dev mailing list: https://groups.google.com/a/monadic.xyz/forum/#!forum/radicle
 .. _`Secure Scuttlebutt`: https://scuttlebutt.nz
