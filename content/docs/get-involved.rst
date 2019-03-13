@@ -32,6 +32,6 @@ own Scuttlebutt pub :)
 Contributions to the Radicle project and interactions with the community should adhere to our `code of conduct <https://github.com/radicle-dev/radicle/tree/master/code-of-conduct.md>`_.
 
 
-.. `_dev mailing list`: https://groups.google.com/a/monadic.xyz/forum/#!forum/radicle
+.. _dev mailing list: https://groups.google.com/a/monadic.xyz/forum/#!forum/radicle
 .. _github: https://github.com/radicle-dev/radicle
 .. _`Secure Scuttlebutt`: https://scuttlebutt.nz
