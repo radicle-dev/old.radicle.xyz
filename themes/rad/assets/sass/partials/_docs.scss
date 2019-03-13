@@ -57,7 +57,6 @@ main {
   justify-self: center;
   border-left: 1px solid rgba($black, 0.2);
   width: 100%;
-  padding-top: 7em;
 
   .divider:last-child {
     display: none;
@@ -73,13 +72,10 @@ main {
 
     h1 {
       color: $blue;
-      margin: 0.2em auto 1em auto;
+      padding: 2.6em 0 1em;
     }
 
     .document {
-
-      padding-top: 6em;
-
       h2 {
         font-family: FoundersGrotesk, Arial, sans-serif;
         font-size: 27px;
@@ -104,7 +100,7 @@ main {
 
       .mono {
         background-color: inherit !important;
-	      margin: auto !important;
+        margin: auto !important;
       }
 
       pre {
