@@ -92,6 +92,14 @@ Maybe we'd like to add a comment to request additional changes:
   $ rad patch comment <PATCH-NUMBER> "Nice feature, but here is my comment..."
   Added comment to Patch <PATCH-NUMBER>
 
+For local testing we can checkout the patch in a branch:
+
+::
+
+  $ rad patch checkout <PATCH-NUMBER>
+  Switched to a new branch 'patch/<PATCH-NUMBER>'
+  Applying: [PATCH] Sewing seeds
+
 And then we can either reject the proposal:
 
 ::
