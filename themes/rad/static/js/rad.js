@@ -2,6 +2,7 @@ function animateDivider(el) {
   const defaultDensity = 3;
   const defaultOndulation = 50;
   const defaultSpeed = 4;
+  const defaultIsStatic = false;
 
   // Read config variables from data attributes.
   let density = parseInt(
@@ -19,6 +20,8 @@ function animateDivider(el) {
   let speed = parseInt(el.getAttribute('data-rad-divider-speed') || defaultSpeed);
 
   if (isNaN(speed)) { speed = defaultSpeed; }
+
+  let isStatic = el.getAttribute('data-rad-divider-static') === "true" || defaultIsStatic;
 
   let width = el.clientWidth;
   let isLine = el.classList.contains('line');
@@ -51,6 +54,10 @@ function animateDivider(el) {
     now = Date.now();
     elapsed = now - then;
 
+    if (isStatic) {
+      elapsed += interval * 2;
+    }
+
     if (elapsed > interval) {
       let xoff = 0;
       let xs = [];
@@ -81,7 +88,9 @@ function animateDivider(el) {
       then = now - (elapsed % interval);
     }
 
-    requestAnimationFrame(animate);
+    if (!isStatic) {
+      requestAnimationFrame(animate);
+    }
   }
 
   animate();
