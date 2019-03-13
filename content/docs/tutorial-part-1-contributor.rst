@@ -110,7 +110,7 @@ Like our git repo, Radicle stores your issues and patches locally and distribute
   state    #   title                         author    updated
   open     1   Patch proposal not accepted   janedoe   2019-03-04T16:41:47Z
 
-There's only one issue for this project at the moment. Let's take a closer look with ``$ rad issue show 1``.
+There's only one issue for this project at the moment. Let's take a closer look with ``$ rad issue show 0``.
 
 ::
 
