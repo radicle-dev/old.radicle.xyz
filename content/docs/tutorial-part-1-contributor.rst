@@ -138,17 +138,14 @@ Now let's make our own garden. First of let's create a new branch and check it o
 
 
 As mentioned in the issue above, the text should fit in a box of 20 characters wide and 8 lines high. Here is an empty 20 x 8 frame to start us off.
-
-::
-
-  ╔══════════════════╗
-  ║                  ║
-  ║                  ║
-  ║                  ║
-  ║                  ║
-  ║                  ║
-  ║                  ║
-  ╚══════════════════╝
+{{< mono style="font-family: monospace; background-color: #f2f2f2; padding-top: 0;" >}}╔══════════════════╗ 
+║                  ║
+║                  ║
+║                  ║
+║                  ║
+║                  ║
+║                  ║
+╚══════════════════╝{{< /mono >}}
 
 And few ASCII art collections for inspiration:
 
