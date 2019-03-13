@@ -8,21 +8,25 @@
   border-radius: 2px;
   display: block;
   text-align: center;
+
   &.active {
     opacity: 0.8;
   }
+
   &:hover {
     opacity: 0.95;
     text-decoration: none;
   }
+
   span {
     margin-left: 14px;
     opacity: 0.35;
   }
 }
+
 .header-btn {
   @extend .button;
-  padding: 0px 8px 7px;
+  padding: 1px 8px 7px;
   height: 29px;
   font-size: 16px;
 }
