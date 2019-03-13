@@ -50,7 +50,7 @@ rad patch commands
      Usage:
           rad patch list [(-s | --state | --filter-by-state) <state>] [--fancy]
           rad patch propose <commit>
-          rad patch [show | retract | accept | reject] <patch-number>
+          rad patch [show | retract | accept | reject | checkout] <patch-number>
           rad patch comment <patch-number> <comment>
           rad patch help
 
@@ -72,6 +72,9 @@ rad patch commands
        accept       - Accept a patch
                       Automatically merges to master and pushes to origin. This
                       command is restricted to the maintainer of the project.
+       checkout     - Checkout a patch locally
+                      Creates a new branch 'patch/<patch-number>' and applies the
+                      patch to it.
        reject       - Reject a patch
                       This command is restricted to the maintainer of the project.
        help         - Print this help and exit
