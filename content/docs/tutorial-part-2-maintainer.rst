@@ -17,11 +17,12 @@ Tutorial 2: Maintainer
 Creating the Radicle Garden & managing contributions
 ====================================================
 
-Now that we've shown off our green thumb, let's see what happens on the other side of the collaboration by seeing how the Radicle Garden project was created and how to manage contributions as a maintainer.
+Now that we've shown off our green thumb in part 1, let's see what happens on the other side of the collaboration by walking through how the Radicle Garden project was created and how contributions are managed as a maintainer.
 
-First we need to create the Radicle project. To do that we'll run ``$ rad project init``
-and choose a project name. Note that the project is create in your current
-working directory.
+First we need to create a Radicle project. To do that we'll run ``$ rad project init``
+and choose a project name.
+
+*Note that the project is created in our current working directory.*
 
 ::
 
@@ -34,7 +35,7 @@ working directory.
   2. Add your own remote (e.g.: github / gitlab / ...)
       (see www.radicle.xyz/docs/#git-integration for more info)
 
-We're going to choose option 1 to crate a P2P repo that's distributed with IPFS. When we do, we'll see the following:
+We're going to choose option 1 to create a P2P repo distributed using IPFS. When we do, we'll see the following:
 
 ::
 
@@ -61,28 +62,29 @@ If we'd like to invite others to contribute, we'll need to give them our project
   => 12D3KooW...
   => Share this project id for people to collaborate with you on your project.
 
-Let's say a collaborator already proposed a patch, using the steps outlined in the first section of this guide. We can see a list of all proposed patches, as well as the status of each patch, with ``$ rad patch list``.
+Let's say a collaborator already proposed a patch using the steps outlined in the first section of this guide.
+We can see a list of all proposed patches, as well as the status of each patch, with ``$ rad patch list``.
 
 ::
 
   $ rad patch list
-  state     patch #  commit                               author     updated
-  pending   2        Make documentation more accessible   jane doe   2019-01-25 13:27
+  state     patch #  commit                author   updated
+  pending   2        Plant a few flowers   jane     2019-01-25 13:27
 
 Then we can inspect the patch with:
 
 ::
 
   $ rad patch show <PATCH-NUMBER>
-  accepted 0 Sewing seeds jane doe 2019-03-04T16:49:28Z
+  accepted 0 Sewing seeds jane 2019-03-01T16:49:28Z
 
   From b118c572a441a774d4577ccb68f67fcfacc58df2 Mon Sep 17 00:00:00 2001
-  From: jane doe <jane@doe.xyz>
+  From: jane doe <jane@botanicals.xyz>
   Date: Mon, 4 Mar 2019 17:47:15 +0100
-  Subject: [PATCH] Sewing seeds
+  Subject: [PATCH] Plant a few flowers
 
   ---
-  mygarden.txt | 8 ++++++++
+  2019-03-01_tulip.txt | 8 ++++++++
   ...
 
 Maybe we'd like to add a comment to request additional changes:
@@ -120,7 +122,7 @@ Let's check the proposal status one more time to confirm:
 
   $ rad patch list
   state     patch #  commit        author    updated
-  accepted  2       Sewing seeds  jane doe  2019-01-25 13:27
+  accepted  2       Sewing seeds  jane       2019-01-25 13:27
 
 That's it!
 
