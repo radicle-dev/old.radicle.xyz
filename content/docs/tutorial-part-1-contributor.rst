@@ -109,7 +109,7 @@ Like our git repo, Radicle stores our issues and patches locally and distributes
 
   $ rad issue list
   state    #   title                         author    updated
-  open     1   Patch proposal not accepted   jane      2019-03-04T16:41:47Z
+  open     0   Patch proposal not accepted   jane      2019-03-04T16:41:47Z
 
 There's only one issue for this project at the moment [note: the output may differ if additions have been made]. Let's take a closer look with ``$ rad issue show 0``.
 
