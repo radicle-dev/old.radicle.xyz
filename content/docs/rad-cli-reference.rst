@@ -33,6 +33,7 @@ rad issue commands
                       <state2> ...'.
                       If the option '--fancy' is appended, the list is opened via
                       fzf (note that fzf has to be installed).
+                      Unread issues are marked with a * before the timestamp.
        new          - Create a new issue in $EDITOR
        show         - Show an issue
        comment      - Add a comment to an issue
@@ -44,8 +45,8 @@ rad patch commands
 ==================
 
 .. code-block::
-
-  rad patch - Radicle patch CLI
+   
+  rad patch - Radicle Patch CLI
 
      Usage:
           rad patch list [(-s | --state | --filter-by-state) <state>] [--fancy]
@@ -63,6 +64,7 @@ rad patch commands
                       <state2> ...'.
                       If the option '--fancy' is appended, the list is opened via
                       fzf (note that fzf has to be installed).
+                      Unread patches are marked with a * before the timestamp.
        propose      - Create a new patch from a single commit
        show         - Show a patch
        comment      - Add a comment to a patch
@@ -81,7 +83,6 @@ rad patch commands
 
 rad project commands
 ====================
-
 
 .. code-block::
 

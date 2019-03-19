@@ -69,7 +69,7 @@ We can see a list of all proposed patches, as well as the status of each patch, 
 
   $ rad patch list
   state     patch #  commit                author   updated
-  pending   2        Plant a few flowers   jane     2019-01-25 13:27
+  pending   2        Plant a few flowers   jane     2019-01-25 13:27 *
 
 Then we can inspect the patch with:
 
