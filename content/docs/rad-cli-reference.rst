@@ -36,7 +36,7 @@ rad issue commands
                       fzf (note that fzf has to be installed).
                       If the option '--unread' is appended, only unread issues
                       are listed.
-                      Unread issues are marked with a * before the timestamp.
+                      Unread issues are marked with a * after the timestamp.
        new          - Create a new issue in $EDITOR
        show         - Show an issue
        comment      - Add a comment to an issue
@@ -73,7 +73,7 @@ rad patch commands
                       fzf (note that fzf has to be installed).
                       If the option '--unread' is appended, only unread patches
                       are listed.
-                      Unread patches are marked with a * before the timestamp.
+                      Unread patches are marked with a * after the timestamp.
        propose      - Create a new patch from a single commit
        show         - Show a patch
        comment      - Add a comment to a patch
