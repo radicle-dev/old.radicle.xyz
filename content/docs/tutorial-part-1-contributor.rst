@@ -106,10 +106,12 @@ What lovely gardens. It looks like each garden file contains an ASCII image. The
 Like our git repo, Radicle stores our issues and patches locally and distributes them over the IPFS network. To look at a list of issues we'll run ``$ rad issue list`` while inside the git repo.
 
 ::
-
+   
   $ rad issue list
   state    #   title                         author    updated
-  open     0   Patch proposal not accepted   jane      2019-03-04T16:41:47Z *
+  open     0   Patch proposal not accepted   jane      2019-03-12T10:18:52Z * 
+
+  2 issues: 1 open, 1 closed
 
 There's only one issue for this project at the moment [note: the output may differ if additions have been made]. Let's take a closer look with ``$ rad issue show 0``.
 
@@ -180,8 +182,10 @@ If we want to see the status of our patch we can do that with:
 ::
 
   $ rad patch list
-  state     #  commit        author    updated
-  pending   1  Sowing seeds  jane      2019-03-04T21:23:34Z
+  state     #   commit        author   updated                
+  pending   45  Sowing seeds  jane     2019-03-19T23:51:47Z
+
+  46 patches: 35 accepted, 1 pending, 6 rejected, 4 retracted
 
 *Note 1: The author name comes from the local .gitconfig.*
 *Note 2: It may take a minute or so until proposed patches show up in this list.*

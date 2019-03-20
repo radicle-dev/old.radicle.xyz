@@ -66,10 +66,12 @@ Let's say a collaborator already proposed a patch using the steps outlined in th
 We can see a list of all proposed patches, as well as the status of each patch, with ``$ rad patch list``.
 
 ::
-
+   
   $ rad patch list
-  state     patch #  commit                author   updated
-  pending   2        Plant a few flowers   jane     2019-01-25 13:27 *
+  state     #   commit               author  updated                
+  pending   2   Plant a few flowers  jane    2019-03-19T23:51:47Z * 
+
+  3 patches: 1 accepted, 1 pending, 1 rejected
 
 Then we can inspect the patch with:
 
@@ -120,9 +122,12 @@ Let's check the proposal status one more time to confirm:
 
 ::
 
-  $ rad patch list
-  state     patch #  commit        author    updated
-  accepted  2       Sewing seeds  jane       2019-01-25 13:27
+  $ rad patch list -s accepted
+  state     #  commit        author    updated
+  accepted  2  Sewing seeds  jane      2019-01-25 13:27
+  ...
+  
+  3 patches: 2 accepted, 1 rejected
 
 That's it!
 
