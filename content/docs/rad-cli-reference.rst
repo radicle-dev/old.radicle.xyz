@@ -20,8 +20,9 @@ rad issue commands
      Usage:
           rad issue list [(--filter-by-state | --state | -s) <state>] [--fancy]
           rad issue new
-          rad issue [show | close] <issue-number>
+          rad issue [show | close | mark-read | mark-unread] <issue-number>
           rad issue comment <issue-number> <comment>
+          rad all-read
           rad issue help
 
        list         - Lists all issues
@@ -33,11 +34,17 @@ rad issue commands
                       <state2> ...'.
                       If the option '--fancy' is appended, the list is opened via
                       fzf (note that fzf has to be installed).
+                      If the option '--unread' is appended, only unread issues
+                      are listed.
+                      Unread issues are marked with a * after the timestamp.
        new          - Create a new issue in $EDITOR
        show         - Show an issue
        comment      - Add a comment to an issue
        close        - Close an issue
                       This command is restricted to the maintainer of the project.
+       mark-read    - Mark issue as read
+       mark-unread  - Mark issue as unread
+       all-read     - Mark all issues as read
        help         - Print this help and exit
 
 rad patch commands
@@ -45,13 +52,14 @@ rad patch commands
 
 .. code-block::
 
-  rad patch - Radicle patch CLI
+  rad patch - Radicle Patch CLI
 
      Usage:
           rad patch list [(-s | --state | --filter-by-state) <state>] [--fancy]
           rad patch propose <commit>
-          rad patch [show | retract | accept | reject | checkout] <patch-number>
+          rad patch [show | retract | accept | reject | checkout | mark-read | mark-unread] <patch-number>
           rad patch comment <patch-number> <comment>
+          rad patch all-read
           rad patch help
 
        list         - Lists all patches
@@ -63,6 +71,9 @@ rad patch commands
                       <state2> ...'.
                       If the option '--fancy' is appended, the list is opened via
                       fzf (note that fzf has to be installed).
+                      If the option '--unread' is appended, only unread patches
+                      are listed.
+                      Unread patches are marked with a * after the timestamp.
        propose      - Create a new patch from a single commit
        show         - Show a patch
        comment      - Add a comment to a patch
@@ -77,11 +88,13 @@ rad patch commands
                       patch to it.
        reject       - Reject a patch
                       This command is restricted to the maintainer of the project.
+       mark-read    - Mark patch as read
+       mark-unread  - Mark patch as unread
+       all-read     - Mark all patches as read
        help         - Print this help and exit
 
 rad project commands
 ====================
-
 
 .. code-block::
 
