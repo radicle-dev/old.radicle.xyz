@@ -51,7 +51,7 @@ rad patch commands
 ==================
 
 .. code-block::
-  
+
   rad patch - Radicle Patch CLI
 
      Usage:

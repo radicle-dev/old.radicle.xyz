@@ -106,7 +106,7 @@ What lovely gardens. It looks like each garden file contains an ASCII image. The
 Like our git repo, Radicle stores our issues and patches locally and distributes them over the IPFS network. To look at a list of issues we'll run ``$ rad issue list`` while inside the git repo.
 
 ::
-   
+
   $ rad issue list
   state    #   title                         author    updated
   open     0   Patch proposal not accepted   jane      2019-03-12T10:18:52Z * 

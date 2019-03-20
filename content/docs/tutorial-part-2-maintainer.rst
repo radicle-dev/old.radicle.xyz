@@ -66,7 +66,7 @@ Let's say a collaborator already proposed a patch using the steps outlined in th
 We can see a list of all proposed patches, as well as the status of each patch, with ``$ rad patch list``.
 
 ::
-   
+
   $ rad patch list
   state     #   commit               author  updated                
   pending   2   Plant a few flowers  jane    2019-03-19T23:51:47Z * 
