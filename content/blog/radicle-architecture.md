@@ -63,7 +63,7 @@ be retrieved from its IPFS address. For the most part, it's sufficient to know
 that a machine exists, and that you can interact with it. But in this blog
 post, we'll bore down into these abstraction layers.
 
-Formally, a Radicle machines is a state machine defined by:
+Formally, a Radicle machine is a state machine defined by:
 
 - a set of possible states \\(S\\)
 - a set of possible inputs \\(I\\)
