@@ -18,7 +18,7 @@ existing tools. In particular Radicle is:
 - Extensible
 
 We've built several "utilities" using the radicle system. One example,
-`rad-issues`, is a P2P issue tracker.
+`rad-issues`, is a P2P issue tracker:
 
 ```
 $ rad issue list
@@ -60,9 +60,10 @@ Where does a machine "exist"? Where does it execute? Part of the idea behind the
 Radicle architecture is to abstract away any such notion. Whether on your local
 device, or the larger P2P network, as long as a machine is available it can
 be retrieved from its IPFS address. For the most part, it's sufficient to know
-that a machine exists, and that you can interact with it.
+that a machine exists, and that you can interact with it. But in this blog
+post, we'll bore down into these abstraction layers.
 
-As far as what a Radicle machine *is*: formally, it is a state machine defined by:
+Formally, a Radicle machines is a state machine defined by:
 
 - a set of possible states \\(S\\)
 - a set of possible inputs \\(I\\)
@@ -142,13 +143,15 @@ can input the following:
       :getCounter (list (read-ref s) rad-state))))
 ```
 
-In this example we've omitted the Radicle *prelude*, which is a set of basic
+(In this example we've omitted the Radicle *prelude*, which is a set of basic
 modules containing many useful functions for writing state machines. The prelude is
-necessary here in order to access pattern matching functionality.
+necessary here in order to access pattern matching functionality.)
 
-Machines are materialized from the sequence of all received expressions, this sequence is maintained via a pointer to
+
+
+Machines are materialized from the sequence of all received expressions. This sequence is maintained via a pointer to
 a linked list stored on IPFS. To materialize a Radicle machine,
-the pointer is resolved, fetching data from IPFS, and the resulting set of expressions is re-evaluated.
+the pointer is resolved, fetching data from IPFS, and the resulting set of expressions is evaluated.
 One can then make a query to inspect the materialized machine. For example,
 requesting the current state with `get-counter`.
 
@@ -158,13 +161,15 @@ requesting the current state with `get-counter`.
 Fetching data will also replicate those IPFS blocks automatically, ensuring availability
 if other peers go offline. One nice feature of this architecture is that
 popular machines will be more available. Currently we pin all data
-indefinitely, however with a system to unpin rarely used data, we
-get a simple, elegant, replication and garbage collection
+indefinitely, however, with a system to unpin rarely used data, we
+get a simple and elegant replication and garbage collection
 infrastructure. Another useful feature is that machines with common prefixes
-i.e. they share initial definitions, will already be available. For instance,
-consider two counter machines which share several initial IPFS blocks. Once
-a single counter machine has been cached, the sequences common to the
-second will already be available.
+-- i.e. those that share initial definitions -- will also share IPFS blocks.
+This means that a) if you already have those blocks you won't need to fetch
+them again, and b) if anyone has the blocks because of a different machine,
+they will still replicate and increase availability for other machines that
+need those blocks. Most machines will share the prelude as block; issue
+machines will additionally share the issue-definition blocks; etc.
 
 {{% div style="padding: 0.5em 0 1em 0;" %}}
 
@@ -191,7 +196,9 @@ worried about your data being unavailable while offline, you can
 simply query a public daemon for your machine, causing that daemon to replicate from
 your instance. Then, when you go offline, the remote server can continue to make your
 machine available. We provide several such public daemons, but
-you can also run your own and help seed your favorite machines.
+you can also run your own and help seed your favorite machines. Since you still
+control the pointer, and all data is identified by hash, you don't need to
+trust these public daemons.
 
 *Note: While Radicle is still in alpha, daemons have no authentication mechanim,
 thus there is a possibility of DOS attacks if you enable this option.*
@@ -199,7 +206,7 @@ thus there is a possibility of DOS attacks if you enable this option.*
 Secondly, because the radicle daemon is just an HTTP server, this opens the
 possibility of creating websites using your machine as a data layer.
 
-*Note: This can only be accomplished manually at present, however, we aim to automate and
+*Note: This can only be accomplished manually at present. We aim to automate and
 simplify this process in the future.*
 
 How does the pointer work? We back it with an IPNS pointer. IPNS
@@ -217,12 +224,20 @@ and update the machine's pointer.
 *Note: This means that if the owner is offline,
 writing won't work, and the machine becomes read-only.*
 
-Because the owner can point a link to *anything*, not just an extension of the
-previous linked list of inputs, they could (in theory) re-write the history of
-their Radicle machine. Such behaviour would be easily detectable by (the
-daemon's of) other users following this machine. In the future the Radicle daemon will
-stop following such a machine, mark it as invalid, and possibly notify other
-users on the network of the fork.
+Any expression that's submitted and throws an exception will be rejected by the
+owner's daemon, making validation trivial. In the counter machine above, for
+example, if the input is not `:increment` or `:getCounter`, the pattern match
+will fail, resulting in the expression being rejected.
+
+
+## Conclusion
+
+Hopefully this blog post clarifies how Radicle is implemented, and helps to
+give a sense of both its limitations and possibilities. In particular, we hope
+its clear that none of the architecture limits it to the few utilities we've
+released. Radicle is in a sense a truly "serverless" architecture - a system
+where programs can be deployed without worrying about provisioning and
+configuring physical servers, in a completely peer-to-peer way.
 
 <br>
 
