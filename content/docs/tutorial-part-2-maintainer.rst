@@ -64,12 +64,14 @@ If we'd like to invite others to contribute, we'll need to give them our project
 
 Let's say a collaborator already proposed a patch using the steps outlined in the first section of this guide.
 We can see a list of all proposed patches, as well as the status of each patch, with ``$ rad patch list``.
+Per default the command only shows patches of state `pending`. For further options for the list command,
+check out the `cli reference`_.
 
 ::
 
   $ rad patch list
-  state     #   commit               author  updated                
-  pending   2   Plant a few flowers  jane    2019-03-19T23:51:47Z * 
+  state     #   commit               author     updated
+  pending   2   Plant a few flowers  jane doe   2019-03-04T17:48:28Z *
 
   3 patches: 1 accepted, 1 pending, 1 rejected
 
@@ -78,15 +80,15 @@ Then we can inspect the patch with:
 ::
 
   $ rad patch show <PATCH-NUMBER>
-  accepted 0 Sewing seeds jane 2019-03-01T16:49:28Z
+  pending 2 Plant a few flowers jane doe 2019-03-04T17:48:28Z *
 
-  From b118c572a441a774d4577ccb68f67fcfacc58df2 Mon Sep 17 00:00:00 2001
+  From b118c572a441a774d4577ccb68f67fcfacc58df2 Mon Mar 4 17:47:15 2001
   From: jane doe <jane@botanicals.xyz>
   Date: Mon, 4 Mar 2019 17:47:15 +0100
-  Subject: [PATCH] Plant a few flowers
+  Subject: Plant a few flowers
 
   ---
-  2019-03-01_tulip.txt | 8 ++++++++
+  2019-03-04_tulip.txt | 8 ++++++++
   ...
 
 Maybe we'd like to add a comment to request additional changes:
@@ -102,7 +104,7 @@ For local testing we can checkout the patch in a branch:
 
   $ rad patch checkout <PATCH-NUMBER>
   Switched to a new branch 'patch/<PATCH-NUMBER>'
-  Applying: [PATCH] Sewing seeds
+  Applying: Plant a few flowers
 
 And then we can either reject the proposal:
 
@@ -123,12 +125,14 @@ Let's check the proposal status one more time to confirm:
 ::
 
   $ rad patch list -s accepted
-  state     #  commit        author    updated
-  accepted  2  Sewing seeds  jane      2019-01-25 13:27
-  ...
-  
+  state     #  commit               author     updated
+  accepted  2  Plant a few flowers  jane doe   2019-03-05T08:27:04Z
+  accepted  0  Sewing seeds         jane doe   2019-03-01T16:49:28Z
+
   3 patches: 2 accepted, 1 rejected
 
 That's it!
 
 🌻
+
+.. _`cli reference`: ./#rad-cli-reference
