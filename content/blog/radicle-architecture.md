@@ -1,10 +1,10 @@
 ---
 
 title: "Radicle"
-date: 2019-03-01
+date: 2019-03-28
 markup: mmark
 author: "Julian Arni and James Haydon"
-draft: true
+draft: false
 
 ---
 
