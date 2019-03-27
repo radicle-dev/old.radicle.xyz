@@ -144,8 +144,11 @@ can input the following:
 ```
 
 (In this example we've omitted the Radicle *prelude*, which is a set of basic
-modules containing many useful functions for writing state machines. The prelude is
-necessary here in order to access pattern matching functionality.)
+modules containing many useful functions for writing state machines. The
+prelude is necessary here in order to access pattern matching functionality.
+Note that helper functions exist to write this in a more natural style. Note
+also that Radicle-the-language is likely to change considerably in the near
+future.)
 
 
 
@@ -168,7 +171,7 @@ infrastructure. Another useful feature is that machines with common prefixes
 This means that a) if you already have those blocks you won't need to fetch
 them again, and b) if anyone has the blocks because of a different machine,
 they will still replicate and increase availability for other machines that
-need those blocks. Most machines will share the prelude as block; issue
+need those blocks. Most machines will share the prelude blocks; issue
 machines will additionally share the issue-definition blocks; etc.
 
 {{% div style="padding: 0.5em 0 1em 0;" %}}
