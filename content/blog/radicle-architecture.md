@@ -203,7 +203,7 @@ you can also run your own and help seed your favorite machines. Since you still
 control the pointer, and all data is identified by hash, you don't need to
 trust these public daemons.
 
-*Note: While Radicle is still in alpha, daemons have no authentication mechanim,
+*Note: While Radicle is still in alpha, daemons have no authentication mechanism,
 thus there is a possibility of DOS attacks if you enable this option.*
 
 Secondly, because the radicle daemon is just an HTTP server, this opens the
