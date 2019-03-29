@@ -22,7 +22,7 @@ rad issue commands
           rad issue new
           rad issue [show | close | mark-read | mark-unread] <issue-number>
           rad issue comment <issue-number> <comment>
-          rad all-read
+          rad issue all-read
           rad issue help
 
        list         - Lists all issues
@@ -101,9 +101,9 @@ rad project commands
   rad project - Radicle project CLI
 
      Usage:
-          rad-project init
-          rad-project show-id
-          rad-project checkout <PROJECT-ID>
+          rad project init
+          rad project show-id
+          rad project checkout <PROJECT-ID>
 
        init         - Initialize a new project
        show-id      - Show the project id
@@ -128,3 +128,18 @@ rad key commands
      The key pair is used for signing actions in the utils. Note that some actions
      are restricted to certain key pairs so deleting or overwriting your key pair
      can lead to loss of some authorisations.
+
+rad replicate commands
+======================
+
+.. code-block::
+
+  rad replicate - Replicate radicle projects.
+
+    This can be used to make your machines more available (e.g., readable when
+    you are offline, or writable and readable if you are behind a firewall).
+
+     Usage:
+          rad replicate [URL]
+
+    If not provided, the URL defaults to http://replicate.radicle.xyz
