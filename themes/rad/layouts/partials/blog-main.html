@@ -5,9 +5,10 @@
 
   {{ range .Pages }}
   <article>
-  	<h1>{{ .Title }}</h1>
+  	<a href="{{ .RelPermalink }}"><h1>{{ .Title }}</h1></a>
   	<p id="author">{{ .Params.author }}, {{ dateFormat "2006-01-02" .Params.date }}</p>
-    {{ .Content }}
+    {{ .Summary }}
+    <a href='{{ .Permalink }}'><nobr>Read more →</nobr></a>
   </article>
   {{ end }}
 
