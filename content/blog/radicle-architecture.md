@@ -6,7 +6,7 @@ markup: mmark
 author: "Julian Arni and James Haydon"
 draft: false
 summary: "Radicle is a system for code collaboration that has several advantages over
-existing tools. In particular Radicle is: Completely peer-to-peer, Easily modifiable & programmable, Extensible. We've built several *utilities* using the radicle system."
+existing tools. In particular Radicle is: completely peer-to-peer, easily modifiable & programmable, and extensible."
 
 ---
 Radicle is a system for code collaboration that has several advantages over

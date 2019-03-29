@@ -3,8 +3,10 @@
 
   <article>
     <h1>{{ .Title }}</h1>
-    <p id="author">{{ .Params.author }}, {{ dateFormat "2006-01-02" .Params.date }}</p>
+    <p class="author">{{ dateFormat "January 2, 2006" .Params.date }} — {{ .Params.author }}</p>
     {{ .Content }}
   </article>
 </div>
+<div class="divider white line opacity"></div>
+
 {{ end }}
