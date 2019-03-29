@@ -1,15 +1,12 @@
 ---
 
-title: "Radicle"
+title: "Radicle Architecture"
 date: 2019-03-28
 markup: mmark
 author: "Julian Arni and James Haydon"
 draft: false
 
 ---
-
-# Radicle Architecture
-
 Radicle is a system for code collaboration that has several advantages over
 existing tools. In particular Radicle is:
 

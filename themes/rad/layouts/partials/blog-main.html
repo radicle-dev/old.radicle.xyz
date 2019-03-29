@@ -5,6 +5,8 @@
 
   {{ range .Pages }}
   <article>
+  	<h1>{{ .Title }}</h1>
+  	<p id="author">{{ .Params.author }}, {{ dateFormat "2006-01-02" .Params.date }}</p>
     {{ .Content }}
   </article>
   {{ end }}
