@@ -4,6 +4,7 @@ title: "Introducing Radicle"
 date: 2018-10-12
 markup: rst
 author: "Sam Hart"
+summary: "Radicle is a peer-to-peer stack for creating open source software together. A collaboration environment that’s designed to be: offline-first, peer-to-peer, Cryptographically secure, Programmable, Interoperable & open."
 
 ---
     because ’tis the Origin of the Root… The Radicle is likewise called the seminal Root.

@@ -5,10 +5,20 @@
 
   {{ range .Pages }}
   <article>
-  	<a href="{{ .RelPermalink }}"><h1>{{ .Title }}</h1></a>
+  	<h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
   	<p id="author">{{ .Params.author }}, {{ dateFormat "2006-01-02" .Params.date }}</p>
-    {{ .Summary }}
-    <a href='{{ .Permalink }}'><nobr>Read more →</nobr></a>
+  	<div id="summary">
+  		{{ if .Params.summary }}
+		{{ .Params.summary | markdownify }}
+		{{ else }}
+		{{ .Summary }}
+		{{ end}}
+  	</div>
+  	{{ if .Truncated }}
+      <div>
+        <a href='{{ .RelPermalink }}'><nobr>Read more →</nobr></a>
+      </div>
+      {{ end }}
   </article>
   {{ end }}
 
