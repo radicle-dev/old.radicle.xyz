@@ -6,6 +6,18 @@
     <p class="author">{{ dateFormat "January 2, 2006" .Params.date }} — {{ .Params.author }}</p>
     {{ .Content }}
   </article>
+  <div class="blog-nav">
+    <div class="prev">
+      {{ if .PrevInSection }}
+      <a href="{{.PrevInSection.Permalink}}">👈 Previous Post</a>
+      {{ end }}
+    </div>
+    <div class="next">
+      {{ if .NextInSection }}
+      <a href="{{.NextInSection.Permalink}}">Next Post 👉</a>
+      {{ end }}
+    </div>
+  </div>
 </div>
 <div class="divider white line opacity"></div>
 
