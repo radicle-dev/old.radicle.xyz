@@ -1,33 +1,24 @@
 {{ define "main" }}
-<section id="main">
-  <h1 id="title">{{ .Title }}</h1>
-  <div>
-    <article id="content">
-      {{ .Content }}
-    </article>
-  </div>
-</section>
-<aside id="meta">
-  <div>
-    <section>
-      <h4 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
-      <h5 id="wordcount"> {{ .WordCount }} Words </h5>
-    </section>
-    {{ with .Params.topics }}
-    <ul id="topics">
-      {{ range . }}
-      <li><a href="{{ "topics" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
+<div class="blog-content">
+
+  <article>
+    <h1>{{ .Title }}</h1>
+    <p class="author">{{ dateFormat "January 2, 2006" .Params.date }} — {{ .Params.author }}</p>
+    {{ .Content }}
+  </article>
+  <div class="blog-nav">
+    <div class="prev">
+      {{ if .PrevInSection }}
+      <a href="{{.PrevInSection.Permalink}}">👈 Previous Post</a>
       {{ end }}
-    </ul>
-    {{ end }}
+    </div>
+    <div class="next">
+      {{ if .NextInSection }}
+      <a href="{{.NextInSection.Permalink}}">Next Post 👉</a>
+      {{ end }}
+    </div>
   </div>
-  <div>
-    {{ with .PrevInSection }}
-    <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
-    {{ end }}
-    {{ with .NextInSection }}
-    <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
-    {{ end }}
-  </div>
-</aside>
+</div>
+<div class="divider white line opacity"></div>
+
 {{ end }}

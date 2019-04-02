@@ -1,13 +1,26 @@
 <div class="blog-content">
 
-  <h1>Radicle Blog</h1>
+	<h1>Radicle Blog</h1>
 
 
-  {{ range .Pages }}
-  <article>
-    {{ .Content }}
-  </article>
-  {{ end }}
+	{{ range .Pages }}
+	<article>
+		<h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+		<p class="author">{{ dateFormat "January 2, 2006" .Params.date }} — {{ .Params.author }}</p>
+		<div class="summary">
+			{{ if .Params.summary }}
+			{{ .Params.summary | markdownify }}
+			{{ else }}
+			{{ .Summary }}
+			{{ end}}
+		</div>
+		{{ if .Truncated }}
+		<div>
+			<a href='{{ .RelPermalink }}'>Read more 👉</a>
+		</div>
+		{{ end }}
+	</article>
+	{{ end }}
 
 </div>
 <div class="divider white line opacity"></div>
