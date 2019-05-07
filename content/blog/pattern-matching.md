@@ -4,8 +4,8 @@ title: "Pattern matching in Radicle"
 date: 2019-04-04
 markup: mmark
 author: "James Haydon"
-draft: true
-summary: "We explain how pattern matches work in Radicle and how it's implemented under the hood."
+draft: false
+summary: "We explain how pattern matching works in Radicle and how it's implemented under the hood."
 
 ---
 
