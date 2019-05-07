@@ -200,7 +200,7 @@ small price to pay for the power we get with first-class patterns.
 
 The `/vec` patterns, allows one to match a vector based on a vector (or list)
 based of patterns; elements and patterns are matched positionally. For example
-`(/vec [p q])` will match vectors of length 2 for with the first item matches
+`(/vec [p q])` will match vectors of length 2 for which the first item matches
 the pattern `p` and the second item matches the pattern `q`. Because vectors are
 treated specially in `match-pat` one can just use `[p q]` directly:
 
