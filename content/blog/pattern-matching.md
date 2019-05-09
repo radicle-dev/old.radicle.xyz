@@ -241,3 +241,25 @@ the pattern `['x 'y]` along with the guard `(< (+ x y) 10)`. It would not be
 hard to add guards but we didn't settle on a syntax for them yet. We will
 revisit guards if we feel the lack of them is making the Radicle code
 significantly worse.
+
+There are a few other open questions we haven't quite made a decision on yet.
+Patterns in a `match` are arbitrary expressions that are evaluated like any
+other, in particular they may change the environment, mutate refs, perform IO
+and throw exceptions. Related to each of these is the question: _what happens if
+the pattern does not match?_. First of all it should be noted that each of these
+actions should be _strongly discouraged_ in patterns, but it's easy to break
+this rule without realising it (indeed we have ourselves!).
+
+At the moment all such effects are preserved. Here are some alternatives we can
+consider:
+
+- Patterns are evaluated in their own scope, which doesn't leak either to the
+  corresponding branch if the match is successful, or any of the other branches
+  or after the whole `match` expression, if the `match` fails.
+- Mutations to refs are undone if the match fails. That is, the values that the
+  refs had before evaluation of the pattern started are restored.
+- Any exception which happens during evaluation of a pattern is not propagated
+  outside of the `match`, but instead indicates a match-failure.
+- Unfortunately any missiles which were launched might not be cancelable! So we
+  could disallow I/O completely, and throw an exception if any of the relevant
+  primitive functions are invoked.
