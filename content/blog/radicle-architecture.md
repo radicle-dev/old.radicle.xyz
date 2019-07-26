@@ -8,6 +8,9 @@ draft: false
 summary: "In this post we explain the P2P architecture underlying Radicle: decentralised state machines stored on IPFS."
 
 ---
+
+_**Note**: There is a [Russian translation of this blog post](https://howtorecover.me/radikalnaya-arkhitektura), courtesy of HTR.
+
 Radicle is a system for code collaboration that has several advantages over
 existing tools. In particular Radicle is:
 
